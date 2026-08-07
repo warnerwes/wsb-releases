@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.23-beta.11",
+      "date": "2026-08-07",
+      "features": [],
+      "bugs": [
+        "Turning off 'Notify me of new updates' now actually stops Work Sample Buddy asking about updates in the background. It only kept quiet inside Settings before."
+      ]
+    },
+    {
       "version": "4.2.23-beta.10",
       "date": "2026-08-07",
       "features": [],
