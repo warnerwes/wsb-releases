@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "version": "4.2.23-beta.12",
+      "date": "2026-08-07",
+      "features": [],
+      "bugs": [
+        "The uninstaller now always tells you that your settings and student roster are shared by both the Beta and the regular version, and that there is only one copy. Before, that warning only appeared when the other version happened to still be installed, which is exactly when those options were switched off anyway.",
+        "The uninstaller no longer risks removing the wrong Windows account's settings. If it is run by a different user than the one who installed the app, for example when an administrator types their password to allow it, it now keeps your settings and roster and explains why instead of deleting files it cannot identify."
+      ]
+    },
+    {
       "version": "4.2.23-beta.11",
       "date": "2026-08-07",
       "features": [
@@ -1485,5 +1494,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-07T15:32:37.284739"
+  "last_updated": "2026-08-07T21:17:01.777306"
 }
