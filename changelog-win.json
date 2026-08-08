@@ -1,0 +1,1489 @@
+{
+  "versions": [
+    {
+      "version": "4.2.23-beta.11",
+      "date": "2026-08-07",
+      "features": [
+        "When you uninstall Work Sample Buddy, it now asks what you want to remove. The program is uninstalled as always, and you separately choose whether to also delete your settings, the student roster and grading database, downloaded update files, or logs. Everything is unchecked to begin with, so nothing extra is removed unless you ask for it.",
+        "The uninstaller never deletes your work samples or your workspace folder, whichever boxes you tick."
+      ],
+      "bugs": [
+        "Fixed the Check for Updates button being pushed off the right edge of the Status and health page when a release had long update notes.",
+        "The Notify me of new updates setting now actually stops update prompts. Before this, the setting only applied inside Settings, so the app still asked about updates shortly after launch and again every hour.",
+        "Fixed every document being fully re-analysed each time when the AI model was unavailable, which made things slower on computers not running Ollama.",
+        "Recent Updates now reads release notes written for Windows, so they are no longer replaced by notes from a Mac release.",
+        "If you have both the Beta and the regular version installed, uninstalling one no longer offers to delete the shared student roster and settings that the other one still needs."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.9",
+      "date": "2026-08-07",
+      "features": [
+        "Work Sample Buddy now keeps only the two most recent downloaded updates instead of every one it has ever fetched, freeing up disk space."
+      ],
+      "bugs": [
+        "Fixed two Update windows opening at once and downloading the same file twice, which could end in an error and leave the update unfinished.",
+        "Checking for updates no longer re-downloads an update you have already downloaded.",
+        "If you choose 'Not now', Work Sample Buddy stops asking about that version until you check again yourself.",
+        "An update you chose to install later is no longer offered again as a fresh download."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.8",
+      "date": "2026-08-07",
+      "features": [
+        "If the app ever fails to open on a Mac, it now tells you why. You get a window with the error, ready to copy, and the address to send it to - no Terminal, no hunting for log files."
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.2.23-beta.7",
+      "date": "2026-08-06",
+      "features": [
+        "In LP3, LP5 and LP7, TK-8 students now need one work sample for each core subject - Math, English, History and Science. A single sample no longer covers the other three. Other learning periods, high school, and previous school years are unchanged.",
+        "Grading now uses ADV, PRO, DEV and MIN instead of symbol marks.",
+        "Those marks now post to Schoology and stay put when you sync again."
+      ],
+      "bugs": [
+        "Fixed first-run setup getting stuck on 'Waiting for the PCA Extension'. If you installed the extension before Work Sample Buddy, the two could never connect. Setup now connects on its own, and never leaves you stuck waiting.",
+        "Fixed setup suggesting the previous teacher's name on a shared computer.",
+        "Fixed dropping a Word document freezing the app for up to two minutes.",
+        "Word documents you have already converted now reopen much faster.",
+        "Fixed Simple mode throwing away the file you dropped onto Replace."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.6",
+      "date": "2026-08-05",
+      "features": [],
+      "bugs": [
+        "Fixed the Mac app failing to open on computers that don't have developer tools installed. It closed instantly with no error message and no log file."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.5",
+      "date": "2026-08-05",
+      "features": [],
+      "bugs": [
+        "Fixed the Mac app failing to launch on some machines because of a conflicting system library."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.4",
+      "date": "2026-08-04",
+      "features": [
+        "About and help information is now available in Simple Mode; developer tools stay in Advanced."
+      ],
+      "bugs": [
+        "The completion matrix no longer goes blank when the school year rolls over."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.3",
+      "date": "2026-08-04",
+      "features": [],
+      "bugs": [
+        "The Chrome extension bridge on Mac is now a signed, self-contained component and no longer fails to start.",
+        "Printing web pages to PDF no longer hangs, and the page footer no longer shows a local file path.",
+        "Beta builds no longer offer an already-installed update as if it were new."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.2",
+      "date": "2026-07-14",
+      "features": [],
+      "bugs": [
+        "Re-start, Redo, and Restart now ask for confirmation before discarding a sample that is waiting for verification and re-running extraction, so verify-stage work can't be lost by a stray click."
+      ]
+    },
+    {
+      "version": "4.2.23-beta.1",
+      "date": "2026-07-14",
+      "features": [
+        "Large PDFs, student packages, and page thumbnails now load and process in the background, so the window stays responsive during heavy work.",
+        "Lower memory use when viewing large documents and long page strips."
+      ],
+      "bugs": [
+        "Fixed rare crashes and file corruption when saving, rotating, or replacing PDFs during grading and review.",
+        "Google Drive and Schoology 'Test Connection' and folder scans no longer freeze the app while they run.",
+        "More reliable cancellation of long-running compression and folder-scan operations.",
+        "Faster, more responsive startup."
+      ]
+    },
+    {
+      "version": "4.2.22",
+      "date": "2026-06-22",
+      "features": [],
+      "bugs": [
+        "Maintenance release: build and release tooling fixes. No changes to the app itself."
+      ]
+    },
+    {
+      "version": "4.2.21",
+      "date": "2026-06-22",
+      "features": [
+        "New OCR engine: switched to PaddleOCR PP-OCRv6 (tiny) as the primary handwriting reader with a WinOCR fallback — smaller install and better accuracy on student work.",
+        "OCR effort modes now scale how many pages are scanned: Quick reads 1 page, Balanced 4 (with smart last-page coverage), and Thorough reads every page.",
+        "New \"Off — OCR only\" mode runs text extraction without Ollama/AI grading, for when you just want the text."
+      ],
+      "bugs": [
+        "Fixed OCR not working in the installed (frozen) build — PaddleX initialization, bundled dependencies, and package metadata.",
+        "Fixed graded feedback not repopulating when you regrade a sample.",
+        "Fixed an intermittent crash when the student matrix refreshed during its fade-in animation.",
+        "Fixed the AI settings falsely labelling a model \"not vision-capable\" when it simply was not installed on the selected Ollama host — it now says it could not verify."
+      ]
+    },
+    {
+      "version": "4.2.20",
+      "date": "2026-06-16",
+      "features": [
+        "Added automatic update notifications to help you stay current with the latest features.",
+        "Improved the update process by moving to a more reliable download system on GitHub."
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.2.19",
+      "date": "2026-06-16",
+      "features": [],
+      "bugs": [
+        "Fixed an issue where the app could show a previous update as if it were a new one after already installing it"
+      ]
+    },
+    {
+      "version": "4.2.18",
+      "date": "2026-06-16",
+      "features": [],
+      "bugs": [
+        "Fixed a crash that could occur when choosing \"Install Later\" on the update prompt"
+      ]
+    },
+    {
+      "version": "4.2.17",
+      "date": "2026-06-16",
+      "features": [],
+      "bugs": [
+        "Fixed an issue where the app sometimes didn't reopen automatically after installing an update"
+      ]
+    },
+    {
+      "version": "4.2.16",
+      "date": "2026-06-16",
+      "features": [
+        "The app now asks before downloading an update, so it only happens when you're ready — and you can keep working while it downloads in the background"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.2.15",
+      "date": "2026-06-16",
+      "features": [],
+      "bugs": [
+        "Fixed an issue on Mac where the update installer couldn't find the app to replace after downloading"
+      ]
+    },
+    {
+      "version": "4.2.14",
+      "date": "2026-06-16",
+      "features": [],
+      "bugs": [
+        "Fixed the update checker so it correctly identifies the latest update for your platform (Mac or Windows) and doesn't mix them up"
+      ]
+    },
+    {
+      "version": "4.2.13",
+      "date": "2026-06-15",
+      "features": [
+        "Work Sample Buddy can now update itself — when a new version is available, you'll see a prompt to install it right from the app, with no need to manually download and reinstall. Works on both Mac and Windows."
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.2.12",
+      "date": "2026-06-15",
+      "features": [
+        "Added a first-run Welcome Wizard that guides new teachers through initial setup, plus new interactive Quick Start tutorials that demonstrate how to scan, organize, and package student work samples",
+        "Redesigned the Settings menu with a cleaner, accordion-style layout: each configuration section now expands one at a time to reduce clutter, and all panels (Grading Rules, PDF Output, Schoology, and more) have been compacted to fit more options on screen with less scrolling",
+        "Improved the Progress Grid with smoother data refreshing and clearer visual overlays when checking which students have submitted work samples"
+      ],
+      "bugs": [
+        "Fixed a crash that occurred when clicking Cancel in the Settings window",
+        "Fixed error handling to gracefully notify you if required AI models are missing when using Simple Mode, instead of failing silently"
+      ]
+    },
+    {
+      "version": "4.2.11",
+      "date": "2026-06-11",
+      "features": [
+        "Improved AI grading with hardware auto-tuning, throttled background processing to prevent computer slowdown, one-click fixes for missing AI models, and better recognition of handwritten headers",
+        "Added accelerated math standards support to report card comments with new \"Clear Period\" controls, and enhanced the progress grid with polished Schoology badges, faster imports, and smarter finalization gating",
+        "Sped up PDF previews and the grading viewer with background thumbnail generation, adjacent page prefetching, and cached orientation detection",
+        "Added PCA Chrome extension diagnostics with path mismatch detection and improved onboarding rechecks"
+      ],
+      "bugs": [
+        "Fixed crashes when deleting courses with unfinished report card drafts or when dragging to reorder pages in previews, plus corrected pending sample badge counts, OCR setup issues, and report card general comment generation failures"
+      ]
+    },
+    {
+      "version": "4.2.07",
+      "date": "2026-05-23",
+      "features": [
+        "Pathways uploads now detect when Chrome opened the upload page and keep waiting through sign-in prompts instead of failing early."
+      ],
+      "bugs": [
+        "Pathways uploads now fail faster with clearer Chrome profile guidance when the PCA Extension never sees the upload tab.",
+        "Installed Windows and Mac builds now include the native bridge upload acknowledgement helper needed by the PCA Extension."
+      ]
+    },
+    {
+      "version": "4.2.06",
+      "date": "2026-05-23",
+      "features": [],
+      "bugs": [
+        "Windows builds now bundle the native bridge upload-date helper inside wsb_bridge.exe, preventing repeated Pathways bridge startup popups"
+      ]
+    },
+    {
+      "version": "4.2.05",
+      "date": "2026-05-22",
+      "features": [],
+      "bugs": [
+        "Mac builds now include the native bridge upload-date helper, preventing Pathways upload bridge startup failures after installing on macOS"
+      ]
+    },
+    {
+      "version": "4.2.04",
+      "date": "2026-05-22",
+      "features": [
+        "Pathways uploads now show queued upload state, support queued re-upload confirmation, and keep the upload controls clearer while another student is uploading",
+        "Matrix review flags now have a fuller review workflow for flagged students and samples",
+        "Package finalization now gives clearer missing-file handling when a sample PDF has moved or disappeared"
+      ],
+      "bugs": [
+        "Pathways uploads now match students against the requested school-year roster and block uploads when completed-work dates do not fit the requested LP/year slot",
+        "Upload failures that happen before file injection now report the real preflight error back to Work Sample Buddy instead of timing out without a debug log",
+        "Student upload flags are cleared after upload, and course work-sample flags are cleared after a finalized packet is created",
+        "AI and grading queue background work now uses tighter runtime limits and responsiveness checks to reduce long-running stalls"
+      ]
+    },
+    {
+      "version": "4.2.03",
+      "date": "2026-05-21",
+      "features": [
+        "AI model settings now use clearer Light, Medium, and Heavy roles, with optional task-specific models and a Use for All shortcut for teachers who want one model everywhere",
+        "The Schoology grading course selector now includes clearer course progress details, including overall grade and missing-work counts",
+        "Setup integrations are split into clearer File Imports, Schoology, and Google Drive sections that load directly in the setup view"
+      ],
+      "bugs": [
+        "AI feedback cleanup now removes forced or uncertain critical comments instead of posting unsupported correction advice",
+        "PDF grading and patch tools now use smaller focused helpers for page edits, patch rendering, text patches, and marker overlays, reducing reload and traceback failures",
+        "Several Qt UI paths now guard deleted widgets and pixmap compatibility edge cases that could cause intermittent crashes"
+      ]
+    },
+    {
+      "version": "4.2.02",
+      "date": "2026-05-21",
+      "features": [
+        "Finalized matrix rows now use a polished Schoology badge that opens the selected student's Schoology coursework, with a notification dot when new unposted work is waiting"
+      ],
+      "bugs": [
+        "Schoology video submissions now run the foreground Whisper transcript the first time they are opened after pre-grade, even when pre-grade already created a PDF preview",
+        "Switching courses in the Schoology grading window now stays scoped to the selected student instead of opening the first student in the class",
+        "Finalized student rows now keep showing unposted Schoology work even while it is still waiting for pre-grade"
+      ]
+    },
+    {
+      "version": "4.2.01",
+      "date": "2026-05-21",
+      "features": [
+        "Teachers can now update a Schoology task from the grading window and queue a re-grade that uses the revised task, with clearer queue messages while it runs",
+        "Course right-click menus now include Schoology pre-grading controls when a course has queued or analyzing submissions"
+      ],
+      "bugs": [
+        "Schoology refresh now commits local roster and assignment updates before checking submissions or resubmission threads, avoiding open-transaction errors during API calls",
+        "Merging into an existing pending sample now resolves workspace-relative source files and warns when the original files are missing",
+        "PDF link copying now preserves supported external link types while skipping internal page-jump links whose page numbers can change",
+        "Learning-period calendar notification menus now clean up stale popups without closing a newer menu",
+        "Rejected-date feedback now distinguishes weekend dates from holiday and non-school-day dates"
+      ]
+    },
+    {
+      "version": "4.2.00",
+      "date": "2026-05-19",
+      "features": [
+        "Patch Selected Area now includes a dedicated ink correction workflow with grab-pen sampling, adjustable pen, halo, paper, eraser, softness, and blotchiness controls",
+        "Ink corrections now preview and render sampled handwriting details more naturally, including color variation, halo behavior, circular eraser sizing, and live eraser outlines",
+        "Typed text replacement now shows the detected font details and auto-aligns replacement text unless the user manually changes the alignment"
+      ],
+      "bugs": [
+        "PDF patching now keeps edits attached to the correct editable Schoology source document instead of losing changes after reload, undo, or header/task rebuilds",
+        "Ink and eraser patches now avoid gray border artifacts around edited strokes and patch rectangles",
+        "Patch dialogs now open away from the selected PDF area and shut down pending preview work when closed, avoiding crashes after closing the dialog",
+        "Version bumping now rolls 4.1.99 to 4.2.00 instead of 4.1.100"
+      ]
+    },
+    {
+      "version": "4.1.99",
+      "date": "2026-05-15",
+      "features": [],
+      "bugs": [
+        "Family contact messages now honor saved course checkbox selections immediately when the contact window is reopened",
+        "Family contact Gmail actions no longer queue duplicate pending messages, and reminders for different learning periods stay separate",
+        "Schoology image submissions that open as converted PDFs now use the current revision correctly instead of treating the PDF as a stale copy of the original image",
+        "Gradebook printout feedback now uses the detected saved grade and course when the submitted page has little or no readable text",
+        "Packaged builds now keep required Google API support modules available, preventing frozen-app failures from missing standard library dependencies"
+      ]
+    },
+    {
+      "version": "4.1.98",
+      "date": "2026-05-15",
+      "features": [],
+      "bugs": [
+        "Schoology grading now removes the first page from the actual editable submission source, rebuilds any active header/task/link stamps, and keeps the remaining pages renumbered correctly",
+        "K8 sibling status refreshes no longer crash after a background extraction fails and its worker has already been cleaned up"
+      ]
+    },
+    {
+      "version": "4.1.97",
+      "date": "2026-05-14",
+      "features": [],
+      "bugs": [
+        "Opening a student's input folder from the matrix no longer raises an error on macOS",
+        "Preview auto-coordinate lookup now ignores malformed background results instead of crashing the preview window"
+      ]
+    },
+    {
+      "version": "4.1.96",
+      "date": "2026-05-12",
+      "features": [
+        "Schoology grading now detects newer resubmission notices from the submission thread during refresh and grading-window load, so returned revisions are picked up even when Schoology keeps the same filename",
+        "Large phone-photo submissions are handled with safer OCR and preview scaling, improving extraction on oversized JPEGs without forcing slow full-resolution scans"
+      ],
+      "bugs": [
+        "Cached Schoology attachments are now validated against current Schoology file metadata before reuse, preventing an older LP/sample file from appearing after a same-name resubmission",
+        "HTML placeholder and Google-link submissions now resolve to the current PDF before header or task stamping, avoiding stale base files during grading",
+        "Video submissions no longer restart pre-grading while conversion is already running",
+        "Generated task descriptions now use larger response budgets and reject mid-sentence endings, so task text no longer stops after phrases like \"including\" or \"detailing\"",
+        "The packaged-sample banner no longer clips the message when the right-side status chip is hidden",
+        "Vision extraction now rejects obvious book or page numbers as grades and can correct OCR year slips when the corrected date fits the LP range"
+      ]
+    },
+    {
+      "version": "4.1.95",
+      "date": "2026-05-07",
+      "features": [
+        "Large Schoology video uploads now create a smaller temporary MP4 before uploading to Google Drive, keeping the original local video untouched and falling back to the original if compression is unavailable or not worthwhile"
+      ],
+      "bugs": [
+        "Finalized rows whose combined PDF is missing now offer to rebuild the finalized package from the student's existing completed samples instead of stopping at a file-not-found popup",
+        "The Task checkbox now stamps explicit Schoology task instructions onto activity-log submissions when real instructions are present, while still avoiding generic activity-log boilerplate",
+        "Checking Task now applies the task stamp when the PDF does not already have one, even if analysis already detected task text"
+      ]
+    },
+    {
+      "version": "4.1.94",
+      "date": "2026-05-07",
+      "features": [
+        "Advanced verification manual tagging now stays manual: placing, moving, or resizing a tag no longer runs region OCR automatically, and tag OCR is available from the right-click Scan Tag Text action when needed"
+      ],
+      "bugs": [
+        "Switching out of Demo DB no longer lets the internal demo workspace become the real workspace, preventing older sample paths from being expanded under demo_workspace",
+        "Workspace-relative sample paths can now recover through recent real workspaces when a stale workspace root points at the wrong folder",
+        "Config loading now tolerates UTF-8 BOM files, preventing a valid saved workspace from being ignored after external config edits",
+        "Family contact status messages no longer raise a deleted QLabel error if the dialog closes before a delayed status clear runs"
+      ]
+    },
+    {
+      "version": "4.1.93",
+      "date": "2026-05-07",
+      "features": [],
+      "bugs": [
+        "Google Drive source refreshes now write sign-in and scan failures to the app log, so a failed Drive login is visible after the popup is gone",
+        "Transient Google Drive token hiccups now get one quiet retry before Buddy asks you to sign in again, reducing unnecessary popups when Drive recovers by itself",
+        "Matrix refresh now keeps Google Drive sign-in or scan problems visible in the refresh status instead of replacing them with a generic sync-complete message"
+      ]
+    },
+    {
+      "version": "4.1.92",
+      "date": "2026-05-07",
+      "features": [
+        "Schoology video submissions can now be uploaded directly to Google Drive from the grading window, creating an anyone-with-link URL and stamping it onto the submission when +Link is enabled",
+        "Source folder imports now support fuzzy course matching with confirmation prompts, remembered acceptances, and better filename parsing for PCA/PPS and season-prefixed files",
+        "The Schoology grading panel now separates posting grades from packaging work samples: the LP sample banner packages, replaces, or removes the Buddy sample independently from Post/Repost",
+        "A synthetic demo database mode is available for walkthroughs and recordings without using real student data"
+      ],
+      "bugs": [
+        "Post to thread is no longer persistent: it starts off for every loaded Schoology submission and only posts to the thread when enabled for that specific submission",
+        "Removing a pending sample whose source file is missing no longer crashes after the missing-file recovery dialog",
+        "Schoology grading now blocks normal grades on missing submissions unless the grade is Mi or Ex, avoiding accidental real grades on missing work",
+        "Google Drive source scans now offer a sign-in recovery prompt when the saved Drive token cannot be refreshed"
+      ]
+    },
+    {
+      "version": "4.1.91",
+      "date": "2026-05-04",
+      "features": [
+        "Schoology grading now reads as accept/reject: the green dropdown shows \"Accepted\" instead of \"No flag\", reasons mark the submission as \"Rejected\", and the matrix and notification surfaces label rejected Schoology submissions clearly while keeping the matrix \"flagged\" feature for completed samples separate",
+        "Family contact emails for missing samples now announce repeat sends as \"2nd attempt\", \"3rd attempt\", and so on in the email banner, intro, plain text, and brief, so families can tell this is a follow-up reminder",
+        "The report card comment dialog has a new \"Copy for Magic School\" button that builds the same structured prompt and copies it to the clipboard, so teachers can paste it into Magic School, ChatGPT, or Claude when Ollama is not running",
+        "The Thread back-arrow next to the submission thread label is now a clickable button that opens the thread, matching the bigger Thread button next to it"
+      ],
+      "bugs": [
+        "Resubmissions now download the actual new revision: cached attachments are validated against Schoology's md5 before reuse, so a student's resubmitted file is never silently replaced by the previous revision when filenames match",
+        "When a stale revision is detected, the submission's prior AI, final, and posted grade/comment fields are cleared so the form picks up the fresh AI analysis of the new file instead of reapplying the old grade",
+        "Opening a missing-file submission in the grading window now clears and collapses the page strip so thumbnails from the previous submission no longer appear above the \"No file available\" message",
+        "Family contact dialog and emails now distinguish Schoology-rejected submissions from matrix-flagged completed samples instead of merging both into one Flagged count"
+      ]
+    },
+    {
+      "version": "4.1.90",
+      "date": "2026-05-01",
+      "features": [
+        "Schoology Google Docs and Google Drive link submissions can now be resolved into PDFs during grading when Google Drive export credentials are available, with a Schoology converted-PDF fallback when export is unavailable",
+        "The Schoology submission thread now supports quick inline teacher replies, editing teacher comments, and deleting teacher comments from the grading window",
+        "Duplicate submission warnings now list matching submissions directly in the grading panel so the original and duplicate files can be opened and compared",
+        "The work-sample packaging confirmation screen and course picker now make the student, Schoology course, and Pathways LP course clearer and filter choices to the student's relevant LP courses",
+        "AI performance presets now control background pre-grading more explicitly, so Quick mode stays lighter while Balanced and Thorough can do more work"
+      ],
+      "bugs": [
+        "Schoology submission delete is shown as unavailable when the teacher/API role cannot delete submission revisions, avoiding a failed action that Schoology returns as HTTP 403",
+        "The grading panel uses a denser task/feedback layout so Course Progress has more room, and AI-generated feedback is visually marked in the feedback label",
+        "Auto-grade completion summaries now count completed priority and batch items correctly instead of reporting zero when work actually finished",
+        "Matrix notification summaries now include clearer counts for Schoology flags, manual review items, unread comments, and calendar categories",
+        "Duplicate detection ignores stale hashes for submissions whose local file was cleared, reducing false duplicate flags after re-downloads or cleanup"
+      ]
+    },
+    {
+      "version": "4.1.89",
+      "date": "2026-04-29",
+      "features": [
+        "TK-8 core-course samples can now be kept on file but removed from the current LP package from the course right-click menu, then added back later if that PDF should be the packaged sample",
+        "The Schoology grading workflow now asks before overwriting an existing Buddy sample, reducing accidental replacement when packaging a submission into an LP slot that already has work",
+        "Right-click menus throughout the app now include visual icons or emoji cues, making grading, preview tagging, matrix, PDF, queue, tray, page-strip, and setup actions easier to scan"
+      ],
+      "bugs": [
+        "Not-packaged TK-8 samples stay saved without being counted in final LP packages, duplicate staged imports, or shared-sample completion checks",
+        "After posting a Schoology grade, the grading window now switches cleanly from Post to Repost after the brief Posted confirmation",
+        "Header/task stamp status now appears in the main grading toolbar status area instead of taking extra space in the grading panel",
+        "Preview badge right-click menus in simple mode now open at the clicked position instead of offset from the badge"
+      ]
+    },
+    {
+      "version": "4.1.88",
+      "date": "2026-04-29",
+      "features": [
+        "The Schoology grading window has a cleaner, denser right panel with compact date, flag, stamp, task, feedback, score, course, and progress controls that leave more room for reading feedback",
+        "Feedback processing depth is now visible from the grading toolbar, with diagnostics and processing settings grouped into the same menu",
+        "Course Progress now includes a segmented progress meter for graded, flagged, and open work, and stronger work-sample candidates are emphasized directly in the list",
+        "Right-clicking the Post/Repost button or LP sample checkbox now shows focused sample-only actions, including using the current work as the LP sample without reposting feedback, replacing the existing LP sample, or removing the current sample"
+      ],
+      "bugs": [
+        "When a previously flagged Schoology submission is resubmitted, stale F/0 flag grades and generic feedback no longer block the fresh pre-grade result from filling the form",
+        "Blank generated task text now remains inspectable in the grading workflow, and generic assignment titles such as LP Samples are no longer reused as assignment task text",
+        "One-page submissions now collapse the thumbnail strip automatically while keeping a View pages control available",
+        "Page selection mode now builds all selectable thumbnails immediately, so select all, deselect, rotate selected, and group controls work reliably"
+      ]
+    },
+    {
+      "version": "4.1.87",
+      "date": "2026-04-28",
+      "features": [
+        "Schoology grading now has a dedicated Wrong date flag for work samples dated outside the current learning period. The feedback tells the student the incorrect sample date and the expected LP date range",
+        "The Schoology grading window now warns before you leave or close a flagged submission that has not been posted yet, so an F/0 resubmission flag is not accidentally left local-only",
+        "Grading prompts are more cautious about handwriting, readability, and inferred task requirements, reducing feedback that criticizes neatness or claims a missing requirement that was not explicitly provided"
+      ],
+      "bugs": [
+        "Next in the Schoology grading window now skips flagged submissions that were already posted and advances to the next unposted item, while still stopping on flagged submissions that have not been posted yet",
+        "Unchecking + Task now hides the task editor consistently, even after AI/header analysis finds task text",
+        "Image-heavy grading submissions can skip slow full-page OCR when vision field scan is available, and Ollama grading requests now cap context and response size to avoid runaway slowdowns",
+        "Preview coordinate matching is more reliable for split/cropped pages and generated preview PDFs, including source-coordinate fallback when preview search would hit an old stamped header",
+        "Windows OCR and image-orientation checks now close PIL image handles promptly, reducing file-handle leaks during long grading and preview sessions"
+      ]
+    },
+    {
+      "version": "4.1.86",
+      "date": "2026-04-28",
+      "features": [],
+      "bugs": [
+        "Mac builds now explicitly bundle all Work Sample Buddy source modules, including the new visible-score grading helper. This fixes Heat AI failing in the packaged app with \"No module named 'src.core.visible_score'\" even when git pull said the source was up to date",
+        "Closing the app while the grading queue is active no longer lets a late worker-finished signal start another pending batch during shutdown, preventing the \"QThread: Destroyed while thread is still running\" crash"
+      ]
+    },
+    {
+      "version": "4.1.85",
+      "date": "2026-04-28",
+      "features": [
+        "Grading now treats a visible teacher or platform score on the submission as the source of truth. Scores found in the text, OCR boxes, top margin, or vision field scan are carried into Grade/Points, and full-credit visible scores no longer produce feedback that claims mistakes or missing work",
+        "Activity logs and skills sheets now use assignment profiles based on the Schoology title/description. Plain \"Log\" and \"Skills\" assignments skip separate task detection, use the correct grading guidance, and override stale work-sample assignment types when needed",
+        "Grading effort presets now have clearer behavior: Fast stays text-only, Balanced uses a small capped vision pass, and Thorough can inspect more images while keeping text prompts within an effort-specific budget",
+        "Family contact now shows clearer previous-contact history, updates the matrix after a send or draft succeeds, and handles middle-school core course selections more precisely when a user selects individual courses",
+        "The grading queue now keeps canceled, paused, queued, and actively analyzing submissions in sync across the matrix, queue dialog, and grading window"
+      ],
+      "bugs": [
+        "Image-heavy submissions with only partial OCR text no longer get graded from Schoology page controls. If a visible LMS score is present, Work Sample Buddy uses that score without inventing feedback; otherwise it leaves the item for vision grading or manual review",
+        "PDF header/task/link stamping now preserves pages that already have PDF rotation metadata, and the analyzer resets misapplied rotation metadata before OCR or vision checks so rotated phone-photo PDFs do not get read sideways",
+        "Closing a grading window now detaches from the shared grading queue instead of canceling work that is still running elsewhere",
+        "Manual task overrides are cleared more cleanly on reset/resubmission, including the mirrored detected-task field when it was only storing the old override"
+      ]
+    },
+    {
+      "version": "4.1.84",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "\"Task is Wrong\" → Save & Re-grade now actually uses the corrected task. The override was being saved correctly to the submission and shown in the form, but the grading worker was still building its prompt from Schoology's original assignment description, so the re-grade produced identical feedback. The worker now reads user_task_override first and feeds it into the grading prompt as the assignment description"
+      ]
+    },
+    {
+      "version": "4.1.83",
+      "date": "2026-04-26",
+      "features": [
+        "\"Fix Task\" renamed to \"Clean Task\" and a new \"Task is Wrong\" button sits next to it. Click \"Task is Wrong\" to open an editor with the current task description; rewrite what the assignment really asks for and click Save & Re-grade. Your text is persisted on the submission as the source of truth, the analyzer uses it instead of generating its own task description, and a fresh analysis is queued immediately. The override sticks until the student resubmits (the resubmission flow clears it because the prior correction may not apply to the new revision)"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.82",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Re-grade confirmation dialog no longer mentions \"AI\" — the message is now \"Re-grading will replace [it/them] with a fresh analysis\" and the title is just \"Re-grade?\""
+      ]
+    },
+    {
+      "version": "4.1.81",
+      "date": "2026-04-26",
+      "features": [
+        "AI feedback now gets a humanizing pass before it lands on the form or in the database. The grading prompt already tells the model to address the student directly, but it slips into third-person \"the student\" anyway. The post-process replaces \"the student\" / \"this student\" (and possessive forms with both straight and curly apostrophes) with the student's first name, so feedback reads \"Asher adapted the assignment\" rather than \"the student adapted the assignment.\" Sentence-start capitalization is preserved when a substitution lands after a period"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.80",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Audio-only submission PDFs no longer waste page 1 on a header alone — the transcript now flows immediately under the file name + duration on the same page and continues onto page 2 only when the content actually overflows. A short audio submission that previously rendered as 3 pages will fit on 2"
+      ]
+    },
+    {
+      "version": "4.1.79",
+      "date": "2026-04-26",
+      "features": [
+        "Audio-only submissions (.mp3 / .m4a / .wav / .aac / .ogg / .flac / .wma / .opus) now skip the video-frame extraction path and go straight to transcription. The MP4 ftyp magic bytes are shared by MP4 video AND audio-only formats like .m4a, so the file-kind sniffer was routing audio files through cv2.VideoCapture which hangs on Windows trying to demux a video track that doesn't exist. Now the converter detects the audio extension and produces a transcript-on-its-own-page PDF without ever calling cv2 — fixes the 90-second wedge the user reported on an .m4a submission"
+      ],
+      "bugs": [
+        "First-time submission download now stamps the cached file's revision id into ai_header_check so the next _check_stale_cache pass doesn't trip the stale-cache cascade (which would clear the AI/final fields then re-download the same file in a loop). v4.1.70 fixed this for Re-download specifically; this extends the fix to any download that creates a fresh cache entry"
+      ]
+    },
+    {
+      "version": "4.1.78",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Course Progress list now shows the 📦 packaged badge (and the WS banner shows \"packaged\") when the date resolver found the published sample via requirement_id but methods 1-3 missed it. The packaged-sub detection chain that feeds the 📦 emoji now includes the same fourth fallback as the date resolver — work_samples joined by the WS-banner-resolved requirement id — so the date and the badge agree on whether this sub is the published one"
+      ]
+    },
+    {
+      "version": "4.1.77",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Auto-apply on PDF load now uses the same field-availability check as the manual checkbox toggle (name/date/course resolvable) instead of the stricter has_name/has_date/has_course flags that only AI extraction sets. After Re-download, the header_check is reset to a revision stub with none of those flags, so the auto-apply was silently skipping the header even when the checkbox was on — toggling off-and-on then worked because the manual handler uses the permissive check. Now both paths agree",
+        "Added a fourth fallback for the date resolver: read work_samples.work_date by the requirement id resolved via the WS-banner. Catches published samples whose schoology_submission_id is NULL AND whose file path doesn't carry sub_{id}_ (e.g. samples imported via the matrix Inputs flow with renamed filenames). The resolver now also logs the source label (direct / legacy_path / pending_samples / requirement_id / none) so the chosen date's origin is visible",
+        "Added _load_pdf logging: every reload prints `_load_pdf: sub=N file=basename load_ok=True/False` so the empty-viewer-after-fix issue can be traced from the log"
+      ]
+    },
+    {
+      "version": "4.1.76",
+      "date": "2026-04-26",
+      "features": [
+        "Header and Task stamps now apply automatically when their checkboxes are on after the PDF loads. Previously you had to uncheck-and-recheck the box to trigger the stamp because form populate sets the checkbox state with signals blocked. Now _load_pdf calls the existing _auto_apply_missing_fixes hook once the PDF is visible — the stamp matches the checkbox state without manual toggling",
+        "Packaged work samples now save the as-posted task description and feedback text alongside the file. Stored on both pending_samples and work_samples (new task_text and feedback_text columns), and also embedded in the metadata JSON. Lets future tooling re-post to Schoology, audit, or display the original post without re-running AI"
+      ],
+      "bugs": [
+        "Fixed AttributeError that crashed the grading window after Re-download — _load_pdf was calling a method I'd named differently than the existing helper"
+      ]
+    },
+    {
+      "version": "4.1.75",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Date resolver now also checks pending_samples — a submission packaged via \"Use as LP sample\" lives there with metadata.date BEFORE the import flow promotes it into work_samples. The WS-banner detection already checks all three locations (work_samples direct + work_samples legacy path + pending_samples); the date resolver was missing the pending_samples branch, so freshly packaged subs would keep falling back to submitted_at instead of restoring the date the user entered when packaging"
+      ]
+    },
+    {
+      "version": "4.1.74",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Date resolver now finds work samples whose schoology_submission_id column was never populated (legacy data published before that column was being saved). Falls back to matching `sub_{id}_…` in the source / output PDF path — same legacy fallback the unpackage flow uses. Also exposes the match source (direct vs legacy_path) in the diagnostic log line"
+      ]
+    },
+    {
+      "version": "4.1.73",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Added diagnostic logs for the completion-date resolver so the picked date is provable from the log: every form populate now writes `_populate_form date pick: sub=X → PICKED (final=A ai=B posted_cmt=C thread_cmt=D ext=E)` showing every source and the winner, plus a `Date resolver:` line listing both work_samples.work_date and submitted_at with the priority decision and reason"
+      ]
+    },
+    {
+      "version": "4.1.72",
+      "date": "2026-04-26",
+      "features": [
+        "Date field on the grading form now restores from a published work sample first — if you've already published this submission as a sample to the student's matrix, that's the canonical date and it comes back when you re-open or Re-download. For non-published or never-published submissions it falls back to the Schoology submitted_at timestamp. Resubmissions skip the published-sample date (it belongs to the old revision) and use submitted_at directly"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.71",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Fixed numeric grades crashing the Schoology metadata parser. Schoology's grades response returns `grade` as a float (9.5) for numeric assignments and a string for letter grades; the parser was calling .strip() on the value unconditionally, which threw AttributeError on every numeric grade and bailed out before storing posted_grade or posted_comment. Both reconcile and Re-download now coerce values to string before stripping"
+      ]
+    },
+    {
+      "version": "4.1.70",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Re-download no longer trips a stale-cache cascade that wiped the AI/final fields a second time. The flow was: Re-download cleared ai_header_check (correct, since fix flags belong to the old file) → _load_pdf called _check_stale_cache → stored_rev was None and current_rev was the new revision, so the cache was always \"stale\" → clears AI/final and re-downloads in a loop. The clear now stamps ai_header_check with the current revision id, so the stale check sees a match and leaves the just-restored data alone"
+      ]
+    },
+    {
+      "version": "4.1.69",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Re-download now actually finds the grade and feedback in Schoology's response. The old parser only walked period[].grade[] and section[].period[].grade[], but Schoology's grades endpoint also returns rows at the top level (under `grades`) and with the inner key spelled `grades` instead of `grade`, depending on the section. A response with rows in any of those positions was being read as 0 grade rows — so Re-download silently treated graded subs as ungraded and ran AI. The new walker recursively yields every grade entry it can find regardless of where it sits in the response shape, and reconcile uses the same walker"
+      ]
+    },
+    {
+      "version": "4.1.68",
+      "date": "2026-04-26",
+      "features": [],
+      "bugs": [
+        "Re-download no longer silently runs AI and fills fabricated defaults (\"A\" 100/100, submitted_at as the date) when the Schoology grade fetch fails or doesn't match. The handler now distinguishes \"API succeeded with no grade\" (ungraded — AI is fine) from \"API call failed\" (unknown state — leave the form blank with a warning instead of inventing data). Logs also dump what the metadata fetch actually returned so the matching can be diagnosed when grades don't come through"
+      ]
+    },
+    {
+      "version": "4.1.67",
+      "date": "2026-04-26",
+      "features": [
+        "Schoology is now the source of truth for grade, completion date, AND feedback. Posting a grade encodes the date as a `[date: MM/DD/YYYY]` prefix on the comment so it round-trips through Schoology (the API has no native completion-date field). Re-download or open a previously-posted submission and all three fields restore from Schoology"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.66",
+      "date": "2026-04-25",
+      "features": [
+        "Posting a grade now also writes the feedback to the Schoology submission comment thread — the same place Schoology UI puts teacher comments. Previously the feedback only went to the gradebook entry's comment field, which made it look invisible from the submission view. Feedback is now in both places, so it's visible wherever you look in Schoology and recoverable from either source on read"
+      ],
+      "bugs": [
+        "Feedback box no longer shows the student's submission text mixed with the comment thread when there's no other feedback source — the form now extracts only the teacher's messages from the thread and ignores the student's own lines"
+      ]
+    },
+    {
+      "version": "4.1.65",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Schoology grade now actually populates the grade dropdown and points box on a graded submission — previously the form only checked for letter grades, but we send numeric points to Schoology when posting (so a graded sub came back with posted_grade=\"10\" or \"8.5\", which didn't match anything in the letter dropdown). The form now splits posted_grade into a derived letter (A/B/C/D/F based on percentage) for the dropdown and the numeric value for the points box, mirroring what was originally posted",
+        "Excused/Missing exceptions from Schoology now restore as Ex/Mi in the grade dropdown"
+      ]
+    },
+    {
+      "version": "4.1.64",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Feedback box now also falls through to the Schoology submission comment thread — most teachers leave feedback in the comment thread on the submission, not in the separate gradebook comment field, so the form was showing blank feedback for graded subs even when Schoology had it. Priority order: final feedback (user edited) → gradebook comment → submission thread → AI feedback"
+      ]
+    },
+    {
+      "version": "4.1.63",
+      "date": "2026-04-25",
+      "features": [
+        "Re-download now also re-fetches the grade and teacher comment from Schoology, plus the submission comment thread — so you don't have to wait for the next full sync to see what's currently in Schoology",
+        "Re-download decides what to do based on graded state: ungraded submissions get queued for AI pre-grading on the fresh file (as before); already-graded submissions just have the Schoology grade and comment restored, with no AI run. To force a fresh AI grade on an already-graded sub, click Re-grade after the download finishes"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.62",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Opening a graded submission no longer pops up \"This submission already has a grade. Re-grade?\" — the auto-Analyze hook was firing for any sub that didn't have the new posted_grade column populated yet, which meant freshly upgraded users got the prompt for every old graded sub without ever clicking Re-grade. The auto-Analyze gate now treats a sub as already-graded when any of posted_to_schoology, status='graded', final_grade, posted_grade, or ai_feedback is set. The overwrite prompt only appears when you explicitly click Re-grade"
+      ]
+    },
+    {
+      "version": "4.1.61",
+      "date": "2026-04-25",
+      "features": [
+        "Grading window now pulls the existing grade and teacher comment from Schoology when you open a graded submission, instead of running AI to regenerate them. The form populates from Schoology by default; the AI only runs on demand",
+        "\"Analyze\" button is now \"Re-grade\" — makes it clear that AI grading is opt-in. Click Re-grade to overwrite the Schoology grade/comment with a fresh AI run; you'll be prompted to confirm before anything is replaced",
+        "Pre-grading queue now only auto-runs for submissions with no Schoology grade yet, or for resubmissions — already-graded work is left alone unless you explicitly Re-grade it"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.60",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Fixed second auto-fill path that was repopulating the queue right after Cancel All — the Schoology badge refresh hook was calling enqueue_batch on every refresh and bypassing the pause check that v4.1.59 added to the other auto-grade path. The enqueue_batch call itself now respects the paused state, so any background path that tries to refill the queue (badge refresh, auto-heat, auto-grade) is silently ignored until the user resumes. Manual Analyze still works while paused"
+      ]
+    },
+    {
+      "version": "4.1.59",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Cancel All in the grading queue now also pauses the queue — previously the queue would refill itself within seconds because the auto-grade refresh hook didn't know the user had explicitly stopped it. Resume by clicking the pause toggle",
+        "Opening a submission while the queue is paused no longer auto-starts AI analysis — the auto-Analyze-on-select hook and the auto-heat warm-up both honor the pause state now"
+      ]
+    },
+    {
+      "version": "4.1.58",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Cancel All in the grading queue now actually stops the worker — previously it just emptied the queue while the worker kept grinding its in-flight submission for up to a minute, and the main window's \"Pre-grading 1/119\" pill stayed stuck during that time. Now the worker is interrupted immediately and the pill clears the moment the queue goes empty"
+      ]
+    },
+    {
+      "version": "4.1.57",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Status line after a manual Analyze click no longer says \"Pre-graded 0/0\" when a single submission was successfully analyzed — priority items are now counted separately and the summary reports them as \"analyzed N\" so the message matches what actually happened"
+      ]
+    },
+    {
+      "version": "4.1.56",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Re-download button now also kills any in-flight video conversion so a fresh-start request actually starts fresh — previously the v4.1.55 \"don't restart for same video\" guard would refuse to relaunch and the user couldn't force a clean conversion"
+      ]
+    },
+    {
+      "version": "4.1.55",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Fixed video conversions never finishing because they kept getting cancelled and restarted on every grading-window refresh — multiple paths (auto-stale-cache, heat-worker completion, manual Re-download) all called _start_video_conversion which always cancelled the in-flight subprocess. Now it leaves an existing conversion for the same video alone instead of restarting it from zero each time"
+      ]
+    },
+    {
+      "version": "4.1.54",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Fixed video transcription hanging mid-clip on multi-minute videos — the diagnostic confirmed whisper produced the first segment fine but then stalled on a later one. Switched to greedy decoding (beam_size=1), disabled context-feedback (condition_on_previous_text=False), and enabled VAD filtering, which are the standard mitigations for this faster-whisper failure mode. Also added per-10-segment progress breadcrumbs so a future hang is visible from the log",
+        "Also clears the persisted whisper_unavailable flag so the new settings actually get tried instead of being skipped over by the auto-disable from v4.1.53"
+      ]
+    },
+    {
+      "version": "4.1.53",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Video conversion timeout shortened from 4 minutes to 90 seconds, and after the first timeout the app remembers that whisper is hanging on this machine and skips transcription on subsequent video opens — you'll get a frame-only preview in ~95 seconds instead of staring at \"Converting video to PDF...\" forever"
+      ]
+    },
+    {
+      "version": "4.1.52",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Fixed video transcription hanging forever after \"WhisperModel ready, transcribing\" — faster-whisper spawns a multiprocessing resource_tracker daemon by re-running the bundled exe with python-style `-c <code>` arguments; the trampoline didn't recognize that pattern, the daemon fell through to the main app and got killed by the single-instance guard, and transcription waited forever on the dead helper. The trampoline now emulates Python's `-c` flag for these invocations"
+      ]
+    },
+    {
+      "version": "4.1.51",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Moved the cv2 sys.path scrub directly into video_converter.py so it fires right before `import cv2` regardless of who imports the module — the scrub at main.py top wasn't sticking (something re-added Resources/cv2 to sys.path between startup and the heat worker), so the heat worker hit the recursion bug and only ever produced the placeholder \"Video could not be previewed\" PDF"
+      ]
+    },
+    {
+      "version": "4.1.50",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Diagnostic: video subprocess trampoline now prints what it sees (sys.argv, the matched flag, module-run result) so we can pinpoint why a frozen subprocess falls through to full app startup instead of running the helper module"
+      ]
+    },
+    {
+      "version": "4.1.49",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Hanging video conversions now time out after 4 minutes and fall back to a frame-only preview instead of leaving the viewer stuck on \"Converting video to PDF...\"",
+        "Subprocess stderr breadcrumbs (where it is in the conversion pipeline) are now tailed into the main log every poll cycle so a stuck conversion is diagnosable from the log rather than invisible"
+      ]
+    },
+    {
+      "version": "4.1.48",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Page-strip thumbnails now actually clear on Re-download — the previous \"clear\" call was a silent no-op (PageStripWidget didn't have a public clear() method, so the AttributeError got swallowed and the old thumbnails stuck around)"
+      ]
+    },
+    {
+      "version": "4.1.47",
+      "date": "2026-04-25",
+      "features": [
+        "While a video submission is converting, the grading window now shows the no-transcript preview immediately so the viewer isn't blank for the 30+ seconds whisper takes"
+      ],
+      "bugs": [
+        "Clicking Re-download or detecting a stale cache now clears the page-strip thumbnails too — previously the strip kept showing frames from the previous revision while the new file was downloading and converting",
+        "Re-download / stale-cache cleanup now also deletes the heat worker's .heat.pdf preview, so a stale preview from before the re-download can't slip into the viewer"
+      ]
+    },
+    {
+      "version": "4.1.46",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Fixed cv2 import recursion on the macOS app — video conversion was silently degrading to a placeholder \"Video could not be previewed\" PDF (and the orientation OCR tiebreak was failing the same way) because cv2's own subdirectory was on sys.path, making cv2 re-import itself. Now scrubbed at startup and the bundled cv2 is collected cohesively"
+      ]
+    },
+    {
+      "version": "4.1.45",
+      "date": "2026-04-25",
+      "features": [],
+      "bugs": [
+        "Fixed video transcription crashing the converter on Windows (0xC0000005 access violation in ctranslate2 4.7.x) — the bundled installer now ships ctranslate2 4.6.0, and if Whisper still can't load on a given machine the grading window now remembers and skips transcription instead of repeatedly crashing"
+      ]
+    },
+    {
+      "version": "4.1.44",
+      "date": "2026-04-24",
+      "features": [
+        "When Ollama isn't available, the grading window now falls back to the Schoology submission date and awards full credit so the auto-header stamp can run end-to-end — you can still adjust either field before posting",
+        "Pre-grading queue pause/resume + a per-LP cutoff so you can stop heating work you don't plan to grade",
+        "First-time launch after a Schoology connect now asks which Learning Period to start pre-grading from"
+      ],
+      "bugs": [
+        "Fixed video submissions getting stuck on \"Converting video to PDF...\" forever — the conversion subprocess was deadlocking on its stderr pipe once whisper started writing progress; stderr now lands on a tempfile so the conversion actually completes",
+        "Fixed the macOS installer crashing on launch (the v4.1.43 DMG would not start) — PyInstaller now bundles the jaraco.* / pkg_resources / Pillow native libs the frozen app needs",
+        "Fixed video conversion in the bundled Mac app: subprocess invocations now properly route through main.py to the right module instead of re-launching the whole app"
+      ]
+    },
+    {
+      "version": "4.1.43",
+      "date": "2026-04-24",
+      "features": [],
+      "bugs": [
+        "Fixed the macOS app crashing immediately on launch with \"No module named 'jaraco'\" — the bundled installer now includes the setuptools / pkg_resources dependencies PyInstaller was missing",
+        "Schoology pre-grading queue now correctly skips work you've already graded in Schoology — fixed the grade-reconciliation parser that was silently iterating an empty list, so 200+ already-graded submissions no longer get re-queued for AI grading",
+        "After the reconciler fix lands, Buddy auto-runs a one-time full sync at startup so existing posted-grade flags get refreshed; the auto-grader holds off until that completes so the queue never sees stale state",
+        "Cleaned up the \"Could not parse stylesheet\" Qt warnings printed at startup — several link-style buttons in Settings used a CSS property Qt doesn't accept (text-decoration), now using the proper Qt font underline / strike-out instead"
+      ]
+    },
+    {
+      "version": "4.1.42",
+      "date": "2026-04-24",
+      "features": [
+        "Schoology auto-syncs the first time you connect, then runs a quiet weekly full sync in the background — the status bar shows progress while it runs, and an interrupted sync resumes where it left off the next time you open Buddy",
+        "Pre-grading queue now skips submissions that are already graded so you're not redownloading or re-extracting work you've already finished",
+        "Settings: split the old Integrations page into separate \"File Imports\" and \"Schoology\" pages in the Connections menu — each with a clearer ON/OFF pill toggle, and Schoology has a one-click link to the API page next to Test Connection",
+        "Video submissions now include automatic audio transcription under each frame in the rendered PDF — no extra setup needed, the model downloads on first use"
+      ],
+      "bugs": [
+        "Closing Buddy mid-Schoology-sync no longer leaks the in-flight HTTP requests — the sync is cancelled cleanly and resumes where it stopped"
+      ]
+    },
+    {
+      "version": "4.1.41",
+      "date": "2026-04-24",
+      "features": [
+        "Send Debug Report now shows a live preview of the screenshot you're about to send — snip a new one with Win+Shift+S or Cmd+Shift+4 and the thumbnail updates on its own",
+        "Grading window: when a multi-attachment submission comes in with pages reversed, they're now auto-flipped and you get a one-click Undo instead of a prompt",
+        "Added a compact ⇅ Reverse button in the grading toolbar, visible whenever a submission has 2+ merged attachments"
+      ],
+      "bugs": [
+        "Fixed a crash on macOS when opening a video submission in the grading window (\"recursion detected during loading of cv2\") — if the OpenCV bundle fails to load, the app now falls back to a placeholder preview instead of crashing",
+        "Made the crash-report tracking sheet resilient to header row edits — data can no longer land in the wrong columns"
+      ]
+    },
+    {
+      "version": "4.1.40",
+      "date": "2026-04-23",
+      "features": [
+        "Compress button now shows the current file size (e.g. \"Compress (2.3 MB)\") so you can see at a glance whether compression would help",
+        "Compress menu marks the current DPI level with a checkmark and bold text so you know which preset the PDF is already at",
+        "Family contact dialog has a new \"Include curriculum titles\" toggle that appends the curriculum name in parentheses after each course (e.g. \"Algebra I (Pearson)\")"
+      ],
+      "bugs": [
+        "Fixed a race between the grading heat worker and the main window that could raise sqlite3.InterfaceError and leave the matrix stuck on the previous Learning Period until the app was restarted"
+      ]
+    },
+    {
+      "version": "4.1.39",
+      "date": "2026-04-20",
+      "features": [
+        "Added Quick Start Guide and Open Setup Guide shortcuts to the Help menu",
+        "Rewrote the Integrations folder guidance with a concrete example (add the school-year folder, not the parent or individual LPs) and clickable Google Drive for Desktop link"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.38",
+      "date": "2026-04-20",
+      "features": [
+        "New Help menu with one-click shortcuts to Quick Start Guide, Setup Guide, Check for Updates, and Send Debug Report"
+      ],
+      "bugs": [
+        "Fixed \"Send Debug Report\" failing with SSL certificate errors on macOS",
+        "Ollama model download now shows live progress with byte counts and percentage instead of sitting silent",
+        "Model-installed check now matches exact tags — deleting one size of a model no longer leaves the others shown as still installed"
+      ]
+    },
+    {
+      "version": "4.1.37",
+      "date": "2026-04-17",
+      "features": [
+        "Edit Learning Periods directly in Settings → School Calendar — change start/end dates, add, delete, or lock LPs so the next sync doesn't overwrite manual edits",
+        "Select an LP row to scope the school-day calendar to that range, with one-click \"Select All Weekdays\" and \"Clear LP Dates\" actions (weekends auto-excluded)",
+        "LP range is now visually tinted on the calendar while an LP is selected"
+      ],
+      "bugs": [
+        "Fixed a startup crash when the database had multiple learning-period rows with no school year",
+        "Fixed the importer error on empty WSLP rows",
+        "Fixed the school-calendar panel going blank when selecting an LP with no school days in range"
+      ]
+    },
+    {
+      "version": "4.1.36",
+      "date": "2026-04-17",
+      "features": [
+        "Settings → School Calendar now shows a \"Fix Learning Periods\" button when orphaned LPs are detected"
+      ],
+      "bugs": [
+        "Fixed learning periods not appearing after sync when Pathways left the School Year column blank — school year is now derived from the LP start date (existing orphaned LPs are auto-repaired on startup)",
+        "Fixed crash when checking for updates (missing import for the update-available dialog)"
+      ]
+    },
+    {
+      "version": "4.1.35",
+      "date": "2026-04-17",
+      "features": [],
+      "bugs": [
+        "Fixed blank matrix after importing data with no learning periods — now warns and aborts instead of showing a black screen",
+        "Reduced noisy error logging during requirement generation to a single warning"
+      ]
+    },
+    {
+      "version": "4.1.34",
+      "date": "2026-04-16",
+      "features": [
+        "Crash reports now show the teacher's name instead of the computer login name"
+      ],
+      "bugs": [
+        "Fixed Setup Guide showing a blank panel when opening Settings for the first time each session",
+        "Faster preview dialog open — page strip rendering moved off the blocking path"
+      ]
+    },
+    {
+      "version": "4.1.33",
+      "date": "2026-04-16",
+      "features": [
+        "Settings page opens near-instantly (panels now load on first visit instead of all at once)",
+        "Cleaner settings sidebar — removed Close button, selected item now highlighted with accent color",
+        "Ghostscript detection is now cached in config (single source of truth across setup guide and PDF settings)"
+      ],
+      "bugs": [
+        "Fixed setup guide not detecting Ghostscript installed in standard Program Files location"
+      ]
+    },
+    {
+      "version": "4.1.32",
+      "date": "2026-04-16",
+      "features": [
+        "Auto-DPI tiled rendering: zooming in automatically sharpens the PDF (300→600 DPI) without manual quality selection",
+        "Double-click PDF view to toggle between fit and zoomed-in (250%)",
+        "Compress button in review dialog toolbar — change file DPI without leaving the viewer",
+        "Oversized file warning badge on course cards",
+        "Ghostscript enable/disable toggle in PDF settings",
+        "View File button in compression complete dialog",
+        "Keep Higher Quality option when reprocessing would increase file size"
+      ],
+      "bugs": [
+        "Fixed review dialog compression not using Ghostscript (config was not passed through)",
+        "Fixed crash when compressing from review dialog (file lock from open PDF handle)",
+        "Fixed marker animation crash after compressing (deleted C++ objects)",
+        "Fixed unable to go back to higher DPI after compressing down (now re-compresses from original backup)",
+        "Fixed DPI pre-check blocking legitimate recompression at same or higher DPI",
+        "Fixed compression failed dialog not switching app to advanced mode properly",
+        "Zoom level now preserved when navigating between pages in review dialog"
+      ]
+    },
+    {
+      "version": "4.1.31",
+      "date": "2026-04-16",
+      "features": [
+        "Right-click a completed course to Open Input Folder (renamed existing action to Open Output Folder)"
+      ],
+      "bugs": [
+        "Fixed source file backups creating 30+ duplicate copies in input folders (reuses existing backup if same files)"
+      ]
+    },
+    {
+      "version": "4.1.30",
+      "date": "2026-04-16",
+      "features": [],
+      "bugs": [
+        "Fixed compression creating duplicate backups on Google Drive (size-match dedup instead of slow content hash)"
+      ]
+    },
+    {
+      "version": "4.1.29",
+      "date": "2026-04-16",
+      "features": [
+        "Compression shows visible wobble animation on course card while processing",
+        "Smart DPI pre-check skips unnecessary Ghostscript runs when image resolution is already near target",
+        "Compression complete dialog now shows the DPI level used",
+        "Asks before downgrading DPI with warning about potential text blurriness",
+        "Crash reports now include username for easier triage",
+        "Global exception handler with persistent breadcrumbs for better crash diagnostics"
+      ],
+      "bugs": [
+        "Fixed compression animation disappearing immediately after starting (refresh_data was destroying the widget)",
+        "Fixed silent auto-retry at lower DPI without user confirmation",
+        "Fixed Ghostscript writing temp files to Google Drive instead of local disk (slow I/O)",
+        "Fixed access violation crash when background extraction opens database during main thread writes",
+        "Fixed staged pickup infinite loop on unresolved sidecar files",
+        "Fixed preview dialog page navigation broken by redundant cache clearing",
+        "Fixed preview dialog crash from dangling animations after widget destruction",
+        "Fixed QThread workers crashing on shutdown from forced termination",
+        "Removed deprecated Schoology Scout integration"
+      ]
+    },
+    {
+      "version": "4.1.28",
+      "date": "2026-04-07",
+      "features": [
+        "Keep Calendar Open / Keep Grade Picker Open toggles in verify dialog (right-click or field menu)",
+        "Calendar and grade picker icons replaced with calendar and checkmark, active state highlight"
+      ],
+      "bugs": [
+        "Fixed toolbar buttons overlapping on macOS in verify dialog",
+        "Fixed macOS saving a ghost copy of the old PDF to Trash when re-verifying a sample"
+      ]
+    },
+    {
+      "version": "4.1.27",
+      "date": "2026-04-06",
+      "features": [
+        "Redesigned celebration toolbar icon (gold star-burst, cleaner at small sizes)"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.26",
+      "date": "2026-04-06",
+      "features": [
+        "4-level celebration unlock system: Basic, Customize, Mouse Interaction, and Custom Emoji",
+        "New visual reward dialog after unlocking celebrations (replaces plain message boxes)",
+        "Emoji tab redesigned with clickable gallery grid and inline add-to-library",
+        "Usage history shown on each celebration card (e.g. LP3, LP5 2025-2026)",
+        "Right-click party button opens Celebration settings directly",
+        "Party button tooltip shows current LP celebration and active selection",
+        "Crash recovery: missed unlocks are auto-awarded on next startup"
+      ],
+      "bugs": [
+        "Fixed celebrations not re-triggering after reset and re-finalize",
+        "Fixed unlock dialog crash from missing CelebrationOverlay import",
+        "Fixed celebration cards showing 'Locked' even after unlocking",
+        "Fixed settings navigation not reaching Celebration page (panel index lookup)",
+        "Fixed nested DB session closing connection during finalization check",
+        "Slowed hearts and confetti particle speed for a more relaxed feel",
+        "Reduced mouse interaction force to prevent particles flying off screen"
+      ]
+    },
+    {
+      "version": "4.1.25",
+      "date": "2026-04-04",
+      "features": [
+        "Replace or Merge dialog when dropping files on in-progress work sample slots",
+        "Conflict resolver now pulls original un-stamped source files instead of stamped output"
+      ],
+      "bugs": [
+        "Fixed double-stamped headers when resolving conflicts with already-processed files",
+        "Fixed grade marker pointing to random letter in essay body instead of the grade in the header",
+        "Fixed verify dialog blocking for 10-20 seconds while running live OCR search",
+        "Fixed simple mode triggering background extraction during conflict resolution",
+        "Stripped PCA extension header from Google Classroom HTML submissions (was taking a full page)"
+      ]
+    },
+    {
+      "version": "4.1.24",
+      "date": "2026-04-04",
+      "features": [],
+      "bugs": [
+        "Fixed crash when PCA roster sync fires during startup course animation",
+        "Fixed false 'unclean exit' crash reports caused by slow shutdown cleanup",
+        "Bundled RapidOCR data files in Windows installer for offline OCR support"
+      ]
+    },
+    {
+      "version": "4.1.23",
+      "date": "2026-04-03",
+      "features": [
+        "Thumbnail strip now auto-resizes when pages are rotated to landscape orientation",
+        "Viewport indicator and field marker dots rotate with thumbnail rotation in edit mode"
+      ],
+      "bugs": [
+        "Fixed orientation detection falsely rotating upright CamScanner pages with decorative borders",
+        "Fixed rotation direction mismatch between detection (CCW) and PDF rendering (CW)",
+        "Fixed grading viewer reloading the wrong file after orientation correction (signal race)",
+        "Fixed memory leaks from unclosed PDF documents in bridge and page strip",
+        "Fixed re-finalize upload warning not appearing after unfinalize/re-finalize cycle"
+      ]
+    },
+    {
+      "version": "4.1.22",
+      "date": "2026-04-03",
+      "features": [
+        "Smooth fade-in and rise animation for course cards on startup — each row reveals with staggered timing",
+        "Matrix scroll position is now saved and restored between sessions",
+        "Unfinalize button is hidden until you hover a finalized row, then appears subtly and highlights on direct hover",
+        "When finalized students are hidden, a helpful info row shows the count and a link to disable the setting",
+        "Auto-hide finalized in pinned mode now shows all students when everyone is finalized instead of showing an empty table"
+      ],
+      "bugs": [
+        "Fixed packaged-as-work-sample detection failing for shared Schoology sections",
+        "Fixed S badge showing green for all-posted submissions on the wrong Learning Period",
+        "Fixed grading queue cancel not stopping in-flight items",
+        "Fixed white flash during matrix refresh by using deferred animation setup"
+      ]
+    },
+    {
+      "version": "4.1.21",
+      "date": "2026-04-03",
+      "features": [
+        "Improved the student progress grid with alternating row colors and more compact columns for easier scanning",
+        "Added smooth slide animations and refreshed button styling when switching between Learning Periods",
+        "Streamlined the progress grid toolbar by combining settings controls and merging sample counts into the PDF export button"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.20",
+      "date": "2026-04-03",
+      "features": [
+        "New Email menu with Completion Email Mode: Disabled, Draft, Send, Auto-Draft, Auto-Send",
+        "Auto-Draft and Auto-Send modes automatically email families after uploading to Pathways (skips already-emailed students)",
+        "View Drafts in Gmail shortcut in the Email menu",
+        "Staged conflict badge on finalized student rows shows new incoming samples with blue 'X new' button",
+        "Staged conflict count included in LP calendar badge and per-LP breakdown",
+        "Status bar notification when staged conflicts are detected",
+        "Celebration unlock now asks if you want to use the new celebration on the next LP"
+      ],
+      "bugs": [
+        "Fixed onnxruntime DLL access violation in frozen builds by pinning to version 1.20.0",
+        "Fixed crash when opening Family Contact dialog: config attribute not stored on dialog",
+        "Fixed crash in sample resolver dialog when page thumbnails are still loading (None guard)",
+        "Fixed page strip showing only first page per sample in resolver: treat unloaded thumbnails as selected",
+        "Fixed faulthandler crash on startup in windowed frozen builds (sys.stderr is None)",
+        "Fixed frozen macOS builds re-launching the app during OCR availability probe",
+        "Fixed resolving staged conflicts on finalized students not unfinalizing the row",
+        "Fixed merged samples accumulating duplicate red headers by using source backup PDF",
+        "Family Contact dialog Gmail buttons now disabled when PCA bridge is not active"
+      ]
+    },
+    {
+      "version": "4.1.19",
+      "date": "2026-04-02",
+      "features": [
+        "Calendar now allows selecting non-standard dates (weekends, non-school days, out-of-LP) with a warning dialog offering Use, Flag, or Cancel",
+        "LP mismatch banner in calendar is now a clickable 'Move sample to LP X' button with hint text",
+        "Flag reasons in family contact emails now show the specific issue (date value, day name, LP range) instead of generic 'Needs resubmission'",
+        "Status text in emails is now the clickable provider link itself (underlined with arrow) for a cleaner layout",
+        "Post button reverts from 'Posted' to 'Repost Grade + Feedback' when header, task, link, or WS checkbox is toggled"
+      ],
+      "bugs": [
+        "Fixed background staged pickup poll stealing window focus when importing samples while WSB is in the background",
+        "Fixed page deletion not working in the Schoology grading window thumbnail strip"
+      ]
+    },
+    {
+      "version": "4.1.18",
+      "date": "2026-04-02",
+      "features": [
+        "Automatic crash reporting: when the app crashes, a report is sent on next launch with logs and context about what you were doing",
+        "Crash reports include user action breadcrumbs so developers can see exactly what led to the crash",
+        "AI feedback now addresses students by name instead of 'the student'",
+        "Page strip thumbnail markers and viewport overlay now align precisely with page images"
+      ],
+      "bugs": [
+        "Fixed crash when opening Settings: import path for Quick Start Guide was broken",
+        "Fixed crash from onnxruntime DLL conflict: OCR availability now tested safely in a subprocess",
+        "Fixed resubmitted assignments losing their pre-grading results (grade, feedback, header stamps)",
+        "Fixed grade A showing 0 points: grade-to-points sanity check now auto-corrects mismatches",
+        "Fixed app not shutting down cleanly: grading queue worker now stops on exit",
+        "Fixed Edgenuity date extraction finding wrong date when only one slash was garbled",
+        "Reduced debug report size from 50MB to ~13MB by including only the most recent log backup"
+      ]
+    },
+    {
+      "version": "4.1.16",
+      "date": "2026-04-02",
+      "features": [],
+      "bugs": [
+        "Fixed all QThread worker crashes: 14 workers across the app had shadowed finished signals causing 'QThread: Destroyed while thread is still running' crashes, especially on macOS",
+        "Fixed highlighting marker positions on cropped pages when reviewing scanned work samples in the preview dialog (previously, selection boxes appeared in wrong locations)",
+        "Fixed icon rendering and text spacing in the student progress grid on macOS: due date and contact icons now display as text symbols instead of emojis, and due dates sit properly beneath student names"
+      ]
+    },
+    {
+      "version": "4.1.15",
+      "date": "2026-04-01",
+      "features": [
+        "Family contact dialog: generate email or text messages for families about missing work samples, with course selection and Gmail integration",
+        "Contact history tracking: matrix shows caution icon when situation changed since last contact, with detailed tooltip",
+        "Two-step task generation: AI first describes what the student produced, then rewrites as a teacher instruction — reduces hallucination",
+        "Fix Task button replaces Clean and Generate with a single smart rewrite that checks the document content",
+        "Field markers (name, date, grade boxes) now persist after header stamps, across page navigation, and when reopening submissions",
+        "Grade level now visible and inline-editable in the Course Management settings panel",
+        "K-8 work sample collection order is configurable in Grading Settings (drag to reorder LP subjects)",
+        "Menu bar reorganized into File, View, and Window menus",
+        "Grading queue dialog now supports canceling in-progress items and shows grade results for completed items",
+        "Forward-bias LP resolution: submissions no longer pushed back to completed LPs when assignment title indicates a later LP"
+      ],
+      "bugs": [
+        "Fixed crash: QThread destroyed while running caused by SyncWorker.finished shadowing QThread's built-in signal",
+        "Fixed points display rounding 7.5 to 8 — now preserves decimal values",
+        "Fixed SATISFIED requirement banner blocking work sample packaging for middle school students",
+        "Fixed black thumbnails in page strip caused by pulse animation capturing icons before progressive rendering finished",
+        "Fixed family contact dialog not detecting Schoology-flagged submissions",
+        "Fixed wrong module import for ollama_helpers (renamed to ollama_config)",
+        "Fixed OllamaWorker in feedback mixin shadowing QThread.finished signal"
+      ]
+    },
+    {
+      "version": "4.1.14",
+      "date": "2026-03-30",
+      "features": [
+        "Verification window now shows calendar and grade picker inline in simple mode — date and grade are always visible without extra clicks",
+        "Thumbnail strip and toolbar sit beside the calendar for a cleaner, more compact layout",
+        "Post Grade and Next buttons now sit on the same row in the grading window"
+      ],
+      "bugs": [
+        "Fixed settings menu showing OCR / Grading Models and other advanced sections in simple mode",
+        "Fixed verification window not updating when switching between simple and advanced mode mid-session"
+      ]
+    },
+    {
+      "version": "4.1.13",
+      "date": "2026-03-30",
+      "features": [
+        "Inline date calendar and grade picker now available in advanced mode alongside manual tagging — no more floating popups blocking the view",
+        "All picker popups are now non-modal so you can scroll and interact with the preview behind them",
+        "Right-click any date or grade field for 'Pop Out' option to use a floating picker instead"
+      ],
+      "bugs": [
+        "Fixed inline calendar not updating the selected-date highlight after picking a new date",
+        "Fixed toolbar Page label being cut off at small widths"
+      ]
+    },
+    {
+      "version": "4.1.12",
+      "date": "2026-03-30",
+      "features": [
+        "Task generation refinement loop — AI retries up to 3 times with feedback when the first attempt produces a bad result, yielding more accurate task descriptions",
+        "Video submissions now automatically stamp +Link during pre-grading (no longer requires the global auto-link setting)",
+        "Workspace-not-found dialog now offers a Retry button for when Google Drive is still loading at startup"
+      ],
+      "bugs": [
+        "Fixed +Link editor not appearing in sidebar when auto-checked for video submissions",
+        "Fixed link input not highlighted when +Link is checked but URL is empty",
+        "Fixed AI generating meta-tasks for videos like 'Analyze the video...' instead of describing the student's actual assignment",
+        "Fixed student comment not being passed to task generation from the inline Generate button",
+        "Removed redundant 'Ollama Started' confirmation dialog",
+        "Removed debug Extracted Text panel from grading sidebar (already included in Copy Diagnostics)"
+      ]
+    },
+    {
+      "version": "4.1.11",
+      "date": "2026-03-30",
+      "features": [
+        "+Link checkbox stamps a clickable public URL onto the PDF header — paste a Google Drive sharing link and it's permanently embedded in the work sample",
+        "Compact '📂 Video File' button replaces the bulky video panel — one click opens Explorer for easy upload to Google Drive",
+        "Video task generation now adapts to the course type (Photography, Music, PE, Science, etc.) instead of defaulting to music terminology",
+        "Video transcripts now feed into AI task generation for more accurate assignments",
+        "Simplified navigation: Back/Skip removed, compact Next button beside Post Grade",
+        "Simple mode for preview dialog — streamlined date and grade picker workflow",
+        "Settings reorganized with dedicated PCA Extension section",
+        "Interactive setup guide walkthrough"
+      ],
+      "bugs": [
+        "Fixed clickable links in PDF — annotations now properly survive the page assembly process",
+        "Fixed video cover page removing header/task when link was applied",
+        "Fixed transcript sidecar not found after header stamping (path mismatch)",
+        "Fixed video conversion not auto-triggering analysis after re-download",
+        "Fixed page strip not showing thumbnails after video conversion",
+        "Fixed 'by the student' appearing in AI-generated task descriptions (post-processing strip)",
+        "Fixed video cache not being deleted on re-download",
+        "Fixed theme KeyError for hover_bg in video button styling"
+      ]
+    },
+    {
+      "version": "4.1.10",
+      "date": "2026-03-28",
+      "features": [
+        "Duplicate submission detection — auto-flags when a student submits the same file to multiple assignments, with clipboard emoji indicator and pre-filled flag dialog",
+        "Student comments now included in AI task generation for more accurate task descriptions",
+        "Video submissions reconvert with Whisper transcription when opening in grading window",
+        "Crash diagnostics via faulthandler — C-level crashes now logged to crash_traceback.log"
+      ],
+      "bugs": [
+        "Fixed grading window silently closing after posting grades (wrapped post-grade advance in error handler)",
+        "Fixed SQLite thread safety crash during mouse hover when AI worker is writing (wobble config fallback)",
+        "Fixed AI grader error traceback when submission has no local file (graceful skip)",
+        "Fixed duplicate detection running before content hashes were computed (ordering fix)",
+        "Simplified PDF viewer context menu (merged re-download options)"
+      ]
+    },
+    {
+      "version": "4.1.9",
+      "date": "2026-03-27",
+      "features": [
+        "Split tall pages now displays correctly in the preview — page strip shows output pages, markers are preserved, and the header updates when you edit name, date, or grade",
+        "CPA/Schoology quiz detection is now content-based — works reliably for rescans and files without 'schoology.com' in the URL bar",
+        "CPA form field answers are now extracted via OCR instead of fitz text, fixing wrong dates and grades from navigation chrome",
+        "Name detection handles OCR typos (e.g. 'Olvia' for 'Olivia') and separate First/Last name fields in either label order",
+        "Date detection supports written formats like 'Friday, Feb. 27, 2026' and 'Today's Date' labels",
+        "Provider type (CPA/Schoology, OCR Scan, etc.) shown in the Background Scan debug dump",
+        "Right-click context menus on PDF viewer and course progress list for quick flag/resubmission",
+        "Sharp text rendering for split pages — uses vector insertion instead of rasterized images"
+      ],
+      "bugs": [
+        "Fixed preview not updating the red header when changing name, date, or grade",
+        "Fixed split tall pages showing as one long page due to premature render race condition",
+        "Fixed page strip clearing coordinate markers when reloading output pages",
+        "Fixed stale disk cache preventing correct rotation and split on reopened files",
+        "Fixed OCR re-running at verify time due to non-normalized cache keys (saves ~20 seconds)",
+        "Fixed coordinate search crash (UnboundLocalError) on CPA pages in ocr_only mode",
+        "Fixed grading queue error traceback when submission has no local file"
+      ]
+    },
+    {
+      "version": "4.1.8",
+      "date": "2026-03-26",
+      "features": [
+        "Send Debug Report button in Settings — packages debug log, crash reports, and system info into a zip on your Desktop for easy sharing",
+        "macOS: Date and grade tag scanning in the preview dialog now uses Apple Vision OCR instead of falling back to manual entry"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.7",
+      "date": "2026-03-26",
+      "features": [],
+      "bugs": [
+        "Updated changelog entries for 4.1.1-4.1.5, fixed generate_changelog keyword fallback"
+      ]
+    },
+    {
+      "version": "4.1.6",
+      "date": "2026-03-25",
+      "features": [
+        "Enhanced the file upload experience with a 90-second timeout and clear diagnostic messages to help troubleshoot when uploads stall",
+        "Added warnings for large finalized packages (over 15MB) and suggestions to install Ghostscript if the app detects it's missing for better PDF processing",
+        "Reorganized the Settings pages: moved the Quick Start Guide into the Setup Guide page and added a 15-minute walkthrough video button there, plus relocated \"Check for Updates\" to the top of the Status page for easier access"
+      ],
+      "bugs": []
+    },
+    {
+      "version": "4.1.5",
+      "date": "2026-03-25",
+      "features": [
+        "Excused and Missing grade options in the Schoology grading dropdown",
+        "Selecting Excused auto-fills feedback, clears points, and unflags the submission",
+        "Red S badge on the matrix for flagged Schoology submissions",
+        "S badge tooltips now explain what each color means",
+        "Click a PROCESSING course box to see progress or skip to manual entry",
+        "Auto-detect and migrate data from older versions of Work Sample Buddy",
+        "Inline post button shows Posting/Posted status instead of popup dialogs",
+        "macOS: friendly prompt to install developer tools for PCA Extension"
+      ],
+      "bugs": [
+        "Fixed 18 dark mode color issues (wrong theme keys, invisible borders/text)",
+        "Fixed crash when saving a manually-entered sample (dict vs dataclass)",
+        "Fixed red S badge not appearing on non-MISSING courses",
+        "Fixed extraction still running after Skip to Manual"
+      ]
+    },
+    {
+      "version": "4.1.4",
+      "date": "2026-03-24",
+      "features": [
+        "Configurable Schoology poll interval (1, 2, 5, 10, 15, or 30 minutes) in Settings",
+        "Schoology polling starts automatically when the app opens",
+        "New submissions detected between sessions are now picked up on launch",
+        "Faster document scanning — pages read front-to-back with early exit when all fields found",
+        "Orientation detection skips unnecessary OCR passes, saving ~12 seconds per document",
+        "Email Log button in Debug settings for easier troubleshooting"
+      ],
+      "bugs": [
+        "Fixed K-8 sibling satisfaction counting unverified samples as complete"
+      ]
+    },
+    {
+      "version": "4.1.3",
+      "date": "2026-03-23",
+      "features": [
+        "Submissions are now auto-graded after syncing with Schoology",
+        "Submission date shown in the grading context bar — click to set the Date field",
+        "Flag and unflag resubmissions with clearer button states",
+        "Faster Ollama connection checks (300ms instead of 3 seconds)",
+        "Ollama prompts are suppressed for users who have not set up AI grading"
+      ],
+      "bugs": [
+        "Fixed course cards incorrectly showing \"Grading...\" instead of \"Queued\"",
+        "Fixed duplicate page orientation detection running twice",
+        "Fixed rare crash when calculating text boundaries"
+      ]
+    },
+    {
+      "version": "4.1.2",
+      "date": "2026-03-21",
+      "features": [
+        "Quick sync button now checks for new Schoology submissions with just one click",
+        "Grading window shows unposted Schoology submission counts on finalized student rows",
+        "Separate Post Grade and Package buttons for clearer workflow",
+        "Workspace reconnection dialog when cloud drive folders go offline temporarily",
+        "Small student work samples are now scaled up for easier reading"
+      ],
+      "bugs": [
+        "Fixed auto-package using wrong student name from missing database join",
+        "Fixed header/task checkboxes showing checked when the fix was not actually applied",
+        "Fixed Ghostscript compression failures by auto-downgrading from 300 to 150 DPI",
+        "Fixed bridge connection issues on macOS (code signing and manifest path)"
+      ]
+    },
+    {
+      "version": "4.1.1",
+      "date": "2026-03-20",
+      "features": [
+        "Improved Mac build with proper code signing for smoother installation"
+      ],
+      "bugs": [
+        "Fixed installer not finding the correct file after beta distribution",
+        "Fixed Mac bridge connection for PCA Chrome Extension"
+      ]
+    }
+  ],
+  "last_updated": "2026-08-07T15:32:37.284739"
+}
