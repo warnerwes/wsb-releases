@@ -1,6 +1,25 @@
 {
   "versions": [
     {
+      "version": "4.2.23",
+      "date": "2026-08-12",
+      "features": [
+        "Grades now use ADV, PRO, DEV and MIN alongside the usual letter grades, replacing the old check-mark symbols. These marks carry no point value of their own inside Work Sample Buddy, and post to Schoology as the matching letter grade so your gradebook still totals correctly.",
+        "From the 2026-2027 school year, learning periods 3, 5 and 7 need a separate work sample for each TK-8 core subject: Language Arts, Mathematics, Science and Social Studies. Earlier school years, other learning periods, elective courses and high school are unchanged.",
+        "About & help is now available in Simple Mode instead of being hidden behind the advanced settings."
+      ],
+      "bugs": [
+        "Dropping a Word document no longer freezes the app for around two minutes the first time you do it. Conversions now finish in a couple of seconds.",
+        "The completion matrix no longer goes blank when the school year rolls over.",
+        "Replacing a file in Simple Mode no longer discards the file you dropped.",
+        "Work Sample Buddy no longer asks again about an update you have already answered, and two update checks can no longer race each other into downloading the same installer twice. Older downloaded installers are tidied up, keeping only the two most recent.",
+        "The grading window now reports an unsupported grade mark instead of quietly doing nothing.",
+        "If the app fails to start before it can open its own window, it now shows a dialog explaining what went wrong and writes the details to a log file, instead of appearing to do nothing.",
+        "The Mac app now launches without needing Homebrew installed.",
+        "The bridge that connects the Chrome extension is now a signed Mac program, so it starts reliably."
+      ]
+    },
+    {
       "version": "4.2.23-beta.11",
       "date": "2026-08-07",
       "features": [],
@@ -1488,5 +1507,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-07"
+  "last_updated": "2026-08-12T12:43:56.277890"
 }
