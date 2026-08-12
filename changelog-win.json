@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "4.2.23",
+      "date": "2026-08-12",
+      "features": [
+        "Grades now use ADV, PRO, DEV and MIN alongside the usual letter grades, replacing the old check-mark symbols. These marks carry no point value of their own inside Work Sample Buddy, and post to Schoology as the matching letter grade so your gradebook still totals correctly.",
+        "From the 2026-2027 school year, learning periods 3, 5 and 7 need a separate work sample for each TK-8 core subject: Language Arts, Mathematics, Science and Social Studies. Earlier school years, other learning periods, elective courses and high school are unchanged.",
+        "About & help is now available in Simple Mode instead of being hidden behind the advanced settings."
+      ],
+      "bugs": [
+        "Dropping a Word document no longer freezes the app for around two minutes the first time you do it. Conversions now finish in a couple of seconds.",
+        "The completion matrix no longer goes blank when the school year rolls over.",
+        "Replacing a file in Simple Mode no longer discards the file you dropped.",
+        "Work Sample Buddy no longer asks again about an update you have already answered, and two update checks can no longer race each other into downloading the same installer twice. Older downloaded installers are tidied up, keeping only the two most recent.",
+        "The grading window now reports an unsupported grade mark instead of quietly doing nothing.",
+        "The uninstaller now always tells you that your settings and student roster are shared by both the Beta and the regular version, and that there is only one copy. It also keeps them, and explains why, when it cannot confirm which Windows account installed the app."
+      ]
+    },
+    {
       "version": "4.2.23-beta.12",
       "date": "2026-08-07",
       "features": [],
@@ -1494,5 +1511,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-07T21:17:01.777306"
+  "last_updated": "2026-08-12T12:43:56.275652"
 }
