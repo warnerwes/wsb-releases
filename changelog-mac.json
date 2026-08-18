@@ -1,20 +1,6 @@
 {
   "versions": [
     {
-      "version": "4.2.24-beta.1",
-      "date": "2026-08-18",
-      "features": [
-        "Students and courses you add yourself are now kept separate from the ones Pathways sends, and a sync no longer removes them. If you add a course to a student who came from Pathways, that student is treated as yours from then on.",
-        "Students you add in Setup now show up in the completion matrix with their work sample requirements already created for every learning period.",
-        "TK-8 core subjects can now require either one combined work sample or a separate sample for each core course. Set it for the whole school under Settings > Grading & Output, per learning period, and optionally for just one school year.",
-        "You can also set the core sample count for a single student by right-clicking them in the matrix. It applies from that learning period onward, including into later school years, until you set a different one. Clearing it goes back to whatever was in effect before. The option is hidden for high school students.",
-        "Importing and exporting a course list now records whether each student and course is yours or came from Pathways, so importing one course no longer takes over the whole student."
-      ],
-      "bugs": [
-        "Students and courses added by hand no longer disappear the next time Pathways syncs."
-      ]
-    },
-    {
       "version": "4.2.23",
       "date": "2026-08-12",
       "features": [
