@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.3",
+      "date": "2026-08-19",
+      "features": [],
+      "bugs": [
+        "Fixed the update check failing on Mac with a security certificate error. Some Macs could not check for or download updates at all, and the app reported \"certificate verify failed\". If you have been stuck on an older version and updating did nothing, this is why."
+      ]
+    },
+    {
       "version": "4.2.24-beta.2",
       "date": "2026-08-18",
       "features": [
