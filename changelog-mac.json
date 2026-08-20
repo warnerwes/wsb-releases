@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.4",
+      "date": "2026-08-19",
+      "features": [
+        "The Add Student and Edit Student windows now have a \"Keep through Pathways syncs\" checkbox, so you can see and change whether a student is protected without hunting through a right-click menu. Students you add by hand stay protected by default, and turning it on also protects that student's classes."
+      ],
+      "bugs": [
+        "The import preview no longer warns that it will remove students you have marked to keep. It never actually removed them, but it listed them under \"Students removed\" and counted your roster down, which made a safe import look destructive. It now shows them as kept instead."
+      ]
+    },
+    {
       "version": "4.2.24-beta.3",
       "date": "2026-08-19",
       "features": [],
