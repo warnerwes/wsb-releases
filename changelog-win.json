@@ -1,7 +1,15 @@
 {
   "versions": [
     {
-      "version": "4.2.24-beta.1",
+      "version": "4.2.24-beta.4",
+      "date": "2026-08-19",
+      "features": [],
+      "bugs": [
+        "Fixed the roster import preview so it no longer warns that students will be removed when they will actually be kept, and now clearly shows the setting responsible."
+      ]
+    },
+    {
+      "version": "4.2.24-beta.2",
       "date": "2026-08-18",
       "features": [
         "Students and courses you add yourself are now kept separate from the ones Pathways sends, and a sync no longer removes them. If you add a course to a student who came from Pathways, that student is treated as yours from then on.",
@@ -1525,5 +1533,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-12T12:43:56.275652"
+  "last_updated": "2026-08-19T18:00:21.747636"
 }
