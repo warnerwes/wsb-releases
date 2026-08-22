@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.5",
+      "date": "2026-08-21",
+      "features": [
+        "Added Annual and Permanent options for source folders, so yearly folders automatically deactivate when a new school year is imported while long-term folders remain active.",
+        "Added automatic selection of the current school-year folder inside a stable parent folder, plus controls to view and restore inactive prior-year sources."
+      ],
+      "bugs": []
+    },
+    {
       "version": "4.2.24-beta.4",
       "date": "2026-08-19",
       "features": [
@@ -176,15 +185,15 @@
       "version": "4.2.21",
       "date": "2026-06-22",
       "features": [
-        "New OCR engine: switched to PaddleOCR PP-OCRv6 (tiny) as the primary handwriting reader with a WinOCR fallback \u2014 smaller install and better accuracy on student work.",
+        "New OCR engine: switched to PaddleOCR PP-OCRv6 (tiny) as the primary handwriting reader with a WinOCR fallback — smaller install and better accuracy on student work.",
         "OCR effort modes now scale how many pages are scanned: Quick reads 1 page, Balanced 4 (with smart last-page coverage), and Thorough reads every page.",
-        "New \"Off \u2014 OCR only\" mode runs text extraction without Ollama/AI grading, for when you just want the text."
+        "New \"Off — OCR only\" mode runs text extraction without Ollama/AI grading, for when you just want the text."
       ],
       "bugs": [
-        "Fixed OCR not working in the installed (frozen) build \u2014 PaddleX initialization, bundled dependencies, and package metadata.",
+        "Fixed OCR not working in the installed (frozen) build — PaddleX initialization, bundled dependencies, and package metadata.",
         "Fixed graded feedback not repopulating when you regrade a sample.",
         "Fixed an intermittent crash when the student matrix refreshed during its fade-in animation.",
-        "Fixed the AI settings falsely labelling a model \"not vision-capable\" when it simply was not installed on the selected Ollama host \u2014 it now says it could not verify."
+        "Fixed the AI settings falsely labelling a model \"not vision-capable\" when it simply was not installed on the selected Ollama host — it now says it could not verify."
       ]
     },
     {
@@ -224,7 +233,7 @@
       "version": "4.2.16",
       "date": "2026-06-16",
       "features": [
-        "The app now asks before downloading an update, so it only happens when you're ready \u2014 and you can keep working while it downloads in the background"
+        "The app now asks before downloading an update, so it only happens when you're ready — and you can keep working while it downloads in the background"
       ],
       "bugs": []
     },
@@ -248,7 +257,7 @@
       "version": "4.2.13",
       "date": "2026-06-15",
       "features": [
-        "Work Sample Buddy can now update itself \u2014 when a new version is available, you'll see a prompt to install it right from the app, with no need to manually download and reinstall. Works on both Mac and Windows."
+        "Work Sample Buddy can now update itself — when a new version is available, you'll see a prompt to install it right from the app, with no need to manually download and reinstall. Works on both Mac and Windows."
       ],
       "bugs": []
     },
@@ -585,7 +594,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "\"Task is Wrong\" \u2192 Save & Re-grade now actually uses the corrected task. The override was being saved correctly to the submission and shown in the form, but the grading worker was still building its prompt from Schoology's original assignment description, so the re-grade produced identical feedback. The worker now reads user_task_override first and feeds it into the grading prompt as the assignment description"
+        "\"Task is Wrong\" → Save & Re-grade now actually uses the corrected task. The override was being saved correctly to the submission and shown in the form, but the grading worker was still building its prompt from Schoology's original assignment description, so the re-grade produced identical feedback. The worker now reads user_task_override first and feeds it into the grading prompt as the assignment description"
       ]
     },
     {
@@ -601,7 +610,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Re-grade confirmation dialog no longer mentions \"AI\" \u2014 the message is now \"Re-grading will replace [it/them] with a fresh analysis\" and the title is just \"Re-grade?\""
+        "Re-grade confirmation dialog no longer mentions \"AI\" — the message is now \"Re-grading will replace [it/them] with a fresh analysis\" and the title is just \"Re-grade?\""
       ]
     },
     {
@@ -617,14 +626,14 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Audio-only submission PDFs no longer waste page 1 on a header alone \u2014 the transcript now flows immediately under the file name + duration on the same page and continues onto page 2 only when the content actually overflows. A short audio submission that previously rendered as 3 pages will fit on 2"
+        "Audio-only submission PDFs no longer waste page 1 on a header alone — the transcript now flows immediately under the file name + duration on the same page and continues onto page 2 only when the content actually overflows. A short audio submission that previously rendered as 3 pages will fit on 2"
       ]
     },
     {
       "version": "4.1.79",
       "date": "2026-04-26",
       "features": [
-        "Audio-only submissions (.mp3 / .m4a / .wav / .aac / .ogg / .flac / .wma / .opus) now skip the video-frame extraction path and go straight to transcription. The MP4 ftyp magic bytes are shared by MP4 video AND audio-only formats like .m4a, so the file-kind sniffer was routing audio files through cv2.VideoCapture which hangs on Windows trying to demux a video track that doesn't exist. Now the converter detects the audio extension and produces a transcript-on-its-own-page PDF without ever calling cv2 \u2014 fixes the 90-second wedge the user reported on an .m4a submission"
+        "Audio-only submissions (.mp3 / .m4a / .wav / .aac / .ogg / .flac / .wma / .opus) now skip the video-frame extraction path and go straight to transcription. The MP4 ftyp magic bytes are shared by MP4 video AND audio-only formats like .m4a, so the file-kind sniffer was routing audio files through cv2.VideoCapture which hangs on Windows trying to demux a video track that doesn't exist. Now the converter detects the audio extension and produces a transcript-on-its-own-page PDF without ever calling cv2 — fixes the 90-second wedge the user reported on an .m4a submission"
       ],
       "bugs": [
         "First-time submission download now stamps the cached file's revision id into ai_header_check so the next _check_stale_cache pass doesn't trip the stale-cache cascade (which would clear the AI/final fields then re-download the same file in a loop). v4.1.70 fixed this for Re-download specifically; this extends the fix to any download that creates a fresh cache entry"
@@ -635,7 +644,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Course Progress list now shows the \ud83d\udce6 packaged badge (and the WS banner shows \"packaged\") when the date resolver found the published sample via requirement_id but methods 1-3 missed it. The packaged-sub detection chain that feeds the \ud83d\udce6 emoji now includes the same fourth fallback as the date resolver \u2014 work_samples joined by the WS-banner-resolved requirement id \u2014 so the date and the badge agree on whether this sub is the published one"
+        "Course Progress list now shows the 📦 packaged badge (and the WS banner shows \"packaged\") when the date resolver found the published sample via requirement_id but methods 1-3 missed it. The packaged-sub detection chain that feeds the 📦 emoji now includes the same fourth fallback as the date resolver — work_samples joined by the WS-banner-resolved requirement id — so the date and the badge agree on whether this sub is the published one"
       ]
     },
     {
@@ -643,7 +652,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Auto-apply on PDF load now uses the same field-availability check as the manual checkbox toggle (name/date/course resolvable) instead of the stricter has_name/has_date/has_course flags that only AI extraction sets. After Re-download, the header_check is reset to a revision stub with none of those flags, so the auto-apply was silently skipping the header even when the checkbox was on \u2014 toggling off-and-on then worked because the manual handler uses the permissive check. Now both paths agree",
+        "Auto-apply on PDF load now uses the same field-availability check as the manual checkbox toggle (name/date/course resolvable) instead of the stricter has_name/has_date/has_course flags that only AI extraction sets. After Re-download, the header_check is reset to a revision stub with none of those flags, so the auto-apply was silently skipping the header even when the checkbox was on — toggling off-and-on then worked because the manual handler uses the permissive check. Now both paths agree",
         "Added a fourth fallback for the date resolver: read work_samples.work_date by the requirement id resolved via the WS-banner. Catches published samples whose schoology_submission_id is NULL AND whose file path doesn't carry sub_{id}_ (e.g. samples imported via the matrix Inputs flow with renamed filenames). The resolver now also logs the source label (direct / legacy_path / pending_samples / requirement_id / none) so the chosen date's origin is visible",
         "Added _load_pdf logging: every reload prints `_load_pdf: sub=N file=basename load_ok=True/False` so the empty-viewer-after-fix issue can be traced from the log"
       ]
@@ -652,11 +661,11 @@
       "version": "4.1.76",
       "date": "2026-04-26",
       "features": [
-        "Header and Task stamps now apply automatically when their checkboxes are on after the PDF loads. Previously you had to uncheck-and-recheck the box to trigger the stamp because form populate sets the checkbox state with signals blocked. Now _load_pdf calls the existing _auto_apply_missing_fixes hook once the PDF is visible \u2014 the stamp matches the checkbox state without manual toggling",
+        "Header and Task stamps now apply automatically when their checkboxes are on after the PDF loads. Previously you had to uncheck-and-recheck the box to trigger the stamp because form populate sets the checkbox state with signals blocked. Now _load_pdf calls the existing _auto_apply_missing_fixes hook once the PDF is visible — the stamp matches the checkbox state without manual toggling",
         "Packaged work samples now save the as-posted task description and feedback text alongside the file. Stored on both pending_samples and work_samples (new task_text and feedback_text columns), and also embedded in the metadata JSON. Lets future tooling re-post to Schoology, audit, or display the original post without re-running AI"
       ],
       "bugs": [
-        "Fixed AttributeError that crashed the grading window after Re-download \u2014 _load_pdf was calling a method I'd named differently than the existing helper"
+        "Fixed AttributeError that crashed the grading window after Re-download — _load_pdf was calling a method I'd named differently than the existing helper"
       ]
     },
     {
@@ -664,7 +673,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Date resolver now also checks pending_samples \u2014 a submission packaged via \"Use as LP sample\" lives there with metadata.date BEFORE the import flow promotes it into work_samples. The WS-banner detection already checks all three locations (work_samples direct + work_samples legacy path + pending_samples); the date resolver was missing the pending_samples branch, so freshly packaged subs would keep falling back to submitted_at instead of restoring the date the user entered when packaging"
+        "Date resolver now also checks pending_samples — a submission packaged via \"Use as LP sample\" lives there with metadata.date BEFORE the import flow promotes it into work_samples. The WS-banner detection already checks all three locations (work_samples direct + work_samples legacy path + pending_samples); the date resolver was missing the pending_samples branch, so freshly packaged subs would keep falling back to submitted_at instead of restoring the date the user entered when packaging"
       ]
     },
     {
@@ -672,7 +681,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Date resolver now finds work samples whose schoology_submission_id column was never populated (legacy data published before that column was being saved). Falls back to matching `sub_{id}_\u2026` in the source / output PDF path \u2014 same legacy fallback the unpackage flow uses. Also exposes the match source (direct vs legacy_path) in the diagnostic log line"
+        "Date resolver now finds work samples whose schoology_submission_id column was never populated (legacy data published before that column was being saved). Falls back to matching `sub_{id}_…` in the source / output PDF path — same legacy fallback the unpackage flow uses. Also exposes the match source (direct vs legacy_path) in the diagnostic log line"
       ]
     },
     {
@@ -680,14 +689,14 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Added diagnostic logs for the completion-date resolver so the picked date is provable from the log: every form populate now writes `_populate_form date pick: sub=X \u2192 PICKED (final=A ai=B posted_cmt=C thread_cmt=D ext=E)` showing every source and the winner, plus a `Date resolver:` line listing both work_samples.work_date and submitted_at with the priority decision and reason"
+        "Added diagnostic logs for the completion-date resolver so the picked date is provable from the log: every form populate now writes `_populate_form date pick: sub=X → PICKED (final=A ai=B posted_cmt=C thread_cmt=D ext=E)` showing every source and the winner, plus a `Date resolver:` line listing both work_samples.work_date and submitted_at with the priority decision and reason"
       ]
     },
     {
       "version": "4.1.72",
       "date": "2026-04-26",
       "features": [
-        "Date field on the grading form now restores from a published work sample first \u2014 if you've already published this submission as a sample to the student's matrix, that's the canonical date and it comes back when you re-open or Re-download. For non-published or never-published submissions it falls back to the Schoology submitted_at timestamp. Resubmissions skip the published-sample date (it belongs to the old revision) and use submitted_at directly"
+        "Date field on the grading form now restores from a published work sample first — if you've already published this submission as a sample to the student's matrix, that's the canonical date and it comes back when you re-open or Re-download. For non-published or never-published submissions it falls back to the Schoology submitted_at timestamp. Resubmissions skip the published-sample date (it belongs to the old revision) and use submitted_at directly"
       ],
       "bugs": []
     },
@@ -704,7 +713,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Re-download no longer trips a stale-cache cascade that wiped the AI/final fields a second time. The flow was: Re-download cleared ai_header_check (correct, since fix flags belong to the old file) \u2192 _load_pdf called _check_stale_cache \u2192 stored_rev was None and current_rev was the new revision, so the cache was always \"stale\" \u2192 clears AI/final and re-downloads in a loop. The clear now stamps ai_header_check with the current revision id, so the stale check sees a match and leaves the just-restored data alone"
+        "Re-download no longer trips a stale-cache cascade that wiped the AI/final fields a second time. The flow was: Re-download cleared ai_header_check (correct, since fix flags belong to the old file) → _load_pdf called _check_stale_cache → stored_rev was None and current_rev was the new revision, so the cache was always \"stale\" → clears AI/final and re-downloads in a loop. The clear now stamps ai_header_check with the current revision id, so the stale check sees a match and leaves the just-restored data alone"
       ]
     },
     {
@@ -712,7 +721,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Re-download now actually finds the grade and feedback in Schoology's response. The old parser only walked period[].grade[] and section[].period[].grade[], but Schoology's grades endpoint also returns rows at the top level (under `grades`) and with the inner key spelled `grades` instead of `grade`, depending on the section. A response with rows in any of those positions was being read as 0 grade rows \u2014 so Re-download silently treated graded subs as ungraded and ran AI. The new walker recursively yields every grade entry it can find regardless of where it sits in the response shape, and reconcile uses the same walker"
+        "Re-download now actually finds the grade and feedback in Schoology's response. The old parser only walked period[].grade[] and section[].period[].grade[], but Schoology's grades endpoint also returns rows at the top level (under `grades`) and with the inner key spelled `grades` instead of `grade`, depending on the section. A response with rows in any of those positions was being read as 0 grade rows — so Re-download silently treated graded subs as ungraded and ran AI. The new walker recursively yields every grade entry it can find regardless of where it sits in the response shape, and reconcile uses the same walker"
       ]
     },
     {
@@ -720,7 +729,7 @@
       "date": "2026-04-26",
       "features": [],
       "bugs": [
-        "Re-download no longer silently runs AI and fills fabricated defaults (\"A\" 100/100, submitted_at as the date) when the Schoology grade fetch fails or doesn't match. The handler now distinguishes \"API succeeded with no grade\" (ungraded \u2014 AI is fine) from \"API call failed\" (unknown state \u2014 leave the form blank with a warning instead of inventing data). Logs also dump what the metadata fetch actually returned so the matching can be diagnosed when grades don't come through"
+        "Re-download no longer silently runs AI and fills fabricated defaults (\"A\" 100/100, submitted_at as the date) when the Schoology grade fetch fails or doesn't match. The handler now distinguishes \"API succeeded with no grade\" (ungraded — AI is fine) from \"API call failed\" (unknown state — leave the form blank with a warning instead of inventing data). Logs also dump what the metadata fetch actually returned so the matching can be diagnosed when grades don't come through"
       ]
     },
     {
@@ -735,10 +744,10 @@
       "version": "4.1.66",
       "date": "2026-04-25",
       "features": [
-        "Posting a grade now also writes the feedback to the Schoology submission comment thread \u2014 the same place Schoology UI puts teacher comments. Previously the feedback only went to the gradebook entry's comment field, which made it look invisible from the submission view. Feedback is now in both places, so it's visible wherever you look in Schoology and recoverable from either source on read"
+        "Posting a grade now also writes the feedback to the Schoology submission comment thread — the same place Schoology UI puts teacher comments. Previously the feedback only went to the gradebook entry's comment field, which made it look invisible from the submission view. Feedback is now in both places, so it's visible wherever you look in Schoology and recoverable from either source on read"
       ],
       "bugs": [
-        "Feedback box no longer shows the student's submission text mixed with the comment thread when there's no other feedback source \u2014 the form now extracts only the teacher's messages from the thread and ignores the student's own lines"
+        "Feedback box no longer shows the student's submission text mixed with the comment thread when there's no other feedback source — the form now extracts only the teacher's messages from the thread and ignores the student's own lines"
       ]
     },
     {
@@ -746,7 +755,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Schoology grade now actually populates the grade dropdown and points box on a graded submission \u2014 previously the form only checked for letter grades, but we send numeric points to Schoology when posting (so a graded sub came back with posted_grade=\"10\" or \"8.5\", which didn't match anything in the letter dropdown). The form now splits posted_grade into a derived letter (A/B/C/D/F based on percentage) for the dropdown and the numeric value for the points box, mirroring what was originally posted",
+        "Schoology grade now actually populates the grade dropdown and points box on a graded submission — previously the form only checked for letter grades, but we send numeric points to Schoology when posting (so a graded sub came back with posted_grade=\"10\" or \"8.5\", which didn't match anything in the letter dropdown). The form now splits posted_grade into a derived letter (A/B/C/D/F based on percentage) for the dropdown and the numeric value for the points box, mirroring what was originally posted",
         "Excused/Missing exceptions from Schoology now restore as Ex/Mi in the grade dropdown"
       ]
     },
@@ -755,14 +764,14 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Feedback box now also falls through to the Schoology submission comment thread \u2014 most teachers leave feedback in the comment thread on the submission, not in the separate gradebook comment field, so the form was showing blank feedback for graded subs even when Schoology had it. Priority order: final feedback (user edited) \u2192 gradebook comment \u2192 submission thread \u2192 AI feedback"
+        "Feedback box now also falls through to the Schoology submission comment thread — most teachers leave feedback in the comment thread on the submission, not in the separate gradebook comment field, so the form was showing blank feedback for graded subs even when Schoology had it. Priority order: final feedback (user edited) → gradebook comment → submission thread → AI feedback"
       ]
     },
     {
       "version": "4.1.63",
       "date": "2026-04-25",
       "features": [
-        "Re-download now also re-fetches the grade and teacher comment from Schoology, plus the submission comment thread \u2014 so you don't have to wait for the next full sync to see what's currently in Schoology",
+        "Re-download now also re-fetches the grade and teacher comment from Schoology, plus the submission comment thread — so you don't have to wait for the next full sync to see what's currently in Schoology",
         "Re-download decides what to do based on graded state: ungraded submissions get queued for AI pre-grading on the fresh file (as before); already-graded submissions just have the Schoology grade and comment restored, with no AI run. To force a fresh AI grade on an already-graded sub, click Re-grade after the download finishes"
       ],
       "bugs": []
@@ -772,7 +781,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Opening a graded submission no longer pops up \"This submission already has a grade. Re-grade?\" \u2014 the auto-Analyze hook was firing for any sub that didn't have the new posted_grade column populated yet, which meant freshly upgraded users got the prompt for every old graded sub without ever clicking Re-grade. The auto-Analyze gate now treats a sub as already-graded when any of posted_to_schoology, status='graded', final_grade, posted_grade, or ai_feedback is set. The overwrite prompt only appears when you explicitly click Re-grade"
+        "Opening a graded submission no longer pops up \"This submission already has a grade. Re-grade?\" — the auto-Analyze hook was firing for any sub that didn't have the new posted_grade column populated yet, which meant freshly upgraded users got the prompt for every old graded sub without ever clicking Re-grade. The auto-Analyze gate now treats a sub as already-graded when any of posted_to_schoology, status='graded', final_grade, posted_grade, or ai_feedback is set. The overwrite prompt only appears when you explicitly click Re-grade"
       ]
     },
     {
@@ -780,8 +789,8 @@
       "date": "2026-04-25",
       "features": [
         "Grading window now pulls the existing grade and teacher comment from Schoology when you open a graded submission, instead of running AI to regenerate them. The form populates from Schoology by default; the AI only runs on demand",
-        "\"Analyze\" button is now \"Re-grade\" \u2014 makes it clear that AI grading is opt-in. Click Re-grade to overwrite the Schoology grade/comment with a fresh AI run; you'll be prompted to confirm before anything is replaced",
-        "Pre-grading queue now only auto-runs for submissions with no Schoology grade yet, or for resubmissions \u2014 already-graded work is left alone unless you explicitly Re-grade it"
+        "\"Analyze\" button is now \"Re-grade\" — makes it clear that AI grading is opt-in. Click Re-grade to overwrite the Schoology grade/comment with a fresh AI run; you'll be prompted to confirm before anything is replaced",
+        "Pre-grading queue now only auto-runs for submissions with no Schoology grade yet, or for resubmissions — already-graded work is left alone unless you explicitly Re-grade it"
       ],
       "bugs": []
     },
@@ -790,7 +799,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Fixed second auto-fill path that was repopulating the queue right after Cancel All \u2014 the Schoology badge refresh hook was calling enqueue_batch on every refresh and bypassing the pause check that v4.1.59 added to the other auto-grade path. The enqueue_batch call itself now respects the paused state, so any background path that tries to refill the queue (badge refresh, auto-heat, auto-grade) is silently ignored until the user resumes. Manual Analyze still works while paused"
+        "Fixed second auto-fill path that was repopulating the queue right after Cancel All — the Schoology badge refresh hook was calling enqueue_batch on every refresh and bypassing the pause check that v4.1.59 added to the other auto-grade path. The enqueue_batch call itself now respects the paused state, so any background path that tries to refill the queue (badge refresh, auto-heat, auto-grade) is silently ignored until the user resumes. Manual Analyze still works while paused"
       ]
     },
     {
@@ -798,8 +807,8 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Cancel All in the grading queue now also pauses the queue \u2014 previously the queue would refill itself within seconds because the auto-grade refresh hook didn't know the user had explicitly stopped it. Resume by clicking the pause toggle",
-        "Opening a submission while the queue is paused no longer auto-starts AI analysis \u2014 the auto-Analyze-on-select hook and the auto-heat warm-up both honor the pause state now"
+        "Cancel All in the grading queue now also pauses the queue — previously the queue would refill itself within seconds because the auto-grade refresh hook didn't know the user had explicitly stopped it. Resume by clicking the pause toggle",
+        "Opening a submission while the queue is paused no longer auto-starts AI analysis — the auto-Analyze-on-select hook and the auto-heat warm-up both honor the pause state now"
       ]
     },
     {
@@ -807,7 +816,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Cancel All in the grading queue now actually stops the worker \u2014 previously it just emptied the queue while the worker kept grinding its in-flight submission for up to a minute, and the main window's \"Pre-grading 1/119\" pill stayed stuck during that time. Now the worker is interrupted immediately and the pill clears the moment the queue goes empty"
+        "Cancel All in the grading queue now actually stops the worker — previously it just emptied the queue while the worker kept grinding its in-flight submission for up to a minute, and the main window's \"Pre-grading 1/119\" pill stayed stuck during that time. Now the worker is interrupted immediately and the pill clears the moment the queue goes empty"
       ]
     },
     {
@@ -815,7 +824,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Status line after a manual Analyze click no longer says \"Pre-graded 0/0\" when a single submission was successfully analyzed \u2014 priority items are now counted separately and the summary reports them as \"analyzed N\" so the message matches what actually happened"
+        "Status line after a manual Analyze click no longer says \"Pre-graded 0/0\" when a single submission was successfully analyzed — priority items are now counted separately and the summary reports them as \"analyzed N\" so the message matches what actually happened"
       ]
     },
     {
@@ -823,7 +832,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Re-download button now also kills any in-flight video conversion so a fresh-start request actually starts fresh \u2014 previously the v4.1.55 \"don't restart for same video\" guard would refuse to relaunch and the user couldn't force a clean conversion"
+        "Re-download button now also kills any in-flight video conversion so a fresh-start request actually starts fresh — previously the v4.1.55 \"don't restart for same video\" guard would refuse to relaunch and the user couldn't force a clean conversion"
       ]
     },
     {
@@ -831,7 +840,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Fixed video conversions never finishing because they kept getting cancelled and restarted on every grading-window refresh \u2014 multiple paths (auto-stale-cache, heat-worker completion, manual Re-download) all called _start_video_conversion which always cancelled the in-flight subprocess. Now it leaves an existing conversion for the same video alone instead of restarting it from zero each time"
+        "Fixed video conversions never finishing because they kept getting cancelled and restarted on every grading-window refresh — multiple paths (auto-stale-cache, heat-worker completion, manual Re-download) all called _start_video_conversion which always cancelled the in-flight subprocess. Now it leaves an existing conversion for the same video alone instead of restarting it from zero each time"
       ]
     },
     {
@@ -839,7 +848,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Fixed video transcription hanging mid-clip on multi-minute videos \u2014 the diagnostic confirmed whisper produced the first segment fine but then stalled on a later one. Switched to greedy decoding (beam_size=1), disabled context-feedback (condition_on_previous_text=False), and enabled VAD filtering, which are the standard mitigations for this faster-whisper failure mode. Also added per-10-segment progress breadcrumbs so a future hang is visible from the log",
+        "Fixed video transcription hanging mid-clip on multi-minute videos — the diagnostic confirmed whisper produced the first segment fine but then stalled on a later one. Switched to greedy decoding (beam_size=1), disabled context-feedback (condition_on_previous_text=False), and enabled VAD filtering, which are the standard mitigations for this faster-whisper failure mode. Also added per-10-segment progress breadcrumbs so a future hang is visible from the log",
         "Also clears the persisted whisper_unavailable flag so the new settings actually get tried instead of being skipped over by the auto-disable from v4.1.53"
       ]
     },
@@ -848,7 +857,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Video conversion timeout shortened from 4 minutes to 90 seconds, and after the first timeout the app remembers that whisper is hanging on this machine and skips transcription on subsequent video opens \u2014 you'll get a frame-only preview in ~95 seconds instead of staring at \"Converting video to PDF...\" forever"
+        "Video conversion timeout shortened from 4 minutes to 90 seconds, and after the first timeout the app remembers that whisper is hanging on this machine and skips transcription on subsequent video opens — you'll get a frame-only preview in ~95 seconds instead of staring at \"Converting video to PDF...\" forever"
       ]
     },
     {
@@ -856,7 +865,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Fixed video transcription hanging forever after \"WhisperModel ready, transcribing\" \u2014 faster-whisper spawns a multiprocessing resource_tracker daemon by re-running the bundled exe with python-style `-c <code>` arguments; the trampoline didn't recognize that pattern, the daemon fell through to the main app and got killed by the single-instance guard, and transcription waited forever on the dead helper. The trampoline now emulates Python's `-c` flag for these invocations"
+        "Fixed video transcription hanging forever after \"WhisperModel ready, transcribing\" — faster-whisper spawns a multiprocessing resource_tracker daemon by re-running the bundled exe with python-style `-c <code>` arguments; the trampoline didn't recognize that pattern, the daemon fell through to the main app and got killed by the single-instance guard, and transcription waited forever on the dead helper. The trampoline now emulates Python's `-c` flag for these invocations"
       ]
     },
     {
@@ -864,7 +873,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Moved the cv2 sys.path scrub directly into video_converter.py so it fires right before `import cv2` regardless of who imports the module \u2014 the scrub at main.py top wasn't sticking (something re-added Resources/cv2 to sys.path between startup and the heat worker), so the heat worker hit the recursion bug and only ever produced the placeholder \"Video could not be previewed\" PDF"
+        "Moved the cv2 sys.path scrub directly into video_converter.py so it fires right before `import cv2` regardless of who imports the module — the scrub at main.py top wasn't sticking (something re-added Resources/cv2 to sys.path between startup and the heat worker), so the heat worker hit the recursion bug and only ever produced the placeholder \"Video could not be previewed\" PDF"
       ]
     },
     {
@@ -889,7 +898,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Page-strip thumbnails now actually clear on Re-download \u2014 the previous \"clear\" call was a silent no-op (PageStripWidget didn't have a public clear() method, so the AttributeError got swallowed and the old thumbnails stuck around)"
+        "Page-strip thumbnails now actually clear on Re-download — the previous \"clear\" call was a silent no-op (PageStripWidget didn't have a public clear() method, so the AttributeError got swallowed and the old thumbnails stuck around)"
       ]
     },
     {
@@ -899,7 +908,7 @@
         "While a video submission is converting, the grading window now shows the no-transcript preview immediately so the viewer isn't blank for the 30+ seconds whisper takes"
       ],
       "bugs": [
-        "Clicking Re-download or detecting a stale cache now clears the page-strip thumbnails too \u2014 previously the strip kept showing frames from the previous revision while the new file was downloading and converting",
+        "Clicking Re-download or detecting a stale cache now clears the page-strip thumbnails too — previously the strip kept showing frames from the previous revision while the new file was downloading and converting",
         "Re-download / stale-cache cleanup now also deletes the heat worker's .heat.pdf preview, so a stale preview from before the re-download can't slip into the viewer"
       ]
     },
@@ -908,7 +917,7 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Fixed cv2 import recursion on the macOS app \u2014 video conversion was silently degrading to a placeholder \"Video could not be previewed\" PDF (and the orientation OCR tiebreak was failing the same way) because cv2's own subdirectory was on sys.path, making cv2 re-import itself. Now scrubbed at startup and the bundled cv2 is collected cohesively"
+        "Fixed cv2 import recursion on the macOS app — video conversion was silently degrading to a placeholder \"Video could not be previewed\" PDF (and the orientation OCR tiebreak was failing the same way) because cv2's own subdirectory was on sys.path, making cv2 re-import itself. Now scrubbed at startup and the bundled cv2 is collected cohesively"
       ]
     },
     {
@@ -916,20 +925,20 @@
       "date": "2026-04-25",
       "features": [],
       "bugs": [
-        "Fixed video transcription crashing the converter on Windows (0xC0000005 access violation in ctranslate2 4.7.x) \u2014 the bundled installer now ships ctranslate2 4.6.0, and if Whisper still can't load on a given machine the grading window now remembers and skips transcription instead of repeatedly crashing"
+        "Fixed video transcription crashing the converter on Windows (0xC0000005 access violation in ctranslate2 4.7.x) — the bundled installer now ships ctranslate2 4.6.0, and if Whisper still can't load on a given machine the grading window now remembers and skips transcription instead of repeatedly crashing"
       ]
     },
     {
       "version": "4.1.44",
       "date": "2026-04-24",
       "features": [
-        "When Ollama isn't available, the grading window now falls back to the Schoology submission date and awards full credit so the auto-header stamp can run end-to-end \u2014 you can still adjust either field before posting",
+        "When Ollama isn't available, the grading window now falls back to the Schoology submission date and awards full credit so the auto-header stamp can run end-to-end — you can still adjust either field before posting",
         "Pre-grading queue pause/resume + a per-LP cutoff so you can stop heating work you don't plan to grade",
         "First-time launch after a Schoology connect now asks which Learning Period to start pre-grading from"
       ],
       "bugs": [
-        "Fixed video submissions getting stuck on \"Converting video to PDF...\" forever \u2014 the conversion subprocess was deadlocking on its stderr pipe once whisper started writing progress; stderr now lands on a tempfile so the conversion actually completes",
-        "Fixed the macOS installer crashing on launch (the v4.1.43 DMG would not start) \u2014 PyInstaller now bundles the jaraco.* / pkg_resources / Pillow native libs the frozen app needs",
+        "Fixed video submissions getting stuck on \"Converting video to PDF...\" forever — the conversion subprocess was deadlocking on its stderr pipe once whisper started writing progress; stderr now lands on a tempfile so the conversion actually completes",
+        "Fixed the macOS installer crashing on launch (the v4.1.43 DMG would not start) — PyInstaller now bundles the jaraco.* / pkg_resources / Pillow native libs the frozen app needs",
         "Fixed video conversion in the bundled Mac app: subprocess invocations now properly route through main.py to the right module instead of re-launching the whole app"
       ]
     },
@@ -938,36 +947,36 @@
       "date": "2026-04-24",
       "features": [],
       "bugs": [
-        "Fixed the macOS app crashing immediately on launch with \"No module named 'jaraco'\" \u2014 the bundled installer now includes the setuptools / pkg_resources dependencies PyInstaller was missing",
-        "Schoology pre-grading queue now correctly skips work you've already graded in Schoology \u2014 fixed the grade-reconciliation parser that was silently iterating an empty list, so 200+ already-graded submissions no longer get re-queued for AI grading",
+        "Fixed the macOS app crashing immediately on launch with \"No module named 'jaraco'\" — the bundled installer now includes the setuptools / pkg_resources dependencies PyInstaller was missing",
+        "Schoology pre-grading queue now correctly skips work you've already graded in Schoology — fixed the grade-reconciliation parser that was silently iterating an empty list, so 200+ already-graded submissions no longer get re-queued for AI grading",
         "After the reconciler fix lands, Buddy auto-runs a one-time full sync at startup so existing posted-grade flags get refreshed; the auto-grader holds off until that completes so the queue never sees stale state",
-        "Cleaned up the \"Could not parse stylesheet\" Qt warnings printed at startup \u2014 several link-style buttons in Settings used a CSS property Qt doesn't accept (text-decoration), now using the proper Qt font underline / strike-out instead"
+        "Cleaned up the \"Could not parse stylesheet\" Qt warnings printed at startup — several link-style buttons in Settings used a CSS property Qt doesn't accept (text-decoration), now using the proper Qt font underline / strike-out instead"
       ]
     },
     {
       "version": "4.1.42",
       "date": "2026-04-24",
       "features": [
-        "Schoology auto-syncs the first time you connect, then runs a quiet weekly full sync in the background \u2014 the status bar shows progress while it runs, and an interrupted sync resumes where it left off the next time you open Buddy",
+        "Schoology auto-syncs the first time you connect, then runs a quiet weekly full sync in the background — the status bar shows progress while it runs, and an interrupted sync resumes where it left off the next time you open Buddy",
         "Pre-grading queue now skips submissions that are already graded so you're not redownloading or re-extracting work you've already finished",
-        "Settings: split the old Integrations page into separate \"File Imports\" and \"Schoology\" pages in the Connections menu \u2014 each with a clearer ON/OFF pill toggle, and Schoology has a one-click link to the API page next to Test Connection",
-        "Video submissions now include automatic audio transcription under each frame in the rendered PDF \u2014 no extra setup needed, the model downloads on first use"
+        "Settings: split the old Integrations page into separate \"File Imports\" and \"Schoology\" pages in the Connections menu — each with a clearer ON/OFF pill toggle, and Schoology has a one-click link to the API page next to Test Connection",
+        "Video submissions now include automatic audio transcription under each frame in the rendered PDF — no extra setup needed, the model downloads on first use"
       ],
       "bugs": [
-        "Closing Buddy mid-Schoology-sync no longer leaks the in-flight HTTP requests \u2014 the sync is cancelled cleanly and resumes where it stopped"
+        "Closing Buddy mid-Schoology-sync no longer leaks the in-flight HTTP requests — the sync is cancelled cleanly and resumes where it stopped"
       ]
     },
     {
       "version": "4.1.41",
       "date": "2026-04-24",
       "features": [
-        "Send Debug Report now shows a live preview of the screenshot you're about to send \u2014 snip a new one with Win+Shift+S or Cmd+Shift+4 and the thumbnail updates on its own",
+        "Send Debug Report now shows a live preview of the screenshot you're about to send — snip a new one with Win+Shift+S or Cmd+Shift+4 and the thumbnail updates on its own",
         "Grading window: when a multi-attachment submission comes in with pages reversed, they're now auto-flipped and you get a one-click Undo instead of a prompt",
-        "Added a compact \u21c5 Reverse button in the grading toolbar, visible whenever a submission has 2+ merged attachments"
+        "Added a compact ⇅ Reverse button in the grading toolbar, visible whenever a submission has 2+ merged attachments"
       ],
       "bugs": [
-        "Fixed a crash on macOS when opening a video submission in the grading window (\"recursion detected during loading of cv2\") \u2014 if the OpenCV bundle fails to load, the app now falls back to a placeholder preview instead of crashing",
-        "Made the crash-report tracking sheet resilient to header row edits \u2014 data can no longer land in the wrong columns"
+        "Fixed a crash on macOS when opening a video submission in the grading window (\"recursion detected during loading of cv2\") — if the OpenCV bundle fails to load, the app now falls back to a placeholder preview instead of crashing",
+        "Made the crash-report tracking sheet resilient to header row edits — data can no longer land in the wrong columns"
       ]
     },
     {
@@ -1000,14 +1009,14 @@
       "bugs": [
         "Fixed \"Send Debug Report\" failing with SSL certificate errors on macOS",
         "Ollama model download now shows live progress with byte counts and percentage instead of sitting silent",
-        "Model-installed check now matches exact tags \u2014 deleting one size of a model no longer leaves the others shown as still installed"
+        "Model-installed check now matches exact tags — deleting one size of a model no longer leaves the others shown as still installed"
       ]
     },
     {
       "version": "4.1.37",
       "date": "2026-04-17",
       "features": [
-        "Edit Learning Periods directly in Settings \u2192 School Calendar \u2014 change start/end dates, add, delete, or lock LPs so the next sync doesn't overwrite manual edits",
+        "Edit Learning Periods directly in Settings → School Calendar — change start/end dates, add, delete, or lock LPs so the next sync doesn't overwrite manual edits",
         "Select an LP row to scope the school-day calendar to that range, with one-click \"Select All Weekdays\" and \"Clear LP Dates\" actions (weekends auto-excluded)",
         "LP range is now visually tinted on the calendar while an LP is selected"
       ],
@@ -1021,10 +1030,10 @@
       "version": "4.1.36",
       "date": "2026-04-17",
       "features": [
-        "Settings \u2192 School Calendar now shows a \"Fix Learning Periods\" button when orphaned LPs are detected"
+        "Settings → School Calendar now shows a \"Fix Learning Periods\" button when orphaned LPs are detected"
       ],
       "bugs": [
-        "Fixed learning periods not appearing after sync when Pathways left the School Year column blank \u2014 school year is now derived from the LP start date (existing orphaned LPs are auto-repaired on startup)",
+        "Fixed learning periods not appearing after sync when Pathways left the School Year column blank — school year is now derived from the LP start date (existing orphaned LPs are auto-repaired on startup)",
         "Fixed crash when checking for updates (missing import for the update-available dialog)"
       ]
     },
@@ -1033,7 +1042,7 @@
       "date": "2026-04-17",
       "features": [],
       "bugs": [
-        "Fixed blank matrix after importing data with no learning periods \u2014 now warns and aborts instead of showing a black screen",
+        "Fixed blank matrix after importing data with no learning periods — now warns and aborts instead of showing a black screen",
         "Reduced noisy error logging during requirement generation to a single warning"
       ]
     },
@@ -1045,7 +1054,7 @@
       ],
       "bugs": [
         "Fixed Setup Guide showing a blank panel when opening Settings for the first time each session",
-        "Faster preview dialog open \u2014 page strip rendering moved off the blocking path"
+        "Faster preview dialog open — page strip rendering moved off the blocking path"
       ]
     },
     {
@@ -1053,7 +1062,7 @@
       "date": "2026-04-16",
       "features": [
         "Settings page opens near-instantly (panels now load on first visit instead of all at once)",
-        "Cleaner settings sidebar \u2014 removed Close button, selected item now highlighted with accent color",
+        "Cleaner settings sidebar — removed Close button, selected item now highlighted with accent color",
         "Ghostscript detection is now cached in config (single source of truth across setup guide and PDF settings)"
       ],
       "bugs": [
@@ -1064,9 +1073,9 @@
       "version": "4.1.32",
       "date": "2026-04-16",
       "features": [
-        "Auto-DPI tiled rendering: zooming in automatically sharpens the PDF (300\u2192600 DPI) without manual quality selection",
+        "Auto-DPI tiled rendering: zooming in automatically sharpens the PDF (300→600 DPI) without manual quality selection",
         "Double-click PDF view to toggle between fit and zoomed-in (250%)",
-        "Compress button in review dialog toolbar \u2014 change file DPI without leaving the viewer",
+        "Compress button in review dialog toolbar — change file DPI without leaving the viewer",
         "Oversized file warning badge on course cards",
         "Ghostscript enable/disable toggle in PDF settings",
         "View File button in compression complete dialog",
@@ -1209,7 +1218,7 @@
       "version": "4.1.22",
       "date": "2026-04-03",
       "features": [
-        "Smooth fade-in and rise animation for course cards on startup \u2014 each row reveals with staggered timing",
+        "Smooth fade-in and rise animation for course cards on startup — each row reveals with staggered timing",
         "Matrix scroll position is now saved and restored between sessions",
         "Unfinalize button is hidden until you hover a finalized row, then appears subtly and highlights on direct hover",
         "When finalized students are hidden, a helpful info row shows the count and a link to disable the setting",
@@ -1306,7 +1315,7 @@
       "features": [
         "Family contact dialog: generate email or text messages for families about missing work samples, with course selection and Gmail integration",
         "Contact history tracking: matrix shows caution icon when situation changed since last contact, with detailed tooltip",
-        "Two-step task generation: AI first describes what the student produced, then rewrites as a teacher instruction \u2014 reduces hallucination",
+        "Two-step task generation: AI first describes what the student produced, then rewrites as a teacher instruction — reduces hallucination",
         "Fix Task button replaces Clean and Generate with a single smart rewrite that checks the document content",
         "Field markers (name, date, grade boxes) now persist after header stamps, across page navigation, and when reopening submissions",
         "Grade level now visible and inline-editable in the Course Management settings panel",
@@ -1317,7 +1326,7 @@
       ],
       "bugs": [
         "Fixed crash: QThread destroyed while running caused by SyncWorker.finished shadowing QThread's built-in signal",
-        "Fixed points display rounding 7.5 to 8 \u2014 now preserves decimal values",
+        "Fixed points display rounding 7.5 to 8 — now preserves decimal values",
         "Fixed SATISFIED requirement banner blocking work sample packaging for middle school students",
         "Fixed black thumbnails in page strip caused by pulse animation capturing icons before progressive rendering finished",
         "Fixed family contact dialog not detecting Schoology-flagged submissions",
@@ -1329,7 +1338,7 @@
       "version": "4.1.14",
       "date": "2026-03-30",
       "features": [
-        "Verification window now shows calendar and grade picker inline in simple mode \u2014 date and grade are always visible without extra clicks",
+        "Verification window now shows calendar and grade picker inline in simple mode — date and grade are always visible without extra clicks",
         "Thumbnail strip and toolbar sit beside the calendar for a cleaner, more compact layout",
         "Post Grade and Next buttons now sit on the same row in the grading window"
       ],
@@ -1342,7 +1351,7 @@
       "version": "4.1.13",
       "date": "2026-03-30",
       "features": [
-        "Inline date calendar and grade picker now available in advanced mode alongside manual tagging \u2014 no more floating popups blocking the view",
+        "Inline date calendar and grade picker now available in advanced mode alongside manual tagging — no more floating popups blocking the view",
         "All picker popups are now non-modal so you can scroll and interact with the preview behind them",
         "Right-click any date or grade field for 'Pop Out' option to use a floating picker instead"
       ],
@@ -1355,7 +1364,7 @@
       "version": "4.1.12",
       "date": "2026-03-30",
       "features": [
-        "Task generation refinement loop \u2014 AI retries up to 3 times with feedback when the first attempt produces a bad result, yielding more accurate task descriptions",
+        "Task generation refinement loop — AI retries up to 3 times with feedback when the first attempt produces a bad result, yielding more accurate task descriptions",
         "Video submissions now automatically stamp +Link during pre-grading (no longer requires the global auto-link setting)",
         "Workspace-not-found dialog now offers a Retry button for when Google Drive is still loading at startup"
       ],
@@ -1372,17 +1381,17 @@
       "version": "4.1.11",
       "date": "2026-03-30",
       "features": [
-        "+Link checkbox stamps a clickable public URL onto the PDF header \u2014 paste a Google Drive sharing link and it's permanently embedded in the work sample",
-        "Compact '\ud83d\udcc2 Video File' button replaces the bulky video panel \u2014 one click opens Explorer for easy upload to Google Drive",
+        "+Link checkbox stamps a clickable public URL onto the PDF header — paste a Google Drive sharing link and it's permanently embedded in the work sample",
+        "Compact '📂 Video File' button replaces the bulky video panel — one click opens Explorer for easy upload to Google Drive",
         "Video task generation now adapts to the course type (Photography, Music, PE, Science, etc.) instead of defaulting to music terminology",
         "Video transcripts now feed into AI task generation for more accurate assignments",
         "Simplified navigation: Back/Skip removed, compact Next button beside Post Grade",
-        "Simple mode for preview dialog \u2014 streamlined date and grade picker workflow",
+        "Simple mode for preview dialog — streamlined date and grade picker workflow",
         "Settings reorganized with dedicated PCA Extension section",
         "Interactive setup guide walkthrough"
       ],
       "bugs": [
-        "Fixed clickable links in PDF \u2014 annotations now properly survive the page assembly process",
+        "Fixed clickable links in PDF — annotations now properly survive the page assembly process",
         "Fixed video cover page removing header/task when link was applied",
         "Fixed transcript sidecar not found after header stamping (path mismatch)",
         "Fixed video conversion not auto-triggering analysis after re-download",
@@ -1396,10 +1405,10 @@
       "version": "4.1.10",
       "date": "2026-03-28",
       "features": [
-        "Duplicate submission detection \u2014 auto-flags when a student submits the same file to multiple assignments, with clipboard emoji indicator and pre-filled flag dialog",
+        "Duplicate submission detection — auto-flags when a student submits the same file to multiple assignments, with clipboard emoji indicator and pre-filled flag dialog",
         "Student comments now included in AI task generation for more accurate task descriptions",
         "Video submissions reconvert with Whisper transcription when opening in grading window",
-        "Crash diagnostics via faulthandler \u2014 C-level crashes now logged to crash_traceback.log"
+        "Crash diagnostics via faulthandler — C-level crashes now logged to crash_traceback.log"
       ],
       "bugs": [
         "Fixed grading window silently closing after posting grades (wrapped post-grade advance in error handler)",
@@ -1413,14 +1422,14 @@
       "version": "4.1.9",
       "date": "2026-03-27",
       "features": [
-        "Split tall pages now displays correctly in the preview \u2014 page strip shows output pages, markers are preserved, and the header updates when you edit name, date, or grade",
-        "CPA/Schoology quiz detection is now content-based \u2014 works reliably for rescans and files without 'schoology.com' in the URL bar",
+        "Split tall pages now displays correctly in the preview — page strip shows output pages, markers are preserved, and the header updates when you edit name, date, or grade",
+        "CPA/Schoology quiz detection is now content-based — works reliably for rescans and files without 'schoology.com' in the URL bar",
         "CPA form field answers are now extracted via OCR instead of fitz text, fixing wrong dates and grades from navigation chrome",
         "Name detection handles OCR typos (e.g. 'Olvia' for 'Olivia') and separate First/Last name fields in either label order",
         "Date detection supports written formats like 'Friday, Feb. 27, 2026' and 'Today's Date' labels",
         "Provider type (CPA/Schoology, OCR Scan, etc.) shown in the Background Scan debug dump",
         "Right-click context menus on PDF viewer and course progress list for quick flag/resubmission",
-        "Sharp text rendering for split pages \u2014 uses vector insertion instead of rasterized images"
+        "Sharp text rendering for split pages — uses vector insertion instead of rasterized images"
       ],
       "bugs": [
         "Fixed preview not updating the red header when changing name, date, or grade",
@@ -1436,7 +1445,7 @@
       "version": "4.1.8",
       "date": "2026-03-26",
       "features": [
-        "Send Debug Report button in Settings \u2014 packages debug log, crash reports, and system info into a zip on your Desktop for easy sharing",
+        "Send Debug Report button in Settings — packages debug log, crash reports, and system info into a zip on your Desktop for easy sharing",
         "macOS: Date and grade tag scanning in the preview dialog now uses Apple Vision OCR instead of falling back to manual entry"
       ],
       "bugs": []
@@ -1486,7 +1495,7 @@
         "Configurable Schoology poll interval (1, 2, 5, 10, 15, or 30 minutes) in Settings",
         "Schoology polling starts automatically when the app opens",
         "New submissions detected between sessions are now picked up on launch",
-        "Faster document scanning \u2014 pages read front-to-back with early exit when all fields found",
+        "Faster document scanning — pages read front-to-back with early exit when all fields found",
         "Orientation detection skips unnecessary OCR passes, saving ~12 seconds per document",
         "Email Log button in Debug settings for easier troubleshooting"
       ],
@@ -1499,7 +1508,7 @@
       "date": "2026-03-23",
       "features": [
         "Submissions are now auto-graded after syncing with Schoology",
-        "Submission date shown in the grading context bar \u2014 click to set the Date field",
+        "Submission date shown in the grading context bar — click to set the Date field",
         "Flag and unflag resubmissions with clearer button states",
         "Faster Ollama connection checks (300ms instead of 3 seconds)",
         "Ollama prompts are suppressed for users who have not set up AI grading"
@@ -1539,5 +1548,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-12T12:43:56.277890"
+  "last_updated": "2026-08-21T17:03:44.236697"
 }
