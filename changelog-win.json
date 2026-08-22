@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.5",
+      "date": "2026-08-21",
+      "features": [
+        "Source folders now show an Annual or Permanent setting directly beside each path. Annual folders deactivate when the school year changes, while Permanent folders stay active.",
+        "You can now add one stable parent folder containing year folders such as 25-26 SY and 26-27 SY. Work Sample Buddy automatically scans only the current school year's folder."
+      ],
+      "bugs": [
+        "Prior-year folders under a stable source parent are no longer included in automatic imports.",
+        "The folder row and its duration menu are no longer clipped in Settings, and the table now follows both light and dark themes."
+      ]
+    },
+    {
       "version": "4.2.24-beta.4",
       "date": "2026-08-19",
       "features": [],
