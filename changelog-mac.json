@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.6",
+      "date": "2026-08-24",
+      "features": [],
+      "bugs": [
+        "The import preview no longer warns that a manually added student will be removed. Students marked \"keep through Pathways syncs\" are now shown as kept, and the roster count no longer drops by one.",
+        "Fixed the warning still appearing when importing through the Pathways browser extension, which was the most common way to hit it."
+      ]
+    },
+    {
       "version": "4.2.24-beta.5",
       "date": "2026-08-21",
       "features": [
@@ -1548,5 +1557,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-21T17:03:44.236697"
+  "last_updated": "2026-08-24T08:19:51.984580"
 }
