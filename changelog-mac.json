@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.7",
+      "date": "2026-08-24",
+      "features": [
+        "The ink editor now labels the blue selection box, so it is clear what it is for."
+      ],
+      "bugs": [
+        "Fixed the ink editor using very large amounts of memory when you select a whole page. A poster-sized selection is now rendered within a size cap, and drawing no longer makes a full-resolution copy of the page for every pen stroke. What you draw on is still what gets saved."
+      ]
+    },
+    {
       "version": "4.2.24-beta.6",
       "date": "2026-08-24",
       "features": [],
