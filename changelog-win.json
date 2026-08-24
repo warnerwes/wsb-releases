@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.7",
+      "date": "2026-08-24",
+      "features": [],
+      "bugs": [
+        "Drawing or erasing on a large page in the PDF ink editor no longer slows the app down or eats memory. The editor now sizes its working image to the selection instead of rendering the whole page at full resolution.",
+        "The ink editor labels the blue selection box, so it is clear where you can draw."
+      ]
+    },
+    {
+      "version": "4.2.24-beta.6",
+      "date": "2026-08-24",
+      "features": [],
+      "bugs": [
+        "The import preview no longer warns that a manually added student will be removed. Students marked \"keep through Pathways syncs\" are now shown as kept, and the roster count no longer drops by one.",
+        "Fixed the warning still appearing when importing through the Pathways browser extension, which was the most common way to hit it."
+      ]
+    },
+    {
       "version": "4.2.24-beta.5",
       "date": "2026-08-21",
       "features": [
@@ -1545,5 +1563,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-19T18:00:21.747636"
+  "last_updated": "2026-08-24T08:20:07.260738"
 }
