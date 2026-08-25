@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.8",
+      "date": "2026-08-25",
+      "features": [],
+      "bugs": [
+        "The import preview now shows student ID numbers when two students share a name, and lets you protect a student from removal without leaving the preview. Course totals add up correctly, and inactive historical records no longer trigger repeated warnings.",
+        "Update checks are more reliable and no longer fail silently. If checks have been failing for several days, Settings → Status will now tell you."
+      ]
+    },
+    {
       "version": "4.2.24-beta.7",
       "date": "2026-08-24",
       "features": [],
