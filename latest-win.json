@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "os": "win",
+  "channels": {
+    "beta": {
+      "version": "4.2.24-beta.8",
+      "tag": "v4.2.24-beta.8",
+      "asset": {
+        "name": "WorkSampleBuddy_win_v4.2.24-beta.8.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.24-beta.8/WorkSampleBuddy_win_v4.2.24-beta.8.exe",
+        "size": 306437520,
+        "sha256": "0f81c12dfd83cfc463fc9b5cf69eb0acee66ea54ea09ecc473a6ea0342339def"
+      },
+      "notes": "Fixes:\n\u2022 The import preview now shows student ID numbers when two students share a name, and lets you protect a student from removal without leaving the preview. Course totals add up correctly, and inactive historical records no longer trigger repeated warnings.\n\u2022 Update checks are more reliable and no longer fail silently. If checks have been failing for several days, Settings \u2192 Status will now tell you."
+    }
+  }
+}
