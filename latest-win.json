@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.24-beta.8",
-      "tag": "v4.2.24-beta.8",
+      "version": "4.2.24-beta.9",
+      "tag": "v4.2.24-beta.9",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.24-beta.8.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.24-beta.8/WorkSampleBuddy_win_v4.2.24-beta.8.exe",
-        "size": 306437520,
-        "sha256": "0f81c12dfd83cfc463fc9b5cf69eb0acee66ea54ea09ecc473a6ea0342339def"
+        "name": "WorkSampleBuddy_win_v4.2.24-beta.9.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.24-beta.9/WorkSampleBuddy_win_v4.2.24-beta.9.exe",
+        "size": 306455920,
+        "sha256": "b167b0d8f80292da462ce38b74defc1df0fb8406f684604a6da7f30c58e7da0d"
       },
-      "notes": "Fixes:\n\u2022 The import preview now shows student ID numbers when two students share a name, and lets you protect a student from removal without leaving the preview. Course totals add up correctly, and inactive historical records no longer trigger repeated warnings.\n\u2022 Update checks are more reliable and no longer fail silently. If checks have been failing for several days, Settings \u2192 Status will now tell you."
+      "notes": "New in this version:\n\u2022 Added first-run guidance to help teachers connect the PCA Chrome extension and confirm that it is working.\n\u2022 Added a visible onboarding step that asks teachers about importing their student roster.\n\nFixes:\n\u2022 Fixed missing-workspace prompts so teachers can choose Quit instead of being forced to continue startup."
     }
   }
 }
