@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "os": "mac",
+  "channels": {
+    "beta": {
+      "version": "4.2.24-beta.10",
+      "tag": "v4.2.24-beta.10",
+      "asset": {
+        "name": "WorkSampleBuddy_mac_v4.2.24-beta.10.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.24-beta.10/WorkSampleBuddy_mac_v4.2.24-beta.10.dmg",
+        "size": 341484206,
+        "sha256": "bf7ee8b3605ef1f41da5ab1c63391bb6521de4014adb42b89e0444c77d624415"
+      },
+      "notes": "Fixes:\n\u2022 Fixed Settings incorrectly reporting the PCA Chrome extension as missing when it was installed in developer mode."
+    }
+  }
+}
