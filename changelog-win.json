@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.24-beta.10",
+      "date": "2026-08-26",
+      "features": [],
+      "bugs": [
+        "Fixed Settings incorrectly reporting the PCA Chrome extension as missing when it was installed in developer mode."
+      ]
+    },
+    {
       "version": "4.2.24-beta.9",
       "date": "2026-08-26",
       "features": [
@@ -1583,5 +1591,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-26T15:58:48.794967"
+  "last_updated": "2026-08-26T16:37:11.935417"
 }
