@@ -1,11 +1,20 @@
 {
   "versions": [
     {
+      "version": "4.2.26-beta.3",
+      "date": "2026-08-27",
+      "features": [],
+      "bugs": [
+        "Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged."
+      ]
+    },
+    {
       "version": "4.2.26-beta.2",
       "date": "2026-08-27",
       "features": [],
       "bugs": [
-        "Fixed another case of the Finalize button going missing. Work Sample Buddy was checking a student's work against every school year at once instead of just the current one, so an unfinished course left over from last year could block packaging forever — the student showed \"0 samples due\" with no way to finalize them."
+        "Fixed another case of the Finalize button going missing. Work Sample Buddy was checking a student's work against every school year at once instead of just the current one, so an unfinished course left over from last year could block packaging forever — the student showed \"0 samples due\" with no way to finalize them.",
+        "Fixed the \"model not installed\" warning still appearing while analysing a document, naming a model that was never chosen."
       ]
     },
     {
