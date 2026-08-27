@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "4.2.24",
+      "date": "2026-08-26",
+      "features": [
+        "Students and courses you add yourself are now kept separate from the ones Pathways sends, and a sync no longer removes them. They appear in the completion matrix with their requirements already created, and importing or exporting a course list remembers which records are yours.",
+        "TK-8 core subjects can now require either one combined work sample or a separate sample for each core course. Set it for the whole school under Settings > Grading & Output, per learning period and optionally for a single school year, or right-click one student in the matrix to set it just for them.",
+        "Source folders can now be marked Annual or Permanent. Annual folders switch off when the school year changes, and you can add one stable parent folder holding year folders such as 25-26 SY so only the current year is scanned.",
+        "First-run setup now walks you through connecting the PCA Chrome extension, tells you what to do if Chrome or the extension is missing, and offers to bring in your student roster."
+      ],
+      "bugs": [
+        "The roster import preview is accurate again: it no longer warns that students will be removed when they will be kept, shows student ID numbers when two students share a name, lets you protect a student without leaving the preview, and adds course totals up correctly. This also covers imports made through the Pathways browser extension.",
+        "Prior-year folders under a stable source parent are no longer picked up by automatic imports.",
+        "Drawing or erasing on a large page in the PDF ink editor no longer slows the app down or uses up memory, and the blue selection box is now labelled so it is clear where you can draw.",
+        "Update checks no longer fail silently. If they have been failing for several days, Settings > Status now tells you.",
+        "The folder row and its duration menu are no longer clipped in Settings, and the table now follows both light and dark themes.",
+        "A missing workspace at startup now offers a Quit option instead of forcing you to continue."
+      ]
+    },
+    {
       "version": "4.2.24-beta.10",
       "date": "2026-08-26",
       "features": [],
