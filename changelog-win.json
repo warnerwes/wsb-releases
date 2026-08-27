@@ -1,6 +1,20 @@
 {
   "versions": [
     {
+      "version": "4.2.25",
+      "date": "2026-08-27",
+      "features": [
+        "You can now require a work sample from one specific TK-8 core course. Right-click a course showing \"Satisfied\" and choose \"Require its own sample\" — it goes back to needing its own sample while the other core courses stay as they are. Right-click it again to undo. Previously right-clicking a satisfied course did nothing at all.",
+        "On Mac, text recognition now uses Apple's built-in Vision engine first, which is faster and needs no download. PaddleOCR still runs behind it for anything Vision cannot read."
+      ],
+      "bugs": [
+        "Fixed the Finalize button disappearing at the start of a new school year. Students who had finished everything showed \"0 samples due\" with no way to package them, and Finalize All found nobody. Work Sample Buddy was measuring this year's courses against last year's learning period dates.",
+        "Fixed packages being built from the wrong school year's date range, which could produce an empty package or a file named with last year's month.",
+        "Fixed a crash that could close the app without warning while you were working. The automatic update check ran in the background and could collide with whatever you were doing.",
+        "Fixed text recognition being completely unavailable on Mac. Two required components were left out of the Mac build, and Mac had no other engine to fall back on."
+      ]
+    },
+    {
       "version": "4.2.24",
       "date": "2026-08-26",
       "features": [
@@ -1609,5 +1623,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-26T16:37:11.935417"
+  "last_updated": "2026-08-27"
 }
