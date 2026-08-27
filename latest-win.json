@@ -14,15 +14,15 @@
       "notes": "Fixes:\n\u2022 Fixed Settings incorrectly reporting the PCA Chrome extension as missing when it was installed in developer mode."
     },
     "stable": {
-      "version": "4.2.24",
-      "tag": "v4.2.24",
+      "version": "4.2.25",
+      "tag": "v4.2.25",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.24.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.24/WorkSampleBuddy_win_v4.2.24.exe",
-        "size": 306372392,
-        "sha256": "cf64f4c3523aa6b63551d51ce8fa7c899a0da8c24496dd45bddf0152abb1e3cf"
+        "name": "WorkSampleBuddy_win_v4.2.25.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.25/WorkSampleBuddy_win_v4.2.25.exe",
+        "size": 306392496,
+        "sha256": "de6346827f613a3871e1764409e8712e4ecf2130f954e82391d252bfcd1248c7"
       },
-      "notes": "New in this version:\n\u2022 Students and courses you add yourself are now kept separate from the ones Pathways sends, and a sync no longer removes them. They appear in the completion matrix with their requirements already created, and importing or exporting a course list remembers which records are yours.\n\u2022 TK-8 core subjects can now require either one combined work sample or a separate sample for each core course. Set it for the whole school under Settings > Grading & Output, per learning period and optionally for a single school year, or right-click one student in the matrix to set it just for them.\n\u2022 Source folders can now be marked Annual or Permanent. Annual folders switch off when the school year changes, and you can add one stable parent folder holding year folders such as 25-26 SY so only the current year is scanned.\n\u2022 First-run setup now walks you through connecting the PCA Chrome extension, tells you what to do if Chrome or the extension is missing, and offers to bring in your student roster.\n\nFixes:\n\u2022 The roster import preview is accurate again: it no longer warns that students will be removed when they will be kept, shows student ID numbers when two students share a name, lets you protect a student without leaving the preview, and adds course totals up correctly. This also covers imports made through the Pathways browser extension.\n\u2022 Prior-year folders under a stable source parent are no longer picked up by automatic imports.\n\u2022 Drawing or erasing on a large page in the PDF ink editor no longer slows the app down or uses up memory, and the blue selection box is now labelled so it is clear where you can draw.\n\u2022 Update checks no longer fail silently. If they have been failing for several days, Settings > Status now tells you.\n\u2022 The folder row and its duration menu are no longer clipped in Settings, and the table now follows both light and dark themes.\n\u2022 A missing workspace at startup now offers a Quit option instead of forcing you to continue."
+      "notes": "New in this version:\n\u2022 You can now require a work sample from one specific TK-8 core course. Right-click a course showing \"Satisfied\" and choose \"Require its own sample\" \u2014 it goes back to needing its own sample while the other core courses stay as they are. Right-click it again to undo. Previously right-clicking a satisfied course did nothing at all.\n\u2022 On Mac, text recognition now uses Apple's built-in Vision engine first, which is faster and needs no download. PaddleOCR still runs behind it for anything Vision cannot read.\n\nFixes:\n\u2022 Fixed the Finalize button disappearing at the start of a new school year. Students who had finished everything showed \"0 samples due\" with no way to package them, and Finalize All found nobody. Work Sample Buddy was measuring this year's courses against last year's learning period dates.\n\u2022 Fixed packages being built from the wrong school year's date range, which could produce an empty package or a file named with last year's month.\n\u2022 Fixed a crash that could close the app without warning while you were working. The automatic update check ran in the background and could collide with whatever you were doing.\n\u2022 Fixed text recognition being completely unavailable on Mac. Two required components were left out of the Mac build, and Mac had no other engine to fall back on."
     }
   }
 }
