@@ -14,15 +14,15 @@
       "notes": "Fixes:\n\u2022 Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged."
     },
     "stable": {
-      "version": "4.2.25",
-      "tag": "v4.2.25",
+      "version": "4.2.26",
+      "tag": "v4.2.26",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.25.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.25/WorkSampleBuddy_win_v4.2.25.exe",
-        "size": 306392496,
-        "sha256": "de6346827f613a3871e1764409e8712e4ecf2130f954e82391d252bfcd1248c7"
+        "name": "WorkSampleBuddy_win_v4.2.26.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26/WorkSampleBuddy_win_v4.2.26.exe",
+        "size": 306564552,
+        "sha256": "432fe686c129375d14f57f410850012c5180aef4158c660e63855b6396c59aca"
       },
-      "notes": "New in this version:\n\u2022 You can now require a work sample from one specific TK-8 core course. Right-click a course showing \"Satisfied\" and choose \"Require its own sample\" \u2014 it goes back to needing its own sample while the other core courses stay as they are. Right-click it again to undo. Previously right-clicking a satisfied course did nothing at all.\n\u2022 On Mac, text recognition now uses Apple's built-in Vision engine first, which is faster and needs no download. PaddleOCR still runs behind it for anything Vision cannot read.\n\nFixes:\n\u2022 Fixed the Finalize button disappearing at the start of a new school year. Students who had finished everything showed \"0 samples due\" with no way to package them, and Finalize All found nobody. Work Sample Buddy was measuring this year's courses against last year's learning period dates.\n\u2022 Fixed packages being built from the wrong school year's date range, which could produce an empty package or a file named with last year's month.\n\u2022 Fixed a crash that could close the app without warning while you were working. The automatic update check ran in the background and could collide with whatever you were doing.\n\u2022 Fixed text recognition being completely unavailable on Mac. Two required components were left out of the Mac build, and Mac had no other engine to fall back on."
+      "notes": "New in this version:\n\u2022 Settings now has two buttons that check the AI really works instead of just reporting that it is installed. \"Test on sample pages\" runs handwriting recognition on two real scanned work samples and tells you how much of the handwriting it read. \"Test AI models\" asks each model role a question with a known answer and reports each role as working, responding with a wrong answer, or not working.\n\nFixes:\n\u2022 Fixed another case of the Finalize button going missing. Work Sample Buddy was checking a student's work against every school year at once instead of just the current one, so an unfinished course left over from last year could block packaging forever \u2014 the student showed \"0 samples due\" with no way to finalize them.\n\u2022 Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged.\n\u2022 When a step needed an AI model that is not installed, the message named a model you never chose and offered no way forward. It now offers to switch to models already on your computer, or to open Settings.\n\u2022 Fixed the \"model not installed\" warning still appearing while analysing a document, naming a model that was never chosen.\n\u2022 Fixed Work Sample Buddy reporting \"qwen3.5:4b not installed\" when no grading model had been chosen. With no model set it now uses one you actually have installed.\n\u2022 Restore Defaults no longer leaves a model role pointing at a model that is not installed."
     }
   }
 }
