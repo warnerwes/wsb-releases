@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.26-beta.3",
+      "date": "2026-08-27",
+      "features": [],
+      "bugs": [
+        "Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged."
+      ]
+    },
+    {
       "version": "4.2.26-beta.2",
       "date": "2026-08-27",
       "features": [],
@@ -1649,5 +1657,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-27T15:52:25.956617"
+  "last_updated": "2026-08-27T16:34:07.798983"
 }
