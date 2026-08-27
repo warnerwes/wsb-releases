@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.26-beta.1",
-      "tag": "v4.2.26-beta.1",
+      "version": "4.2.26-beta.2",
+      "tag": "v4.2.26-beta.2",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.26-beta.1.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26-beta.1/WorkSampleBuddy_win_v4.2.26-beta.1.exe",
-        "size": 306587016,
-        "sha256": "a83603086533dd57430813f33cf3a7c980b5d8ec595462c2ed27669d33d0684a"
+        "name": "WorkSampleBuddy_win_v4.2.26-beta.2.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26-beta.2/WorkSampleBuddy_win_v4.2.26-beta.2.exe",
+        "size": 306624904,
+        "sha256": "2fcbacc7f5028d6e5e35fa828b7489bf8f76a5d4abdb46089e8705f4df32b048"
       },
-      "notes": "New in this version:\n\u2022 Settings now has two buttons that check the AI really works instead of just reporting that it is installed. \"Test on sample pages\" runs handwriting recognition on two real scanned work samples and tells you how much of the handwriting it read. \"Test AI models\" asks each model role a question with a known answer and reports each role as working, responding with a wrong answer, or not working.\n\nFixes:\n\u2022 When a step needed an AI model that is not installed, the message named a model you never chose and offered no way forward. It now offers to switch to models already on your computer, or to open Settings.\n\u2022 Fixed Work Sample Buddy reporting \"qwen3.5:4b not installed\" when no grading model had been chosen. With no model set it now uses one you actually have installed.\n\u2022 Restore Defaults no longer leaves a model role pointing at a model that is not installed."
+      "notes": "Fixes:\n\u2022 Fixed another case of the Finalize button going missing. Work Sample Buddy was checking a student's work against every school year at once instead of just the current one, so an unfinished course left over from last year could block packaging forever \u2014 the student showed \"0 samples due\" with no way to finalize them."
     },
     "stable": {
       "version": "4.2.25",
