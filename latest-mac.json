@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.26-beta.2",
-      "tag": "v4.2.26-beta.2",
+      "version": "4.2.26-beta.3",
+      "tag": "v4.2.26-beta.3",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.26-beta.2.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26-beta.2/WorkSampleBuddy_mac_v4.2.26-beta.2.dmg",
-        "size": 344083428,
-        "sha256": "fcec2e9c13c2b70301eafdbed377d17b8004fad5454cdf7277bdf4242a3a17f0"
+        "name": "WorkSampleBuddy_mac_v4.2.26-beta.3.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26-beta.3/WorkSampleBuddy_mac_v4.2.26-beta.3.dmg",
+        "size": 344085136,
+        "sha256": "cd14e8b4e7e138257ad6341ca8ae5f6141c1636bda31b9f4299ecb6ff973f73d"
       },
-      "notes": "Fixes:\n\u2022 Fixed another case of the Finalize button going missing. Work Sample Buddy was checking a student's work against every school year at once instead of just the current one, so an unfinished course left over from last year could block packaging forever \u2014 the student showed \"0 samples due\" with no way to finalize them.\n\u2022 Fixed text recognition failing on Mac when scanning a marked region of a page. That path used a different engine from the rest of the app and had no Mac engine at all, so it always came back empty.\n\u2022 Fixed the \"model not installed\" warning still appearing while analysing a document, naming a model that was never chosen."
+      "notes": "Fixes:\n\u2022 Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged."
     },
     "stable": {
       "version": "4.2.24",
