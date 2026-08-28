@@ -14,15 +14,15 @@
       "notes": "Fixes:\n\u2022 Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged."
     },
     "stable": {
-      "version": "4.2.26",
-      "tag": "v4.2.26",
+      "version": "4.2.27",
+      "tag": "v4.2.27",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.26.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26/WorkSampleBuddy_win_v4.2.26.exe",
-        "size": 306564552,
-        "sha256": "432fe686c129375d14f57f410850012c5180aef4158c660e63855b6396c59aca"
+        "name": "WorkSampleBuddy_win_v4.2.27.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.27/WorkSampleBuddy_win_v4.2.27.exe",
+        "size": 306583744,
+        "sha256": "1ddeec9b4997215bff1378d0acad6f63ae59b5dc769e5ce799df4c4fbbeffd43"
       },
-      "notes": "New in this version:\n\u2022 Settings now has two buttons that check the AI really works instead of just reporting that it is installed. \"Test on sample pages\" runs handwriting recognition on two real scanned work samples and tells you how much of the handwriting it read. \"Test AI models\" asks each model role a question with a known answer and reports each role as working, responding with a wrong answer, or not working.\n\nFixes:\n\u2022 Fixed another case of the Finalize button going missing. Work Sample Buddy was checking a student's work against every school year at once instead of just the current one, so an unfinished course left over from last year could block packaging forever \u2014 the student showed \"0 samples due\" with no way to finalize them.\n\u2022 Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged.\n\u2022 When a step needed an AI model that is not installed, the message named a model you never chose and offered no way forward. It now offers to switch to models already on your computer, or to open Settings.\n\u2022 Fixed the \"model not installed\" warning still appearing while analysing a document, naming a model that was never chosen.\n\u2022 Fixed Work Sample Buddy reporting \"qwen3.5:4b not installed\" when no grading model had been chosen. With no model set it now uses one you actually have installed.\n\u2022 Restore Defaults no longer leaves a model role pointing at a model that is not installed."
+      "notes": "Fixes:\n\u2022 Fixed the sample verification window reporting \"All fields verified\" when the date box was still empty. An automatically read date was stamped on the sample and counted as checked without ever being shown, so it could be saved without anyone seeing it."
     }
   }
 }
