@@ -1,6 +1,30 @@
 {
   "versions": [
     {
+      "version": "4.2.27",
+      "date": "2026-08-27",
+      "features": [],
+      "bugs": [
+        "Fixed the sample verification window reporting \"All fields verified\" when the date box was still empty. An automatically read date was stamped on the sample and counted as checked without ever being shown, so it could be saved without anyone seeing it."
+      ]
+    },
+    {
+      "version": "4.2.26",
+      "date": "2026-08-27",
+      "features": [
+        "Settings now has two buttons that check the AI really works instead of just reporting that it is installed. \"Test on sample pages\" runs handwriting recognition on two real scanned work samples and tells you how much of the handwriting it read. \"Test AI models\" asks each model role a question with a known answer and reports each role as working, responding with a wrong answer, or not working."
+      ],
+      "bugs": [
+        "Fixed another case of the Finalize button going missing. Work Sample Buddy was checking a student's work against every school year at once instead of just the current one, so an unfinished course left over from last year could block packaging forever — the student showed \"0 samples due\" with no way to finalize them.",
+        "Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged.",
+        "When a step needed an AI model that is not installed, the message named a model you never chose and offered no way forward. It now offers to switch to models already on your computer, or to open Settings.",
+        "Fixed the \"model not installed\" warning still appearing while analysing a document, naming a model that was never chosen.",
+        "Fixed Work Sample Buddy reporting \"qwen3.5:4b not installed\" when no grading model had been chosen. With no model set it now uses one you actually have installed.",
+        "Restore Defaults no longer leaves a model role pointing at a model that is not installed.",
+        "Fixed text recognition failing on Mac when scanning a marked region of a page. That path used a different engine from the rest of the app and had no Mac engine at all, so it always came back empty."
+      ]
+    },
+    {
       "version": "4.2.26-beta.3",
       "date": "2026-08-27",
       "features": [],
@@ -1657,5 +1681,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-27T16:34:07.798983"
+  "last_updated": "2026-08-27T18:52:57.208619"
 }
