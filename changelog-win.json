@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.27",
+      "date": "2026-08-27",
+      "features": [],
+      "bugs": [
+        "Fixed the sample verification window reporting \"All fields verified\" when the date box was still empty. An automatically read date was stamped on the sample and counted as checked without ever being shown, so it could be saved without anyone seeing it."
+      ]
+    },
+    {
       "version": "4.2.26",
       "date": "2026-08-27",
       "features": [
@@ -1667,5 +1675,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-27"
+  "last_updated": "2026-08-27T18:28:48.620101"
 }
