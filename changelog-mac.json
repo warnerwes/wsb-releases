@@ -1,6 +1,20 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.1",
+      "date": "2026-09-03",
+      "features": [
+        "Work Sample Buddy can now connect a Google Drive source in one step, match samples by district ID, stamp assignment details during import, and let you choose or revisit which artifact fills a work-sample slot.",
+        "Samples can now be re-filed under a different class, and workspaces from a previous school year display a warning before you continue."
+      ],
+      "bugs": [
+        "Fixed parked or unmatched sample candidates being counted incorrectly, becoming unreachable, or being dropped instead of offered for review.",
+        "Fixed Drive refresh crashes and cases where choosing Keep Selected, Review Alternatives, or moving a sample did nothing or lost the selected artifact.",
+        "Fixed Schoology full sync retrying indefinitely and reduced database work that could freeze the main window during sync or matrix refresh.",
+        "Fixed course and requirement database cleanup failing because of a legacy uniqueness rule."
+      ]
+    },
+    {
       "version": "4.2.27",
       "date": "2026-08-27",
       "features": [],
