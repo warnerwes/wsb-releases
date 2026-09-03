@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.26-beta.3",
-      "tag": "v4.2.26-beta.3",
+      "version": "4.2.28-beta.1",
+      "tag": "v4.2.28-beta.1",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.26-beta.3.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26-beta.3/WorkSampleBuddy_mac_v4.2.26-beta.3.dmg",
-        "size": 344085136,
-        "sha256": "cd14e8b4e7e138257ad6341ca8ae5f6141c1636bda31b9f4299ecb6ff973f73d"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.1.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.1/WorkSampleBuddy_mac_v4.2.28-beta.1.dmg",
+        "size": 344215559,
+        "sha256": "526ea326383c2f854cb8a5f5c030f09eb9624e3267b0dff428e52f31190684bb"
       },
-      "notes": "Fixes:\n\u2022 Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged."
+      "notes": "New in this version:\n\u2022 Work Sample Buddy can now connect a Google Drive source in one step, match samples by district ID, stamp assignment details during import, and let you choose or revisit which artifact fills a work-sample slot.\n\u2022 Samples can now be re-filed under a different class, and workspaces from a previous school year display a warning before you continue.\n\nFixes:\n\u2022 Fixed parked or unmatched sample candidates being counted incorrectly, becoming unreachable, or being dropped instead of offered for review.\n\u2022 Fixed Drive refresh crashes and cases where choosing Keep Selected, Review Alternatives, or moving a sample did nothing or lost the selected artifact.\n\u2022 Fixed Schoology full sync retrying indefinitely and reduced database work that could freeze the main window during sync or matrix refresh.\n\u2022 Fixed course and requirement database cleanup failing because of a legacy uniqueness rule."
     },
     "stable": {
       "version": "4.2.27",
