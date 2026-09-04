@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.26-beta.3",
-      "tag": "v4.2.26-beta.3",
+      "version": "4.2.28-beta.2",
+      "tag": "v4.2.28-beta.2",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.26-beta.3.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.26-beta.3/WorkSampleBuddy_win_v4.2.26-beta.3.exe",
-        "size": 306585472,
-        "sha256": "aa49e1cb6c9b6ce67a4988bcbd11b2b7d49bcd7ab706d51349228fe21ea871b4"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.2.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.2/WorkSampleBuddy_win_v4.2.28-beta.2.exe",
+        "size": 315549648,
+        "sha256": "dc7c019ab7116cb86aa4ee64e5d6bd8b9cb8463fa1761fe6f56d953801ac9c9e"
       },
-      "notes": "Fixes:\n\u2022 Fixed being unable to remove a student, delete a course, or rebuild a learning period after using \"Require its own sample\" on one of their courses. The action failed and left everything unchanged."
+      "notes": "New in this version:\n\u2022 Work Sample Buddy can now connect a Google Drive source in one step, match samples by district ID, stamp assignment details during import, and let you choose or revisit which artifact fills a work-sample slot.\n\u2022 Samples can now be re-filed under a different class, and workspaces from a previous school year display a warning before you continue.\n\nFixes:\n\u2022 Fixed PCA roster sync failing with a database uniqueness error when requirements from another school year already existed.\n\u2022 When folder and school-year setup opens an empty matrix, Work Sample Buddy now offers to request a roster sync from the PCA Chrome Extension.\n\u2022 Fixed parked or unmatched sample candidates being counted incorrectly, becoming unreachable, or being dropped instead of offered for review.\n\u2022 Fixed Drive refresh crashes and cases where choosing Keep Selected, Review Alternatives, or moving a sample did nothing or lost the selected artifact.\n\u2022 Fixed Schoology full sync retrying indefinitely and reduced database work that could freeze the main window during sync or matrix refresh."
     },
     "stable": {
       "version": "4.2.27",
