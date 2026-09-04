@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.3",
+      "date": "2026-09-04",
+      "features": [],
+      "bugs": [
+        "Fixed cached work samples failing to render in the simple preview workflow."
+      ]
+    },
+    {
+      "version": "4.2.28-beta.2",
+      "date": "2026-09-03",
+      "features": [],
+      "bugs": [
+        "Fixed PCA roster sync failing with a database uniqueness error when requirements from another school year already existed.",
+        "When folder and school-year setup opens an empty matrix, Work Sample Buddy now offers to request a roster sync from the PCA Chrome Extension."
+      ]
+    },
+    {
       "version": "4.2.28-beta.1",
       "date": "2026-09-03",
       "features": [
@@ -1695,5 +1712,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-27T18:52:57.208619"
+  "last_updated": "2026-09-03T17:18:14.291166-07:00"
 }
