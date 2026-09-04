@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.3",
+      "date": "2026-09-04",
+      "features": [
+        "Course cards can now open Schoology alerts directly, and preferred student names carry through roster sync and appear in Schoology work-sample headers.",
+        "PDF compression now offers safer built-in choices, Settings controls are easier to find, and update prompts let you skip one specific version without hiding newer updates."
+      ],
+      "bugs": [
+        "Fixed Schoology connection and re-download errors that could close the app instead of returning to a usable state.",
+        "Dates outside the active learning period are now rejected while grading instead of being saved to the wrong period.",
+        "Fixed videos and other samples with cached analysis opening to an empty verification window. Their pages now appear immediately in both Simple and Advanced modes without requiring Restart."
+      ]
+    },
+    {
       "version": "4.2.28-beta.2",
       "date": "2026-09-03",
       "features": [
@@ -1690,5 +1703,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-03T17:18:14.291166-07:00"
+  "last_updated": "2026-09-04T14:03:42-07:00"
 }
