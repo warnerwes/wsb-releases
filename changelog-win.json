@@ -1,6 +1,21 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.2",
+      "date": "2026-09-03",
+      "features": [
+        "Work Sample Buddy can now connect a Google Drive source in one step, match samples by district ID, stamp assignment details during import, and let you choose or revisit which artifact fills a work-sample slot.",
+        "Samples can now be re-filed under a different class, and workspaces from a previous school year display a warning before you continue."
+      ],
+      "bugs": [
+        "Fixed PCA roster sync failing with a database uniqueness error when requirements from another school year already existed.",
+        "When folder and school-year setup opens an empty matrix, Work Sample Buddy now offers to request a roster sync from the PCA Chrome Extension.",
+        "Fixed parked or unmatched sample candidates being counted incorrectly, becoming unreachable, or being dropped instead of offered for review.",
+        "Fixed Drive refresh crashes and cases where choosing Keep Selected, Review Alternatives, or moving a sample did nothing or lost the selected artifact.",
+        "Fixed Schoology full sync retrying indefinitely and reduced database work that could freeze the main window during sync or matrix refresh."
+      ]
+    },
+    {
       "version": "4.2.27",
       "date": "2026-08-27",
       "features": [],
@@ -1675,5 +1690,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-27T18:28:48.620101"
+  "last_updated": "2026-09-03T17:18:14.291166-07:00"
 }
