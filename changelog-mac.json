@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.8",
+      "date": "2026-09-05",
+      "features": [],
+      "bugs": [
+        "Removed the misplaced Sync Pathways button from the student matrix. Roster syncing remains available in the Connections menu."
+      ]
+    },
+    {
       "version": "4.2.28-beta.7",
       "date": "2026-09-05",
       "features": [
