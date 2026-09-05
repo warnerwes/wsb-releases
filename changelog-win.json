@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.6",
+      "date": "2026-09-05",
+      "features": [
+        "Course tile animations share a timer across repeated interactions, skip hidden tiles, and make fewer repaint requests.",
+        "Activate task and Hide task now share a hover button inside the Task editor, leaving more room for text."
+      ],
+      "bugs": [
+        "Fixed animation timers continuing after their last tile was removed.",
+        "Fixed animated course tiles showing outdated text or colors after their contents changed."
+      ]
+    },
+    {
       "version": "4.2.28-beta.5",
       "date": "2026-09-05",
       "features": [
