@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.4",
-      "tag": "v4.2.28-beta.4",
+      "version": "4.2.28-beta.7",
+      "tag": "v4.2.28-beta.7",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.4.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.4/WorkSampleBuddy_mac_v4.2.28-beta.4.dmg",
-        "size": 344327478,
-        "sha256": "2ea3579b4bc3388222c577e1a8c211385c586dd25309e7fba91193eb6e92cfef"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.7.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.7/WorkSampleBuddy_mac_v4.2.28-beta.7.dmg",
+        "size": 344349930,
+        "sha256": "cade515379b7bdf81538eba44693800e081ba195ac62d9cdaa19ec10985677bc"
       },
-      "notes": "New in this version:\n\u2022 Review, Verify Sample, and Schoology grading now share a compact document toolbar with a File menu, Undo, Patch, page editing, and a zoom menu with Fit page and Fit width.\n\u2022 Schoology grading keeps essential controls within reach on smaller screens, with feedback and task editing in a shared space and menus for editor actions.\n\u2022 Learning-period to-dos are grouped by workflow stage, making the next step easier to find.\n\u2022 Roster sync lets you review incoming changes and skips stale sync packets. Explicit Schoology course mappings and preferred-name choices from the PCA extension carry into Buddy.\n\u2022 Already-saved samples can be verified without rewriting their PDF or existing tags.\n\nFixes:\n\u2022 Rotating pages keeps the selected pages selected, so repeated Rotate clicks continue changing the same pages.\n\u2022 Edit pages is available in Simple-mode verification and for single-page Review documents.\n\u2022 Schoology now correctly identifies the current LP sample instead of offering to replace it with itself. Filing the same submission again leaves it unchanged, and Remove targets only that submission's sample in the selected course and LP.\n\u2022 Improved Schoology link uploads, task stamping, and tooltip rendering."
+      "notes": "New in this version:\n\u2022 Grading edits now show local save progress and failures separately from posting to Schoology. Task text stays editable while hidden, with a Show task on sample checkbox and a dedicated thread drawer.\n\u2022 The course heading has a subtle clickable cue. Show task and Show link use matching compact controls, and Post teacher feedback to thread fades into emphasis on hover.\n\u2022 Settings have searchable navigation, clearer Simple and Advanced mode guidance, and simpler connection, PDF, appearance, and celebration controls.\n\u2022 Welcome setup shows connection progress and a scrollable checklist. Manual courses suggest school-year or semester dates from the selected calendar.\n\u2022 Learning-period selection and to-do controls are easier to navigate. Sync review separates actual changes, protected students, and diagnostic details.\n\u2022 Google Drive sources can last for the current school year or remain permanent. Beta testing offers explicit enrollment and a return-to-stable option.\n\nFixes:\n\u2022 PDF page rendering runs in the background and reuses cached pages, with guards against showing an older submission after switching.\n\u2022 Acknowledging an unchanged sync no longer runs an import. Background syncs and manually requested syncs use the appropriate status or review flow.\n\u2022 Student updates and course tile animations do less unnecessary work, helping the app stay responsive."
     },
     "stable": {
       "version": "4.2.27",
