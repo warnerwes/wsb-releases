@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.7",
-      "tag": "v4.2.28-beta.7",
+      "version": "4.2.28-beta.8",
+      "tag": "v4.2.28-beta.8",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.7.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.7/WorkSampleBuddy_mac_v4.2.28-beta.7.dmg",
-        "size": 344349930,
-        "sha256": "cade515379b7bdf81538eba44693800e081ba195ac62d9cdaa19ec10985677bc"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.8.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.8/WorkSampleBuddy_mac_v4.2.28-beta.8.dmg",
+        "size": 344352596,
+        "sha256": "5e06df2a6471d67a2a76d4a13c15fe57ad434cd62dd61cd1d4458e68f151375e"
       },
-      "notes": "New in this version:\n\u2022 Grading edits now show local save progress and failures separately from posting to Schoology. Task text stays editable while hidden, with a Show task on sample checkbox and a dedicated thread drawer.\n\u2022 The course heading has a subtle clickable cue. Show task and Show link use matching compact controls, and Post teacher feedback to thread fades into emphasis on hover.\n\u2022 Settings have searchable navigation, clearer Simple and Advanced mode guidance, and simpler connection, PDF, appearance, and celebration controls.\n\u2022 Welcome setup shows connection progress and a scrollable checklist. Manual courses suggest school-year or semester dates from the selected calendar.\n\u2022 Learning-period selection and to-do controls are easier to navigate. Sync review separates actual changes, protected students, and diagnostic details.\n\u2022 Google Drive sources can last for the current school year or remain permanent. Beta testing offers explicit enrollment and a return-to-stable option.\n\nFixes:\n\u2022 PDF page rendering runs in the background and reuses cached pages, with guards against showing an older submission after switching.\n\u2022 Acknowledging an unchanged sync no longer runs an import. Background syncs and manually requested syncs use the appropriate status or review flow.\n\u2022 Student updates and course tile animations do less unnecessary work, helping the app stay responsive."
+      "notes": "Fixes:\n\u2022 Removed the misplaced Sync Pathways button from the student matrix. Roster syncing remains available in the Connections menu."
     },
     "stable": {
       "version": "4.2.27",
