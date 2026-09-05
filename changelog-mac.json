@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.7",
+      "date": "2026-09-05",
+      "features": [
+        "Grading edits now show local save progress and failures separately from posting to Schoology. Task text stays editable while hidden, with a Show task on sample checkbox and a dedicated thread drawer.",
+        "The course heading has a subtle clickable cue. Show task and Show link use matching compact controls, and Post teacher feedback to thread fades into emphasis on hover.",
+        "Settings have searchable navigation, clearer Simple and Advanced mode guidance, and simpler connection, PDF, appearance, and celebration controls.",
+        "Welcome setup shows connection progress and a scrollable checklist. Manual courses suggest school-year or semester dates from the selected calendar.",
+        "Learning-period selection and to-do controls are easier to navigate. Sync review separates actual changes, protected students, and diagnostic details.",
+        "Google Drive sources can last for the current school year or remain permanent. Beta testing offers explicit enrollment and a return-to-stable option."
+      ],
+      "bugs": [
+        "PDF page rendering runs in the background and reuses cached pages, with guards against showing an older submission after switching.",
+        "Acknowledging an unchanged sync no longer runs an import. Background syncs and manually requested syncs use the appropriate status or review flow.",
+        "Student updates and course tile animations do less unnecessary work, helping the app stay responsive."
+      ]
+    },
+    {
       "version": "4.2.28-beta.4",
       "date": "2026-09-05",
       "features": [
