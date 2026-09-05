@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.5",
-      "tag": "v4.2.28-beta.5",
+      "version": "4.2.28-beta.6",
+      "tag": "v4.2.28-beta.6",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.5.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.5/WorkSampleBuddy_win_v4.2.28-beta.5.exe",
-        "size": 306386656,
-        "sha256": "52a9195f4191dc37f5eba547cb310c30004e6b91386ba7f7a618a9ef6a70004a"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.6.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.6/WorkSampleBuddy_win_v4.2.28-beta.6.exe",
+        "size": 306367568,
+        "sha256": "814a03dd7a91e28e6903f0fc5880dbfd5d30335b5b81cc1d98f909dfbd64e671"
       },
-      "notes": "New in this version:\n\u2022 Task text can be previewed without adding it to the work sample. Activate task adds it explicitly; Hide task removes it while keeping the text for later.\n\u2022 Feedback and Task text boxes expand when the grading window has room.\n\nFixes:\n\u2022 Fixed Windows beta updates failing to start with a QtCore DLL error. The installer now removes an obsolete ICU DLL left behind by earlier builds.\n\u2022 Mini mode and the system tray now match the app's To-do count, including category preferences, and update together."
+      "notes": "New in this version:\n\u2022 Course tile animations share a timer across repeated interactions, skip hidden tiles, and make fewer repaint requests.\n\u2022 Activate task and Hide task now share a hover button inside the Task editor, leaving more room for text.\n\nFixes:\n\u2022 Fixed animation timers continuing after their last tile was removed.\n\u2022 Fixed animated course tiles showing outdated text or colors after their contents changed."
     },
     "stable": {
       "version": "4.2.27",
