@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.4",
+      "date": "2026-09-05",
+      "features": [
+        "Review, Verify Sample, and Schoology grading now share a compact document toolbar with a File menu, Undo, Patch, page editing, and a zoom menu with Fit page and Fit width.",
+        "Schoology grading keeps essential controls within reach on smaller screens, with feedback and task editing in a shared space and menus for editor actions.",
+        "Learning-period to-dos are grouped by workflow stage, making the next step easier to find.",
+        "Roster sync lets you review incoming changes and skips stale sync packets. Explicit Schoology course mappings and preferred-name choices from the PCA extension carry into Buddy.",
+        "Already-saved samples can be verified without rewriting their PDF or existing tags."
+      ],
+      "bugs": [
+        "Rotating pages keeps the selected pages selected, so repeated Rotate clicks continue changing the same pages.",
+        "Edit pages is available in Simple-mode verification and for single-page Review documents.",
+        "Schoology now correctly identifies the current LP sample instead of offering to replace it with itself. Filing the same submission again leaves it unchanged, and Remove targets only that submission's sample in the selected course and LP.",
+        "Improved Schoology link uploads, task stamping, and tooltip rendering."
+      ]
+    },
+    {
       "version": "4.2.28-beta.3",
       "date": "2026-09-04",
       "features": [],
