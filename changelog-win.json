@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.5",
+      "date": "2026-09-05",
+      "features": [
+        "Task text can be previewed without adding it to the work sample. Activate task adds it explicitly; Hide task removes it while keeping the text for later.",
+        "Feedback and Task text boxes expand when the grading window has room."
+      ],
+      "bugs": [
+        "Fixed Windows beta updates failing to start with a QtCore DLL error. The installer now removes an obsolete ICU DLL left behind by earlier builds.",
+        "Mini mode and the system tray now match the app's To-do count, including category preferences, and update together."
+      ]
+    },
+    {
       "version": "4.2.28-beta.4",
       "date": "2026-09-05",
       "features": [
