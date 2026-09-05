@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.3",
-      "tag": "v4.2.28-beta.3",
+      "version": "4.2.28-beta.4",
+      "tag": "v4.2.28-beta.4",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.3.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.3/WorkSampleBuddy_win_v4.2.28-beta.3.exe",
-        "size": 315593248,
-        "sha256": "b3dc63af55510120803e74f02f6f42a52f23bfd7c21c2b387d2272497d0fdaff"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.4.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.4/WorkSampleBuddy_win_v4.2.28-beta.4.exe",
+        "size": 306365200,
+        "sha256": "0e39243c27557f347a47c41213fc9fb3b19e01472316de9b1109501649c6e871"
       },
-      "notes": "New in this version:\n\u2022 Course cards can now open Schoology alerts directly, and preferred student names carry through roster sync and appear in Schoology work-sample headers.\n\u2022 PDF compression now offers safer built-in choices, Settings controls are easier to find, and update prompts let you skip one specific version without hiding newer updates.\n\nFixes:\n\u2022 Fixed Schoology connection and re-download errors that could close the app instead of returning to a usable state.\n\u2022 Dates outside the active learning period are now rejected while grading instead of being saved to the wrong period.\n\u2022 Fixed videos and other samples with cached analysis opening to an empty verification window. Their pages now appear immediately in both Simple and Advanced modes without requiring Restart."
+      "notes": "New in this version:\n\u2022 Review, Verify Sample, and Schoology grading now share a compact document toolbar with a File menu, Undo, Patch, page editing, and a zoom menu with Fit page and Fit width.\n\u2022 Schoology grading keeps essential controls within reach on smaller screens, with feedback and task editing in a shared space and menus for editor actions.\n\u2022 Learning-period to-dos are grouped by workflow stage, making the next step easier to find.\n\u2022 Roster sync lets you review incoming changes and skips stale sync packets. Explicit Schoology course mappings and preferred-name choices from the PCA extension carry into Buddy.\n\u2022 Already-saved samples can be verified without rewriting their PDF or existing tags.\n\nFixes:\n\u2022 Rotating pages keeps the selected pages selected, so repeated Rotate clicks continue changing the same pages.\n\u2022 Edit pages is available in Simple-mode verification and for single-page Review documents.\n\u2022 Schoology now correctly identifies the current LP sample instead of offering to replace it with itself. Filing the same submission again leaves it unchanged, and Remove targets only that submission\u2019s sample in the selected course and LP.\n\u2022 Improved Schoology link uploads, task stamping, and tooltip rendering."
     },
     "stable": {
       "version": "4.2.27",
