@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.3",
-      "tag": "v4.2.28-beta.3",
+      "version": "4.2.28-beta.4",
+      "tag": "v4.2.28-beta.4",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.3.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.3/WorkSampleBuddy_mac_v4.2.28-beta.3.dmg",
-        "size": 344193623,
-        "sha256": "b95863863ac81e9e4e84f3f9ad2d357c7e9d363036d31be7bbb7b41abfa8796c"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.4.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.4/WorkSampleBuddy_mac_v4.2.28-beta.4.dmg",
+        "size": 344327478,
+        "sha256": "2ea3579b4bc3388222c577e1a8c211385c586dd25309e7fba91193eb6e92cfef"
       },
-      "notes": "Fixes:\n\u2022 Fixed cached work samples failing to render in the simple preview workflow."
+      "notes": "New in this version:\n\u2022 Review, Verify Sample, and Schoology grading now share a compact document toolbar with a File menu, Undo, Patch, page editing, and a zoom menu with Fit page and Fit width.\n\u2022 Schoology grading keeps essential controls within reach on smaller screens, with feedback and task editing in a shared space and menus for editor actions.\n\u2022 Learning-period to-dos are grouped by workflow stage, making the next step easier to find.\n\u2022 Roster sync lets you review incoming changes and skips stale sync packets. Explicit Schoology course mappings and preferred-name choices from the PCA extension carry into Buddy.\n\u2022 Already-saved samples can be verified without rewriting their PDF or existing tags.\n\nFixes:\n\u2022 Rotating pages keeps the selected pages selected, so repeated Rotate clicks continue changing the same pages.\n\u2022 Edit pages is available in Simple-mode verification and for single-page Review documents.\n\u2022 Schoology now correctly identifies the current LP sample instead of offering to replace it with itself. Filing the same submission again leaves it unchanged, and Remove targets only that submission's sample in the selected course and LP.\n\u2022 Improved Schoology link uploads, task stamping, and tooltip rendering."
     },
     "stable": {
       "version": "4.2.27",
