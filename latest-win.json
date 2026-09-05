@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.4",
-      "tag": "v4.2.28-beta.4",
+      "version": "4.2.28-beta.5",
+      "tag": "v4.2.28-beta.5",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.4.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.4/WorkSampleBuddy_win_v4.2.28-beta.4.exe",
-        "size": 306365200,
-        "sha256": "0e39243c27557f347a47c41213fc9fb3b19e01472316de9b1109501649c6e871"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.5.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.5/WorkSampleBuddy_win_v4.2.28-beta.5.exe",
+        "size": 306386656,
+        "sha256": "52a9195f4191dc37f5eba547cb310c30004e6b91386ba7f7a618a9ef6a70004a"
       },
-      "notes": "New in this version:\n\u2022 Review, Verify Sample, and Schoology grading now share a compact document toolbar with a File menu, Undo, Patch, page editing, and a zoom menu with Fit page and Fit width.\n\u2022 Schoology grading keeps essential controls within reach on smaller screens, with feedback and task editing in a shared space and menus for editor actions.\n\u2022 Learning-period to-dos are grouped by workflow stage, making the next step easier to find.\n\u2022 Roster sync lets you review incoming changes and skips stale sync packets. Explicit Schoology course mappings and preferred-name choices from the PCA extension carry into Buddy.\n\u2022 Already-saved samples can be verified without rewriting their PDF or existing tags.\n\nFixes:\n\u2022 Rotating pages keeps the selected pages selected, so repeated Rotate clicks continue changing the same pages.\n\u2022 Edit pages is available in Simple-mode verification and for single-page Review documents.\n\u2022 Schoology now correctly identifies the current LP sample instead of offering to replace it with itself. Filing the same submission again leaves it unchanged, and Remove targets only that submission\u2019s sample in the selected course and LP.\n\u2022 Improved Schoology link uploads, task stamping, and tooltip rendering."
+      "notes": "New in this version:\n\u2022 Task text can be previewed without adding it to the work sample. Activate task adds it explicitly; Hide task removes it while keeping the text for later.\n\u2022 Feedback and Task text boxes expand when the grading window has room.\n\nFixes:\n\u2022 Fixed Windows beta updates failing to start with a QtCore DLL error. The installer now removes an obsolete ICU DLL left behind by earlier builds.\n\u2022 Mini mode and the system tray now match the app's To-do count, including category preferences, and update together."
     },
     "stable": {
       "version": "4.2.27",
