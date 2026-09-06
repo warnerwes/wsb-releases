@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.8",
-      "tag": "v4.2.28-beta.8",
+      "version": "4.2.28-beta.9",
+      "tag": "v4.2.28-beta.9",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.8.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.8/WorkSampleBuddy_mac_v4.2.28-beta.8.dmg",
-        "size": 344352596,
-        "sha256": "5e06df2a6471d67a2a76d4a13c15fe57ad434cd62dd61cd1d4458e68f151375e"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.9.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.9/WorkSampleBuddy_mac_v4.2.28-beta.9.dmg",
+        "size": 344368081,
+        "sha256": "24f35187d96392aa2bf3a336c5d2c2cdbffdd83bef49de2170899a34c031f326"
       },
-      "notes": "Fixes:\n\u2022 Removed the misplaced Sync Pathways button from the student matrix. Roster syncing remains available in the Connections menu."
+      "notes": "New in this version:\n\u2022 When your work folder cannot be reached, Work Sample Buddy shows one clear screen explaining what is safe on this computer, which folder is unavailable, and the available choices. It rechecks automatically and does not treat the situation as a new install.\n\u2022 Choosing a different folder while the usual one is offline checks for existing files, asks before saving elsewhere, and offers to switch back when the usual folder returns.\n\nFixes:\n\u2022 The saved work folder is no longer forgotten after continuing without files during a Google Drive outage, preventing the next launch from looking like first-time setup."
     },
     "stable": {
       "version": "4.2.27",
