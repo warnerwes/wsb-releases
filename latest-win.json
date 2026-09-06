@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.9",
-      "tag": "v4.2.28-beta.9",
+      "version": "4.2.28-beta.10",
+      "tag": "v4.2.28-beta.10",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.9.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.9/WorkSampleBuddy_win_v4.2.28-beta.9.exe",
-        "size": 306840896,
-        "sha256": "ec944f475ea369827881d4bd058c3899d77145eb02a07eb301b77fc2bb3c3139"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.10.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.10/WorkSampleBuddy_win_v4.2.28-beta.10.exe",
+        "size": 306494584,
+        "sha256": "1944fbfc8448aff7bf525b1be7adfe741a82ea4d6e778feff48a79fef5cf47dd"
       },
-      "notes": "New in this version:\n\u2022 When your work folder can't be reached (for example, Google Drive hasn't loaded yet), Work Sample Buddy shows one clear screen: your records are safe on this computer, which folder can't be reached, and your choices. It rechecks automatically, recommends a restart if the folder stays missing, and never treats the situation as a new install.\n\u2022 Choosing a different folder while your usual one is offline now checks whether your existing files are really there, asks before saving new work elsewhere, and offers to switch back once the usual folder returns.\n\nFixes:\n\u2022 The saved work folder is no longer forgotten after clicking Continue Without Files during a Google Drive outage, which made the next launch look like a first-time setup and recommended an unrelated folder.\n\u2022 Removed the misplaced Sync Pathways button from the student matrix. Roster syncing remains available in the Connections menu."
+      "notes": "New in this version:\n\u2022 Installing an update now shows a progress window titled Updating Work Sample Buddy, with the version being installed and a note that the app reopens on its own. Before, the install ran hidden for a minute or two and looked like the app had disappeared.\n\u2022 After an update finishes, Work Sample Buddy brings its window to the front instead of opening behind other windows.\n\nFixes:\n\u2022 The Update Ready prompt now explains that the install shows progress for a minute or two and then reopens the app by itself.\n\u2022 The updater can no longer restart the computer on its own, and it keeps an install log in the app's data folder for troubleshooting."
     },
     "stable": {
       "version": "4.2.27",
