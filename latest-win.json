@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.7",
-      "tag": "v4.2.28-beta.7",
+      "version": "4.2.28-beta.9",
+      "tag": "v4.2.28-beta.9",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.7.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.7/WorkSampleBuddy_win_v4.2.28-beta.7.exe",
-        "size": 306405832,
-        "sha256": "ac681979a5a7263f0aa96928fb180b5a18455735a1b824ee3d21bce654db3f1a"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.9.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.9/WorkSampleBuddy_win_v4.2.28-beta.9.exe",
+        "size": 306840896,
+        "sha256": "ec944f475ea369827881d4bd058c3899d77145eb02a07eb301b77fc2bb3c3139"
       },
-      "notes": "New in this version:\n\u2022 Grading edits now show local save progress and failures separately from posting to Schoology. Task text stays editable while hidden, with a Show task on sample checkbox and a dedicated thread drawer.\n\u2022 The course heading has a subtle clickable cue. Show task and Show link use matching compact controls, and Post teacher feedback to thread fades into emphasis on hover.\n\u2022 Settings have searchable navigation, clearer Simple and Advanced mode guidance, and simpler connection, PDF, appearance, and celebration controls.\n\u2022 Welcome setup shows connection progress and a scrollable checklist. Manual courses suggest school-year or semester dates from the selected calendar.\n\u2022 Learning-period selection and to-do controls are easier to navigate. Sync review separates actual changes, protected students, and diagnostic details.\n\u2022 Google Drive sources can last for the current school year or remain permanent. Beta testing offers explicit enrollment and a return-to-stable option.\n\nFixes:\n\u2022 PDF page rendering runs in the background and reuses cached pages, with guards against showing an older submission after switching.\n\u2022 Acknowledging an unchanged sync no longer runs an import. Background syncs and manually requested syncs use the appropriate status or review flow.\n\u2022 Student updates and course tile animations do less unnecessary work, helping the app stay responsive."
+      "notes": "New in this version:\n\u2022 When your work folder can't be reached (for example, Google Drive hasn't loaded yet), Work Sample Buddy shows one clear screen: your records are safe on this computer, which folder can't be reached, and your choices. It rechecks automatically, recommends a restart if the folder stays missing, and never treats the situation as a new install.\n\u2022 Choosing a different folder while your usual one is offline now checks whether your existing files are really there, asks before saving new work elsewhere, and offers to switch back once the usual folder returns.\n\nFixes:\n\u2022 The saved work folder is no longer forgotten after clicking Continue Without Files during a Google Drive outage, which made the next launch look like a first-time setup and recommended an unrelated folder.\n\u2022 Removed the misplaced Sync Pathways button from the student matrix. Roster syncing remains available in the Connections menu."
     },
     "stable": {
       "version": "4.2.27",
