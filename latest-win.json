@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.10",
-      "tag": "v4.2.28-beta.10",
+      "version": "4.2.28-beta.11",
+      "tag": "v4.2.28-beta.11",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.10.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.10/WorkSampleBuddy_win_v4.2.28-beta.10.exe",
-        "size": 306494584,
-        "sha256": "1944fbfc8448aff7bf525b1be7adfe741a82ea4d6e778feff48a79fef5cf47dd"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.11.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.11/WorkSampleBuddy_win_v4.2.28-beta.11.exe",
+        "size": 304504112,
+        "sha256": "2e089247c82ca4de441eb719690e4a7f6afc09df80fbd8c38c9a9be8188a6115"
       },
-      "notes": "New in this version:\n\u2022 Installing an update now shows a progress window titled Updating Work Sample Buddy, with the version being installed and a note that the app reopens on its own. Before, the install ran hidden for a minute or two and looked like the app had disappeared.\n\u2022 After an update finishes, Work Sample Buddy brings its window to the front instead of opening behind other windows.\n\nFixes:\n\u2022 The Update Ready prompt now explains that the install shows progress for a minute or two and then reopens the app by itself.\n\u2022 The updater can no longer restart the computer on its own, and it keeps an install log in the app's data folder for troubleshooting."
+      "notes": "Fixes:\n\u2022 Manually assigned work samples are now preserved before incoming-file cleanup, preventing assigned samples from losing their source files.\n\u2022 Windows installers now require a working browser connection helper, preventing an installation from silently missing the connection needed by the PCA extension.\n\u2022 Crash reports now remove personal information before upload, and browser connection diagnostics better identify failed requests."
     },
     "stable": {
       "version": "4.2.27",
