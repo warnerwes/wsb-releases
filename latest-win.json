@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.12",
-      "tag": "v4.2.28-beta.12",
+      "version": "4.2.28-beta.13",
+      "tag": "v4.2.28-beta.13",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.12.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.12/WorkSampleBuddy_win_v4.2.28-beta.12.exe",
-        "size": 304514520,
-        "sha256": "69e36fdb225fb46e0d0dcf32ed8b1713faf042fa8bd7868be86abde7fa8e5782"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.13.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.13/WorkSampleBuddy_win_v4.2.28-beta.13.exe",
+        "size": 304540192,
+        "sha256": "45f7ddd5692afd634749f08a7f43430c3564ca5c0b6fe534957d43ddf8e7a10f"
       },
-      "notes": "New in this version:\n\u2022 New work samples now use a four-square header. Choose four-square or six-square in Settings > Grading & output > PDF output. Completed samples keep their original format.\n\u2022 The folder setup message now explains why it can appear after using Buddy for a while, with calmer wording, clearer choices, and folder details available separately.\n\nFixes:\n\u2022 Editing a completed sample now correctly finds workspace-relative source backups and fills in the student and course header fields."
+      "notes": "New in this version:\n\u2022 When you are up to date on stable updates, a subtle Looking for beta? link now appears if a newer beta is available. It opens the beta-testing options so you can choose whether to join.\n\nFixes:\n\u2022 Update checks now clarify that you are up to date for your selected update channel."
     },
     "stable": {
       "version": "4.2.27",
