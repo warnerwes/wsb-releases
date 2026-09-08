@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.13",
+      "date": "2026-09-08",
+      "features": [
+        "When you are up to date on stable updates, a subtle Looking for beta? link now appears if a newer beta is available. It opens the beta-testing options so you can choose whether to join."
+      ],
+      "bugs": [
+        "Update checks now clarify that you are up to date for your selected update channel."
+      ]
+    },
+    {
       "version": "4.2.28-beta.12",
       "date": "2026-09-08",
       "features": [
