@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.14",
-      "tag": "v4.2.28-beta.14",
+      "version": "4.2.28-beta.15",
+      "tag": "v4.2.28-beta.15",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.14.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.14/WorkSampleBuddy_mac_v4.2.28-beta.14.dmg",
-        "size": 344395514,
-        "sha256": "482be46b7529d5a90f6ce3d907a4f283e3ee3341fd2ef894236b2f93fe3f5dcf"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.15.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.15/WorkSampleBuddy_mac_v4.2.28-beta.15.dmg",
+        "size": 344428244,
+        "sha256": "1af475879209dbd05f994ffb9c0e9ca9fa1b80684618e72e812a255fb7764a4e"
       },
-      "notes": "Fixes:\n\u2022 Fixed the Schoology submission viewer treating a freshly downloaded file as stale. If a file still cannot be opened, Buddy now provides clearer re-download and debug-report instructions."
+      "notes": "New in this version:\n\u2022 When automatic analysis cannot finish, Buddy offers clearer recovery choices, manual review, and a diagnostic-report button, with technical details tucked away.\n\nFixes:\n\u2022 AI recovery now runs in the background with cancellation and a time limit, keeping the document available for review.\n\u2022 Failed automatic grading now preserves existing grades and comments instead of replacing them with empty results or showing fallback full credit.\n\u2022 Recovery no longer retries a different submission if you switch documents while AI is starting."
     },
     "stable": {
       "version": "4.2.27",
