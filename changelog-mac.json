@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.13",
+      "date": "2026-09-08",
+      "features": [
+        "Added filing and management of learning-period work samples directly from Schoology course activity.",
+        "Added four-square headers as the default for new work samples and clarified folder setup instructions.",
+        "Improved update preparation feedback, including installation feedback on Mac and invitations to try newer betas after checking for stable updates.",
+        "Added instructions for recovering uploads that are missing saved work dates."
+      ],
+      "bugs": []
+    },
+    {
       "version": "4.2.28-beta.10",
       "date": "2026-09-08",
       "features": [],
@@ -1775,5 +1786,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-03T17:18:14.291166-07:00"
+  "last_updated": "2026-09-08T14:50:08.179641"
 }
