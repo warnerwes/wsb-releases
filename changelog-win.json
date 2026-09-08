@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.15",
+      "date": "2026-09-08",
+      "features": [
+        "When automatic analysis cannot finish, Buddy offers clearer recovery choices, manual review, and a diagnostic-report button, with technical details tucked away."
+      ],
+      "bugs": [
+        "AI recovery now runs in the background with cancellation and a time limit, keeping the document available for review.",
+        "Failed automatic grading now preserves existing grades and comments instead of replacing them with empty results or showing fallback full credit.",
+        "Recovery no longer retries a different submission if you switch documents while AI is starting."
+      ]
+    },
+    {
       "version": "4.2.28-beta.14",
       "date": "2026-09-08",
       "features": [],
