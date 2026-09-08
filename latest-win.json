@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.11",
-      "tag": "v4.2.28-beta.11",
+      "version": "4.2.28-beta.12",
+      "tag": "v4.2.28-beta.12",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.11.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.11/WorkSampleBuddy_win_v4.2.28-beta.11.exe",
-        "size": 304504112,
-        "sha256": "2e089247c82ca4de441eb719690e4a7f6afc09df80fbd8c38c9a9be8188a6115"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.12.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.12/WorkSampleBuddy_win_v4.2.28-beta.12.exe",
+        "size": 304514520,
+        "sha256": "69e36fdb225fb46e0d0dcf32ed8b1713faf042fa8bd7868be86abde7fa8e5782"
       },
-      "notes": "Fixes:\n\u2022 Manually assigned work samples are now preserved before incoming-file cleanup, preventing assigned samples from losing their source files.\n\u2022 Windows installers now require a working browser connection helper, preventing an installation from silently missing the connection needed by the PCA extension.\n\u2022 Crash reports now remove personal information before upload, and browser connection diagnostics better identify failed requests."
+      "notes": "New in this version:\n\u2022 New work samples now use a four-square header. Choose four-square or six-square in Settings > Grading & output > PDF output. Completed samples keep their original format.\n\u2022 The folder setup message now explains why it can appear after using Buddy for a while, with calmer wording, clearer choices, and folder details available separately.\n\nFixes:\n\u2022 Editing a completed sample now correctly finds workspace-relative source backups and fills in the student and course header fields."
     },
     "stable": {
       "version": "4.2.27",
