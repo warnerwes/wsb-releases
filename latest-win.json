@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.13",
-      "tag": "v4.2.28-beta.13",
+      "version": "4.2.28-beta.14",
+      "tag": "v4.2.28-beta.14",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.13.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.13/WorkSampleBuddy_win_v4.2.28-beta.13.exe",
-        "size": 304540192,
-        "sha256": "45f7ddd5692afd634749f08a7f43430c3564ca5c0b6fe534957d43ddf8e7a10f"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.14.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.14/WorkSampleBuddy_win_v4.2.28-beta.14.exe",
+        "size": 304519688,
+        "sha256": "901aae62285654dd628a86711444b6a5ae6fa316a189d600e7ea1c287d2c7f60"
       },
-      "notes": "New in this version:\n\u2022 When you are up to date on stable updates, a subtle Looking for beta? link now appears if a newer beta is available. It opens the beta-testing options so you can choose whether to join.\n\nFixes:\n\u2022 Update checks now clarify that you are up to date for your selected update channel."
+      "notes": "Fixes:\n\u2022 Fixed the Schoology submission viewer treating a freshly downloaded file as stale. If a file still cannot be opened, Buddy now provides clearer re-download and debug-report instructions."
     },
     "stable": {
       "version": "4.2.27",
