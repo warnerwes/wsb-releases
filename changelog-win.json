@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.12",
+      "date": "2026-09-08",
+      "features": [
+        "New work samples now use a four-square header. Choose four-square or six-square in Settings > Grading & output > PDF output. Completed samples keep their original format.",
+        "The folder setup message now explains why it can appear after using Buddy for a while, with calmer wording, clearer choices, and folder details available separately."
+      ],
+      "bugs": [
+        "Editing a completed sample now correctly finds workspace-relative source backups and fills in the student and course header fields."
+      ]
+    },
+    {
       "version": "4.2.28-beta.11",
       "date": "2026-09-08",
       "features": [],
