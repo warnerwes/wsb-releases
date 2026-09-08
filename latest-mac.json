@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.13",
-      "tag": "v4.2.28-beta.13",
+      "version": "4.2.28-beta.14",
+      "tag": "v4.2.28-beta.14",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.13.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.13/WorkSampleBuddy_mac_v4.2.28-beta.13.dmg",
-        "size": 344402213,
-        "sha256": "5a630dbca549197367199334abb63cc6f18ef7d843a2328f9b3f9476e16a2daa"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.14.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.14/WorkSampleBuddy_mac_v4.2.28-beta.14.dmg",
+        "size": 344395514,
+        "sha256": "482be46b7529d5a90f6ce3d907a4f283e3ee3341fd2ef894236b2f93fe3f5dcf"
       },
-      "notes": "New in this version:\n\u2022 Added filing and management of learning-period work samples directly from Schoology course activity.\n\u2022 Added four-square headers as the default for new work samples and clarified folder setup instructions.\n\u2022 Improved update preparation feedback, including installation feedback on Mac and invitations to try newer betas after checking for stable updates.\n\u2022 Added instructions for recovering uploads that are missing saved work dates."
+      "notes": "Fixes:\n\u2022 Fixed the Schoology submission viewer treating a freshly downloaded file as stale. If a file still cannot be opened, Buddy now provides clearer re-download and debug-report instructions."
     },
     "stable": {
       "version": "4.2.27",
