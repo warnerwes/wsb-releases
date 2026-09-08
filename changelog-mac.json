@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.14",
+      "date": "2026-09-08",
+      "features": [],
+      "bugs": [
+        "Fixed the Schoology submission viewer treating a freshly downloaded file as stale. If a file still cannot be opened, Buddy now provides clearer re-download and debug-report instructions."
+      ]
+    },
+    {
       "version": "4.2.28-beta.13",
       "date": "2026-09-08",
       "features": [
@@ -1786,5 +1794,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-08T14:50:08.179641"
+  "last_updated": "2026-09-08T15:08:41.165580"
 }
