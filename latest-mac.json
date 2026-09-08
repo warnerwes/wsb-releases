@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.10",
-      "tag": "v4.2.28-beta.10",
+      "version": "4.2.28-beta.13",
+      "tag": "v4.2.28-beta.13",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.10.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.10/WorkSampleBuddy_mac_v4.2.28-beta.10.dmg",
-        "size": 344361220,
-        "sha256": "d46c0dc00466fdbe5ca9dba94622326d2c0398a873cc769151caa9339e59b13e"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.13.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.13/WorkSampleBuddy_mac_v4.2.28-beta.13.dmg",
+        "size": 344402213,
+        "sha256": "5a630dbca549197367199334abb63cc6f18ef7d843a2328f9b3f9476e16a2daa"
       },
-      "notes": "Fixes:\n\u2022 Manually assigned unresolved work samples are copied into the workspace before staging cleanup, preventing their source files from disappearing.\n\u2022 Crash reports redact email addresses and student names in known breadcrumb formats before upload. This does not remove every possible personal detail from free-form logs.\n\u2022 The macOS installer now requires a verified native messaging bridge, with additional packaging checks for executable metadata and bundled libraries."
+      "notes": "New in this version:\n\u2022 Added filing and management of learning-period work samples directly from Schoology course activity.\n\u2022 Added four-square headers as the default for new work samples and clarified folder setup instructions.\n\u2022 Improved update preparation feedback, including installation feedback on Mac and invitations to try newer betas after checking for stable updates.\n\u2022 Added instructions for recovering uploads that are missing saved work dates."
     },
     "stable": {
       "version": "4.2.27",
