@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.15",
-      "tag": "v4.2.28-beta.15",
+      "version": "4.2.28-beta.16",
+      "tag": "v4.2.28-beta.16",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.15.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.15/WorkSampleBuddy_win_v4.2.28-beta.15.exe",
-        "size": 304556448,
-        "sha256": "614aa81590ec55f1afb958f07488853910e737fa60c0fed18d3d528ee579de5f"
+        "name": "WorkSampleBuddy_win_v4.2.28-beta.16.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.16/WorkSampleBuddy_win_v4.2.28-beta.16.exe",
+        "size": 304556928,
+        "sha256": "2191ebf18b3f8d5ae370b14d969811293ac7d0e688b53eebdb99135c9cb15e38"
       },
-      "notes": "New in this version:\n\u2022 When automatic analysis cannot finish, Buddy offers clearer recovery choices, manual review, and a diagnostic-report button, with technical details tucked away.\n\nFixes:\n\u2022 AI recovery now runs in the background with cancellation and a time limit, keeping the document available for review.\n\u2022 Failed automatic grading now preserves existing grades and comments instead of replacing them with empty results or showing fallback full credit.\n\u2022 Recovery no longer retries a different submission if you switch documents while AI is starting."
+      "notes": "New in this version:\n\u2022 Schoology review now offers clearer filed-sample replacement with undo and task preview shortcuts.\n\nFixes:\n\u2022 Fixed an error displaying the review badge when multiple Mr. D samples arrive for the same student and course.\n\u2022 Schoology refresh now detects submitted work even when an old Missing grade remains, and missing-work indicators follow the selected learning period.\n\u2022 Course Activity stays in place while reviewing submissions.\n\u2022 Clicking To-do now closes the open tray without immediately reopening it.\n\u2022 Converting browser work samples to PDF no longer flashes a terminal window.\n\u2022 Corrected samples sent with the same filename now reach review instead of being discarded as duplicates."
     },
     "stable": {
       "version": "4.2.27",
