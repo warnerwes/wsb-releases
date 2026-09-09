@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.16",
-      "tag": "v4.2.28-beta.16",
+      "version": "4.2.28-beta.17",
+      "tag": "v4.2.28-beta.17",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.16.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.16/WorkSampleBuddy_mac_v4.2.28-beta.16.dmg",
-        "size": 344394401,
-        "sha256": "f074d285bc4bc5156b41da5df0410ebeca8c24e7a95eec7d36e038dc68ad3cbb"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.17.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.17/WorkSampleBuddy_mac_v4.2.28-beta.17.dmg",
+        "size": 344395065,
+        "sha256": "cd353086a0ae76a2641674ab97895c5ef21d3ecbfa55f862e453da6ea60b9191"
       },
-      "notes": "Fixes:\n\u2022 Schoology refresh now detects submitted work despite stale Missing grades or incomplete reminders, and missing-work indicators follow the selected learning period.\n\u2022 Course Activity and grading review are more stable, with clearer filed-sample replacement, undo, and task preview shortcuts.\n\u2022 Fixed learning-period to-do toggling and resending corrected work samples."
+      "notes": "Fixes:\n\u2022 Fixed conflict badges in the progress grid so they display correctly when multiple work samples arrive at the same time."
     },
     "stable": {
       "version": "4.2.27",
