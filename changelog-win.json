@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.18",
+      "date": "2026-09-09",
+      "features": [
+        "Student forms now explain that first and last names should match Pathways, while preferred names can be anything.",
+        "Sample comparison controls are clearer, with the option to delete either sample."
+      ],
+      "bugs": [
+        "Preferred names now appear in the verification window, reopened sample headers, progress grid, and exception paperwork. Queued samples use the current preferred name when opened.",
+        "Searching the progress grid now finds students by their preferred names."
+      ]
+    },
+    {
       "version": "4.2.28-beta.16",
       "date": "2026-09-08",
       "features": [
