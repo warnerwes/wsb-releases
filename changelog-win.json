@@ -1,6 +1,21 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.16",
+      "date": "2026-09-08",
+      "features": [
+        "Schoology review now offers clearer filed-sample replacement with undo and task preview shortcuts."
+      ],
+      "bugs": [
+        "Fixed an error displaying the review badge when multiple Mr. D samples arrive for the same student and course.",
+        "Schoology refresh now detects submitted work even when an old Missing grade remains, and missing-work indicators follow the selected learning period.",
+        "Course Activity stays in place while reviewing submissions.",
+        "Clicking To-do now closes the open tray without immediately reopening it.",
+        "Converting browser work samples to PDF no longer flashes a terminal window.",
+        "Corrected samples sent with the same filename now reach review instead of being discarded as duplicates."
+      ]
+    },
+    {
       "version": "4.2.28-beta.15",
       "date": "2026-09-08",
       "features": [
