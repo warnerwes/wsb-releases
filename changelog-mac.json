@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.17",
+      "date": "2026-09-09",
+      "features": [],
+      "bugs": [
+        "Fixed conflict badges in the progress grid so they display correctly when multiple work samples arrive at the same time."
+      ]
+    },
+    {
       "version": "4.2.28-beta.16",
       "date": "2026-09-08",
       "features": [],
@@ -1816,5 +1824,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-08T23:56:57.183193"
+  "last_updated": "2026-09-09T00:14:11.302524"
 }
