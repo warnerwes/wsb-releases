@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.17",
-      "tag": "v4.2.28-beta.17",
+      "version": "4.2.28-beta.18",
+      "tag": "v4.2.28-beta.18",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.17.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.17/WorkSampleBuddy_mac_v4.2.28-beta.17.dmg",
-        "size": 344395065,
-        "sha256": "cd353086a0ae76a2641674ab97895c5ef21d3ecbfa55f862e453da6ea60b9191"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.18.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.18/WorkSampleBuddy_mac_v4.2.28-beta.18.dmg",
+        "size": 344415440,
+        "sha256": "005ea2e96b2144f15c98da7fcee1faf4b3825f1a3c5ad5ca253ab88e14cc8f83"
       },
-      "notes": "Fixes:\n\u2022 Fixed conflict badges in the progress grid so they display correctly when multiple work samples arrive at the same time."
+      "notes": "New in this version:\n\u2022 Improved sample comparison controls to make them clearer and allow deleting either sample.\n\u2022 Added preferred student names to work sample verification and paperwork."
     },
     "stable": {
       "version": "4.2.27",
