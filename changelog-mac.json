@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "4.2.28-beta.16",
+      "date": "2026-09-08",
+      "features": [],
+      "bugs": [
+        "Schoology refresh now detects submitted work despite stale Missing grades or incomplete reminders, and missing-work indicators follow the selected learning period.",
+        "Course Activity and grading review are more stable, with clearer filed-sample replacement, undo, and task preview shortcuts.",
+        "Fixed learning-period to-do toggling and resending corrected work samples."
+      ]
+    },
+    {
       "version": "4.2.28-beta.15",
       "date": "2026-09-08",
       "features": [
@@ -1806,5 +1816,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-08T16:30:33.979908"
+  "last_updated": "2026-09-08T23:56:57.183193"
 }
