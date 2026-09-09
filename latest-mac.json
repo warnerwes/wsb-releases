@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.15",
-      "tag": "v4.2.28-beta.15",
+      "version": "4.2.28-beta.16",
+      "tag": "v4.2.28-beta.16",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28-beta.15.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.15/WorkSampleBuddy_mac_v4.2.28-beta.15.dmg",
-        "size": 344428244,
-        "sha256": "1af475879209dbd05f994ffb9c0e9ca9fa1b80684618e72e812a255fb7764a4e"
+        "name": "WorkSampleBuddy_mac_v4.2.28-beta.16.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.16/WorkSampleBuddy_mac_v4.2.28-beta.16.dmg",
+        "size": 344394401,
+        "sha256": "f074d285bc4bc5156b41da5df0410ebeca8c24e7a95eec7d36e038dc68ad3cbb"
       },
-      "notes": "New in this version:\n\u2022 When automatic analysis cannot finish, Buddy offers clearer recovery choices, manual review, and a diagnostic-report button, with technical details tucked away.\n\nFixes:\n\u2022 AI recovery now runs in the background with cancellation and a time limit, keeping the document available for review.\n\u2022 Failed automatic grading now preserves existing grades and comments instead of replacing them with empty results or showing fallback full credit.\n\u2022 Recovery no longer retries a different submission if you switch documents while AI is starting."
+      "notes": "Fixes:\n\u2022 Schoology refresh now detects submitted work despite stale Missing grades or incomplete reminders, and missing-work indicators follow the selected learning period.\n\u2022 Course Activity and grading review are more stable, with clearer filed-sample replacement, undo, and task preview shortcuts.\n\u2022 Fixed learning-period to-do toggling and resending corrected work samples."
     },
     "stable": {
       "version": "4.2.27",
