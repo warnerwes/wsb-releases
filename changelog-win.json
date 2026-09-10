@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "4.2.28",
+      "date": "2026-09-09",
+      "features": [
+        "Review and grading share a compact document toolbar with Undo, page editing, and zoom controls. Sample comparison is clearer, with choices to replace, keep, or delete samples.",
+        "New samples use a four-square header, with six-square available in Settings. Task text can be previewed before adding it to a sample.",
+        "Preferred student names carry through verification, headers, progress-grid searches, and paperwork. Roster sync lets you review incoming changes.",
+        "Google Drive setup is simpler, and folder recovery provides clearer choices when your work folder is temporarily unavailable.",
+        "Learning-period to-dos are grouped by workflow stage. Windows updates show installation progress and reopen Buddy automatically."
+      ],
+      "bugs": [
+        "Fixed Schoology files failing to open, re-download errors, stale Missing indicators, and repeated sync attempts. Review now preserves the selected course and learning period.",
+        "Fixed incoming and manually assigned samples losing source files or being overlooked as duplicates. Corrected work sent with the same filename now reaches review.",
+        "Failed AI analysis offers recovery or manual review, preserves existing grades and feedback, and no longer supplies fallback full credit.",
+        "Fixed crashes displaying incoming-sample review badges, empty previews, page-selection issues during rotation, and roster-sync database errors.",
+        "Improved Windows startup and browser connection packaging, and removed personal information from uploaded crash reports."
+      ]
+    },
+    {
       "version": "4.2.28-beta.18",
       "date": "2026-09-09",
       "features": [
