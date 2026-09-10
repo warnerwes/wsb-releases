@@ -1,6 +1,25 @@
 {
   "versions": [
     {
+      "version": "4.2.28",
+      "date": "2026-09-09",
+      "features": [
+        "Review and grading share a compact document toolbar with Undo, page editing, and zoom controls. Sample comparison offers clearer choices to replace, keep, or delete samples.",
+        "New samples use a four-square header, with six-square available in Settings. Task text can be previewed before adding it to a sample.",
+        "Preferred student names appear in verification, sample headers, progress-grid searches, and paperwork. Roster sync lets you review incoming changes.",
+        "Folder recovery provides clearer choices when your work folder is temporarily unavailable, and setup explains folder and connection choices.",
+        "Schoology samples can be filed and managed directly from course activity. Learning-period to-dos are grouped by workflow stage, and Mac updates show clearer preparation and installation progress."
+      ],
+      "bugs": [
+        "Fixed Schoology files failing to open after downloads, stale Missing indicators, and missing-work refresh. Sample replacement supports undo and keeps review tied to the selected course and learning period.",
+        "Fixed incoming and manually assigned samples losing source files or being overlooked as duplicates. Corrected work sent with the same filename now reaches review.",
+        "Failed AI analysis offers recovery or manual review, preserves existing grades and feedback, and no longer supplies fallback full credit.",
+        "Fixed incoming-sample comparison badges and page-selection issues during rotation. Work sample filing validates dates against the active learning period.",
+        "Mac installers include a verified browser bridge and stronger packaging checks. Crash reports redact email addresses and student names in known breadcrumb formats.",
+        "Closing AI settings while a model capability check is running no longer causes a late-callback error."
+      ]
+    },
+    {
       "version": "4.2.28-beta.18",
       "date": "2026-09-09",
       "features": [
@@ -1833,5 +1852,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-09T13:25:40.127765"
+  "last_updated": "2026-09-09T17:35:40.503551"
 }
