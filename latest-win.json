@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.28-beta.18",
-      "tag": "v4.2.28-beta.18",
+      "version": "4.2.30-beta.1",
+      "tag": "v4.2.30-beta.1",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28-beta.18.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28-beta.18/WorkSampleBuddy_win_v4.2.28-beta.18.exe",
-        "size": 304549032,
-        "sha256": "9a935b2a8b455fe22a9d51e343ad8be158d707f128446a17f307eb26640d6935"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.1.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.1/WorkSampleBuddy_win_v4.2.30-beta.1.exe",
+        "size": 306644896,
+        "sha256": "980dc47a8a1a6195c546fbb144738df5aead4f1c0367d0151c88cd9985a1f7d9"
       },
-      "notes": "New in this version:\n\u2022 Student forms now explain that first and last names should match Pathways, while preferred names can be anything.\n\u2022 Sample comparison controls are clearer, with the option to delete either sample.\n\nFixes:\n\u2022 Preferred names now appear in the verification window, reopened sample headers, progress grid, and exception paperwork. Queued samples use the current preferred name when opened.\n\u2022 Searching the progress grid now finds students by their preferred names."
+      "notes": "New in this version:\n\u2022 Simple mode now pre-grades Schoology work without OCR or AI: activity logs are scored from their logged hours, gradebook printouts are summarized, and everything else gets a neutral comment with the grade left for you.\n\u2022 Student rosters refresh automatically every day instead of every week, so a student you move between classes shows up in the right place.\n\nFixes:\n\u2022 Fixed course boxes showing \"Missing\" for students who had been removed from a Schoology section. Dropped enrollments are retired on sync and their empty placeholders no longer count.\n\u2022 Fixed work due later today, or later in the current learning period, being marked Missing before its deadline."
     },
     "stable": {
       "version": "4.2.29",
