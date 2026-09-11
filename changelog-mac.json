@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.29",
+      "date": "2026-09-11",
+      "features": [
+        "Missing Schoology work now offers a direct assignment link and a Reload action in the center of the viewer.",
+        "Reload checks Schoology again and downloads newly submitted work automatically."
+      ],
+      "bugs": [
+        "Fixed course-card clicks opening a different student's course or assignment. The selected student and course now stay together through grading.",
+        "Fixed missing-assignment links sending signed-in teachers to the generic Schoology login page."
+      ]
+    },
+    {
       "version": "4.2.28",
       "date": "2026-09-09",
       "features": [
