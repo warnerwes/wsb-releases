@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Improved sample comparison controls to make them clearer and allow deleting either sample.\n\u2022 Added preferred student names to work sample verification and paperwork."
     },
     "stable": {
-      "version": "4.2.28",
-      "tag": "v4.2.28",
+      "version": "4.2.29",
+      "tag": "v4.2.29",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.28.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28/WorkSampleBuddy_mac_v4.2.28.dmg",
-        "size": 343204404,
-        "sha256": "388242494d62bf90f6afab7c8c843a87e4daba7878fc86cfc4c71348a3299f19"
+        "name": "WorkSampleBuddy_mac_v4.2.29.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.29/WorkSampleBuddy_mac_v4.2.29.dmg",
+        "size": 343278869,
+        "sha256": "b6dff32505235fdbf8c53b9ea8199ce2d043bfacef93391a273f4d6371b6e97a"
       },
-      "notes": "New in this version:\n\u2022 Review and grading share a compact document toolbar with Undo, page editing, and zoom controls. Sample comparison offers clearer choices to replace, keep, or delete samples.\n\u2022 New samples use a four-square header, with six-square available in Settings. Task text can be previewed before adding it to a sample.\n\u2022 Preferred student names appear in verification, sample headers, progress-grid searches, and paperwork. Roster sync lets you review incoming changes.\n\u2022 Folder recovery provides clearer choices when your work folder is temporarily unavailable, and setup explains folder and connection choices.\n\u2022 Schoology samples can be filed and managed directly from course activity. Learning-period to-dos are grouped by workflow stage, and Mac updates show clearer preparation and installation progress.\n\nFixes:\n\u2022 Fixed Schoology files failing to open after downloads, stale Missing indicators, and missing-work refresh. Sample replacement supports undo and keeps review tied to the selected course and learning period.\n\u2022 Fixed incoming and manually assigned samples losing source files or being overlooked as duplicates. Corrected work sent with the same filename now reaches review.\n\u2022 Failed AI analysis offers recovery or manual review, preserves existing grades and feedback, and no longer supplies fallback full credit.\n\u2022 Fixed incoming-sample comparison badges and page-selection issues during rotation. Work sample filing validates dates against the active learning period.\n\u2022 Mac installers include a verified browser bridge and stronger packaging checks. Crash reports redact email addresses and student names in known breadcrumb formats.\n\u2022 Closing AI settings while a model capability check is running no longer causes a late-callback error."
+      "notes": "New in this version:\n\u2022 Missing Schoology work now offers a direct assignment link and a Reload action in the center of the viewer.\n\u2022 Reload checks Schoology again and downloads newly submitted work automatically.\n\nFixes:\n\u2022 Fixed course-card clicks opening a different student's course or assignment. The selected student and course now stay together through grading.\n\u2022 Fixed missing-assignment links sending signed-in teachers to the generic Schoology login page."
     }
   }
 }
