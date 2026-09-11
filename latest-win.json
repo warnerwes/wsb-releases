@@ -19,8 +19,8 @@
       "asset": {
         "name": "WorkSampleBuddy_win_v4.2.29.exe",
         "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.29/WorkSampleBuddy_win_v4.2.29.exe",
-        "size": 315891792,
-        "sha256": "b9a5d6b176b0e412f78f2732358fcbd59d85e4a632fac7d1a41aa617a81f62bf"
+        "size": 305879224,
+        "sha256": "9e4be3193ccffba259bb858105c8bca80b03f52ddf3d653657167d46bb5b6705"
       },
       "notes": "New in this version:\n\u2022 Missing Schoology work now offers a direct assignment link and a Reload action in the center of the viewer.\n\u2022 Reload checks Schoology again and downloads newly submitted work automatically.\n\nFixes:\n\u2022 Fixed course-card clicks opening a different student's course or assignment. The selected student and course now stay together through grading.\n\u2022 Fixed missing-assignment links sending signed-in teachers to the generic Schoology login page."
     }
