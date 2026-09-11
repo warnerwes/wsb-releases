@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.2",
+      "date": "2026-09-11",
+      "features": [
+        "Grading window keyboard shortcuts: N next, B back, G type a score, F feedback, D date, T task menu, U link editor, O open in Schoology, S submit as a work sample, P post. Press ? or click the new ? button for a small menu of every shortcut that also runs the action when clicked.",
+        "The review and verification windows get the same ? shortcut menu. Review keeps N, P, F, M, 1, 2, 3 and O; verification adds S to save, X for Save & Next, C for the calendar, L for layout options and H for the workflow help."
+      ],
+      "bugs": []
+    },
+    {
       "version": "4.2.30-beta.1",
       "date": "2026-09-11",
       "features": [
