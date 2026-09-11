@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Student forms now explain that first and last names should match Pathways, while preferred names can be anything.\n\u2022 Sample comparison controls are clearer, with the option to delete either sample.\n\nFixes:\n\u2022 Preferred names now appear in the verification window, reopened sample headers, progress grid, and exception paperwork. Queued samples use the current preferred name when opened.\n\u2022 Searching the progress grid now finds students by their preferred names."
     },
     "stable": {
-      "version": "4.2.28",
-      "tag": "v4.2.28",
+      "version": "4.2.29",
+      "tag": "v4.2.29",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.28.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.28/WorkSampleBuddy_win_v4.2.28.exe",
-        "size": 304507312,
-        "sha256": "8be74827443b06a56616820e42f96e4bced00de9d1b4da264b1db098bb268268"
+        "name": "WorkSampleBuddy_win_v4.2.29.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.29/WorkSampleBuddy_win_v4.2.29.exe",
+        "size": 315891792,
+        "sha256": "b9a5d6b176b0e412f78f2732358fcbd59d85e4a632fac7d1a41aa617a81f62bf"
       },
-      "notes": "New in this version:\n\u2022 Review and grading share a compact document toolbar with Undo, page editing, and zoom controls. Sample comparison is clearer, with choices to replace, keep, or delete samples.\n\u2022 New samples use a four-square header, with six-square available in Settings. Task text can be previewed before adding it to a sample.\n\u2022 Preferred student names carry through verification, headers, progress-grid searches, and paperwork. Roster sync lets you review incoming changes.\n\u2022 Google Drive setup is simpler, and folder recovery provides clearer choices when your work folder is temporarily unavailable.\n\u2022 Learning-period to-dos are grouped by workflow stage. Windows updates show installation progress and reopen Buddy automatically.\n\nFixes:\n\u2022 Fixed Schoology files failing to open, re-download errors, stale Missing indicators, and repeated sync attempts. Review now preserves the selected course and learning period.\n\u2022 Fixed incoming and manually assigned samples losing source files or being overlooked as duplicates. Corrected work sent with the same filename now reaches review.\n\u2022 Failed AI analysis offers recovery or manual review, preserves existing grades and feedback, and no longer supplies fallback full credit.\n\u2022 Fixed crashes displaying incoming-sample review badges, empty previews, page-selection issues during rotation, and roster-sync database errors.\n\u2022 Improved Windows startup and browser connection packaging, and removed personal information from uploaded crash reports."
+      "notes": "New in this version:\n\u2022 Missing Schoology work now offers a direct assignment link and a Reload action in the center of the viewer.\n\u2022 Reload checks Schoology again and downloads newly submitted work automatically.\n\nFixes:\n\u2022 Fixed course-card clicks opening a different student's course or assignment. The selected student and course now stay together through grading.\n\u2022 Fixed missing-assignment links sending signed-in teachers to the generic Schoology login page."
     }
   }
 }
