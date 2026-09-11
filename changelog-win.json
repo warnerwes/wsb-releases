@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.1",
+      "date": "2026-09-11",
+      "features": [
+        "Simple mode now pre-grades Schoology work without OCR or AI: activity logs are scored from their logged hours, gradebook printouts are summarized, and everything else gets a neutral comment with the grade left for you.",
+        "Student rosters refresh automatically every day instead of every week, so a student you move between classes shows up in the right place."
+      ],
+      "bugs": [
+        "Fixed course boxes showing \"Missing\" for students who had been removed from a Schoology section. Dropped enrollments are retired on sync and their empty placeholders no longer count.",
+        "Fixed work due later today, or later in the current learning period, being marked Missing before its deadline."
+      ]
+    },
+    {
       "version": "4.2.29",
       "date": "2026-09-11",
       "features": [
@@ -1893,5 +1905,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-05"
+  "last_updated": "2026-09-11"
 }
