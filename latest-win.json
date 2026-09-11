@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.1",
-      "tag": "v4.2.30-beta.1",
+      "version": "4.2.30-beta.2",
+      "tag": "v4.2.30-beta.2",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.1.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.1/WorkSampleBuddy_win_v4.2.30-beta.1.exe",
-        "size": 306644896,
-        "sha256": "980dc47a8a1a6195c546fbb144738df5aead4f1c0367d0151c88cd9985a1f7d9"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.2.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.2/WorkSampleBuddy_win_v4.2.30-beta.2.exe",
+        "size": 306668104,
+        "sha256": "09d34ef51554d57eb797c84ccb4352494c69564a762ff8aaf31979c88321f17e"
       },
-      "notes": "New in this version:\n\u2022 Simple mode now pre-grades Schoology work without OCR or AI: activity logs are scored from their logged hours, gradebook printouts are summarized, and everything else gets a neutral comment with the grade left for you.\n\u2022 Student rosters refresh automatically every day instead of every week, so a student you move between classes shows up in the right place.\n\nFixes:\n\u2022 Fixed course boxes showing \"Missing\" for students who had been removed from a Schoology section. Dropped enrollments are retired on sync and their empty placeholders no longer count.\n\u2022 Fixed work due later today, or later in the current learning period, being marked Missing before its deadline."
+      "notes": "New in this version:\n\u2022 Grading window keyboard shortcuts: N next, B back, G type a score, F feedback, D date, T task menu, U link editor, O open in Schoology, S submit as a work sample, P post. Press ? or click the new ? button for a small menu of every shortcut that also runs the action when clicked.\n\u2022 The review and verification windows get the same ? shortcut menu. Review keeps N, P, F, M, 1, 2, 3 and O; verification adds S to save, X for Save & Next, C for the calendar, L for layout options and H for the workflow help."
     },
     "stable": {
       "version": "4.2.29",
