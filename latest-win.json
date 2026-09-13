@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.10",
-      "tag": "v4.2.30-beta.10",
+      "version": "4.2.30-beta.11",
+      "tag": "v4.2.30-beta.11",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.10.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.10/WorkSampleBuddy_win_v4.2.30-beta.10.exe",
-        "size": 304898984,
-        "sha256": "f331eee771b516806145441aa838d0d176f3e53e40afa70445f3a4d28dbc3c58"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.11.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.11/WorkSampleBuddy_win_v4.2.30-beta.11.exe",
+        "size": 304940040,
+        "sha256": "6be49932ec3bd9546d1cc39eb046b46c49fe386351115e7c5d80ff3cec8bbaba"
       },
-      "notes": "New in this version:\n\u2022 Patch puts Erase, Replace text, and Draw up front, with a larger preview, Compare original, and Undo. Pen color and Match pen sit beside Brush settings.\n\u2022 Fix Problem offers Unverify sample to start over in the existing editor, plus separate Edit in default app, Patch, and Edit page order actions.\n\u2022 Verifying or re-verifying a sample uses your current 4-square or 6-square header setting for the preview and saved PDF.\n\u2022 Schoology pre-grading can use supported linked assignment rubrics, with assignment choices and scoring evidence available for review. Missing or unsupported rubric material requires review instead of a guessed score.\n\u2022 Expand an assignment title to see its directions and linked materials. Click the floating submitted-work badges to reach assignments above or below the visible list.\n\nFixes:\n\u2022 Fixed Brush settings ignoring clicks outside the popup, including its own button. One click now closes it without drawing on the document underneath.\n\u2022 Fixed long freezes after posting Schoology grades and reduced background animation work while editors and popups are open. Sample previews open without rendering the first page twice, and canceled previews no longer hold up the interface.\n\u2022 Fixed Patch slowing down as strokes accumulated, soft erasing leaving haze in saved PDFs, and paper colors being ignored when saving. Improved pen matching and drag behavior, and prevented outdated previews from piling up.\n\u2022 Fixed pre-grading movement stopping after hovering over a course, clipped course titles in the grading window, and unclear completion totals. The tally now identifies finalized students and remaining samples.\n\u2022 Protected teacher edits and newer submission revisions from background grading results, preserved queued requests through cancellation and restart, and prevented overlapping grade posts. Uncertain posting results are retained for reconciliation without automatically posting again.\n\u2022 Ordinary PDF corrections no longer automatically unverify a sample. Saved tag placements follow their pages through rotation, reordering, deletion, and Undo.\n\u2022 Fixed overlapping course progress text, unreliable grading shortcuts, missing-file recovery blocking other work, and the quick-start tour's file-size check and packaged demo lookup."
+      "notes": "New in this version:\n\u2022 Replacing a Schoology sample uses a simple Replace or Cancel dialog. It identifies the student, course, learning period, school year, current assignment, and proposed replacement assignment.\n\nFixes:\n\u2022 Fixed replacement incorrectly reporting that the original sample was missing when its source files were present in a backup folder.\n\u2022 Undo preserves original source folders, including appended sources, along with the saved PDF and verification status.\n\u2022 Improved long duplicate-sample labels, duplicate-review sizing across monitors, and remembered workspace folder names."
     },
     "stable": {
       "version": "4.2.29",
