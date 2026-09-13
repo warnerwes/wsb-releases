@@ -1,6 +1,122 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.10",
+      "date": "2026-09-12",
+      "features": [
+        "Patch puts Erase, Replace text, and Draw up front, with a larger preview, Compare original, and Undo. Pen color and Match pen sit beside Brush settings.",
+        "Fix Problem offers Unverify sample to start over in the existing editor, plus separate Edit in default app, Patch, and Edit page order actions.",
+        "Verifying or re-verifying a sample uses your current 4-square or 6-square header setting for the preview and saved PDF.",
+        "Schoology pre-grading can use supported linked assignment rubrics, with assignment choices and scoring evidence available for review. Missing or unsupported rubric material requires review instead of a guessed score.",
+        "Expand an assignment title to see its directions and linked materials. Click the floating submitted-work badges to reach assignments above or below the visible list."
+      ],
+      "bugs": [
+        "Fixed Brush settings ignoring clicks outside the popup, including its own button. One click now closes it without drawing on the document underneath.",
+        "Fixed long freezes after posting Schoology grades and reduced background animation work while editors and popups are open. Sample previews open without rendering the first page twice, and canceled previews no longer hold up the interface.",
+        "Fixed Patch slowing down as strokes accumulated, soft erasing leaving haze in saved PDFs, and paper colors being ignored when saving. Improved pen matching and drag behavior, and prevented outdated previews from piling up.",
+        "Fixed pre-grading movement stopping after hovering over a course, clipped course titles in the grading window, and unclear completion totals. The tally now identifies finalized students and remaining samples.",
+        "Protected teacher edits and newer submission revisions from background grading results, preserved queued requests through cancellation and restart, and prevented overlapping grade posts. Uncertain posting results are retained for reconciliation without automatically posting again.",
+        "Ordinary PDF corrections no longer automatically unverify a sample. Saved tag placements follow their pages through rotation, reordering, deletion, and Undo.",
+        "Fixed overlapping course progress text, unreliable grading shortcuts, missing-file recovery blocking other work, and the quick-start tour's file-size check and packaged demo lookup."
+      ]
+    },
+    {
+      "version": "4.2.30-beta.9",
+      "date": "2026-09-12",
+      "features": [
+        "Patch puts Erase, Replace text, and Draw up front, with a larger preview, Compare original, Undo, and fine adjustments under More options.",
+        "Fix Problem offers Unverify sample to start over in the existing sample editor, plus separate Edit in default app, Patch, and Edit page order actions. Page-order editing highlights the thumbnails.",
+        "Verifying or re-verifying a sample now uses your current 4-square or 6-square header setting for the preview and saved PDF.",
+        "Schoology pre-grading can use supported linked assignment rubrics, with assignment choices and scoring evidence available for review. Missing or unsupported rubric material requires review instead of a guessed score.",
+        "Expand an assignment title to see its directions and linked materials. Click the floating submitted-work badges to reach assignments above or below the visible list.",
+        "Saved tag controls appear only for usable placements and follow their pages through rotation, reordering, deletion, and Undo."
+      ],
+      "bugs": [
+        "Fixed pre-grading movement stopping after hovering over a course. The main tally now clearly identifies finalized students and remaining samples.",
+        "Fixed Patch slowing down as strokes accumulated, soft erasing leaving haze in saved PDFs, and chosen paper colors being ignored when saving. Long gestures retain their end and outdated previews no longer pile up.",
+        "Removed the extra saved-sample verification screen. Ordinary PDF edits no longer automatically unverify the sample; Unverify sample uses the existing restart workflow.",
+        "Protected teacher edits and newer submission revisions from background grading results, and preserved queued analysis requests through cancellation, retries, and restart recovery.",
+        "Moved Schoology posting into the background, prevented overlapping sends, and retained uncertain results for reconciliation without automatically posting them again.",
+        "Fixed overlapping course progress text, unreliable grading shortcuts, missing-file recovery blocking other work, and the quick-start tour's file-size check and packaged demo lookup."
+      ]
+    },
+    {
+      "version": "4.2.30-beta.8",
+      "date": "2026-09-12",
+      "features": [
+        "Patch now puts Erase, Replace text, and Draw up front, with a larger preview, Compare original, Undo, and fine adjustments under More options.",
+        "Fix Problem offers Unverify sample to start over in the existing sample editor, plus separate Edit in default app, Patch, and Edit page order actions. Page-order editing highlights the thumbnails.",
+        "Schoology pre-grading can use supported linked assignment rubrics, with assignment choices and scoring evidence available for review. Missing or unsupported rubric material requires review instead of a guessed score.",
+        "Expand an assignment title to see its directions and linked materials. Click the floating submitted-work badges to reach assignments above or below the visible list.",
+        "Saved tag controls appear only for usable placements and follow their pages through rotation, reordering, deletion, and Undo."
+      ],
+      "bugs": [
+        "Fixed Patch slowing down as strokes accumulated, soft erasing leaving haze in saved PDFs, and chosen paper colors being ignored when saving. Long gestures retain their end and outdated previews no longer pile up.",
+        "Removed the extra saved-sample verification screen. Ordinary PDF edits no longer automatically unverify the sample; Unverify sample uses the existing restart workflow.",
+        "Protected teacher edits and newer submission revisions from background grading results, and preserved queued analysis requests through cancellation, retries, and restart recovery.",
+        "Moved Schoology posting into the background, prevented overlapping sends, and retained uncertain results for reconciliation without automatically posting them again.",
+        "Fixed overlapping course progress text, unreliable grading shortcuts, missing-file recovery blocking other work, and the quick-start tour's file-size check and packaged demo lookup."
+      ]
+    },
+    {
+      "version": "4.2.30-beta.7",
+      "date": "2026-09-12",
+      "features": [
+        "Fix Problem offers Unverify sample to start over in the existing sample editor, plus separate Edit in default app, Patch, and Edit page order actions. Page-order editing highlights the thumbnails.",
+        "Schoology pre-grading can use supported linked assignment rubrics, with assignment choices and scoring evidence available for review. Missing or unsupported rubric material requires review instead of a guessed score.",
+        "Expand an assignment title to see its directions and linked materials. Click the floating submitted-work badges to reach assignments above or below the visible list.",
+        "Saved tag controls appear only for usable placements and follow their pages through rotation, reordering, deletion, and Undo."
+      ],
+      "bugs": [
+        "Removed the extra saved-sample verification screen. Editing a PDF no longer automatically unverifies it; Unverify sample uses the existing restart workflow.",
+        "Fixed Patch drawing slowing down as strokes accumulated. Repeated soft eraser passes now remove haze in the saved PDF, long gestures retain their end, and outdated previews no longer pile up.",
+        "Protected teacher edits and newer submission revisions from background grading results, and preserved queued analysis requests through cancellation, retries, and restart recovery.",
+        "Moved Schoology posting into the background, prevented overlapping sends, and retained uncertain results for reconciliation without automatically posting them again.",
+        "Fixed overlapping course progress text, unreliable grading shortcuts, missing-file recovery blocking other work, and the quick-start tour's file-size check and packaged demo lookup."
+      ]
+    },
+    {
+      "version": "4.2.30-beta.6",
+      "date": "2026-09-12",
+      "features": [
+        "Schoology pre-grading can use supported linked assignment rubrics, with assignment choices and scoring evidence available for review. Missing or unsupported rubric material requires review instead of a guessed score.",
+        "Expand an assignment title to see its directions and linked materials. Click the floating submitted-work badges to reach assignments above or below the visible list.",
+        "Fix Problem reopens a saved work sample for page and text corrections without its original source file. Verify the corrected sample again when finished.",
+        "Saved tag controls appear only for usable placements and follow their pages through rotation, reordering, deletion, and Undo."
+      ],
+      "bugs": [
+        "Protected teacher edits and newer submission revisions from background grading results, and preserved queued analysis requests through cancellation, retries, and restart recovery.",
+        "Moved Schoology posting into the background, prevented overlapping sends, and retained uncertain results for reconciliation without automatically posting them again.",
+        "Fixed overlapping course progress text, unreliable grading shortcuts, and missing-file recovery blocking other work.",
+        "Fixed the quick-start tour showing a permanent file-size check and corrected its packaged demo asset lookup."
+      ]
+    },
+    {
+      "version": "4.2.30-beta.5",
+      "date": "2026-09-12",
+      "features": [
+        "Expanded Schoology assignments now show directions from the linked assignment document, with links to the assignment, rubrics, and other materials."
+      ],
+      "bugs": [
+        "Fixed assignment details showing only Schoology's introductory paragraph when the real task was in a linked Google Doc. Materials load in the background and can be retried if unavailable."
+      ]
+    },
+    {
+      "version": "4.2.30-beta.4",
+      "date": "2026-09-12",
+      "features": [
+        "Click an assignment title in the grading window to expand its Schoology instructions and open the assignment in your browser.",
+        "Floating badges show how many submitted assignments are above or below the visible course activity list.",
+        "Enter follows the highlighted grading action: post feedback, file the work sample, then move to the next submission. Visible shortcut cues help you keep moving."
+      ],
+      "bugs": [
+        "Fixed overlapping course progress text and grading shortcuts that stopped responding after repeated use.",
+        "Missing PDFs and disconnected work folders no longer block other work. Recovery updates the folder heading and can find missing files in bulk.",
+        "Pre-grading preserves newer grades, feedback, and submission revisions; incomplete results remain available for review without awarding credit.",
+        "Manual analysis retries and requests arriving as the queue finishes are retained. Posting without a Schoology connection no longer reports success."
+      ]
+    },
+    {
       "version": "4.2.30-beta.2",
       "date": "2026-09-11",
       "features": [
