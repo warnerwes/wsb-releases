@@ -1,6 +1,29 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.10",
+      "date": "2026-09-12",
+      "features": [
+        "Patch puts Erase, Replace text, and Draw up front, with a larger preview, Compare original, and Undo. Pen color and Match pen sit beside Brush settings.",
+        "Fix Problem offers Unverify sample to start over in the existing editor, plus separate Edit in default app, Patch, and Edit page order actions.",
+        "Verifying or re-verifying a sample uses your current 4-square or 6-square header setting for the preview and saved PDF.",
+        "Schoology pre-grading can use supported linked assignment rubrics, with assignment choices and scoring evidence available for review. Missing or unsupported rubric material requires review instead of a guessed score.",
+        "Expand an assignment title to see its directions and linked materials. Click the floating submitted-work badges to reach assignments above or below the visible list.",
+        "Simple mode can pre-grade Schoology work without local OCR or Ollama."
+      ],
+      "bugs": [
+        "Fixed Brush settings ignoring clicks outside the popup, including its own button. One click now closes it without drawing on the document underneath.",
+        "Fixed long freezes after posting Schoology grades and reduced background animation work while editors and popups are open. Sample previews open without rendering the first page twice, and canceled previews no longer hold up the interface.",
+        "Fixed Patch slowing down as strokes accumulated, soft erasing leaving haze in saved PDFs, and paper colors being ignored when saving. Improved pen matching and drag behavior, and prevented outdated previews from piling up.",
+        "Fixed pre-grading movement stopping after hovering over a course, clipped course titles in the grading window, and unclear completion totals. The tally now identifies finalized students and remaining samples.",
+        "Protected teacher edits and newer submission revisions from background grading results, preserved queued requests through cancellation and restart, and prevented overlapping grade posts. Uncertain posting results are retained for reconciliation without automatically posting again.",
+        "Ordinary PDF corrections no longer automatically unverify a sample. Saved tag placements follow their pages through rotation, reordering, deletion, and Undo.",
+        "Fixed overlapping course progress text, unreliable grading shortcuts, missing-file recovery blocking other work, and the quick-start tour's file-size check and packaged demo lookup.",
+        "Removed inactive Schoology course enrollments from the active roster and stopped marking assignments due today as overdue.",
+        "Fixed duplicate-status stamps overflowing narrow Mac grading panes and made remembered Windows folder paths display readable names on Mac."
+      ]
+    },
+    {
       "version": "4.2.29",
       "date": "2026-09-11",
       "features": [
@@ -1864,5 +1887,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-09T17:35:40.503551"
+  "last_updated": "2026-09-12"
 }
