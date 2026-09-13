@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.11",
+      "date": "2026-09-12",
+      "features": [
+        "Replacing a Schoology sample uses a simple Replace or Cancel dialog. It identifies the student, course, learning period, school year, current assignment, and proposed replacement assignment."
+      ],
+      "bugs": [
+        "Fixed replacement incorrectly reporting that the original sample was missing when its source files were present in a backup folder.",
+        "Undo preserves original source folders, including appended sources, along with the saved PDF and verification status.",
+        "Improved long duplicate-sample labels, duplicate-review sizing across monitors, and remembered workspace folder names."
+      ]
+    },
+    {
       "version": "4.2.30-beta.10",
       "date": "2026-09-12",
       "features": [
