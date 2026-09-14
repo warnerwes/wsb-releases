@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.12",
+      "date": "2026-09-14",
+      "features": [
+        "When AI is unavailable, Work Sample Buddy explains why and offers to start Ollama, open AI settings, or turn AI off."
+      ],
+      "bugs": [
+        "Restoring AI now retries interrupted grading once, including work waiting for Resume, while preserving teacher edits and newer submission revisions.",
+        "Fixed repeated AI outage prompts after recovery and unnecessary AI checks in Simple Mode or when AI is turned off.",
+        "Page orientation checks can use built-in Windows OCR when RapidOCR is unavailable, and leave pages unchanged when results are uncertain."
+      ]
+    },
+    {
       "version": "4.2.30-beta.11",
       "date": "2026-09-12",
       "features": [
