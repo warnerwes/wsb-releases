@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.11",
-      "tag": "v4.2.30-beta.11",
+      "version": "4.2.30-beta.12",
+      "tag": "v4.2.30-beta.12",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.11.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.11/WorkSampleBuddy_win_v4.2.30-beta.11.exe",
-        "size": 304940040,
-        "sha256": "6be49932ec3bd9546d1cc39eb046b46c49fe386351115e7c5d80ff3cec8bbaba"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.12.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.12/WorkSampleBuddy_win_v4.2.30-beta.12.exe",
+        "size": 304967928,
+        "sha256": "5229277ae5a6973e0349d8153dac6149ec3e1b2a36d478c75bea843d0ac6d73f"
       },
-      "notes": "New in this version:\n\u2022 Replacing a Schoology sample uses a simple Replace or Cancel dialog. It identifies the student, course, learning period, school year, current assignment, and proposed replacement assignment.\n\nFixes:\n\u2022 Fixed replacement incorrectly reporting that the original sample was missing when its source files were present in a backup folder.\n\u2022 Undo preserves original source folders, including appended sources, along with the saved PDF and verification status.\n\u2022 Improved long duplicate-sample labels, duplicate-review sizing across monitors, and remembered workspace folder names."
+      "notes": "New in this version:\n\u2022 When AI is unavailable, Work Sample Buddy explains why and offers to start Ollama, open AI settings, or turn AI off.\n\nFixes:\n\u2022 Restoring AI now retries interrupted grading once, including work waiting for Resume, while preserving teacher edits and newer submission revisions.\n\u2022 Fixed repeated AI outage prompts after recovery and unnecessary AI checks in Simple Mode or when AI is turned off.\n\u2022 Page orientation checks can use built-in Windows OCR when RapidOCR is unavailable, and leave pages unchanged when results are uncertain."
     },
     "stable": {
       "version": "4.2.29",
