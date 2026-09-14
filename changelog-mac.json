@@ -1,6 +1,20 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.12",
+      "date": "2026-09-14",
+      "features": [
+        "Replacing a Schoology sample now uses a concise Replace or Cancel confirmation that identifies the student, course, learning period, school year, current assignment, and proposed replacement.",
+        "When AI is unavailable, Buddy explains why and offers to start Ollama, open AI settings, or turn AI off. Restoring Ollama can retry the same unchanged grading request once."
+      ],
+      "bugs": [
+        "Fixed sample replacement incorrectly reporting that the original was missing when its source files were stored in a backup folder. Undo now preserves original source folders, appended sources, the saved PDF, and verification state.",
+        "Orientation checks on Mac now use the available native OCR engine, including Apple Vision, and leave pages unchanged when results are uncertain.",
+        "Ollama recovery ignores stale warnings after service recovers, stays quiet when AI is inactive, and protects teacher edits, cancellations, and changed source files from delayed retries.",
+        "Improved duplicate-review placement across multiple monitors and made Mac shutdown wait for window cleanup before quitting."
+      ]
+    },
+    {
       "version": "4.2.30-beta.10",
       "date": "2026-09-12",
       "features": [
@@ -1887,5 +1901,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-12"
+  "last_updated": "2026-09-14"
 }
