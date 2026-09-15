@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.16",
+      "date": "2026-09-15",
+      "features": [
+        "Grading and OCR now stay responsive while background analysis, tag-region detection, and retry work continue."
+      ],
+      "bugs": [
+        "Fixed PaddleOCR and other OCR operations blocking the grading window or hanging when native OCR work was already busy.",
+        "Fixed interrupted grading jobs losing their resume path or retrying after the crash-loop guard had given up. Review panels now explain repeated interruptions clearly.",
+        "Fixed OCR retries across asynchronous PDF and image conversions so recoverable samples can continue processing without restarting the whole review."
+      ]
+    },
+    {
       "version": "4.2.30-beta.15",
       "date": "2026-09-14",
       "features": [
