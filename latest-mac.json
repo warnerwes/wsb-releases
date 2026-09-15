@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.17",
-      "tag": "v4.2.30-beta.17",
+      "version": "4.2.30-beta.18",
+      "tag": "v4.2.30-beta.18",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.30-beta.17.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.17/WorkSampleBuddy_mac_v4.2.30-beta.17.dmg",
-        "size": 344798015,
-        "sha256": "a61a75c566be40a14a91dd6cef0a5daecf4eff21133e0aa7880c61c651321458"
+        "name": "WorkSampleBuddy_mac_v4.2.30-beta.18.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.18/WorkSampleBuddy_mac_v4.2.30-beta.18.dmg",
+        "size": 344804633,
+        "sha256": "5c513137d0a99f9c3dc8a7e777ce23225982cb494437d15f06b32bca78d288f3"
       },
-      "notes": "New in this version:\n\u2022 Interrupted grading analysis now resumes safely after a restart and explains when repeated interruptions require teacher review.\n\nFixes:\n\u2022 Fixed grading queue races that could lose resumed work or close the queue before pending jobs were restored.\n\u2022 Fixed crash-loop recovery cleanup so one worker cannot remove another worker's state and clean quits do not consume retry protection.\n\u2022 Jobs that the crash-loop guard has given up on no longer auto-retry repeatedly; their interrupted reason is shown in the review panel."
+      "notes": "New in this version:\n\u2022 New Mac installs and reconnects can now sign in to Google Drive because the desktop OAuth client is included in the release.\n\nFixes:\n\u2022 Mac and Windows packaging now fails clearly when the required Google Drive OAuth client is missing instead of creating an installer that cannot sign in."
     },
     "stable": {
       "version": "4.2.29",
