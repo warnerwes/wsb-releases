@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.12",
-      "tag": "v4.2.30-beta.12",
+      "version": "4.2.30-beta.14",
+      "tag": "v4.2.30-beta.14",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.12.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.12/WorkSampleBuddy_win_v4.2.30-beta.12.exe",
-        "size": 304967928,
-        "sha256": "5229277ae5a6973e0349d8153dac6149ec3e1b2a36d478c75bea843d0ac6d73f"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.14.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.14/WorkSampleBuddy_win_v4.2.30-beta.14.exe",
+        "size": 307267816,
+        "sha256": "3bdef9b958ea40ba95fd7e3939c53811cb9b05ec86febd06c6c484bd95ddf8c9"
       },
-      "notes": "New in this version:\n\u2022 When AI is unavailable, Work Sample Buddy explains why and offers to start Ollama, open AI settings, or turn AI off.\n\nFixes:\n\u2022 Restoring AI now retries interrupted grading once, including work waiting for Resume, while preserving teacher edits and newer submission revisions.\n\u2022 Fixed repeated AI outage prompts after recovery and unnecessary AI checks in Simple Mode or when AI is turned off.\n\u2022 Page orientation checks can use built-in Windows OCR when RapidOCR is unavailable, and leave pages unchanged when results are uncertain."
+      "notes": "New in this version:\n\u2022 When a Pathways upload does not reach PCA Extension, Work Sample Buddy now gives clear Chrome setup steps, can open the Chrome Web Store, and lets you copy support details.\n\nFixes:\n\u2022 Fixed upload recovery suggesting an update when Chrome was connected to another installed copy of Work Sample Buddy. The message now identifies the bridge that Chrome is using.\n\u2022 The Chrome bridge now identifies its completed-work-date capability and always returns date status for finalized students, so an unreadable date record gives useful guidance instead of a misleading update prompt."
     },
     "stable": {
       "version": "4.2.29",
