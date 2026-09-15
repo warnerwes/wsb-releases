@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.14",
+      "date": "2026-09-14",
+      "features": [
+        "When a Pathways upload does not reach PCA Extension, Work Sample Buddy now gives clear Chrome setup steps, can open the Chrome Web Store, and lets you copy support details."
+      ],
+      "bugs": [
+        "Fixed upload recovery suggesting an update when Chrome was connected to another installed copy of Work Sample Buddy. The message now identifies the bridge that Chrome is using.",
+        "The Chrome bridge now identifies its completed-work-date capability and always returns date status for finalized students, so an unreadable date record gives useful guidance instead of a misleading update prompt."
+      ]
+    },
+    {
       "version": "4.2.30-beta.12",
       "date": "2026-09-14",
       "features": [
