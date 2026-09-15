@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.14",
+      "date": "2026-09-14",
+      "features": [],
+      "bugs": [
+        "Folder scans now recognize current PCA filename shorthand such as Alg and Eng, glued grade levels, part numbers, and common student-name separators so matching work reaches the correct roster course.",
+        "Scanned files that match no course are now offered for placement instead of being quietly dropped, and the original scanned files are never deleted.",
+        "Crash and debug reports now retain attached screenshots and the full redacted native crash dump from the crashed session, without resending that dump on a later launch.",
+        "Attaching a clipboard screenshot to a debug report no longer fails with an error.",
+        "Fixed Schoology re-downloads failing after a live thread revision because the refreshed submission data was held in the wrong in-memory format.",
+        "Samples imported without a work date now fall inside their learning period instead of defaulting to today.",
+        "Pathways uploads now accept any saved Work Date format rather than rejecting some of them.",
+        "The toolbar learning period button now shows the current learning period as soon as the app opens.",
+        "Four import and scan steps that could fail silently now report the problem instead of losing a sample without a word."
+      ]
+    },
+    {
       "version": "4.2.30-beta.12",
       "date": "2026-09-14",
       "features": [
