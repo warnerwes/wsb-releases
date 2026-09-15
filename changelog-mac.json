@@ -1,6 +1,20 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.15",
+      "date": "2026-09-14",
+      "features": [
+        "Schoology pre-grading now remembers completed Needs review decisions across restarts and retries a transient interruption once instead of repeatedly restarting the same work.",
+        "Supported Google Docs directions can now provide grading context more reliably when an assignment has no separate rubric."
+      ],
+      "bugs": [
+        "Fixed resubmission R badges so they appear only for a real newer revision, keep the correct queue color, and survive course-card refreshes.",
+        "Fixed background pre-grading repeatedly reconsidering completed work and incorrectly counting finished items against its work limit.",
+        "A Schoology grade newer than the submitted file now clears its resubmission state without requiring an exception.",
+        "When the PCA Extension cannot complete an upload, Buddy now explains how to recover instead of leaving the failure unexplained."
+      ]
+    },
+    {
       "version": "4.2.30-beta.14",
       "date": "2026-09-14",
       "features": [],
