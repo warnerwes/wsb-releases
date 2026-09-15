@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.14",
-      "tag": "v4.2.30-beta.14",
+      "version": "4.2.30-beta.15",
+      "tag": "v4.2.30-beta.15",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.14.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.14/WorkSampleBuddy_win_v4.2.30-beta.14.exe",
-        "size": 307267816,
-        "sha256": "3bdef9b958ea40ba95fd7e3939c53811cb9b05ec86febd06c6c484bd95ddf8c9"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.15.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.15/WorkSampleBuddy_win_v4.2.30-beta.15.exe",
+        "size": 307296584,
+        "sha256": "7f9a6137b56f15c1a58bb4ea7a39a7d44f9f015433285c2ee37f00155fab7ea0"
       },
-      "notes": "New in this version:\n\u2022 When a Pathways upload does not reach PCA Extension, Work Sample Buddy now gives clear Chrome setup steps, can open the Chrome Web Store, and lets you copy support details.\n\nFixes:\n\u2022 Fixed upload recovery suggesting an update when Chrome was connected to another installed copy of Work Sample Buddy. The message now identifies the bridge that Chrome is using.\n\u2022 The Chrome bridge now identifies its completed-work-date capability and always returns date status for finalized students, so an unreadable date record gives useful guidance instead of a misleading update prompt."
+      "notes": "New in this version:\n\u2022 Schoology pre-grading now remembers items that need review and automatically rechecks them when assignment material changes.\n\nFixes:\n\u2022 Fixed Google Docs directions sometimes appearing unreadable to pre-grading; Work Sample Buddy can now use available assignment descriptions when no rubric is attached.\n\u2022 Fixed resubmission badges appearing on ordinary reopened work or lingering after a newer Schoology grade. The R badge now marks only a true resubmission and follows its current grading state.\n\u2022 Fixed queued Schoology pre-grading and progress totals being lost or repeatedly refreshed while the class grid reloads."
     },
     "stable": {
       "version": "4.2.29",
