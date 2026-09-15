@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.12",
-      "tag": "v4.2.30-beta.12",
+      "version": "4.2.30-beta.14",
+      "tag": "v4.2.30-beta.14",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.30-beta.12.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.12/WorkSampleBuddy_mac_v4.2.30-beta.12.dmg",
-        "size": 344758660,
-        "sha256": "dfff2ad462d56b4b89026a9faee9b020a5ad852ec0b90d16b3f50c911488d2a2"
+        "name": "WorkSampleBuddy_mac_v4.2.30-beta.14.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.14/WorkSampleBuddy_mac_v4.2.30-beta.14.dmg",
+        "size": 344776091,
+        "sha256": "2d40f00560126d341c3a997fbf0d26337ab183f63651cd0055143b77eb454854"
       },
-      "notes": "New in this version:\n\u2022 Replacing a Schoology sample now uses a concise Replace or Cancel confirmation that identifies the student, course, learning period, school year, current assignment, and proposed replacement.\n\u2022 When AI is unavailable, Buddy explains why and offers to start Ollama, open AI settings, or turn AI off. Restoring Ollama can retry the same unchanged grading request once.\n\nFixes:\n\u2022 Fixed sample replacement incorrectly reporting that the original was missing when its source files were stored in a backup folder. Undo now preserves original source folders, appended sources, the saved PDF, and verification state.\n\u2022 Orientation checks on Mac now use the available native OCR engine, including Apple Vision, and leave pages unchanged when results are uncertain.\n\u2022 Ollama recovery ignores stale warnings after service recovers, stays quiet when AI is inactive, and protects teacher edits, cancellations, and changed source files from delayed retries.\n\u2022 Improved duplicate-review placement across multiple monitors and made Mac shutdown wait for window cleanup before quitting."
+      "notes": "Fixes:\n\u2022 Folder scans now recognize current PCA filename shorthand such as Alg and Eng, glued grade levels, part numbers, and common student-name separators so matching work reaches the correct roster course.\n\u2022 Scanned files that match no course are now offered for placement instead of being quietly dropped, and the original scanned files are never deleted.\n\u2022 Crash and debug reports now retain attached screenshots and the full redacted native crash dump from the crashed session, without resending that dump on a later launch.\n\u2022 Attaching a clipboard screenshot to a debug report no longer fails with an error.\n\u2022 Fixed Schoology re-downloads failing after a live thread revision because the refreshed submission data was held in the wrong in-memory format.\n\u2022 Samples imported without a work date now fall inside their learning period instead of defaulting to today.\n\u2022 Pathways uploads now accept any saved Work Date format rather than rejecting some of them.\n\u2022 The toolbar learning period button now shows the current learning period as soon as the app opens.\n\u2022 Four import and scan steps that could fail silently now report the problem instead of losing a sample without a word."
     },
     "stable": {
       "version": "4.2.29",
