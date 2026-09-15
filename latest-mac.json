@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.14",
-      "tag": "v4.2.30-beta.14",
+      "version": "4.2.30-beta.15",
+      "tag": "v4.2.30-beta.15",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.30-beta.14.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.14/WorkSampleBuddy_mac_v4.2.30-beta.14.dmg",
-        "size": 344776091,
-        "sha256": "2d40f00560126d341c3a997fbf0d26337ab183f63651cd0055143b77eb454854"
+        "name": "WorkSampleBuddy_mac_v4.2.30-beta.15.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.15/WorkSampleBuddy_mac_v4.2.30-beta.15.dmg",
+        "size": 344780222,
+        "sha256": "102d384474031257053f23c97e4861c8a22dc11ca3b0a11d113327d8145aec0d"
       },
-      "notes": "Fixes:\n\u2022 Folder scans now recognize current PCA filename shorthand such as Alg and Eng, glued grade levels, part numbers, and common student-name separators so matching work reaches the correct roster course.\n\u2022 Scanned files that match no course are now offered for placement instead of being quietly dropped, and the original scanned files are never deleted.\n\u2022 Crash and debug reports now retain attached screenshots and the full redacted native crash dump from the crashed session, without resending that dump on a later launch.\n\u2022 Attaching a clipboard screenshot to a debug report no longer fails with an error.\n\u2022 Fixed Schoology re-downloads failing after a live thread revision because the refreshed submission data was held in the wrong in-memory format.\n\u2022 Samples imported without a work date now fall inside their learning period instead of defaulting to today.\n\u2022 Pathways uploads now accept any saved Work Date format rather than rejecting some of them.\n\u2022 The toolbar learning period button now shows the current learning period as soon as the app opens.\n\u2022 Four import and scan steps that could fail silently now report the problem instead of losing a sample without a word."
+      "notes": "New in this version:\n\u2022 Schoology pre-grading now remembers completed Needs review decisions across restarts and retries a transient interruption once instead of repeatedly restarting the same work.\n\u2022 Supported Google Docs directions can now provide grading context more reliably when an assignment has no separate rubric.\n\nFixes:\n\u2022 Fixed resubmission R badges so they appear only for a real newer revision, keep the correct queue color, and survive course-card refreshes.\n\u2022 Fixed background pre-grading repeatedly reconsidering completed work and incorrectly counting finished items against its work limit.\n\u2022 A Schoology grade newer than the submitted file now clears its resubmission state without requiring an exception.\n\u2022 When the PCA Extension cannot complete an upload, Buddy now explains how to recover instead of leaving the failure unexplained."
     },
     "stable": {
       "version": "4.2.29",
