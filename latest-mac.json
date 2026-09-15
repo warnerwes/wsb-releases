@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.15",
-      "tag": "v4.2.30-beta.15",
+      "version": "4.2.30-beta.16",
+      "tag": "v4.2.30-beta.16",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.30-beta.15.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.15/WorkSampleBuddy_mac_v4.2.30-beta.15.dmg",
-        "size": 344780222,
-        "sha256": "102d384474031257053f23c97e4861c8a22dc11ca3b0a11d113327d8145aec0d"
+        "name": "WorkSampleBuddy_mac_v4.2.30-beta.16.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.16/WorkSampleBuddy_mac_v4.2.30-beta.16.dmg",
+        "size": 344778892,
+        "sha256": "1beb9e967fe42a90501b4b8b3ad5508eca35b24956de861e7099efbea0eb64c0"
       },
-      "notes": "New in this version:\n\u2022 Schoology pre-grading now remembers completed Needs review decisions across restarts and retries a transient interruption once instead of repeatedly restarting the same work.\n\u2022 Supported Google Docs directions can now provide grading context more reliably when an assignment has no separate rubric.\n\nFixes:\n\u2022 Fixed resubmission R badges so they appear only for a real newer revision, keep the correct queue color, and survive course-card refreshes.\n\u2022 Fixed background pre-grading repeatedly reconsidering completed work and incorrectly counting finished items against its work limit.\n\u2022 A Schoology grade newer than the submitted file now clears its resubmission state without requiring an exception.\n\u2022 When the PCA Extension cannot complete an upload, Buddy now explains how to recover instead of leaving the failure unexplained."
+      "notes": "New in this version:\n\u2022 Preview OCR now runs away from the GUI thread so extracting names and tags keeps the app responsive.\n\u2022 A diagnostic GUI hang watchdog records thread stacks when the interface stalls, helping identify the cause of future freezes.\n\nFixes:\n\u2022 Fixed PaddleOCR native calls racing when multiple OCR jobs run at once; calls are now serialized to prevent native crashes.\n\u2022 Fixed OCR retry state being lost when a preview image is converted to PDF during the asynchronous extraction flow."
     },
     "stable": {
       "version": "4.2.29",
