@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.18",
+      "date": "2026-09-15",
+      "features": [
+        "New Mac installs and reconnects can now sign in to Google Drive because the desktop OAuth client is included in the release."
+      ],
+      "bugs": [
+        "Mac and Windows packaging now fails clearly when the required Google Drive OAuth client is missing instead of creating an installer that cannot sign in."
+      ]
+    },
+    {
       "version": "4.2.30-beta.17",
       "date": "2026-09-15",
       "features": [
