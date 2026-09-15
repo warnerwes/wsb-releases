@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.17",
+      "date": "2026-09-15",
+      "features": [
+        "Interrupted grading analysis now resumes safely after a restart and explains when repeated interruptions require teacher review."
+      ],
+      "bugs": [
+        "Fixed grading queue races that could lose resumed work or close the queue before pending jobs were restored.",
+        "Fixed crash-loop recovery cleanup so one worker cannot remove another worker's state and clean quits do not consume retry protection.",
+        "Jobs that the crash-loop guard has given up on no longer auto-retry repeatedly; their interrupted reason is shown in the review panel."
+      ]
+    },
+    {
       "version": "4.2.30-beta.16",
       "date": "2026-09-15",
       "features": [
