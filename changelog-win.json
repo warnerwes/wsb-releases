@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.15",
+      "date": "2026-09-14",
+      "features": [
+        "Schoology pre-grading now remembers items that need review and automatically rechecks them when assignment material changes."
+      ],
+      "bugs": [
+        "Fixed Google Docs directions sometimes appearing unreadable to pre-grading; Work Sample Buddy can now use available assignment descriptions when no rubric is attached.",
+        "Fixed resubmission badges appearing on ordinary reopened work or lingering after a newer Schoology grade. The R badge now marks only a true resubmission and follows its current grading state.",
+        "Fixed queued Schoology pre-grading and progress totals being lost or repeatedly refreshed while the class grid reloads."
+      ]
+    },
+    {
       "version": "4.2.30-beta.14",
       "date": "2026-09-14",
       "features": [
