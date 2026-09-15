@@ -1,6 +1,18 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.16",
+      "date": "2026-09-15",
+      "features": [
+        "Preview OCR now runs away from the GUI thread so extracting names and tags keeps the app responsive.",
+        "A diagnostic GUI hang watchdog records thread stacks when the interface stalls, helping identify the cause of future freezes."
+      ],
+      "bugs": [
+        "Fixed PaddleOCR native calls racing when multiple OCR jobs run at once; calls are now serialized to prevent native crashes.",
+        "Fixed OCR retry state being lost when a preview image is converted to PDF during the asynchronous extraction flow."
+      ]
+    },
+    {
       "version": "4.2.30-beta.15",
       "date": "2026-09-14",
       "features": [
