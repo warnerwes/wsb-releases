@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.15",
-      "tag": "v4.2.30-beta.15",
+      "version": "4.2.30-beta.16",
+      "tag": "v4.2.30-beta.16",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.15.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.15/WorkSampleBuddy_win_v4.2.30-beta.15.exe",
-        "size": 307296584,
-        "sha256": "7f9a6137b56f15c1a58bb4ea7a39a7d44f9f015433285c2ee37f00155fab7ea0"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.16.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.16/WorkSampleBuddy_win_v4.2.30-beta.16.exe",
+        "size": 307280288,
+        "sha256": "d20c14ac981c3ecfbd05c1cef88ae8db76b4fcdd15e699bd2aae1aca9d04f8ee"
       },
-      "notes": "New in this version:\n\u2022 Schoology pre-grading now remembers items that need review and automatically rechecks them when assignment material changes.\n\nFixes:\n\u2022 Fixed Google Docs directions sometimes appearing unreadable to pre-grading; Work Sample Buddy can now use available assignment descriptions when no rubric is attached.\n\u2022 Fixed resubmission badges appearing on ordinary reopened work or lingering after a newer Schoology grade. The R badge now marks only a true resubmission and follows its current grading state.\n\u2022 Fixed queued Schoology pre-grading and progress totals being lost or repeatedly refreshed while the class grid reloads."
+      "notes": "New in this version:\n\u2022 Grading and OCR now stay responsive while background analysis, tag-region detection, and retry work continue.\n\nFixes:\n\u2022 Fixed PaddleOCR and other OCR operations blocking the grading window or hanging when native OCR work was already busy.\n\u2022 Fixed interrupted grading jobs losing their resume path or retrying after the crash-loop guard had given up. Review panels now explain repeated interruptions clearly.\n\u2022 Fixed OCR retries across asynchronous PDF and image conversions so recoverable samples can continue processing without restarting the whole review."
     },
     "stable": {
       "version": "4.2.29",
