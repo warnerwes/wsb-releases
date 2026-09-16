@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "4.2.31",
+      "date": "2026-09-16",
+      "features": [
+        "macOS builds now bundle PyQt6-Qt6 6.11.2, preventing the Qt WaitCursor crash caused by QTBUG-147602."
+      ],
+      "bugs": [
+        "Fixed a macOS crash when the app showed the wait cursor."
+      ]
+    },
+    {
       "version": "4.2.30",
       "date": "2026-09-16",
       "features": [
