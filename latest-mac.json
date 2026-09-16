@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.18",
-      "tag": "v4.2.30-beta.18",
+      "version": "4.2.30-beta.19",
+      "tag": "v4.2.30-beta.19",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.30-beta.18.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.18/WorkSampleBuddy_mac_v4.2.30-beta.18.dmg",
-        "size": 344804633,
-        "sha256": "5c513137d0a99f9c3dc8a7e777ce23225982cb494437d15f06b32bca78d288f3"
+        "name": "WorkSampleBuddy_mac_v4.2.30-beta.19.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.19/WorkSampleBuddy_mac_v4.2.30-beta.19.dmg",
+        "size": 344907199,
+        "sha256": "2f481caafd146fbe2bfe1c23624014a32b42dba8945ad450c0bada1548641c75"
       },
-      "notes": "New in this version:\n\u2022 New Mac installs and reconnects can now sign in to Google Drive because the desktop OAuth client is included in the release.\n\nFixes:\n\u2022 Mac and Windows packaging now fails clearly when the required Google Drive OAuth client is missing instead of creating an installer that cannot sign in."
+      "notes": "New in this version:\n\u2022 Excused and Missing moved out of the grade dropdown into the submission status control, beside Accepted and the rejection reasons. Marking work excused or missing no longer looks like giving it a grade.\n\u2022 While a submission is queued for pre-grading, its grade, score, date and feedback are held so pending AI results cannot overwrite your work. A Take over button cancels that item and hands the fields back.\n\nFixes:\n\u2022 Fixed Missing work posting to Schoology as Incomplete instead of Missing.\n\u2022 Fixed pre-grading results being discarded when the grading window stamped a header while the analysis was still running, so pre-grades now land instead of quietly disappearing.\n\u2022 Fixed Schoology submissions that could not be graded after a redownload, reporting that the submission had changed while its attachment was downloading.\n\u2022 Fixed teacher-approved equivalent rubrics dead-ending at Needs review instead of falling through to normal grading, and added a rubric section to the diagnostics report.\n\u2022 Fixed the task printed on a work sample using the original directions instead of the revised, shortened version.\n\u2022 Fixed one student's feedback and score carrying over to the next student after marking work excused or missing."
     },
     "stable": {
       "version": "4.2.29",
