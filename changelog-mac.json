@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "version": "4.2.30-beta.19",
+      "date": "2026-09-16",
+      "features": [
+        "Excused and Missing moved out of the grade dropdown into the submission status control, beside Accepted and the rejection reasons. Marking work excused or missing no longer looks like giving it a grade.",
+        "While a submission is queued for pre-grading, its grade, score, date and feedback are held so pending AI results cannot overwrite your work. A Take over button cancels that item and hands the fields back."
+      ],
+      "bugs": [
+        "Fixed Missing work posting to Schoology as Incomplete instead of Missing.",
+        "Fixed pre-grading results being discarded when the grading window stamped a header while the analysis was still running, so pre-grades now land instead of quietly disappearing.",
+        "Fixed Schoology submissions that could not be graded after a redownload, reporting that the submission had changed while its attachment was downloading.",
+        "Fixed teacher-approved equivalent rubrics dead-ending at Needs review instead of falling through to normal grading, and added a rubric section to the diagnostics report.",
+        "Fixed the task printed on a work sample using the original directions instead of the revised, shortened version.",
+        "Fixed one student's feedback and score carrying over to the next student after marking work excused or missing."
+      ]
+    },
+    {
       "version": "4.2.30-beta.18",
       "date": "2026-09-15",
       "features": [
