@@ -1,6 +1,44 @@
 {
   "versions": [
     {
+      "version": "4.2.30",
+      "date": "2026-09-16",
+      "features": [
+        "Excused and Missing are now submission statuses, set from the status control beside Accepted and the rejection reasons instead of from the grade list.",
+        "Schoology pre-grading can use linked assignment rubrics and Google Docs directions, shows its scoring evidence for review, and asks for review instead of guessing when rubric material is missing or unsupported. Items needing review are remembered and rechecked when the assignment material changes.",
+        "Simple mode pre-grades Schoology work without OCR or AI: activity logs are scored from their logged hours, gradebook printouts are summarized, and other work gets a neutral comment with the grade left for you.",
+        "While a submission is queued for pre-grading, its grade, score, date and feedback are held so AI results cannot overwrite your work. Take over cancels that item and hands the fields back.",
+        "Expand an assignment title to see its directions and linked materials, and click the floating badges to reach submitted work above or below the visible list.",
+        "Grading window keyboard shortcuts: N next, B back, G score, F feedback, D date, T task, U link, O open in Schoology, S submit as a work sample, P post. Press ? for a menu of every shortcut; Enter follows the highlighted action. Review and verification windows have their own ? menus.",
+        "Patch puts Erase, Replace text and Draw up front, with a larger preview, Compare original, Undo and Match pen. Fix Problem adds Unverify sample, Edit in default app, Patch and Edit page order.",
+        "Verifying a sample uses your current 4-square or 6-square header setting.",
+        "Replacing a Schoology sample uses a simple Replace or Cancel confirmation that identifies the student, course, learning period, school year and both assignments.",
+        "When AI is unavailable, Work Sample Buddy explains why and offers to start Ollama, open AI settings, or turn AI off.",
+        "When a Pathways upload does not reach PCA Extension, Work Sample Buddy explains how to recover and lets you copy support details.",
+        "Student rosters refresh daily, so a student moved between classes appears in the right place."
+      ],
+      "bugs": [
+        "Fixed Missing work posting to Schoology as Incomplete. Work already posted as Missing may still show Incomplete in Schoology; open it and press Post to correct it.",
+        "Fixed excusing a missing assignment switching back to Missing when you reopened it, which could post Missing instead of Excused.",
+        "Fixed pre-grades being silently discarded, redownloaded Schoology work that could not be graded, and teacher-approved equivalent rubrics stopping at Needs review.",
+        "Background grading no longer overwrites your edits or newer submission revisions. Queued and interrupted work resumes after cancellation, a restart or an AI outage, and repeated interruptions are explained instead of retried forever.",
+        "Posting grades runs in the background without long freezes, never sends overlapping posts, keeps uncertain results for reconciliation, and no longer reports success without a Schoology connection.",
+        "Fixed assignments marked Missing before their deadline or for students no longer in the section, and resubmission badges appearing on work that was not resubmitted.",
+        "Fixed OCR work freezing the interface or crashing when several jobs ran at once. Previews read names and tags in the background, and orientation checks use Apple Vision, leaving pages unchanged when unsure.",
+        "Fixed Patch slowing down over time, soft erasing leaving haze in saved PDFs, paper colors being ignored, and Brush settings not closing on an outside click.",
+        "Ordinary PDF corrections no longer unverify a sample, and saved tags follow their pages through rotation, reordering, deletion and Undo.",
+        "The task printed on a work sample now uses the revised, shortened task.",
+        "Fixed one student's feedback and score carrying over to the next student.",
+        "Missing PDFs or disconnected folders no longer block other work, and replacing a sample no longer claims the original is missing when it is in a backup folder.",
+        "Folder scans recognize current PCA filename shorthand, files that match no course are offered for placement instead of dropped, and samples imported without a work date fall inside their learning period.",
+        "Fixed Pathways uploads rejecting some saved Work Date formats.",
+        "Crash and debug reports keep attached screenshots, and pasting a screenshot into a report no longer fails.",
+        "Fixed overlapping course progress text, grading shortcuts that stopped responding, and Recent Updates staying empty on a new install without a connection.",
+        "New Mac installs can sign in to Google Drive.",
+        "Quitting waits for open windows to close cleanly, and duplicate-status stamps no longer overflow narrow grading panes."
+      ]
+    },
+    {
       "version": "4.2.30-beta.19",
       "date": "2026-09-16",
       "features": [
@@ -1981,5 +2019,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-14"
+  "last_updated": "2026-09-16"
 }
