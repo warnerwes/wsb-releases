@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.16",
-      "tag": "v4.2.30-beta.16",
+      "version": "4.2.30-beta.19",
+      "tag": "v4.2.30-beta.19",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.16.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.16/WorkSampleBuddy_win_v4.2.30-beta.16.exe",
-        "size": 307280288,
-        "sha256": "d20c14ac981c3ecfbd05c1cef88ae8db76b4fcdd15e699bd2aae1aca9d04f8ee"
+        "name": "WorkSampleBuddy_win_v4.2.30-beta.19.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.19/WorkSampleBuddy_win_v4.2.30-beta.19.exe",
+        "size": 311035656,
+        "sha256": "a1b98a95869119ee27ead6e072539b3f12e0bab249e7b5ed8cf96e31312dfa4d"
       },
-      "notes": "New in this version:\n\u2022 Grading and OCR now stay responsive while background analysis, tag-region detection, and retry work continue.\n\nFixes:\n\u2022 Fixed PaddleOCR and other OCR operations blocking the grading window or hanging when native OCR work was already busy.\n\u2022 Fixed interrupted grading jobs losing their resume path or retrying after the crash-loop guard had given up. Review panels now explain repeated interruptions clearly.\n\u2022 Fixed OCR retries across asynchronous PDF and image conversions so recoverable samples can continue processing without restarting the whole review."
+      "notes": "New in this version:\n\u2022 Excused and Missing moved out of the grade dropdown into the submission status control, beside Accepted and the rejection reasons. Marking work excused or missing no longer looks like giving it a grade.\n\u2022 While a submission is queued for pre-grading, its grade, score, date and feedback are held so pending AI results cannot overwrite your work. A Take over button cancels that item and hands the fields back.\n\nFixes:\n\u2022 Fixed Missing work posting to Schoology as Incomplete instead of Missing.\n\u2022 Fixed pre-grading results being discarded when the grading window stamped a header while the analysis was still running, so pre-grades now land instead of quietly disappearing.\n\u2022 Fixed Schoology submissions that could not be graded after a redownload, reporting that the submission had changed while its attachment was downloading.\n\u2022 Fixed teacher-approved equivalent rubrics dead-ending at Needs review instead of falling through to normal grading, and added a rubric section to the diagnostics report.\n\u2022 Fixed the task printed on a work sample using the original directions instead of the revised, shortened version.\n\u2022 Fixed one student's feedback and score carrying over to the next student after marking work excused or missing."
     },
     "stable": {
       "version": "4.2.29",
