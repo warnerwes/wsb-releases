@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.19",
-      "tag": "v4.2.30-beta.19",
+      "version": "4.2.32-beta.2",
+      "tag": "v4.2.32-beta.2",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.30-beta.19.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.19/WorkSampleBuddy_win_v4.2.30-beta.19.exe",
-        "size": 311035656,
-        "sha256": "a1b98a95869119ee27ead6e072539b3f12e0bab249e7b5ed8cf96e31312dfa4d"
+        "name": "WorkSampleBuddy_win_v4.2.32-beta.2.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.32-beta.2/WorkSampleBuddy_win_v4.2.32-beta.2.exe",
+        "size": 310647616,
+        "sha256": "ca9afdb48dee2fcf25c5c1f69306b6717f1eb778b014b8c27480cc8ff3afec98"
       },
-      "notes": "New in this version:\n\u2022 Excused and Missing moved out of the grade dropdown into the submission status control, beside Accepted and the rejection reasons. Marking work excused or missing no longer looks like giving it a grade.\n\u2022 While a submission is queued for pre-grading, its grade, score, date and feedback are held so pending AI results cannot overwrite your work. A Take over button cancels that item and hands the fields back.\n\nFixes:\n\u2022 Fixed Missing work posting to Schoology as Incomplete instead of Missing.\n\u2022 Fixed pre-grading results being discarded when the grading window stamped a header while the analysis was still running, so pre-grades now land instead of quietly disappearing.\n\u2022 Fixed Schoology submissions that could not be graded after a redownload, reporting that the submission had changed while its attachment was downloading.\n\u2022 Fixed teacher-approved equivalent rubrics dead-ending at Needs review instead of falling through to normal grading, and added a rubric section to the diagnostics report.\n\u2022 Fixed the task printed on a work sample using the original directions instead of the revised, shortened version.\n\u2022 Fixed one student's feedback and score carrying over to the next student after marking work excused or missing."
+      "notes": "New in this version:\n\u2022 PCA work samples shared by PCA Extension are now picked up automatically during normal syncs in both Simple and Advanced mode, including student, course, learning-period, and no-work information.\n\u2022 Sync results now say how many PCA samples were collected and list the students they belong to.\n\u2022 Courses marked No Work This LP can open the PCA work-sample page for review, and the PCA connection can be enabled or given a different Apps Script link in Settings.\n\nFixes:\n\u2022 Fixed PCA samples with matching student IDs and slightly different course names being left out, and made no-work warnings follow the same matching path.\n\u2022 Fixed PCA samples being stuck as duplicates after they were deleted and sent again from the extension.\n\u2022 Fixed crashes while opening PCA settings, handling PCA sign-in during refresh, and completing a shared sync.\n\u2022 Fixed several import and recovery paths that could lose staged page details, leave unresolved files behind, or stop a refresh after one provider failed."
     },
     "stable": {
       "version": "4.2.30",
