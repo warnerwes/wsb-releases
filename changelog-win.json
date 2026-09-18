@@ -1,6 +1,41 @@
 {
   "versions": [
     {
+      "version": "4.2.32-beta.2",
+      "date": "2026-09-18",
+      "features": [
+        "PCA work samples shared by PCA Extension are now picked up automatically during normal syncs in both Simple and Advanced mode, including student, course, learning-period, and no-work information.",
+        "Sync results now say how many PCA samples were collected and list the students they belong to.",
+        "Courses marked No Work This LP can open the PCA work-sample page for review, and the PCA connection can be enabled or given a different Apps Script link in Settings."
+      ],
+      "bugs": [
+        "Fixed PCA samples with matching student IDs and slightly different course names being left out, and made no-work warnings follow the same matching path.",
+        "Fixed PCA samples being stuck as duplicates after they were deleted and sent again from the extension.",
+        "Fixed crashes while opening PCA settings, handling PCA sign-in during refresh, and completing a shared sync.",
+        "Fixed several import and recovery paths that could lose staged page details, leave unresolved files behind, or stop a refresh after one provider failed."
+      ]
+    },
+    {
+      "version": "4.2.32-beta.1",
+      "date": "2026-09-17",
+      "features": [
+        "Finalized-student Schoology badges now name the assignments waiting for grading and open directly to those submissions."
+      ],
+      "bugs": [
+        "Fixed Missing Schoology placeholders appearing as unposted submissions waiting for pre-grade."
+      ]
+    },
+    {
+      "version": "4.2.31",
+      "date": "2026-09-16",
+      "features": [
+        "macOS builds now bundle PyQt6-Qt6 6.11.2, preventing the Qt WaitCursor crash caused by QTBUG-147602."
+      ],
+      "bugs": [
+        "Fixed a macOS crash when the app showed the wait cursor."
+      ]
+    },
+    {
       "version": "4.2.30",
       "date": "2026-09-16",
       "features": [
