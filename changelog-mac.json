@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "4.2.32-beta.2",
+      "date": "2026-09-18",
+      "features": [
+        "Simple-mode course drops can turn videos into work samples, with a video header and Google Drive upload. Links in PDFs can be opened from Verify.",
+        "Finalized-student Schoology badges name the assignments waiting for grading and open directly to those submissions.",
+        "PCA work-sample connection controls are available in both Simple and Advanced mode. Desktop importing requires administrator-provided API setup; live PCA search and download have not yet been validated."
+      ],
+      "bugs": [
+        "Fixed refresh and settings crashes and improved recovery when AI or a connected folder is unavailable.",
+        "Fixed Missing Schoology placeholders appearing as unposted submissions waiting for pre-grade.",
+        "Fixed PCA extension samples being blocked from being sent again after deletion.",
+        "Improved import matching and cancellation handling to preserve existing work and ignore results from canceled uploads.",
+        "Preserved accompanying documents when rebuilding a video work-sample header.",
+        "Show in folder now selects the current document in Finder."
+      ]
+    },
+    {
       "version": "4.2.31",
       "date": "2026-09-16",
       "features": [
