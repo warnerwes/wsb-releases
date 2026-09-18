@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.30-beta.19",
-      "tag": "v4.2.30-beta.19",
+      "version": "4.2.32-beta.2",
+      "tag": "v4.2.32-beta.2",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.30-beta.19.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.30-beta.19/WorkSampleBuddy_mac_v4.2.30-beta.19.dmg",
-        "size": 344907199,
-        "sha256": "2f481caafd146fbe2bfe1c23624014a32b42dba8945ad450c0bada1548641c75"
+        "name": "WorkSampleBuddy_mac_v4.2.32-beta.2.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.32-beta.2/WorkSampleBuddy_mac_v4.2.32-beta.2.dmg",
+        "size": 345060096,
+        "sha256": "3fba8b790b1bd4fb163616a4db1f075b1bcf7e3a6b0d4015bd235bac5ec5d895"
       },
-      "notes": "New in this version:\n\u2022 Excused and Missing moved out of the grade dropdown into the submission status control, beside Accepted and the rejection reasons. Marking work excused or missing no longer looks like giving it a grade.\n\u2022 While a submission is queued for pre-grading, its grade, score, date and feedback are held so pending AI results cannot overwrite your work. A Take over button cancels that item and hands the fields back.\n\nFixes:\n\u2022 Fixed Missing work posting to Schoology as Incomplete instead of Missing.\n\u2022 Fixed pre-grading results being discarded when the grading window stamped a header while the analysis was still running, so pre-grades now land instead of quietly disappearing.\n\u2022 Fixed Schoology submissions that could not be graded after a redownload, reporting that the submission had changed while its attachment was downloading.\n\u2022 Fixed teacher-approved equivalent rubrics dead-ending at Needs review instead of falling through to normal grading, and added a rubric section to the diagnostics report.\n\u2022 Fixed the task printed on a work sample using the original directions instead of the revised, shortened version.\n\u2022 Fixed one student's feedback and score carrying over to the next student after marking work excused or missing."
+      "notes": "New in this version:\n\u2022 Simple-mode course drops can turn videos into work samples, with a video header and Google Drive upload. Links in PDFs can be opened from Verify.\n\u2022 Finalized-student Schoology badges name the assignments waiting for grading and open directly to those submissions.\n\u2022 PCA work-sample connection controls are available in both Simple and Advanced mode. Desktop importing requires administrator-provided API setup; live PCA search and download have not yet been validated.\n\nFixes:\n\u2022 Fixed refresh and settings crashes and improved recovery when AI or a connected folder is unavailable.\n\u2022 Fixed Missing Schoology placeholders appearing as unposted submissions waiting for pre-grade.\n\u2022 Fixed PCA extension samples being blocked from being sent again after deletion.\n\u2022 Improved import matching and cancellation handling to preserve existing work and ignore results from canceled uploads.\n\u2022 Preserved accompanying documents when rebuilding a video work-sample header.\n\u2022 Show in folder now selects the current document in Finder."
     },
     "stable": {
       "version": "4.2.31",
