@@ -1,6 +1,49 @@
 {
   "versions": [
     {
+      "version": "4.2.32-beta.5",
+      "date": "2026-09-19",
+      "features": [
+        "Compare multiple samples for the same class with page previews, zoom, and available assignment details, then keep the whole file you prefer.",
+        "Open Mix pages when needed to combine, reorder, rotate, or remove pages from different samples.",
+        "Receive batches of RoboSpark work samples through Chrome while preserving each assignment's metadata and keeping alternatives available for review."
+      ],
+      "bugs": [
+        "Fixed incoming samples being discarded just because their filenames matched.",
+        "Failed replacements and page combinations preserve the current sample and original files.",
+        "Fixed pressing Enter in the preview page number accidentally accepting the sample."
+      ]
+    },
+    {
+      "version": "4.2.32-beta.4",
+      "date": "2026-09-19",
+      "features": [
+        "Original source revisions are preserved, with storage settings to review older backups.",
+        "Debug reports include session, freeze, and background-task details to help diagnose pauses."
+      ],
+      "bugs": [
+        "Fixed repeated course-progress refreshes retaining completed tasks and starting overlapping database work; rapid student and course changes now keep only the newest refresh.",
+        "Fixed cancelled course-progress refreshes waiting behind database writes, and reduced repeated sample-status lookups.",
+        "Fixed background grading remaining busy when a completed worker was cleaned up before its completion was handled.",
+        "Google Drive import and upload now share one sign-in.",
+        "Courses containing only excused requirements no longer show a Finalize action."
+      ]
+    },
+    {
+      "version": "4.2.32-beta.3",
+      "date": "2026-09-19",
+      "features": [
+        "Advanced Mode scans readable CPA and Edgenuity samples faster, keeping platform-specific extraction active across pages and avoiding repeated OCR.",
+        "PCA Extension can send PCA work samples and private Google files directly through Chrome."
+      ],
+      "bugs": [
+        "Fixed quiz Attempt Score values such as 5 / 6 being missed as grades.",
+        "Fixed decimal Edgenuity scores such as 83.3% being misread, and incomplete reports missing image-based grades or attempt dates.",
+        "Improved highlights for readable quiz answers and scores, and refreshed cached analysis so corrected scans take effect.",
+        "Courses outside the current learning period no longer count toward samples due."
+      ]
+    },
+    {
       "version": "4.2.32-beta.2",
       "date": "2026-09-18",
       "features": [
