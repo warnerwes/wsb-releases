@@ -3,15 +3,15 @@
   "os": "win",
   "channels": {
     "beta": {
-      "version": "4.2.32-beta.2",
-      "tag": "v4.2.32-beta.2",
+      "version": "4.2.32-beta.5",
+      "tag": "v4.2.32-beta.5",
       "asset": {
-        "name": "WorkSampleBuddy_win_v4.2.32-beta.2.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.32-beta.2/WorkSampleBuddy_win_v4.2.32-beta.2.exe",
-        "size": 310647616,
-        "sha256": "ca9afdb48dee2fcf25c5c1f69306b6717f1eb778b014b8c27480cc8ff3afec98"
+        "name": "WorkSampleBuddy_win_v4.2.32-beta.5.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.32-beta.5/WorkSampleBuddy_win_v4.2.32-beta.5.exe",
+        "size": 308889888,
+        "sha256": "a0dd31ba251f18be38c2a391286d888b4ab8cc34818e6271e06c652fd8171a67"
       },
-      "notes": "New in this version:\n\u2022 PCA work samples shared by PCA Extension are now picked up automatically during normal syncs in both Simple and Advanced mode, including student, course, learning-period, and no-work information.\n\u2022 Sync results now say how many PCA samples were collected and list the students they belong to.\n\u2022 Courses marked No Work This LP can open the PCA work-sample page for review, and the PCA connection can be enabled or given a different Apps Script link in Settings.\n\nFixes:\n\u2022 Fixed PCA samples with matching student IDs and slightly different course names being left out, and made no-work warnings follow the same matching path.\n\u2022 Fixed PCA samples being stuck as duplicates after they were deleted and sent again from the extension.\n\u2022 Fixed crashes while opening PCA settings, handling PCA sign-in during refresh, and completing a shared sync.\n\u2022 Fixed several import and recovery paths that could lose staged page details, leave unresolved files behind, or stop a refresh after one provider failed."
+      "notes": "New in this version:\n\u2022 Compare multiple samples for the same class with page previews, zoom, and available assignment details, then keep the whole file you prefer.\n\u2022 Open Mix pages when needed to combine, reorder, rotate, or remove pages from different samples.\n\u2022 Receive batches of RoboSpark work samples through Chrome while preserving each assignment's metadata and keeping alternatives available for review.\n\nFixes:\n\u2022 Fixed incoming samples being discarded just because their filenames matched.\n\u2022 Failed replacements and page combinations preserve the current sample and original files.\n\u2022 Fixed pressing Enter in the preview page number accidentally accepting the sample."
     },
     "stable": {
       "version": "4.2.30",
