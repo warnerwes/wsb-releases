@@ -1,6 +1,26 @@
 {
   "versions": [
     {
+      "version": "4.2.32-beta.5",
+      "date": "2026-09-19",
+      "features": [
+        "Compare multiple samples for the same class with page previews, zoom, and available assignment details, then keep the whole file you prefer.",
+        "Open Mix pages when needed to combine, reorder, rotate, or remove pages from different samples.",
+        "Receive PCA, private Google, and RoboSpark work samples through Chrome while preserving assignment details and keeping alternatives available for review.",
+        "Original source revisions are preserved, with storage settings to review older backups.",
+        "Advanced Mode scans readable CPA and Edgenuity samples faster, and debug reports include session, freeze, and background-task details."
+      ],
+      "bugs": [
+        "Fixed incoming samples being discarded just because their filenames matched; failed replacements and page combinations preserve the current sample and original files.",
+        "Fixed pressing Enter in the preview page number accidentally accepting the sample.",
+        "Fixed repeated or cancelled course-progress refreshes retaining completed tasks, starting overlapping database work, or showing stale results.",
+        "Fixed background grading remaining busy when a completed worker was cleaned up before its completion was handled.",
+        "Google Drive import and upload now share one sign-in.",
+        "Fixed quiz Attempt Score and decimal Edgenuity grades being missed, and courses outside the current learning period counting toward samples due.",
+        "Courses containing only excused requirements no longer show a Finalize action."
+      ]
+    },
+    {
       "version": "4.2.32-beta.2",
       "date": "2026-09-18",
       "features": [
