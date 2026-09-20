@@ -3,15 +3,15 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.32-beta.2",
-      "tag": "v4.2.32-beta.2",
+      "version": "4.2.32-beta.5",
+      "tag": "v4.2.32-beta.5",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.32-beta.2.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.32-beta.2/WorkSampleBuddy_mac_v4.2.32-beta.2.dmg",
-        "size": 345060096,
-        "sha256": "3fba8b790b1bd4fb163616a4db1f075b1bcf7e3a6b0d4015bd235bac5ec5d895"
+        "name": "WorkSampleBuddy_mac_v4.2.32-beta.5.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.32-beta.5/WorkSampleBuddy_mac_v4.2.32-beta.5.dmg",
+        "size": 344799299,
+        "sha256": "a12095c8531f1e8f3747820df107fec696eb917d4bd790398f244f576e502846"
       },
-      "notes": "New in this version:\n\u2022 Simple-mode course drops can turn videos into work samples, with a video header and Google Drive upload. Links in PDFs can be opened from Verify.\n\u2022 Finalized-student Schoology badges name the assignments waiting for grading and open directly to those submissions.\n\u2022 PCA work-sample connection controls are available in both Simple and Advanced mode. Desktop importing requires administrator-provided API setup; live PCA search and download have not yet been validated.\n\nFixes:\n\u2022 Fixed refresh and settings crashes and improved recovery when AI or a connected folder is unavailable.\n\u2022 Fixed Missing Schoology placeholders appearing as unposted submissions waiting for pre-grade.\n\u2022 Fixed PCA extension samples being blocked from being sent again after deletion.\n\u2022 Improved import matching and cancellation handling to preserve existing work and ignore results from canceled uploads.\n\u2022 Preserved accompanying documents when rebuilding a video work-sample header.\n\u2022 Show in folder now selects the current document in Finder."
+      "notes": "New in this version:\n\u2022 Compare multiple samples for the same class with page previews, zoom, and available assignment details, then keep the whole file you prefer.\n\u2022 Open Mix pages when needed to combine, reorder, rotate, or remove pages from different samples.\n\u2022 Receive PCA, private Google, and RoboSpark work samples through Chrome while preserving assignment details and keeping alternatives available for review.\n\u2022 Original source revisions are preserved, with storage settings to review older backups.\n\u2022 Advanced Mode scans readable CPA and Edgenuity samples faster, and debug reports include session, freeze, and background-task details.\n\nFixes:\n\u2022 Fixed incoming samples being discarded just because their filenames matched; failed replacements and page combinations preserve the current sample and original files.\n\u2022 Fixed pressing Enter in the preview page number accidentally accepting the sample.\n\u2022 Fixed repeated or cancelled course-progress refreshes retaining completed tasks, starting overlapping database work, or showing stale results.\n\u2022 Fixed background grading remaining busy when a completed worker was cleaned up before its completion was handled.\n\u2022 Google Drive import and upload now share one sign-in.\n\u2022 Fixed quiz Attempt Score and decimal Edgenuity grades being missed, and courses outside the current learning period counting toward samples due.\n\u2022 Courses containing only excused requirements no longer show a Finalize action."
     },
     "stable": {
       "version": "4.2.31",
