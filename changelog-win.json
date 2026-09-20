@@ -1,6 +1,20 @@
 {
   "versions": [
     {
+      "version": "4.2.32-beta.6",
+      "date": "2026-09-19",
+      "features": [
+        "PCA and RoboSpark keep new samples for review while a student's packet is open, including alternatives for classes with saved work.",
+        "Compare incoming alternatives with the currently saved sample, and preserve it in history when choosing another file or mixing pages."
+      ],
+      "bugs": [
+        "Finalized packets skip further PCA and RoboSpark samples for that student, school year, and learning period.",
+        "Source identity and available provider details survive verification so repeat scans recognize saved samples.",
+        "Fixed PCA alternatives losing their downloaded files and fixed history recovery when a temporary download is gone.",
+        "PCA scans open sample review, and simultaneous scan completions no longer open duplicate review dialogs."
+      ]
+    },
+    {
       "version": "4.2.32-beta.5",
       "date": "2026-09-19",
       "features": [
