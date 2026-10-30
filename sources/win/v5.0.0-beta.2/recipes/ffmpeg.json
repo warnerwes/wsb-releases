@@ -1,0 +1,55 @@
+{
+  "toolchain": "Qt CI Windows host, MSVC 2022 (--toolchain=msvc), MSYS2 shell for configure; zlib 1.3.1 built by Qt's provisioning",
+  "configuration": {
+    "configure": "--prefix=/c/FFmpeg-n7.1.5/build/msvc/installed --disable-programs --disable-doc --disable-debug --enable-network --disable-lzma --enable-pic --disable-vulkan --disable-v4l2-m2m --disable-decoder=truemotion1 --disable-avdevice --disable-avfilter --enable-zlib --extra-cflags='-IC:/zlib-1.3.1/build/amd64' --extra-ldflags='-LIBPATH:C:/zlib-1.3.1/build/amd64' --toolchain=msvc --enable-shared --disable-static",
+    "source_of_string": "avcodec_configuration() string embedded in the shipped avcodec-61.dll",
+    "qt_provisioning": "qt/qt5 713a36536903d172f9e6737584d428753c119496 coin/provisioning/common/windows/install-ffmpeg.ps1 (retained) + common/shared/ffmpeg_config_options.txt (retained)",
+    "enabled_license": "LGPL (no --enable-gpl/--enable-nonfree/--enable-version3)",
+    "static_third_party": "zlib 1.3.1 (Zlib license), via --enable-zlib"
+  },
+  "build_commands": [
+    "tar xf ffmpeg-7.1.5.tar.xz && cd FFmpeg-n7.1.5",
+    "./configure --prefix=/c/FFmpeg-n7.1.5/build/msvc/installed --disable-programs --disable-doc --disable-debug --enable-network --disable-lzma --enable-pic --disable-vulkan --disable-v4l2-m2m --disable-decoder=truemotion1 --disable-avdevice --disable-avfilter --enable-zlib --extra-cflags='-IC:/zlib-1.3.1/build/amd64' --extra-ldflags='-LIBPATH:C:/zlib-1.3.1/build/amd64' --toolchain=msvc --enable-shared --disable-static",
+    "make -j && make install",
+    "Qt deploys avcodec-61, avformat-61, avutil-59, swresample-5, swscale-8 next to Qt6Multimedia (QT_DEPLOY_FFMPEG=TRUE)"
+  ],
+  "correspondence": "The five shipped FFmpeg DLLs are byte-identical to the PySide6_Addons 6.11.2 win_amd64 wheel members; avcodec-61.dll embeds the configure string above and the C:/FFmpeg-n7.1.5 source paths; Qt's v6.11.2 Windows provisioning (retained) builds that tag with those options.",
+  "source_revision": "n7.1.5 tag object eefb3654c445a9004712036be4ffb01a68b2c3e1, commit 3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587; ffmpeg-7.1.5.tar.xz sha256 de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f",
+  "archive_sha256": [
+    "de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f",
+    "7ce4b9d56e3ef0cd4c3a9c0b2c8a034ac91e6c4c011c1f10b05a8aa7292fca35",
+    "8430cf7a57ea918614757384ad993d49fe867730c4c65a2317c9641400e09edf",
+    "5331acdc4bb8689719d6319e3ede3babd46793320d5305128224b4ac19bb810c"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/ffmpeg/ffmpeg-7.1.5.tar.xz",
+      "size": 11050340,
+      "sha256": "de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f",
+      "url": "https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz",
+      "downloaded": "2026-10-30T00:09:42Z"
+    },
+    {
+      "path": "archives/ffmpeg/ffmpeg-7.1.5.tar.xz.asc",
+      "size": 520,
+      "sha256": "7ce4b9d56e3ef0cd4c3a9c0b2c8a034ac91e6c4c011c1f10b05a8aa7292fca35",
+      "url": "https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz.asc",
+      "downloaded": "2026-10-30T00:09:40Z"
+    },
+    {
+      "path": "archives/ffmpeg/qt5-v6.11.2-install-ffmpeg.ps1",
+      "size": 13881,
+      "sha256": "8430cf7a57ea918614757384ad993d49fe867730c4c65a2317c9641400e09edf",
+      "url": "https://raw.githubusercontent.com/qt/qt5/713a36536903d172f9e6737584d428753c119496/coin/provisioning/common/windows/install-ffmpeg.ps1",
+      "downloaded": "2026-10-30T03:54:39Z"
+    },
+    {
+      "path": "archives/ffmpeg/qt5-v6.11.2-ffmpeg_config_options.txt",
+      "size": 198,
+      "sha256": "5331acdc4bb8689719d6319e3ede3babd46793320d5305128224b4ac19bb810c",
+      "url": "https://raw.githubusercontent.com/qt/qt5/713a36536903d172f9e6737584d428753c119496/coin/provisioning/common/shared/ffmpeg_config_options.txt",
+      "downloaded": "2026-10-30T03:54:40Z"
+    }
+  ]
+}

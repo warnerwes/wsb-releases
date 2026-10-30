@@ -1,0 +1,54 @@
+{
+  "toolchain": "OpenCV's Docker build (opencv_3rdparty ffmpeg/build_via_docker.sh): Ubuntu mingw-w64 cross toolchain x86_64-w64-mingw32 (static libgcc/libstdc++)",
+  "configuration": {
+    "ffmpeg_configure": "--pkg-config=pkg-config --enable-static --enable-avresample --enable-w32threads --enable-libopenh264 --enable-libvpx --disable-filters --disable-bsfs --disable-programs --disable-debug --disable-cuda --disable-cuvid --disable-nvenc --enable-libaom --enable-cross-compile --arch=x86_64 --target-os=mingw32 --cross-prefix=x86_64-w64-mingw32-",
+    "static_with": "libvpx, libaom (BSD) and the OpenH264 API headers; OpenCV videoio FFmpeg plugin (Apache-2.0) from the OpenCV commit retained",
+    "opencv_3rdparty_commit": "394dca6ceb3085c979415e6385996b6570e94153",
+    "opencv_submodule_commit": "8393885a39dac1e650bf5d0aaff84c04ad8bcdd3",
+    "enabled_license": "LGPL (no --enable-gpl/--enable-nonfree/--enable-version3)"
+  },
+  "build_commands": [
+    "tar xzf opencv_3rdparty-394dca6c-ffmpeg-4.x_20240522.tar.gz; place ffmpeg-4.4.4 (from the retained tarball, tag n4.4.4) at build/ffmpeg and OpenCV 8393885a39da at opencv/",
+    "fetch libvpx / aom / openh264 at the tags download_src.sh names (BSD; not LGPL)",
+    "ffmpeg/build_via_docker.sh  (runs make_mingw.sh: configure as above, make, then build_videoio_plugin.sh links opencv_videoio_ffmpeg_64.dll)"
+  ],
+  "correspondence": "The shipped opencv_videoio_ffmpeg4100_64.dll is byte-identical to the opencv_contrib_python-4.10.0.84-cp37-abi3-win_amd64.whl member; its strings name OpenCV '8393885\u2026' version 4.10.0-pre (equal to the retained OpenCV snapshot's version.hpp) and FFmpeg libavcodec 58.134; opencv_3rdparty 394dca6c's download_src.sh pins FFmpeg n4.4.4.",
+  "source_revision": "FFmpeg tag n4.4.4; ffmpeg-4.4.4.tar.xz sha256 e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309; opencv_3rdparty 394dca6ceb3085c979415e6385996b6570e94153; OpenCV 8393885a39dac1e650bf5d0aaff84c04ad8bcdd3",
+  "archive_sha256": [
+    "e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309",
+    "cdc8e143fcdea3ce2831c1f9d6b9fad144b0dfe0e5a9cbdce0615e0054312159",
+    "343314b25967b321fd9958c78ef4b32417e6e3a17807992c59b55a3ea467ce6f",
+    "a3bd5a34b4301e00811244ee9be346270e7052e1d135644217c37b3dda490d95"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/ffmpeg-n4.4.4/ffmpeg-4.4.4.tar.xz",
+      "size": 9565584,
+      "sha256": "e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309",
+      "url": "https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz",
+      "downloaded": "2026-10-30T03:53:27Z"
+    },
+    {
+      "path": "archives/ffmpeg-n4.4.4/ffmpeg-4.4.4.tar.xz.asc",
+      "size": 520,
+      "sha256": "cdc8e143fcdea3ce2831c1f9d6b9fad144b0dfe0e5a9cbdce0615e0054312159",
+      "url": "https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz.asc",
+      "downloaded": "2026-10-30T03:53:41Z"
+    },
+    {
+      "path": "archives/ffmpeg-n4.4.4/opencv_3rdparty-394dca6c-ffmpeg-4.x_20240522.tar.gz",
+      "size": 20962584,
+      "sha256": "343314b25967b321fd9958c78ef4b32417e6e3a17807992c59b55a3ea467ce6f",
+      "url": "https://github.com/opencv/opencv_3rdparty/archive/394dca6ceb3085c979415e6385996b6570e94153.tar.gz",
+      "downloaded": "2026-10-30T03:53:00Z"
+    },
+    {
+      "path": "archives/ffmpeg-n4.4.4/opencv-8393885a39dac1e650bf5d0aaff84c04ad8bcdd3.tar.gz",
+      "size": 94761657,
+      "sha256": "a3bd5a34b4301e00811244ee9be346270e7052e1d135644217c37b3dda490d95",
+      "url": "https://codeload.github.com/opencv/opencv/tar.gz/8393885a39dac1e650bf5d0aaff84c04ad8bcdd3",
+      "downloaded": "2026-10-30T08:47:17Z"
+    }
+  ]
+}

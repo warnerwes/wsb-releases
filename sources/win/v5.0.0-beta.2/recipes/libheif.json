@@ -1,0 +1,37 @@
+{
+  "toolchain": "GitHub Actions windows-2022, MSYS2 mingw64 (GCC 16.1.0 Rev5, makepkg-mingw), CMake + Ninja; strip -s; cibuildwheel 3.2.1 + delvewheel 1.13.0",
+  "configuration": {
+    "pkgbuild": "pillow_heif v1.4.0 pi-heif/libheif/windows/mingw-w64-libheif/PKGBUILD (retained; pkgver 1.23.0, its sha256sums names the retained tarball)",
+    "key_flags": "-DBUILD_SHARED_LIBS=ON -DWITH_LIBDE265=ON -DWITH_X265=OFF -DWITH_AOM_*=OFF -DWITH_DAV1D=OFF -DENABLE_PLUGIN_LOADING=OFF (full list in the PKGBUILD)",
+    "workflow": "pillow_heif v1.4.0 .github/workflows/wheels-pi_heif.yml job wheels_windows (in evidence)"
+  },
+  "build_commands": [
+    "(MSYS2 mingw64) cd libheif/windows/mingw-w64-libheif && makepkg-mingw --syncdeps --noconfirm -f",
+    "pacman -U mingw-w64-x86_64-libheif-*-any.pkg.tar.zst",
+    "strip -s $MSYS2_PREFIX/bin/libheif.dll",
+    "cibuildwheel; delvewheel repair --add-path $MSYS2_PREFIX/bin (renames to libheif-<hash>.dll)"
+  ],
+  "correspondence": "The shipped libheif-75127e76\u2026.dll is byte-identical to the pi_heif 1.4.0 cp313 win_amd64 wheel member, reports 1.23.0, imports only libde265/libgcc/libstdc++/libwinpthread/kernel32/msvcrt (no x265); pi-heif's Windows PKGBUILD (retained) builds it from the retained libheif-1.23.0.tar.gz with x265 off.",
+  "source_revision": "v1.23.0 commit bd114ed6d592adc92a09882172ab71d1b4c6e1b1; libheif-1.23.0.tar.gz sha256 4c9182b18897617182eed12ab5eb9f9d855b3aa3a736d6bdb31abc034ec7d393",
+  "archive_sha256": [
+    "4c9182b18897617182eed12ab5eb9f9d855b3aa3a736d6bdb31abc034ec7d393",
+    "8dd5d34061381bf6fa884638cdc391bd14bc5bf40d3bb69f840a046a870acf8a"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/libheif/libheif-1.23.0.tar.gz",
+      "size": 2064049,
+      "sha256": "4c9182b18897617182eed12ab5eb9f9d855b3aa3a736d6bdb31abc034ec7d393",
+      "url": "https://github.com/strukturag/libheif/releases/download/v1.23.0/libheif-1.23.0.tar.gz",
+      "downloaded": "2026-10-30T00:10:39Z"
+    },
+    {
+      "path": "archives/libheif/pi-heif-v1.4.0-mingw-w64-libheif-PKGBUILD",
+      "size": 2483,
+      "sha256": "8dd5d34061381bf6fa884638cdc391bd14bc5bf40d3bb69f840a046a870acf8a",
+      "url": "https://github.com/bigcat88/pillow_heif/archive/refs/tags/v1.4.0.tar.gz member pillow_heif-1.4.0/pi-heif/libheif/windows/mingw-w64-libheif/PKGBUILD",
+      "downloaded": "2026-10-30T03:55:17Z"
+    }
+  ]
+}

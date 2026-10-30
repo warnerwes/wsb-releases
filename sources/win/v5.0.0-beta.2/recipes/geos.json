@@ -1,0 +1,44 @@
+{
+  "toolchain": "GitHub Actions windows-2025, MSVC (TheMrMilchmann/setup-msvc-dev@v4, x64), CMake + Ninja; cibuildwheel + delvewheel",
+  "configuration": {
+    "GEOS_VERSION": "3.14.1",
+    "script": "shapely 2.2.0 ci/install_geos.cmd (retained)",
+    "cmake_args": [
+      "-GNinja",
+      "-D CMAKE_BUILD_TYPE=Release",
+      "-D BUILD_SHARED_LIBS=ON",
+      "-D CMAKE_INSTALL_PREFIX=%GEOS_INSTALL%",
+      "-D BUILD_TESTING=OFF"
+    ],
+    "workflow": "shapely 2.2.0 .github/workflows/release.yml (GEOS_VERSION 3.14.1; CIBW_BEFORE_ALL_WINDOWS: ci\\install_geos.cmd)"
+  },
+  "build_commands": [
+    "7z x geos-3.14.1.tar.bz2 && 7z x geos-3.14.1.tar && cd geos-3.14.1",
+    "cmake -GNinja -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=ON -D CMAKE_INSTALL_PREFIX=%GEOS_INSTALL% -D BUILD_TESTING=OFF -S . -B build",
+    "cmake --build build && cmake --install build",
+    "delvewheel copies geos.dll / geos_c.dll into shapely.libs with hashed names"
+  ],
+  "correspondence": "Both shipped GEOS DLLs are byte-identical to the shapely 2.2.0 cp313 win_amd64 wheel members and report 3.14.1; shapely 2.2.0's release workflow builds GEOS 3.14.1 from the retained download.osgeo.org tarball (same bytes as the Mac record) with the retained script.",
+  "source_revision": "3.14.1 commit c389f532d25fe6228861d9b19339f9cb57ca4bdb; geos-3.14.1.tar.bz2 sha256 3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716",
+  "archive_sha256": [
+    "3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716",
+    "540ece44323dfdff7cabd8cee8c4206fd086cfeeda9d9672845c6be251f2b89e"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/geos/geos-3.14.1.tar.bz2",
+      "size": 7013834,
+      "sha256": "3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716",
+      "url": "https://download.osgeo.org/geos/geos-3.14.1.tar.bz2",
+      "downloaded": "2026-10-30T00:09:39Z"
+    },
+    {
+      "path": "archives/geos/shapely-2.2.0-ci-install_geos.cmd",
+      "size": 1100,
+      "sha256": "540ece44323dfdff7cabd8cee8c4206fd086cfeeda9d9672845c6be251f2b89e",
+      "url": "https://raw.githubusercontent.com/shapely/shapely/2.2.0/ci/install_geos.cmd",
+      "downloaded": "2026-10-30T08:45:28Z"
+    }
+  ]
+}

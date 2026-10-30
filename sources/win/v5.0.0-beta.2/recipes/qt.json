@@ -1,0 +1,62 @@
+{
+  "toolchain": "Qt CI (coin) template qtci-windows-11_24H2-x86_64-73, MSVC 2022, per the Qt6Core.dll build string",
+  "configuration": {
+    "coin_platform_config": "qt/qt5@713a36536903d172f9e6737584d428753c119496 coin/platform_configs/cmake_platforms.yaml Id windows-11_24H2-msvc2022 (Features include Packaging)",
+    "configure_arguments": "-debug-and-release -force-debug-info -headersclean -nomake examples -qt-zlib",
+    "NON_QTBASE_CMAKE_ARGS": "-DFFMPEG_DIR={{.Env.FFMPEG_DIR_MSVC}} -DQT_DEPLOY_FFMPEG=TRUE -DFEATURE_clangcpp=OFF -DINPUT_headersclean=ON",
+    "qt_build_string": "Qt 6.11.2 (x86_64-little_endian-llp64 shared (dynamic) release build; by MSVC 2022)",
+    "pyside_qt_pin": "pyside-setup v6.11.2 coin/dependencies.yaml -> qt/qt5 713a36536903d172f9e6737584d428753c119496",
+    "modules": [
+      "qtbase",
+      "qtsvg",
+      "qtmultimedia",
+      "qtimageformats"
+    ]
+  },
+  "build_commands": [
+    "for m in qtbase qtsvg qtimageformats qtmultimedia: tar xf <m>-everywhere-src-6.11.2.tar.xz",
+    "qtbase: configure.bat -debug-and-release -force-debug-info -headersclean -nomake examples -qt-zlib -- -DFEATURE_msvc_obj_debug_info=ON -DOPENSSL_ROOT_DIR=<openssl>",
+    "cmake --build . --parallel && cmake --install .",
+    "qtsvg, qtimageformats, qtmultimedia: <prefix>\\bin\\qt-configure-module.bat . -- -DFFMPEG_DIR=<ffmpeg n7.1.5 MSVC prefix> -DQT_DEPLOY_FFMPEG=TRUE && cmake --build . && cmake --install .",
+    "PySide6 packaging copies the release DLLs and plugins into the PySide6_Essentials / PySide6_Addons win_amd64 wheels"
+  ],
+  "correspondence": "Every shipped Qt DLL and plugin is byte-identical to the member of the same name in the PySide6_Essentials or PySide6_Addons 6.11.2 cp310-abi3-win_amd64 wheel recorded in the draft; Qt6Core.dll carries the Qt 6.11.2 MSVC 2022 build string; the four retained module archives are the Qt 6.11.2 release sources (same bytes as the Mac 5.0.0-beta.2 record).",
+  "source_revision": "v6.11.2: qtbase commit ef55f427f2c8b410d34f8a7681020a3000cf6866 (tag object 7a59d906fb765eb85759d4d3cae45d3f295f6359); qtsvg commit 17ca512f903f935282ebeca496aac5d11ba4199a (tag object 7f649404bccad7c8364ef08d72c60b836d3f753a); qtmultimedia commit 6f162ccac1425edbd7b4d1582fabab5973b43d6c (tag object 38c4ae0a8380bc8b90a67cba8b4cf7e99985a3e2); qtimageformats commit 47b6139dda3b84d1d3ec15caf8d04eff8d744c8d (tag object eb50d5e6b8e1ad102cf50358b7fb109d86fc14ff); qt5 supermodule commit 713a36536903d172f9e6737584d428753c119496",
+  "archive_sha256": [
+    "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22",
+    "d594337feca84c26fb67fe87b85e6a5c12fda404b611d905f9d138210c311876",
+    "967b5e02ec6b793cdb360622cd6e703132836af983208d678dae4b50f109cd9f",
+    "cecd8900f34b6550076309bc94f62f828008b633a4239e0a08c86788f41001f8"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/qt/qtbase-everywhere-src-6.11.2.tar.xz",
+      "size": 50582668,
+      "sha256": "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz",
+      "downloaded": "2026-10-30T00:09:43Z"
+    },
+    {
+      "path": "archives/qt/qtsvg-everywhere-src-6.11.2.tar.xz",
+      "size": 2341860,
+      "sha256": "d594337feca84c26fb67fe87b85e6a5c12fda404b611d905f9d138210c311876",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtsvg-everywhere-src-6.11.2.tar.xz",
+      "downloaded": "2026-10-30T00:09:41Z"
+    },
+    {
+      "path": "archives/qt/qtmultimedia-everywhere-src-6.11.2.tar.xz",
+      "size": 10255120,
+      "sha256": "967b5e02ec6b793cdb360622cd6e703132836af983208d678dae4b50f109cd9f",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtmultimedia-everywhere-src-6.11.2.tar.xz",
+      "downloaded": "2026-10-30T00:09:42Z"
+    },
+    {
+      "path": "archives/qt/qtimageformats-everywhere-src-6.11.2.tar.xz",
+      "size": 2050424,
+      "sha256": "cecd8900f34b6550076309bc94f62f828008b633a4239e0a08c86788f41001f8",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtimageformats-everywhere-src-6.11.2.tar.xz",
+      "downloaded": "2026-10-30T00:09:42Z"
+    }
+  ]
+}

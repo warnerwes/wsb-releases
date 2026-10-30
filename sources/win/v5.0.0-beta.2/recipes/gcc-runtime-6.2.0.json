@@ -1,0 +1,190 @@
+{
+  "toolchain": "MinGW-W64-builds-4.3.0 (--mode=gcc-6.2.0 --rt-version=v5 --rev=1 --threads=win32 --exceptions=seh --arch=x86_64), built 2016-09-08 with host GCC 4.9.3",
+  "configuration": {
+    "build_info": "toolchain-build-info.txt (retained; the toolchain's own record of versions, URLs, patches and configure lines)",
+    "pkgversion": "x86_64-win32-seh-rev1, Built by MinGW-W64 project",
+    "patches_in_order": [
+      "gcc-4.7-stdthreads.patch",
+      "gcc-5.1-iconv.patch",
+      "gcc-4.8-libstdc++export.patch",
+      "gcc-4.8.2-build-more-gnattools.mingw.patch",
+      "gcc-4.8.2-fix-for-windows-not-minding-non-existant-parent-dirs.patch",
+      "gcc-4.8.2-windows-lrealpath-no-force-lowercase-nor-backslash.patch",
+      "gcc-4.9.1-enable-shared-gnat-implib.mingw.patch",
+      "gcc-5.1.0-make-xmmintrin-header-cplusplus-compatible.patch",
+      "gcc-5.2-fix-mingw-pch.patch",
+      "gcc-5-dwarf-regression.patch",
+      "gcc-5.1.0-fix-libatomic-building-for-threads=win32.patch",
+      "gcc-6-ktietz-libgomp.patch",
+      "gcc-6.1-disable-weak-refs.patch"
+    ],
+    "scripts": "mingw-builds 81fb2d71 build, library/config.sh, scripts/gcc-6.2.0.sh (earliest public commit with the 4.3.0 scripts; its PKG_PATCHES equals the build-info list)",
+    "runtime_patches": "gcc-5-dwarf-regression.patch (libgcc/libgcc2.c) and gcc-4.7-stdthreads.patch (libgcc/gthr-posix.h)",
+    "gcc_4.9.3_idents": "come from mingw-w64 v5 CRT objects built by the 4.9.3 host compiler (ZPL/public domain, not GCC); no 4.9.3 GCC runtime code is inside"
+  },
+  "build_commands": [
+    "tar xjf gcc-6.2.0.tar.bz2; apply the retained patches in the listed order (patch -p1)",
+    "./build --mode=gcc-6.2.0 --buildroot=<dir> --jobs=N --rev=1 --rt-version=v5 --threads=win32 --exceptions=seh --arch=x86_64 --enable-languages=c,c++,fortran  (mingw-builds scripts retained)",
+    "Paddle copies mingw64/bin/libgcc_s_seh-1.dll, libgfortran-3.dll, libquadmath-0.dll into paddle/libs"
+  ],
+  "correspondence": "The three shipped paddle/libs runtime DLLs are byte-identical to the paddlepaddle 3.2.0 wheel members and to mingw64/bin/ of SourceForge's x86_64-6.2.0-release-win32-seh-rt_v5-rev1.7z (sha256 matches SourceForge's sha1/md5/sha256 listing); that toolchain's build-info.txt records gcc-6.2.0.tar.bz2 from ftp.gnu.org and the 13 retained patches.",
+  "source_revision": "gcc-6.2.0.tar.bz2 sha256 9944589fc722d3e66308c0ce5257788ebd7872982a718aa2516123940671b7c5 + MinGW-W64-builds-4.3.0 rev1 patches (niXman/mingw-builds 81fb2d718a82a067014cd1e54c0be72d45853c78)",
+  "archive_sha256": [
+    "9944589fc722d3e66308c0ce5257788ebd7872982a718aa2516123940671b7c5",
+    "9e8321145be15bdbf76a76deef07e579a41096fc6bb0add09e0357a8c42e7878",
+    "8f72722687b729f444825371e60c4d3de03ae5b682179ad9777e1167bf49568c",
+    "d139734b1af82d4c016389c65a23d03eb32b12d03acb3906377e702e147738e2",
+    "10da8133d0ef1c37ba3911a186e765981c8fc6397aa11a0c045a5fa66a8e5fb2",
+    "d022f6af7a3e30923ce09c0eec5864ecf691c4c0eb8181d5ec15be5dcdc0ae8f"
+  ],
+  "patch_sha256": [
+    "5e0fc1437ce0b357e78d440692e3a30a7905a5f360a67928a95b14ec8d45365b",
+    "4cb3b893be90c93318dcf978902a1aa527f7df5d0b375fda92b2f0a14e09de90",
+    "21191b4fd57ce5f230fcc97b4d9ae31bdc387d7c7c8e39436aa7e4268d278d3d",
+    "d16e76e0aa9e5a1c239424edc3a6da52785e82849b6e00850f8e2526e7f496d9",
+    "74e3a5690f33b71399731a40b1a95fa1ec7275f156a55ee14e7a1eac1711129e",
+    "0953d65d4fb3d681c76b6d6353e3cc424751a417872435f724d463001da66d43",
+    "6db77e87ca3a7b43c7549b19cfd1364346107502d75d84a4e0c5c590a4cbe4b5",
+    "a253ff798060bf19780bd695b4d96187932a247b2e0c9a9b92b4c92efa55b69f",
+    "fe3d1264b4d2f94ec543eff77c44e90d2c3672bf16be59ca0e5137f5457ecbf4",
+    "0768864eba737cf7be59e8469d039a2246e015e40ba139cd2d20aa798c3362ef",
+    "6ff32c123e545641766ebb11d5e36dafbc000a828aac2cd30b422b97cffe39a1",
+    "12217934a7cac3c179f0ec6c431091c902345c62bdd1c0fd9dfd3af125e2df36",
+    "09f27e0dae8d962f2a46a33a9891f2d14303629bb40f91ed8c5824c90da653a9"
+  ],
+  "retained_files": [
+    {
+      "path": "archives/gcc-6.2.0/gcc-6.2.0.tar.bz2",
+      "size": 99778648,
+      "sha256": "9944589fc722d3e66308c0ce5257788ebd7872982a718aa2516123940671b7c5",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2",
+      "downloaded": "2026-10-30T03:54:48Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/gcc-6.2.0.tar.bz2.sig",
+      "size": 280,
+      "sha256": "9e8321145be15bdbf76a76deef07e579a41096fc6bb0add09e0357a8c42e7878",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2.sig",
+      "downloaded": "2026-10-30T03:54:48Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/toolchain-build-info.txt",
+      "size": 43659,
+      "sha256": "8f72722687b729f444825371e60c4d3de03ae5b682179ad9777e1167bf49568c",
+      "url": "member mingw64/build-info.txt of https://downloads.sourceforge.net/project/mingw-w64/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/6.2.0/threads-win32/seh/x86_64-6.2.0-release-win32-seh-rt_v5-rev1.7z",
+      "downloaded": "2026-10-30T08:40:19Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/mingw-builds-81fb2d71/scripts/gcc-6.2.0.sh",
+      "size": 4697,
+      "sha256": "d139734b1af82d4c016389c65a23d03eb32b12d03acb3906377e702e147738e2",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/scripts/gcc-6.2.0.sh",
+      "downloaded": "2026-10-30T08:44:11Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/mingw-builds-81fb2d71/build",
+      "size": 30989,
+      "sha256": "10da8133d0ef1c37ba3911a186e765981c8fc6397aa11a0c045a5fa66a8e5fb2",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/build",
+      "downloaded": "2026-10-30T08:44:11Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/mingw-builds-81fb2d71/library/config.sh",
+      "size": 5934,
+      "sha256": "d022f6af7a3e30923ce09c0eec5864ecf691c4c0eb8181d5ec15be5dcdc0ae8f",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/library/config.sh",
+      "downloaded": "2026-10-30T08:44:12Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-4.7-stdthreads.patch",
+      "size": 352,
+      "sha256": "5e0fc1437ce0b357e78d440692e3a30a7905a5f360a67928a95b14ec8d45365b",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-4.7-stdthreads.patch",
+      "downloaded": "2026-10-30T08:44:37Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-5.1-iconv.patch",
+      "size": 490,
+      "sha256": "4cb3b893be90c93318dcf978902a1aa527f7df5d0b375fda92b2f0a14e09de90",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-5.1-iconv.patch",
+      "downloaded": "2026-10-30T08:44:38Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-4.8-libstdc++export.patch",
+      "size": 379,
+      "sha256": "21191b4fd57ce5f230fcc97b4d9ae31bdc387d7c7c8e39436aa7e4268d278d3d",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-4.8-libstdc%2B%2Bexport.patch",
+      "downloaded": "2026-10-30T08:44:38Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-4.8.2-build-more-gnattools.mingw.patch",
+      "size": 1248,
+      "sha256": "d16e76e0aa9e5a1c239424edc3a6da52785e82849b6e00850f8e2526e7f496d9",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-4.8.2-build-more-gnattools.mingw.patch",
+      "downloaded": "2026-10-30T08:44:38Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-4.8.2-fix-for-windows-not-minding-non-existant-parent-dirs.patch",
+      "size": 3444,
+      "sha256": "74e3a5690f33b71399731a40b1a95fa1ec7275f156a55ee14e7a1eac1711129e",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-4.8.2-fix-for-windows-not-minding-non-existant-parent-dirs.patch",
+      "downloaded": "2026-10-30T08:44:39Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-4.8.2-windows-lrealpath-no-force-lowercase-nor-backslash.patch",
+      "size": 1363,
+      "sha256": "0953d65d4fb3d681c76b6d6353e3cc424751a417872435f724d463001da66d43",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-4.8.2-windows-lrealpath-no-force-lowercase-nor-backslash.patch",
+      "downloaded": "2026-10-30T08:44:39Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-4.9.1-enable-shared-gnat-implib.mingw.patch",
+      "size": 1090,
+      "sha256": "6db77e87ca3a7b43c7549b19cfd1364346107502d75d84a4e0c5c590a4cbe4b5",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-4.9.1-enable-shared-gnat-implib.mingw.patch",
+      "downloaded": "2026-10-30T08:44:39Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-5.1.0-make-xmmintrin-header-cplusplus-compatible.patch",
+      "size": 707,
+      "sha256": "a253ff798060bf19780bd695b4d96187932a247b2e0c9a9b92b4c92efa55b69f",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-5.1.0-make-xmmintrin-header-cplusplus-compatible.patch",
+      "downloaded": "2026-10-30T08:44:40Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-5.2-fix-mingw-pch.patch",
+      "size": 1444,
+      "sha256": "fe3d1264b4d2f94ec543eff77c44e90d2c3672bf16be59ca0e5137f5457ecbf4",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-5.2-fix-mingw-pch.patch",
+      "downloaded": "2026-10-30T08:44:40Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-5-dwarf-regression.patch",
+      "size": 1184,
+      "sha256": "0768864eba737cf7be59e8469d039a2246e015e40ba139cd2d20aa798c3362ef",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-5-dwarf-regression.patch",
+      "downloaded": "2026-10-30T08:44:41Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-5.1.0-fix-libatomic-building-for-threads=win32.patch",
+      "size": 481,
+      "sha256": "6ff32c123e545641766ebb11d5e36dafbc000a828aac2cd30b422b97cffe39a1",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-5.1.0-fix-libatomic-building-for-threads=win32.patch",
+      "downloaded": "2026-10-30T08:44:41Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-6-ktietz-libgomp.patch",
+      "size": 2194,
+      "sha256": "12217934a7cac3c179f0ec6c431091c902345c62bdd1c0fd9dfd3af125e2df36",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-6-ktietz-libgomp.patch",
+      "downloaded": "2026-10-30T08:44:41Z"
+    },
+    {
+      "path": "archives/gcc-6.2.0/patches/gcc-6.1-disable-weak-refs.patch",
+      "size": 375,
+      "sha256": "09f27e0dae8d962f2a46a33a9891f2d14303629bb40f91ed8c5824c90da653a9",
+      "url": "https://raw.githubusercontent.com/niXman/mingw-builds/81fb2d718a82a067014cd1e54c0be72d45853c78/patches/gcc/gcc-6.1-disable-weak-refs.patch",
+      "downloaded": "2026-10-30T08:44:41Z"
+    }
+  ]
+}

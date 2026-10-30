@@ -1,0 +1,36 @@
+{
+  "toolchain": "MSYS2 mingw64 package build (makepkg-mingw, GCC 16.1.0), package built 2026-06-03T18:38:12Z; installed by pi-heif's makepkg --syncdeps on 2026-06-10",
+  "configuration": {
+    "package": "mingw-w64-x86_64-libde265-1.1.1-1-any.pkg.tar.zst (sha256 68f5eafb0b52833a14af453844097baca7358705e111cd18c8447a4ec4e03e4b)",
+    "source_package": "mingw-w64-libde265-1.1.1-1.src.tar.zst (sha256 fd4cf7d04006cb984f92579a09d34839469057ec0fb4a04a979484d748b60190): PKGBUILD, .SRCINFO, libde265-1.1.1.tar.gz; no patches",
+    "pkgbuild": "retained; MINGW-packages commit 151a937bfc2d5afa3576ed379de63b282838d7ee ('libde265: update to 1.1.1', 2026-06-03)",
+    "O12": "the MSYS2 build applies no patches, so the pristine tarball plus the PKGBUILD is the complete source"
+  },
+  "build_commands": [
+    "(MSYS2 mingw64) makepkg-mingw with the retained PKGBUILD (fetches and checks the retained tarball)",
+    "pi-heif CI: pacman installs the package, strip -s libde265-0.dll, delvewheel renames it libde265-0-<hash>.dll"
+  ],
+  "correspondence": "The shipped libde265-0-aa0625e0\u2026.dll is byte-identical to the pi_heif 1.4.0 wheel member, reports 1.1.1, and its PE .text (32f375a7\u2026) equals bin/libde265-0.dll of the MSYS2 1.1.1-1 package; that package's source package holds only the PKGBUILD and the retained tarball (byte-identical, cmp).",
+  "source_revision": "v1.1.1; libde265-1.1.1.tar.gz sha256 fd48a927e94ed74fc7ce8829d222b9d8599fcbfe8b6448ba66705babc56ab219; MSYS2 mingw-w64-libde265 1.1.1-1 (MINGW-packages 151a937bfc2d5afa3576ed379de63b282838d7ee)",
+  "archive_sha256": [
+    "fd48a927e94ed74fc7ce8829d222b9d8599fcbfe8b6448ba66705babc56ab219",
+    "fc2de1efa3f6da827dc032252d3d6cdb0e2747d923870d0b04d6968596b50901"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/libde265/libde265-1.1.1.tar.gz",
+      "size": 315566,
+      "sha256": "fd48a927e94ed74fc7ce8829d222b9d8599fcbfe8b6448ba66705babc56ab219",
+      "url": "https://github.com/strukturag/libde265/releases/download/v1.1.1/libde265-1.1.1.tar.gz",
+      "downloaded": "2026-10-30T03:55:35Z"
+    },
+    {
+      "path": "archives/libde265/mingw-w64-libde265-1.1.1-1-PKGBUILD",
+      "size": 2092,
+      "sha256": "fc2de1efa3f6da827dc032252d3d6cdb0e2747d923870d0b04d6968596b50901",
+      "url": "https://raw.githubusercontent.com/msys2/MINGW-packages/151a937bfc2d5afa3576ed379de63b282838d7ee/mingw-w64-libde265/PKGBUILD",
+      "downloaded": "2026-10-30T08:42:23Z"
+    }
+  ]
+}

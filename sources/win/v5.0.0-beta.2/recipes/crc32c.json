@@ -1,0 +1,30 @@
+{
+  "toolchain": "PyPI wheel built by the ICRAR/crc32c release workflow (cibuildwheel, MSVC) for cp313-win_amd64",
+  "configuration": {
+    "build_backend": "setuptools (setup.py + pyproject.toml in the sdist)",
+    "extension": "crc32c._crc32c from src/crc32c/ext/*.c",
+    "wheel": {
+      "filename": "crc32c-2.9.post0-cp313-cp313-win_amd64.whl",
+      "sha256": "ec93306e36242e1883de21d68a2a536e0b9603dfe0035ec9b6d7f2341075152f"
+    }
+  },
+  "build_commands": [
+    "tar xzf crc32c-2.9.post0.tar.gz && cd crc32c-2.9.post0",
+    "python -m pip wheel . --no-deps   (MSVC, CPython 3.13 x64)"
+  ],
+  "correspondence": "The shipped crc32c/_crc32c.cp313-win_amd64.pyd is byte-identical to the crc32c 2.9.post0 cp313 win_amd64 wheel member; the retained sdist (sha256 equal to PyPI's) holds its C sources and license texts.",
+  "source_revision": "crc32c-2.9.post0.tar.gz sha256 6a089e0340de8438e836a09e613c6b541675d0f3aa92b3fe34295aaba62f014f (PyPI sdist)",
+  "archive_sha256": [
+    "6a089e0340de8438e836a09e613c6b541675d0f3aa92b3fe34295aaba62f014f"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/crc32c/crc32c-2.9.post0.tar.gz",
+      "size": 48258,
+      "sha256": "6a089e0340de8438e836a09e613c6b541675d0f3aa92b3fe34295aaba62f014f",
+      "url": "https://files.pythonhosted.org/packages/f6/07/b5fabe88654f5eded3e4b6d84cde572dd0280a7362a6a5b698bbd77be5df/crc32c-2.9.post0.tar.gz",
+      "downloaded": "2026-10-30T08:45:53Z"
+    }
+  ]
+}

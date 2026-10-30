@@ -1,0 +1,191 @@
+{
+  "toolchain": "MSYS2 mingw64 package build of mingw-w64-gcc 16.1.0-5 (package built 2026-05-17T18:04:18Z); gcc-libs installed by pi-heif's CI on 2026-06-10",
+  "configuration": {
+    "pkgbuild": "retained; --with-pkgversion=\"Rev${pkgrel}, Built by MSYS2 project\" with pkgrel=5 (the shipped 'Rev5' idents)",
+    "patches": [
+      "0002-i386-Keep-SEH-enabled-for-Win64-sysv_abi-functions.patch",
+      "0003-Windows-Follow-Posix-dir-exists-semantics-more-close.patch",
+      "0007-Build-EXTRA_GNATTOOLS-for-Ada.patch",
+      "0008-Prettify-linking-no-undefined.patch",
+      "0011-Enable-shared-gnat-implib.patch",
+      "0012-Handle-spaces-in-path-for-default-manifest.patch",
+      "0014-gcc-9-branch-clone_function_name_1-Retain-any-stdcall-suffix.patch",
+      "0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch",
+      "0022-unset-native-system-header-dir.patch",
+      "0140-gcc-diagnostic-color.patch",
+      "0200-add-m-no-align-vector-insn-option-for-i386.patch",
+      "2001-fix-building-rust-on-mingw-w64.patch",
+      "3001-fix-codeview-crashes.patch"
+    ],
+    "runtime_note": "no patch modifies libgcc/ or libstdc++-v3/; 0002, 0014, 0022 and 0200 change code generation; 0008 (libgfortran link flags) and 0020 (libgomp) touch libraries not shipped from this toolchain",
+    "split": "gcc-16.1.0.tar.xz is retained as parts; concatenate in order and check the whole-file sha256"
+  },
+  "build_commands": [
+    "cat gcc-16.1.0.tar.xz.part-* > gcc-16.1.0.tar.xz && echo '50efb4d94c3397aff3b0d61a5abd748b4dd31d9d3f2ab7be05b171d36a510f79  gcc-16.1.0.tar.xz' | sha256sum -c",
+    "(MSYS2 mingw64) makepkg-mingw with the retained PKGBUILD, patches and gdbinit (prepare() applies the patches with patch -Nbp1, then autoreconf)",
+    "pi-heif CI: pacman installs gcc-libs; strip -s libgcc_s_seh-1.dll libstdc++-6.dll; delvewheel renames them with hashes"
+  ],
+  "correspondence": "The shipped libgcc_s_seh-1-70f48b1f\u2026.dll and libstdc++-6-110c9d51\u2026.dll are byte-identical to the pi_heif 1.4.0 wheel members; their PE .text equals the MSYS2 gcc-libs 16.1.0-5 package's (libgcc_s also by .rdata, which differs from -4); the MSYS2 source package's tarball is cmp-identical to the retained gcc-16.1.0.tar.xz and its patches equal the retained ones.",
+  "source_revision": "gcc-16.1.0.tar.xz sha256 50efb4d94c3397aff3b0d61a5abd748b4dd31d9d3f2ab7be05b171d36a510f79 + MSYS2 mingw-w64-gcc 16.1.0-5 (MINGW-packages 18aeb95f69dd6bd3c9172a938c9fd35491536410)",
+  "archive_sha256": [
+    "c50266d9cde69845dd5daedb6f504e01f3e2a5e8c7a55b1d357c0f71e3122215",
+    "3aa1ebaf9228701410711a4b379df29eca0b749fcf495143ba45abed2d07eb57",
+    "86221bdbc35756f5c3194f219dc19512d17c105a5060c79fe6530a5d9842169d",
+    "33a851c045ea2ef6f580d82b2abfb1dc75d8b270727800028ca5f40c3b4a4246",
+    "40f248fa589babd9315cc589a76a0c00939355bd68c92287a2dcb7d1acb58f96",
+    "bce81824fc89e5e62cca350de4c17a27e27a18a1a1ad5ca3492aec1fc5af3234"
+  ],
+  "patch_sha256": [
+    "fdf4e90a56fc195a8f9a969af39335f158a29f29d42d33c00d908fc47cf5ad24",
+    "3fc35067823f87e48dd3bfd265e7593000dc110fa9ad5f16c81b896765fc897a",
+    "90d5cb570083f9dea4ac0f0f87e3e8d2230f5052e6f9b946061a20a224a9d195",
+    "8d2d53ae26b777d90189240494de1b895c5efa1ebdcdfbf5774f29fc742499d9",
+    "5ef4148acc4a2b7ed648d4fe75fab5545e84b4b93a12d6ba4e4ea6061dd635fa",
+    "e98805ead7d78ee2a92f237894c4b2b7ddc1688e1b517d8c04f28d440202e40f",
+    "fd9bdecb2bbc4796bbc9f00b708dac42ef9e3464a06d6d27e5475cee117de5be",
+    "ad1f7b5e7afaaec008b7cbd14feea13a10989fa91bda7003af72d457619bb199",
+    "d8b9b979dc1742f63d23dfca92bc05944612bd196a31fb882b8a616baba84383",
+    "c94004dab1685a6fa9124de86aae742df4136a2e9ff5d5e1ad87ecdc35fbcef4",
+    "1484911163634f30324827619c873a6267b377abba0df8bbedfd128163c53ea4",
+    "a411f59953553a3d01dd64c79b1acbb91eca092c4cb01bfd26b1c51c3eb798e8",
+    "f21f9ab731e9cab8fd4ca8c289497f859ef7004e6fa0507877dc2559ac2071c3"
+  ],
+  "retained_files": [
+    {
+      "path": "archives/gcc-16.1.0/gcc-16.1.0.tar.xz.part-001",
+      "size": 50000000,
+      "sha256": "c50266d9cde69845dd5daedb6f504e01f3e2a5e8c7a55b1d357c0f71e3122215",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-16.1.0/gcc-16.1.0.tar.xz",
+      "downloaded": "2026-10-30T03:53:40Z",
+      "whole_file_sha256": "50efb4d94c3397aff3b0d61a5abd748b4dd31d9d3f2ab7be05b171d36a510f79"
+    },
+    {
+      "path": "archives/gcc-16.1.0/gcc-16.1.0.tar.xz.part-002",
+      "size": 50000000,
+      "sha256": "3aa1ebaf9228701410711a4b379df29eca0b749fcf495143ba45abed2d07eb57",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-16.1.0/gcc-16.1.0.tar.xz",
+      "downloaded": "2026-10-30T03:53:40Z",
+      "whole_file_sha256": "50efb4d94c3397aff3b0d61a5abd748b4dd31d9d3f2ab7be05b171d36a510f79"
+    },
+    {
+      "path": "archives/gcc-16.1.0/gcc-16.1.0.tar.xz.part-003",
+      "size": 2456900,
+      "sha256": "86221bdbc35756f5c3194f219dc19512d17c105a5060c79fe6530a5d9842169d",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-16.1.0/gcc-16.1.0.tar.xz",
+      "downloaded": "2026-10-30T03:53:40Z",
+      "whole_file_sha256": "50efb4d94c3397aff3b0d61a5abd748b4dd31d9d3f2ab7be05b171d36a510f79"
+    },
+    {
+      "path": "archives/gcc-16.1.0/gcc-16.1.0.tar.xz.sig",
+      "size": 543,
+      "sha256": "33a851c045ea2ef6f580d82b2abfb1dc75d8b270727800028ca5f40c3b4a4246",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-16.1.0/gcc-16.1.0.tar.xz.sig",
+      "downloaded": "2026-10-30T03:53:40Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/mingw-w64-gcc-16.1.0-5-PKGBUILD",
+      "size": 23978,
+      "sha256": "40f248fa589babd9315cc589a76a0c00939355bd68c92287a2dcb7d1acb58f96",
+      "url": "https://raw.githubusercontent.com/msys2/MINGW-packages/18aeb95f69dd6bd3c9172a938c9fd35491536410/mingw-w64-gcc/PKGBUILD",
+      "downloaded": "2026-10-30T08:42:23Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/gdbinit",
+      "size": 180,
+      "sha256": "bce81824fc89e5e62cca350de4c17a27e27a18a1a1ad5ca3492aec1fc5af3234",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/gdbinit",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0002-i386-Keep-SEH-enabled-for-Win64-sysv_abi-functions.patch",
+      "size": 3389,
+      "sha256": "fdf4e90a56fc195a8f9a969af39335f158a29f29d42d33c00d908fc47cf5ad24",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0002-i386-Keep-SEH-enabled-for-Win64-sysv_abi-functions.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0003-Windows-Follow-Posix-dir-exists-semantics-more-close.patch",
+      "size": 4138,
+      "sha256": "3fc35067823f87e48dd3bfd265e7593000dc110fa9ad5f16c81b896765fc897a",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0003-Windows-Follow-Posix-dir-exists-semantics-more-close.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0007-Build-EXTRA_GNATTOOLS-for-Ada.patch",
+      "size": 1267,
+      "sha256": "90d5cb570083f9dea4ac0f0f87e3e8d2230f5052e6f9b946061a20a224a9d195",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0007-Build-EXTRA_GNATTOOLS-for-Ada.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0008-Prettify-linking-no-undefined.patch",
+      "size": 1404,
+      "sha256": "8d2d53ae26b777d90189240494de1b895c5efa1ebdcdfbf5774f29fc742499d9",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0008-Prettify-linking-no-undefined.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0011-Enable-shared-gnat-implib.patch",
+      "size": 1474,
+      "sha256": "5ef4148acc4a2b7ed648d4fe75fab5545e84b4b93a12d6ba4e4ea6061dd635fa",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0011-Enable-shared-gnat-implib.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0012-Handle-spaces-in-path-for-default-manifest.patch",
+      "size": 2243,
+      "sha256": "e98805ead7d78ee2a92f237894c4b2b7ddc1688e1b517d8c04f28d440202e40f",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0012-Handle-spaces-in-path-for-default-manifest.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0014-gcc-9-branch-clone_function_name_1-Retain-any-stdcall-suffix.patch",
+      "size": 3690,
+      "sha256": "fd9bdecb2bbc4796bbc9f00b708dac42ef9e3464a06d6d27e5475cee117de5be",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0014-gcc-9-branch-clone_function_name_1-Retain-any-stdcall-suffix.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch",
+      "size": 1608,
+      "sha256": "ad1f7b5e7afaaec008b7cbd14feea13a10989fa91bda7003af72d457619bb199",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0022-unset-native-system-header-dir.patch",
+      "size": 860,
+      "sha256": "d8b9b979dc1742f63d23dfca92bc05944612bd196a31fb882b8a616baba84383",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0022-unset-native-system-header-dir.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0140-gcc-diagnostic-color.patch",
+      "size": 1275,
+      "sha256": "c94004dab1685a6fa9124de86aae742df4136a2e9ff5d5e1ad87ecdc35fbcef4",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0140-gcc-diagnostic-color.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/0200-add-m-no-align-vector-insn-option-for-i386.patch",
+      "size": 7553,
+      "sha256": "1484911163634f30324827619c873a6267b377abba0df8bbedfd128163c53ea4",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/0200-add-m-no-align-vector-insn-option-for-i386.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/2001-fix-building-rust-on-mingw-w64.patch",
+      "size": 343,
+      "sha256": "a411f59953553a3d01dd64c79b1acbb91eca092c4cb01bfd26b1c51c3eb798e8",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/2001-fix-building-rust-on-mingw-w64.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    },
+    {
+      "path": "archives/gcc-16.1.0/patches/3001-fix-codeview-crashes.patch",
+      "size": 4097,
+      "sha256": "f21f9ab731e9cab8fd4ca8c289497f859ef7004e6fa0507877dc2559ac2071c3",
+      "url": "MSYS2 source package mingw-w64-gcc-16.1.0-5.src.tar.zst member mingw-w64-gcc/3001-fix-codeview-crashes.patch",
+      "downloaded": "2026-10-30T08:40:18Z"
+    }
+  ]
+}

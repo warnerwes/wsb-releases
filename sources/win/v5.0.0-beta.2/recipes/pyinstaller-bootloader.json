@@ -1,0 +1,32 @@
+{
+  "toolchain": "Prebuilt by the PyInstaller maintainers (waf, MSVC); shipped unchanged in pyinstaller-6.21.0-py3-none-win_amd64.whl and in the sdist",
+  "configuration": {
+    "bootloader_variant": "Windows-64bit-intel/runw.exe (app, console=False) and run.exe or runw.exe (wsb_bridge.exe)",
+    "wheel": {
+      "filename": "pyinstaller-6.21.0-py3-none-win_amd64.whl",
+      "sha256": "7fae06c494ce0ebfe6bd3055c0e409def884f63af2e3705d06bd431ad9237fc7"
+    },
+    "run_exe_sha256": "0214e42624efe0d6f586ca673ef235f9d4bdee136853b4289e34e9adcd3787ed",
+    "runw_exe_sha256": "184e0d1ade1e772b35531867c4b02215d81ca3df62caf202ee27ae3be94aee60"
+  },
+  "build_commands": [
+    "tar xzf pyinstaller-6.21.0.tar.gz && cd pyinstaller-6.21.0/bootloader",
+    "python ./waf all --target-arch=64bit",
+    "PyInstaller (at app build time) copies the bootloader, appends the app archive and resources; the lane then signs both exes"
+  ],
+  "correspondence": "PyInstaller/bootloader/Windows-64bit-intel/run.exe and runw.exe are byte-identical in the pinned wheel and in the retained sdist (whose bootloader/ holds their sources); the two shipped exes are those bootloaders plus the appended archive and the signature, so they are path-reviewed signed rows.",
+  "source_revision": "v6.21.0 commit 1cda34561015a90b6e1ae31dc89703799adaf13e; pyinstaller-6.21.0.tar.gz sha256 bb9fab705983e393a2d1cac77d6972513057ad800215fd861dc15ff5272e98fd",
+  "archive_sha256": [
+    "bb9fab705983e393a2d1cac77d6972513057ad800215fd861dc15ff5272e98fd"
+  ],
+  "patch_sha256": [],
+  "retained_files": [
+    {
+      "path": "archives/pyinstaller/pyinstaller-6.21.0.tar.gz",
+      "size": 4061519,
+      "sha256": "bb9fab705983e393a2d1cac77d6972513057ad800215fd861dc15ff5272e98fd",
+      "url": "https://files.pythonhosted.org/packages/d5/4d/ec706c3fcf39e26888c35b39615ff4d5865d184069666c47492cff1fbe50/pyinstaller-6.21.0.tar.gz",
+      "downloaded": "2026-10-30T00:09:39Z"
+    }
+  ]
+}

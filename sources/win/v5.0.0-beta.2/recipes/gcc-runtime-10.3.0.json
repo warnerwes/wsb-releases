@@ -1,0 +1,362 @@
+{
+  "toolchain": "Rtools40 2022-02-06 (choco rtools 4.0.0.20220206), MSYSTEM=UCRT64: mingw-w64-ucrt-x86_64-gcc / gcc-fortran 10.3.0-9804; OpenBLAS 0.3.29 linked with -static -static-libgcc -fno-ident",
+  "configuration": {
+    "pkgbuild": "r-windows/rtools-ucrt c5344cc8 mingw-w64-gcc/PKGBUILD (retained; pkgrel 9804 exists only at this commit)",
+    "patches_in_prepare_order": [
+      "0002-Relocate-libintl.patch",
+      "0003-Windows-Follow-Posix-dir-exists-semantics-more-close.patch",
+      "0004-Windows-Use-not-in-progpath-and-leave-case-as-is.patch",
+      "0005-Windows-Don-t-ignore-native-system-header-dir.patch",
+      "0006-Windows-New-feature-to-allow-overriding.patch",
+      "0007-Build-EXTRA_GNATTOOLS-for-Ada.patch",
+      "0008-Prettify-linking-no-undefined.patch",
+      "0009-gcc-make-xmmintrin-header-cplusplus-compatible-depre.patch",
+      "0010-Fix-using-large-PCH.patch",
+      "0011-Enable-shared-gnat-implib.patch",
+      "0012-Handle-spaces-in-path-for-default-manifest.patch",
+      "0014-gcc-9-branch-clone_function_name_1-Retain-any-stdcall-suffix.patch",
+      "0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch",
+      "0021-gcc-config-i386-mingw32.h-Ensure-lmsvcrt-precede-lke.patch",
+      "0022-jit-port-libgccjit-to-Windows.patch",
+      "0023-gcc-jit-Rename-libgccjit.dll-to-libgccjit-0.dll.patch",
+      "0130-libstdc++-in-out.patch",
+      "0140-gcc-8.2.0-diagnostic-color.patch",
+      "0150-gcc-10.2.0-libgcc-ldflags.patch",
+      "0160-libbacktrace-seh.patch",
+      "0200-ms_printf-improvements.patch",
+      "0203-backport-longjmp-fix.patch",
+      "gcc10-4-driver-access-fix.diff",
+      "gcc10-6-reorder-unwind-info.diff",
+      "gcc10-7-allow-ucrt-c99-format.diff",
+      "gcc10-8-enable-reorder-blocks-and-partition-with-pragma.diff"
+    ],
+    "runtime_patches": "0008 (libgfortran/Makefile.*), 0150 (libgcc/Makefile.in), 0160 (libgcc/unwind-seh.c)",
+    "link_step": "MacPython/openblas-libs v0.3.29.0.0 (510428188c2a) .github/workflows/windows.yml + tools/build_openblas.sh (retained): LDFLAGS=-lucrt -static -static-libgcc",
+    "numpy_pin": "numpy v2.2.6 requirements/ci_requirements.txt scipy-openblas64==0.3.29.0.0 (retained)"
+  },
+  "build_commands": [
+    "tar xJf gcc-10.3.0.tar.xz; (MSYS2/Rtools ucrt64) makepkg-mingw with the retained PKGBUILD, patches and gdbinit (prepare() applies them in the listed order)",
+    "openblas-libs: choco install rtools --version=4.0.0.20220206; MSYSTEM=UCRT64 tools/build_openblas.sh (static libgfortran/libgcc 10.3.0)",
+    "numpy 2.2.6 cibw_before_build.sh copies libscipy_openblas64_.dll into numpy.libs (delvewheel hash name)"
+  ],
+  "correspondence": "The shipped numpy.libs/libscipy_openblas64_-13e2df51\u2026.dll is byte-identical to the numpy 2.2.6 wheel member and to scipy_openblas64/lib/libscipy_openblas64_.dll of PyPI's scipy_openblas64 0.3.29.0.0 win_amd64 wheel; it embeds ../../../gcc-10.3.0/libgfortran/... paths and imports only KERNEL32 and the UCRT; Rtools40 2022-02-06 ships gcc 10.3.0-9804, built from the retained PKGBUILD and patches over the retained tarball (sha256 equal to the PKGBUILD's).",
+  "source_revision": "gcc-10.3.0.tar.xz sha256 64f404c1a650f27fc33da242e1f2df54952e3963a49e06e73f6940f3223ac344 + r-windows/rtools-ucrt c5344cc8c7e310ee4eee513b2381af2e75d65cb9 (mingw-w64-gcc 10.3.0-9804)",
+  "archive_sha256": [
+    "64f404c1a650f27fc33da242e1f2df54952e3963a49e06e73f6940f3223ac344",
+    "38b618d5e3de8c1bde92547bfb19fd1e7c41c9b7ad715e3a968a516a951fbec2",
+    "388dcdcbaac1236f6665b60bd6f68620133e3bdf9d369bdec1ac80234dbf9538",
+    "bce81824fc89e5e62cca350de4c17a27e27a18a1a1ad5ca3492aec1fc5af3234",
+    "97f18b4afede9d1eedbe21e4b324b2a77f98a36478454f9dea07d050f41a6478",
+    "bdad8dcaca873c05d02b6614a41a8e8ae8bb27aed8d62b599463caa3a59a29a7",
+    "d77d006b8f58267c2b416738fbd31e1a9e4ff629e82cccf8ca8565de182ecc17",
+    "1ce4c83d89bc30a0a97d4bc18d72ccaa9d3cb7c90ba1408c6b3e29ebf0c5a71c",
+    "6446ea20e4015285079026bd33570a0269f2dc90f0ba7f43113aa54f08dc387a",
+    "ca82eb73bf2ec9bfa33db0d0e7512962b6721dbe9875589fbfd620ec0281bd54",
+    "be6843283804a34e1b7fcaf4d99a060c757e823cc856a927d566f18bd3a02baa",
+    "bfe4ab19bba56d88acbb421f9a827b3adedc01e0fa74fcda66314e1828a9bab5",
+    "ae1a2397fe278af63c029218138beae3844bcd0b9e31019cdbc3386ead311348"
+  ],
+  "patch_sha256": [
+    "1247e81571c908548b4d9aaa3df1ad8fd73aad7b81e7eafea12d53bbada70e94",
+    "5b8ab5a54ebdd10c9802ea431b935ff4ba225eec6ca92824cfddfcf2ee8ac910",
+    "388f423a67e4be6f547ca7e340ff8ee4c78b1ed83f3fd698daa409e309911807",
+    "bd1c201febdf292570b0da9dcc066a237916ab3166dce3610487814f131517e5",
+    "7f5fc74961ec0face6c4c56d3fc3613c38c5133bb68648191065bbf597f3e906",
+    "3629446c0039d9061cfedcb6d7a7589279588bb4601c7ce233546d357bd4be34",
+    "2e4f7d0ef739aec8986eb06a2baadee552ebc2e8be661c39a448e93515179eb5",
+    "513a824ee500d063f09ec920a9ad317a3a117e5468bf201aaf3f70dd0000e769",
+    "ec58aafba0174313451c282339bbd67ed0b11bca034c29023e0138b61441cf71",
+    "3402f11c3edb3a2b0f27f7159c476879e1e6cddb05ac0327968d89ea245044c7",
+    "11dd5388a1e1c0a2bc8bc3824726598784b9b9e0896a3d77950ba6a4569f1128",
+    "21e31addcf13bc6fa6650b02ed0f2e195a1226260ae48c536840cc9230de2cfc",
+    "276ecc392c777d4b17d771a987e80dca50ff25d8f65671d5de139be73997064b",
+    "c7359f4c7015bc1fb02bc13449fa9826669273bd1f0663ba898decb67e8487fc",
+    "61554e1ace26a7638a029c87ca360de9d8efbbe258f2fe84c0635a6c446d19a9",
+    "35715ec552eb262dc9d7cb8ee70215bacce47e7281ee4f45bd959fdeadac56e1",
+    "90c17d738e168a3cfd1379ea3b54ea9defd1e68aee33cd9966ee7562485f4910",
+    "5240a9e731b45c17a164066c7eb193c1fbee9fd8d9a2a5afa2edbcde9510da47",
+    "7f0b4e45d933e18c9d8bd2afcd83e4f52e97e2e25dd41bfa0cba755c70e591c7",
+    "88c1d65e763e631ad49f9a077ed631f4acac9ef4732e2818ccddaefc883b1811",
+    "146ac7aec004a949e42f7da6ff66351790e56094a85f6dbe28ea583b47c8125d",
+    "a1ca2f5dd55823e29f6628dd5027057636cf3d5998c438f365a84f7ec4b7eaa6",
+    "eeb96f5ad3f775590f0549f9bdeb8fb0e8406005b437d180d1a78ca250669d41",
+    "49087ea019f0108c5ebadec24fa15a651cc4ffe0fc71d44be5b1018a78179a87",
+    "d119f17f224db814bc54da87520db532a2cb35aa2e13760048bab8be7c4af17a",
+    "a4598fb9b594026b601de880cc41ae1bdadaf0d818e629591ef4479f9ad58742"
+  ],
+  "retained_files": [
+    {
+      "path": "archives/gcc-10.3.0/gcc-10.3.0.tar.xz",
+      "size": 76692288,
+      "sha256": "64f404c1a650f27fc33da242e1f2df54952e3963a49e06e73f6940f3223ac344",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz",
+      "downloaded": "2026-10-30T03:54:41Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/gcc-10.3.0.tar.xz.sig",
+      "size": 310,
+      "sha256": "38b618d5e3de8c1bde92547bfb19fd1e7c41c9b7ad715e3a968a516a951fbec2",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz.sig",
+      "downloaded": "2026-10-30T03:54:41Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/rtools-ucrt-c5344cc8-PKGBUILD",
+      "size": 20832,
+      "sha256": "388dcdcbaac1236f6665b60bd6f68620133e3bdf9d369bdec1ac80234dbf9538",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/PKGBUILD",
+      "downloaded": "2026-10-30T08:51:20Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/gdbinit",
+      "size": 180,
+      "sha256": "bce81824fc89e5e62cca350de4c17a27e27a18a1a1ad5ca3492aec1fc5af3234",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/gdbinit",
+      "downloaded": "2026-10-30T08:51:29Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/openblas-libs-510428188c2a/.github/workflows/windows.yml",
+      "size": 6404,
+      "sha256": "97f18b4afede9d1eedbe21e4b324b2a77f98a36478454f9dea07d050f41a6478",
+      "url": "https://raw.githubusercontent.com/MacPython/openblas-libs/510428188c2a87260a0593796af9ce425f86ad8e/.github/workflows/windows.yml",
+      "downloaded": "2026-10-30T08:51:40Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/openblas-libs-510428188c2a/tools/build_openblas.sh",
+      "size": 6698,
+      "sha256": "bdad8dcaca873c05d02b6614a41a8e8ae8bb27aed8d62b599463caa3a59a29a7",
+      "url": "https://raw.githubusercontent.com/MacPython/openblas-libs/510428188c2a87260a0593796af9ce425f86ad8e/tools/build_openblas.sh",
+      "downloaded": "2026-10-30T08:51:40Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/openblas-libs-510428188c2a/patches-windows/openblas-make-libs.patch",
+      "size": 943,
+      "sha256": "d77d006b8f58267c2b416738fbd31e1a9e4ff629e82cccf8ca8565de182ecc17",
+      "url": "https://raw.githubusercontent.com/MacPython/openblas-libs/510428188c2a87260a0593796af9ce425f86ad8e/patches-windows/openblas-make-libs.patch",
+      "downloaded": "2026-10-30T08:51:41Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/openblas-libs-510428188c2a/tools/LICENSE_win32.txt",
+      "size": 44231,
+      "sha256": "1ce4c83d89bc30a0a97d4bc18d72ccaa9d3cb7c90ba1408c6b3e29ebf0c5a71c",
+      "url": "https://raw.githubusercontent.com/MacPython/openblas-libs/510428188c2a87260a0593796af9ce425f86ad8e/tools/LICENSE_win32.txt",
+      "downloaded": "2026-10-30T08:51:41Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/openblas-libs-510428188c2a/pyproject.toml",
+      "size": 1066,
+      "sha256": "6446ea20e4015285079026bd33570a0269f2dc90f0ba7f43113aa54f08dc387a",
+      "url": "https://raw.githubusercontent.com/MacPython/openblas-libs/510428188c2a87260a0593796af9ce425f86ad8e/pyproject.toml",
+      "downloaded": "2026-10-30T08:51:41Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/numpy-v2.2.6/requirements/ci_requirements.txt",
+      "size": 116,
+      "sha256": "ca82eb73bf2ec9bfa33db0d0e7512962b6721dbe9875589fbfd620ec0281bd54",
+      "url": "https://raw.githubusercontent.com/numpy/numpy/v2.2.6/requirements/ci_requirements.txt",
+      "downloaded": "2026-10-30T08:51:41Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/numpy-v2.2.6/tools/wheels/cibw_before_build.sh",
+      "size": 2670,
+      "sha256": "be6843283804a34e1b7fcaf4d99a060c757e823cc856a927d566f18bd3a02baa",
+      "url": "https://raw.githubusercontent.com/numpy/numpy/v2.2.6/tools/wheels/cibw_before_build.sh",
+      "downloaded": "2026-10-30T08:51:42Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/numpy-v2.2.6/pyproject.toml",
+      "size": 7291,
+      "sha256": "bfe4ab19bba56d88acbb421f9a827b3adedc01e0fa74fcda66314e1828a9bab5",
+      "url": "https://raw.githubusercontent.com/numpy/numpy/v2.2.6/pyproject.toml",
+      "downloaded": "2026-10-30T08:51:42Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/numpy-v2.2.6/tools/wheels/LICENSE_win32.txt",
+      "size": 44238,
+      "sha256": "ae1a2397fe278af63c029218138beae3844bcd0b9e31019cdbc3386ead311348",
+      "url": "https://raw.githubusercontent.com/numpy/numpy/v2.2.6/tools/wheels/LICENSE_win32.txt",
+      "downloaded": "2026-10-30T08:51:42Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0002-Relocate-libintl.patch",
+      "size": 23671,
+      "sha256": "1247e81571c908548b4d9aaa3df1ad8fd73aad7b81e7eafea12d53bbada70e94",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0002-Relocate-libintl.patch",
+      "downloaded": "2026-10-30T08:51:20Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0003-Windows-Follow-Posix-dir-exists-semantics-more-close.patch",
+      "size": 4102,
+      "sha256": "5b8ab5a54ebdd10c9802ea431b935ff4ba225eec6ca92824cfddfcf2ee8ac910",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0003-Windows-Follow-Posix-dir-exists-semantics-more-close.patch",
+      "downloaded": "2026-10-30T08:51:20Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0004-Windows-Use-not-in-progpath-and-leave-case-as-is.patch",
+      "size": 2172,
+      "sha256": "388f423a67e4be6f547ca7e340ff8ee4c78b1ed83f3fd698daa409e309911807",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0004-Windows-Use-not-in-progpath-and-leave-case-as-is.patch",
+      "downloaded": "2026-10-30T08:51:21Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0005-Windows-Don-t-ignore-native-system-header-dir.patch",
+      "size": 931,
+      "sha256": "bd1c201febdf292570b0da9dcc066a237916ab3166dce3610487814f131517e5",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0005-Windows-Don-t-ignore-native-system-header-dir.patch",
+      "downloaded": "2026-10-30T08:51:21Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0006-Windows-New-feature-to-allow-overriding.patch",
+      "size": 1398,
+      "sha256": "7f5fc74961ec0face6c4c56d3fc3613c38c5133bb68648191065bbf597f3e906",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0006-Windows-New-feature-to-allow-overriding.patch",
+      "downloaded": "2026-10-30T08:51:21Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0007-Build-EXTRA_GNATTOOLS-for-Ada.patch",
+      "size": 1261,
+      "sha256": "3629446c0039d9061cfedcb6d7a7589279588bb4601c7ce233546d357bd4be34",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0007-Build-EXTRA_GNATTOOLS-for-Ada.patch",
+      "downloaded": "2026-10-30T08:51:22Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0008-Prettify-linking-no-undefined.patch",
+      "size": 1704,
+      "sha256": "2e4f7d0ef739aec8986eb06a2baadee552ebc2e8be661c39a448e93515179eb5",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0008-Prettify-linking-no-undefined.patch",
+      "downloaded": "2026-10-30T08:51:22Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0009-gcc-make-xmmintrin-header-cplusplus-compatible-depre.patch",
+      "size": 1167,
+      "sha256": "513a824ee500d063f09ec920a9ad317a3a117e5468bf201aaf3f70dd0000e769",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0009-gcc-make-xmmintrin-header-cplusplus-compatible-depre.patch",
+      "downloaded": "2026-10-30T08:51:22Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0010-Fix-using-large-PCH.patch",
+      "size": 5858,
+      "sha256": "ec58aafba0174313451c282339bbd67ed0b11bca034c29023e0138b61441cf71",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0010-Fix-using-large-PCH.patch",
+      "downloaded": "2026-10-30T08:51:23Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0011-Enable-shared-gnat-implib.patch",
+      "size": 1548,
+      "sha256": "3402f11c3edb3a2b0f27f7159c476879e1e6cddb05ac0327968d89ea245044c7",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0011-Enable-shared-gnat-implib.patch",
+      "downloaded": "2026-10-30T08:51:23Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0012-Handle-spaces-in-path-for-default-manifest.patch",
+      "size": 1696,
+      "sha256": "11dd5388a1e1c0a2bc8bc3824726598784b9b9e0896a3d77950ba6a4569f1128",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0012-Handle-spaces-in-path-for-default-manifest.patch",
+      "downloaded": "2026-10-30T08:51:23Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0014-gcc-9-branch-clone_function_name_1-Retain-any-stdcall-suffix.patch",
+      "size": 3726,
+      "sha256": "21e31addcf13bc6fa6650b02ed0f2e195a1226260ae48c536840cc9230de2cfc",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0014-gcc-9-branch-clone_function_name_1-Retain-any-stdcall-suffix.patch",
+      "downloaded": "2026-10-30T08:51:24Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch",
+      "size": 1620,
+      "sha256": "276ecc392c777d4b17d771a987e80dca50ff25d8f65671d5de139be73997064b",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0020-libgomp-Don-t-hard-code-MS-printf-attributes.patch",
+      "downloaded": "2026-10-30T08:51:24Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0021-gcc-config-i386-mingw32.h-Ensure-lmsvcrt-precede-lke.patch",
+      "size": 928,
+      "sha256": "c7359f4c7015bc1fb02bc13449fa9826669273bd1f0663ba898decb67e8487fc",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0021-gcc-config-i386-mingw32.h-Ensure-lmsvcrt-precede-lke.patch",
+      "downloaded": "2026-10-30T08:51:24Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0022-jit-port-libgccjit-to-Windows.patch",
+      "size": 27077,
+      "sha256": "61554e1ace26a7638a029c87ca360de9d8efbbe258f2fe84c0635a6c446d19a9",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0022-jit-port-libgccjit-to-Windows.patch",
+      "downloaded": "2026-10-30T08:51:24Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0023-gcc-jit-Rename-libgccjit.dll-to-libgccjit-0.dll.patch",
+      "size": 2341,
+      "sha256": "35715ec552eb262dc9d7cb8ee70215bacce47e7281ee4f45bd959fdeadac56e1",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0023-gcc-jit-Rename-libgccjit.dll-to-libgccjit-0.dll.patch",
+      "downloaded": "2026-10-30T08:51:25Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0130-libstdc++-in-out.patch",
+      "size": 136524,
+      "sha256": "90c17d738e168a3cfd1379ea3b54ea9defd1e68aee33cd9966ee7562485f4910",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0130-libstdc%2B%2B-in-out.patch",
+      "downloaded": "2026-10-30T08:51:26Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0140-gcc-8.2.0-diagnostic-color.patch",
+      "size": 1914,
+      "sha256": "5240a9e731b45c17a164066c7eb193c1fbee9fd8d9a2a5afa2edbcde9510da47",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0140-gcc-8.2.0-diagnostic-color.patch",
+      "downloaded": "2026-10-30T08:51:26Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0150-gcc-10.2.0-libgcc-ldflags.patch",
+      "size": 628,
+      "sha256": "7f0b4e45d933e18c9d8bd2afcd83e4f52e97e2e25dd41bfa0cba755c70e591c7",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0150-gcc-10.2.0-libgcc-ldflags.patch",
+      "downloaded": "2026-10-30T08:51:26Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0160-libbacktrace-seh.patch",
+      "size": 819,
+      "sha256": "88c1d65e763e631ad49f9a077ed631f4acac9ef4732e2818ccddaefc883b1811",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0160-libbacktrace-seh.patch",
+      "downloaded": "2026-10-30T08:51:27Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0200-ms_printf-improvements.patch",
+      "size": 12097,
+      "sha256": "146ac7aec004a949e42f7da6ff66351790e56094a85f6dbe28ea583b47c8125d",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0200-ms_printf-improvements.patch",
+      "downloaded": "2026-10-30T08:51:27Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/0203-backport-longjmp-fix.patch",
+      "size": 4185,
+      "sha256": "a1ca2f5dd55823e29f6628dd5027057636cf3d5998c438f365a84f7ec4b7eaa6",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/0203-backport-longjmp-fix.patch",
+      "downloaded": "2026-10-30T08:51:28Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/gcc10-4-driver-access-fix.diff",
+      "size": 665,
+      "sha256": "eeb96f5ad3f775590f0549f9bdeb8fb0e8406005b437d180d1a78ca250669d41",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/gcc10-4-driver-access-fix.diff",
+      "downloaded": "2026-10-30T08:51:28Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/gcc10-6-reorder-unwind-info.diff",
+      "size": 2539,
+      "sha256": "49087ea019f0108c5ebadec24fa15a651cc4ffe0fc71d44be5b1018a78179a87",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/gcc10-6-reorder-unwind-info.diff",
+      "downloaded": "2026-10-30T08:51:28Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/gcc10-7-allow-ucrt-c99-format.diff",
+      "size": 4727,
+      "sha256": "d119f17f224db814bc54da87520db532a2cb35aa2e13760048bab8be7c4af17a",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/gcc10-7-allow-ucrt-c99-format.diff",
+      "downloaded": "2026-10-30T08:51:29Z"
+    },
+    {
+      "path": "archives/gcc-10.3.0/patches/gcc10-8-enable-reorder-blocks-and-partition-with-pragma.diff",
+      "size": 692,
+      "sha256": "a4598fb9b594026b601de880cc41ae1bdadaf0d818e629591ef4479f9ad58742",
+      "url": "https://raw.githubusercontent.com/r-windows/rtools-ucrt/c5344cc8c7e310ee4eee513b2381af2e75d65cb9/mingw-w64-gcc/gcc10-8-enable-reorder-blocks-and-partition-with-pragma.diff",
+      "downloaded": "2026-10-30T08:51:29Z"
+    }
+  ]
+}
