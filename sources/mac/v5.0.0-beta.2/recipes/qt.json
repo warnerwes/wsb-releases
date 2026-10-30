@@ -1,0 +1,76 @@
+{
+  "toolchain": "Qt CI (coin) template qtci-macos-15-arm-105, Apple LLVM 16.0.0 (clang-1600.0.26.3) per the QtCore build string; CMake via Qt configure; universal x86_64;arm64, thinned to arm64 in the app",
+  "configuration": {
+    "coin_platform_config": "qt/qt5@v6.11.2 coin/platform_configs/macos.yaml Id macos-universal-on-arm64",
+    "configure_arguments": "-nomake examples -release -force-debug-info -separate-debug-info -headersclean -framework",
+    "CMAKE_ARGS": "-DCMAKE_OSX_ARCHITECTURES=\"x86_64;arm64\" -DOPENSSL_ROOT_DIR={{.Env.OPENSSL_DIR}}",
+    "NON_QTBASE_CMAKE_ARGS": "-DFEATURE_gds=OFF -DFFMPEG_DIR={{.Env.FFMPEG_DIR}} -DQT_DEPLOY_FFMPEG=TRUE -DINPUT_headersclean=ON -DQT_FEATURE_open62541_security=OFF",
+    "features": [
+      "Sccache",
+      "Packaging",
+      "DoNotRunTests",
+      "WarningsAreErrors",
+      "UseConfigure",
+      "GenerateSBOM",
+      "VerifySBOM"
+    ],
+    "qt_build_string": "Qt 6.11.2 (arm64-little_endian-lp64 shared (dynamic) release build; by Apple LLVM 16.0.0 (clang-1600.0.26.3))",
+    "pyside_qt_pin": "pyside-setup v6.11.2 coin/dependencies.yaml -> qt/qt5 713a36536903d172f9e6737584d428753c119496",
+    "modules": [
+      "qtbase",
+      "qtsvg",
+      "qtmultimedia",
+      "qtimageformats"
+    ]
+  },
+  "build_commands": [
+    "for m in qtbase qtsvg qtimageformats qtmultimedia: tar xf <m>-everywhere-src-6.11.2.tar.xz",
+    "qtbase: ./configure -nomake examples -release -force-debug-info -separate-debug-info -headersclean -framework -- -DCMAKE_OSX_ARCHITECTURES=\"x86_64;arm64\" -DOPENSSL_ROOT_DIR=<openssl>",
+    "cmake --build . --parallel && cmake --install .",
+    "qtsvg, qtimageformats, qtmultimedia: <prefix>/bin/qt-configure-module . -- -DCMAKE_OSX_ARCHITECTURES=\"x86_64;arm64\" -DFFMPEG_DIR=<ffmpeg n7.1.5 prefix> -DQT_DEPLOY_FFMPEG=TRUE && cmake --build . && cmake --install .",
+    "lipo -thin arm64 (the app ships arm64-only slices of the universal2 wheel binaries)"
+  ],
+  "correspondence": "Each shipped framework/plugin is built from the qtbase/qtsvg/qtimageformats/qtmultimedia v6.11.2 archives (module mapping in the evidence). The archives' .tag commits equal the v6.11.2 tags; PySide6 6.11.2 pins qt5 v6.11.2; QtCore reports Qt 6.11.2 built by Apple clang-1600.0.26.3; every shipped binary's arm64 __text equals the PySide6 6.11.2 wheel install. Configuration is Qt's published coin packaging config, not a per-build log.",
+  "source_revision": "v6.11.2: qtbase commit ef55f427f2c8b410d34f8a7681020a3000cf6866 (tag object 7a59d906fb765eb85759d4d3cae45d3f295f6359); qtsvg commit 17ca512f903f935282ebeca496aac5d11ba4199a (tag object 7f649404bccad7c8364ef08d72c60b836d3f753a); qtmultimedia commit 6f162ccac1425edbd7b4d1582fabab5973b43d6c (tag object 38c4ae0a8380bc8b90a67cba8b4cf7e99985a3e2); qtimageformats commit 47b6139dda3b84d1d3ec15caf8d04eff8d744c8d (tag object eb50d5e6b8e1ad102cf50358b7fb109d86fc14ff); qt5 supermodule commit 713a36536903d172f9e6737584d428753c119496",
+  "archive_sha256": [
+    "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22",
+    "d594337feca84c26fb67fe87b85e6a5c12fda404b611d905f9d138210c311876",
+    "967b5e02ec6b793cdb360622cd6e703132836af983208d678dae4b50f109cd9f",
+    "cecd8900f34b6550076309bc94f62f828008b633a4239e0a08c86788f41001f8"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/qtbase-everywhere-src-6.11.2.tar.xz",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz",
+      "effective_url": "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz",
+      "time": "2026-10-30T00:09:43Z",
+      "size": 50582668,
+      "sha256": "5b2e00eccaf5a4d8c14134ffa0ea8dfd0a35ae1ffc7f8d87fa4305a1ed23cf22"
+    },
+    {
+      "path": "archives/qtsvg-everywhere-src-6.11.2.tar.xz",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtsvg-everywhere-src-6.11.2.tar.xz",
+      "effective_url": "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtsvg-everywhere-src-6.11.2.tar.xz",
+      "time": "2026-10-30T00:09:41Z",
+      "size": 2341860,
+      "sha256": "d594337feca84c26fb67fe87b85e6a5c12fda404b611d905f9d138210c311876"
+    },
+    {
+      "path": "archives/qtmultimedia-everywhere-src-6.11.2.tar.xz",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtmultimedia-everywhere-src-6.11.2.tar.xz",
+      "effective_url": "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtmultimedia-everywhere-src-6.11.2.tar.xz",
+      "time": "2026-10-30T00:09:42Z",
+      "size": 10255120,
+      "sha256": "967b5e02ec6b793cdb360622cd6e703132836af983208d678dae4b50f109cd9f"
+    },
+    {
+      "path": "archives/qtimageformats-everywhere-src-6.11.2.tar.xz",
+      "url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtimageformats-everywhere-src-6.11.2.tar.xz",
+      "effective_url": "https://qt.mirror.constant.com/archive/qt/6.11/6.11.2/submodules/qtimageformats-everywhere-src-6.11.2.tar.xz",
+      "time": "2026-10-30T00:09:42Z",
+      "size": 2050424,
+      "sha256": "cecd8900f34b6550076309bc94f62f828008b633a4239e0a08c86788f41001f8"
+    }
+  ]
+}

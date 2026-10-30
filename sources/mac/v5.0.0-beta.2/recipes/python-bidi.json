@@ -1,0 +1,130 @@
+{
+  "toolchain": "GitHub Actions macos-14 (aarch64) via PyO3/maturin-action@v1 (maturin >=1,<2); rustc commit 88d9e12ae178fab0fb5cc050a94da85685d449ea (embedded in the .so)",
+  "configuration": {
+    "maturin_args": "--release --out dist -i 3.10 3.11 3.12 3.13 3.14 3.15 [3.14t 3.15t] pypy3.11",
+    "target": "aarch64-apple-darwin",
+    "crate_type": "cdylib",
+    "pyo3_features": [
+      "extension-module",
+      "generate-import-lib"
+    ],
+    "cargo_lock_crates": [
+      {
+        "name": "heck",
+        "version": "0.5.0",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
+      },
+      {
+        "name": "libc",
+        "version": "0.2.155",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+      },
+      {
+        "name": "once_cell",
+        "version": "1.21.3",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d"
+      },
+      {
+        "name": "portable-atomic",
+        "version": "1.6.0",
+        "license": "Apache-2.0 OR MIT",
+        "checksum": "7170ef9988bc169ba16dd36a7fa041e5c4cbeb6a35b76d4c03daded371eae7c0"
+      },
+      {
+        "name": "proc-macro2",
+        "version": "1.0.107",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9"
+      },
+      {
+        "name": "pyo3",
+        "version": "0.30.1",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "229ca13b8a15bb0d1487b81ab975bfcd97513416499a8312011b6036e42e0de4"
+      },
+      {
+        "name": "pyo3-build-config",
+        "version": "0.30.1",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "70130e2b6dd1ee589a8788026a429561ca5c40fa7a2fa7914c2282eddae24700"
+      },
+      {
+        "name": "pyo3-ffi",
+        "version": "0.30.1",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "5e7ff73c555c286d212d4ce7e5fbda845a973c4f61bd5f160f5f2c3c2a04d1c4"
+      },
+      {
+        "name": "pyo3-macros",
+        "version": "0.30.1",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "c46d2e5862c7bb8207e3b639f713dda3c499933444784154c11d013c5a691b60"
+      },
+      {
+        "name": "pyo3-macros-backend",
+        "version": "0.30.1",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "38b89f066f2ae72a2aef52d1537ca2fcd104440ebfadee06e97aa90738a25b9b"
+      },
+      {
+        "name": "python-bidi",
+        "version": "0.6.12",
+        "license": null,
+        "checksum": null
+      },
+      {
+        "name": "quote",
+        "version": "1.0.45",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "41f2619966050689382d2b44f664f4bc593e129785a36d6ee376ddf37259b924"
+      },
+      {
+        "name": "syn",
+        "version": "3.0.9",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b"
+      },
+      {
+        "name": "target-lexicon",
+        "version": "0.13.3",
+        "license": "Apache-2.0 WITH LLVM-exception",
+        "checksum": "df7f62577c25e07834649fc3b39fafdc597c0a3527dc1c60129201ccfcbaa50c"
+      },
+      {
+        "name": "unicode-bidi",
+        "version": "0.3.18",
+        "license": "MIT OR Apache-2.0",
+        "checksum": "5c1cb5db39152898a79168971543b1cb5020dff7fe43c8dc468b0885f5e29df5"
+      },
+      {
+        "name": "unicode-ident",
+        "version": "1.0.12",
+        "license": "(MIT OR Apache-2.0) AND Unicode-DFS-2016",
+        "checksum": "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
+      }
+    ]
+  },
+  "build_commands": [
+    "tar xzf python_bidi-0.6.12.tar.gz && cd python_bidi-0.6.12",
+    "maturin build --release --target aarch64-apple-darwin --out dist -i python3.12 (uses Cargo.lock; crates from crates.io)"
+  ],
+  "correspondence": "The sdist's Cargo.lock pins the crates whose version strings are embedded in the shipped .so; the shipped .so __text equals the python-bidi 0.6.12 wheel install; build args from the sdist's CI.yml.",
+  "source_revision": "python_bidi-0.6.12.tar.gz sha256 bef41af9bfd16fc6cfc31d8b72a87023b52b5ebd468d9ff2f331a6843b2dad82 (PyPI); git tag v0.6.12 commit 6f301fc339e883d4cb2d2cd6c7fe0d68ab480e5d",
+  "archive_sha256": [
+    "bef41af9bfd16fc6cfc31d8b72a87023b52b5ebd468d9ff2f331a6843b2dad82"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/python_bidi-0.6.12.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/3d/9d/b7ede7e25102f9e52c6cd5ffcd660eea659c2584001df84a352c76f62d74/python_bidi-0.6.12.tar.gz",
+      "effective_url": "https://files.pythonhosted.org/packages/3d/9d/b7ede7e25102f9e52c6cd5ffcd660eea659c2584001df84a352c76f62d74/python_bidi-0.6.12.tar.gz",
+      "time": "2026-10-30T00:09:39Z",
+      "size": 57214,
+      "sha256": "bef41af9bfd16fc6cfc31d8b72a87023b52b5ebd468d9ff2f331a6843b2dad82"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "toolchain": "Qt CI macOS host (qtci-macos-15-arm-105), Apple clang ('clang -arch arm64'), MACOSX_DEPLOYMENT_TARGET=12, brew diffutils+yasm; built per arch then lipo'd universal",
+  "configuration": {
+    "configure": "--disable-programs --disable-doc --disable-debug --enable-network --disable-lzma --enable-pic --disable-vulkan --disable-v4l2-m2m --disable-decoder=truemotion1 --disable-avdevice --disable-avfilter --enable-shared --disable-static --prefix=/usr/local/FFmpeg-n7.1.5 --enable-cross-compile --arch=arm64 --cc='clang -arch arm64'",
+    "source_of_string": "avcodec_configuration() string embedded in the shipped libavcodec.61.dylib",
+    "qt_provisioning": "qt/qt5 713a36536903d172f9e6737584d428753c119496 coin/provisioning/common/macos/install-ffmpeg-macos.sh macos-universal",
+    "MACOSX_DEPLOYMENT_TARGET": "12",
+    "enabled_license": "LGPL (no --enable-gpl/--enable-nonfree)"
+  },
+  "build_commands": [
+    "tar xf ffmpeg-7.1.5.tar.xz && mkdir -p build/arm64 && cd build/arm64",
+    "MACOSX_DEPLOYMENT_TARGET=12 ../../configure --disable-programs --disable-doc --disable-debug --enable-network --disable-lzma --enable-pic --disable-vulkan --disable-v4l2-m2m --disable-decoder=truemotion1 --disable-avdevice --disable-avfilter --enable-shared --disable-static --prefix=/usr/local/FFmpeg-n7.1.5 --enable-cross-compile --arch=arm64 --cc='clang -arch arm64'",
+    "make install DESTDIR=$PWD/installed -j4",
+    "fix_relative_dependencies.sh <installed>/usr/local/FFmpeg-n7.1.5/lib (install-name rewrite to @rpath)",
+    "(x86_64 slice built the same way; makeuniversal.sh lipo; app ships arm64 slice)"
+  ],
+  "correspondence": "The shipped libs embed this exact configure string and 'FFmpeg version 7.1.5'; Qt's v6.11.2 provisioning reproduces the string verbatim and pins the n7.1.5 GitHub archive (sha1 matched), whose tree equals the retained ffmpeg.org tarball apart from VERSION/.gitignore files.",
+  "source_revision": "n7.1.5 tag object eefb3654c445a9004712036be4ffb01a68b2c3e1, commit 3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587; ffmpeg-7.1.5.tar.xz sha256 de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f",
+  "archive_sha256": [
+    "de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f",
+    "7ce4b9d56e3ef0cd4c3a9c0b2c8a034ac91e6c4c011c1f10b05a8aa7292fca35"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/ffmpeg-7.1.5.tar.xz",
+      "url": "https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz",
+      "effective_url": "https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz",
+      "time": "2026-10-30T00:09:42Z",
+      "size": 11050340,
+      "sha256": "de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f"
+    },
+    {
+      "path": "archives/ffmpeg-7.1.5.tar.xz.asc",
+      "url": "https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz.asc",
+      "effective_url": "https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz.asc",
+      "time": "2026-10-30T00:09:40Z",
+      "size": 520,
+      "sha256": "7ce4b9d56e3ef0cd4c3a9c0b2c8a034ac91e6c4c011c1f10b05a8aa7292fca35"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "toolchain": "Prebuilt by PyInstaller maintainers (waf, Apple clang, universal2); shipped unchanged in pyinstaller-6.21.0-py3-none-macosx_10_13_universal2.whl and in the sdist",
+  "configuration": {
+    "bootloader_variant": "Darwin-64bit/runw (windowed, release)",
+    "waf_defaults": {
+      "macos_universal2": true,
+      "MACOSX_DEPLOYMENT_TARGET": "10.13"
+    },
+    "wheel": {
+      "filename": "pyinstaller-6.21.0-py3-none-macosx_10_13_universal2.whl",
+      "sha256": "327d132389f37912609e01be62810cf96b5aa95b613903e4b8692e0d12fb0eda",
+      "url": "https://files.pythonhosted.org/packages/0c/4a/53cf98bf66daed012dc9cd78c8203f19a675d696f2fc12afcf8c5049a0e0/pyinstaller-6.21.0-py3-none-macosx_10_13_universal2.whl"
+    },
+    "runw_sha256": "1d81fdddb181eea1fe15e276d214a9196e32a372d7e3558286c3129242156f96",
+    "runw_arm64_text_sha256": "d3fc6489db274b248f0427c4821e1db985c099257c54bff040d56e3c91deaf7d"
+  },
+  "build_commands": [
+    "tar xzf pyinstaller-6.21.0.tar.gz && cd pyinstaller-6.21.0/bootloader",
+    "python ./waf all   (defaults: universal2, MACOSX_DEPLOYMENT_TARGET=10.13)",
+    "PyInstaller (at app build time) copies runw, thins to arm64, appends the app archive and signs"
+  ],
+  "correspondence": "Both shipped executables contain the arm64 __text of the prebuilt runw that is byte-identical in the PyInstaller 6.21.0 wheel and the retained sdist; the sdist's bootloader/ holds its sources.",
+  "source_revision": "v6.21.0 commit 1cda34561015a90b6e1ae31dc89703799adaf13e; pyinstaller-6.21.0.tar.gz sha256 bb9fab705983e393a2d1cac77d6972513057ad800215fd861dc15ff5272e98fd",
+  "archive_sha256": [
+    "bb9fab705983e393a2d1cac77d6972513057ad800215fd861dc15ff5272e98fd"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/pyinstaller-6.21.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/d5/4d/ec706c3fcf39e26888c35b39615ff4d5865d184069666c47492cff1fbe50/pyinstaller-6.21.0.tar.gz",
+      "effective_url": "https://files.pythonhosted.org/packages/d5/4d/ec706c3fcf39e26888c35b39615ff4d5865d184069666c47492cff1fbe50/pyinstaller-6.21.0.tar.gz",
+      "time": "2026-10-30T00:09:39Z",
+      "size": 4061519,
+      "sha256": "bb9fab705983e393a2d1cac77d6972513057ad800215fd861dc15ff5272e98fd"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "toolchain": "GitHub Actions macos-14 (arm64), Apple clang (SDK 14.5 per LC_BUILD_VERSION), CMake >= 3.16.3, MACOSX_DEPLOYMENT_TARGET=11.0; then cibuildwheel 3.2.1 + delocate (.dylibs)",
+  "configuration": {
+    "cmake_args": [
+      "-DCMAKE_INSTALL_PREFIX=/usr/local",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_INSTALL_NAME_DIR=/usr/local/lib",
+      "-DCMAKE_PREFIX_PATH=/usr/local",
+      "-DCMAKE_LIBRARY_PATH=/usr/local/lib",
+      "-DCMAKE_INCLUDE_PATH=/usr/local/include"
+    ],
+    "env": {
+      "PH_LIGHT_ACTION": "1",
+      "MACOSX_DEPLOYMENT_TARGET": "11.0",
+      "INSTALL_DIR_LIBS": "/usr/local (default on Darwin)"
+    },
+    "source": "bigcat88/pillow_heif v1.4.0 libheif/build_libs.py + .github/workflows/wheels-pi_heif.yml (wheels_macos_arm)"
+  },
+  "build_commands": [
+    "tar -xf libde265-1.1.0.tar.gz --strip-components 1 && mkdir build && cd build",
+    "cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_NAME_DIR=/usr/local/lib -DCMAKE_PREFIX_PATH=/usr/local -DCMAKE_LIBRARY_PATH=/usr/local/lib -DCMAKE_INCLUDE_PATH=/usr/local/include",
+    "make -j4",
+    "make install",
+    "delocate (cibuildwheel) copies the dylib into pi_heif/.dylibs/"
+  ],
+  "correspondence": "pi_heif 1.4.0's macOS arm64 build script pins the libde265 1.1.0 release tarball (retained, digest matches GitHub release) with the listed flags; shipped dylib reports version 1.1.0, links consistently with the flags, and its arm64 __text equals the pi_heif 1.4.0 wheel install.",
+  "source_revision": "v1.1.0 commit f0e5137ee10af674dcb5ac8ed5d02f5a102225af; libde265-1.1.0.tar.gz sha256 afc19dd28e2fc523de5952bba5224ee1d28e286c72436d2843df126cca1181fd",
+  "archive_sha256": [
+    "afc19dd28e2fc523de5952bba5224ee1d28e286c72436d2843df126cca1181fd"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/libde265-1.1.0.tar.gz",
+      "url": "https://github.com/strukturag/libde265/releases/download/v1.1.0/libde265-1.1.0.tar.gz",
+      "effective_url": "https://release-assets.githubusercontent.com/github-production-release-asset/12384165/6c1cd95c-db3b-452a-a8a4-57d6af9525a5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-30T01%3A28%3A24Z&rscd=attachment%3B+filename%3Dlibde265-1.1.0.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-30T00%3A27%3A26Z&ske=2026-10-30T01%3A28%3A24Z&sks=b&skv=2018-11-09&sig=bt0Pudaqf%2FDsjKo9owwPdH85TFAb9B7Wl5Opb14ttfg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzMyMDk4OCwibmJmIjoxNzkzMzIwNjg4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gxDiI7GoVAlV3sO0OL5ooaX5aeyDmMdzjvOf_KrYa_g&response-content-disposition=attachment%3B%20filename%3Dlibde265-1.1.0.tar.gz&response-content-type=application%2Foctet-stream",
+      "time": "2026-10-30T00:10:40Z",
+      "size": 294030,
+      "sha256": "afc19dd28e2fc523de5952bba5224ee1d28e286c72436d2843df126cca1181fd"
+    }
+  ]
+}

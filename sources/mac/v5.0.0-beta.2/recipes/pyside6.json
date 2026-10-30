@@ -1,0 +1,54 @@
+{
+  "toolchain": "Qt CI (coin) macOS packaging host, Python limited API (abi3, cp310), CMake + shiboken6 generator with libclang; universal2 (x86_64;arm64), thinned to arm64 in the app",
+  "configuration": {
+    "setup_py_build_args": [
+      "build",
+      "--standalone",
+      "--unity",
+      "--build-tests",
+      "--log-level=verbose",
+      "--limited-api=yes",
+      "--macos-arch='x86_64;arm64'",
+      "--package-timestamp=<coin INTEGRATION_ID>",
+      "<qtpaths of Qt 6.11.2>"
+    ],
+    "qt_dependency": "qt/qt5 713a36536903d172f9e6737584d428753c119496 (v6.11.2)",
+    "wheel_tags": {
+      "pyside6_essentials": [
+        "Tag: cp310-abi3-macosx_13_0_universal2"
+      ],
+      "pyside6_addons": [
+        "Tag: cp310-abi3-macosx_13_0_universal2"
+      ],
+      "shiboken6": [
+        "Tag: cp310-abi3-macosx_13_0_universal2"
+      ]
+    },
+    "build_date": [
+      "__build_date__ = '2026-08-14T10:07:23+00:00'",
+      "__qt_macos_min_deployment_target__ = '13'"
+    ]
+  },
+  "build_commands": [
+    "tar xf pyside-setup-everywhere-src-6.11.2.tar.xz && cd pyside-setup-everywhere-src-6.11.2",
+    "python -u setup.py build --standalone --unity --build-tests --log-level=verbose --limited-api=yes --macos-arch='x86_64;arm64' --package-timestamp=<id> <Qt-6.11.2>/bin/qtpaths",
+    "python create_wheels.py  (produces shiboken6, PySide6_Essentials, PySide6_Addons wheels)",
+    "lipo -thin arm64 (app ships arm64 slices)"
+  ],
+  "correspondence": "pyside-setup v6.11.2 sources + coin call_setup build arguments; the shipped modules' arm64 __text equals the PySide6_Essentials/Addons/shiboken6 6.11.2 wheel install; the wheels report version 6.11.2, built 2026-08-14.",
+  "source_revision": "v6.11.2 tag object bd13ae01c34bd018aa53f29b6044043a255cf9e0, commit 24627cd36e1593adf22eb1f2950e4248e7bcc1ec; pyside-setup-everywhere-src-6.11.2.tar.xz sha256 cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8",
+  "archive_sha256": [
+    "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "effective_url": "https://qt.mirror.constant.com/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "time": "2026-10-30T00:09:42Z",
+      "size": 18053248,
+      "sha256": "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8"
+    }
+  ]
+}

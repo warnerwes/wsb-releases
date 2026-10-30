@@ -1,0 +1,73 @@
+{
+  "toolchain": "GitHub Actions macos-14 (arm64), Apple clang (SDK 14.5 per LC_BUILD_VERSION), CMake >= 3.16.3, MACOSX_DEPLOYMENT_TARGET=11.0; then cibuildwheel 3.2.1 + delocate (.dylibs)",
+  "configuration": {
+    "cmake_args": [
+      "-DCMAKE_INSTALL_PREFIX=/usr/local",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_INSTALL_NAME_DIR=/usr/local/lib",
+      "-DCMAKE_PREFIX_PATH=/usr/local",
+      "-DCMAKE_LIBRARY_PATH=/usr/local/lib",
+      "-DCMAKE_INCLUDE_PATH=/usr/local/include",
+      "-DWITH_OPENJPH_DECODER=OFF",
+      "-DWITH_OPENJPH_ENCODER=OFF",
+      "-DWITH_OpenH264_DECODER=OFF",
+      "-DWITH_OpenH264_ENCODER=OFF",
+      "-DWITH_HEADER_COMPRESSION=OFF",
+      "-DWITH_LIBDE265=ON",
+      "-DWITH_LIBDE265_PLUGIN=OFF",
+      "-DWITH_X265_PLUGIN=OFF",
+      "-DWITH_AOM_DECODER=OFF",
+      "-DWITH_AOM_DECODER_PLUGIN=OFF",
+      "-DWITH_AOM_ENCODER=OFF",
+      "-DWITH_AOM_ENCODER_PLUGIN=OFF",
+      "-DWITH_RAV1E=OFF",
+      "-DWITH_RAV1E_PLUGIN=OFF",
+      "-DWITH_DAV1D=OFF",
+      "-DWITH_DAV1D_PLUGIN=OFF",
+      "-DWITH_SvtEnc=OFF",
+      "-DWITH_SvtEnc_PLUGIN=OFF",
+      "-DWITH_KVAZAAR=OFF",
+      "-DWITH_KVAZAAR_PLUGIN=OFF",
+      "-DWITH_JPEG_DECODER=OFF",
+      "-DWITH_JPEG_ENCODER=OFF",
+      "-DWITH_OpenJPEG_DECODER=OFF",
+      "-DWITH_OpenJPEG_ENCODER=OFF",
+      "-DENABLE_PLUGIN_LOADING=OFF",
+      "-DWITH_LIBSHARPYUV=OFF",
+      "-DWITH_EXAMPLES=OFF",
+      "-DWITH_EXAMPLE_HEIF_VIEW=OFF",
+      "-DWITH_GDK_PIXBUF=OFF",
+      "-DBUILD_TESTING=OFF",
+      "-DWITH_X265=OFF"
+    ],
+    "env": {
+      "PH_LIGHT_ACTION": "1",
+      "MACOSX_DEPLOYMENT_TARGET": "11.0",
+      "INSTALL_DIR_LIBS": "/usr/local (default on Darwin)"
+    },
+    "source": "bigcat88/pillow_heif v1.4.0 libheif/build_libs.py + .github/workflows/wheels-pi_heif.yml (wheels_macos_arm)"
+  },
+  "build_commands": [
+    "tar -xf libheif-1.23.0.tar.gz --strip-components 1 && mkdir build && cd build",
+    "cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_NAME_DIR=/usr/local/lib -DCMAKE_PREFIX_PATH=/usr/local -DCMAKE_LIBRARY_PATH=/usr/local/lib -DCMAKE_INCLUDE_PATH=/usr/local/include -DWITH_OPENJPH_DECODER=OFF -DWITH_OPENJPH_ENCODER=OFF -DWITH_OpenH264_DECODER=OFF -DWITH_OpenH264_ENCODER=OFF -DWITH_HEADER_COMPRESSION=OFF -DWITH_LIBDE265=ON -DWITH_LIBDE265_PLUGIN=OFF -DWITH_X265_PLUGIN=OFF -DWITH_AOM_DECODER=OFF -DWITH_AOM_DECODER_PLUGIN=OFF -DWITH_AOM_ENCODER=OFF -DWITH_AOM_ENCODER_PLUGIN=OFF -DWITH_RAV1E=OFF -DWITH_RAV1E_PLUGIN=OFF -DWITH_DAV1D=OFF -DWITH_DAV1D_PLUGIN=OFF -DWITH_SvtEnc=OFF -DWITH_SvtEnc_PLUGIN=OFF -DWITH_KVAZAAR=OFF -DWITH_KVAZAAR_PLUGIN=OFF -DWITH_JPEG_DECODER=OFF -DWITH_JPEG_ENCODER=OFF -DWITH_OpenJPEG_DECODER=OFF -DWITH_OpenJPEG_ENCODER=OFF -DENABLE_PLUGIN_LOADING=OFF -DWITH_LIBSHARPYUV=OFF -DWITH_EXAMPLES=OFF -DWITH_EXAMPLE_HEIF_VIEW=OFF -DWITH_GDK_PIXBUF=OFF -DBUILD_TESTING=OFF -DWITH_X265=OFF",
+    "make -j4",
+    "make install",
+    "delocate (cibuildwheel) copies the dylib into pi_heif/.dylibs/"
+  ],
+  "correspondence": "pi_heif 1.4.0's macOS arm64 build script pins the libheif 1.23.0 release tarball (retained, digest matches GitHub release) with the listed flags; shipped dylib reports version 1.23.0, links consistently with the flags, and its arm64 __text equals the pi_heif 1.4.0 wheel install.",
+  "source_revision": "v1.23.0 commit bd114ed6d592adc92a09882172ab71d1b4c6e1b1; libheif-1.23.0.tar.gz sha256 4c9182b18897617182eed12ab5eb9f9d855b3aa3a736d6bdb31abc034ec7d393",
+  "archive_sha256": [
+    "4c9182b18897617182eed12ab5eb9f9d855b3aa3a736d6bdb31abc034ec7d393"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/libheif-1.23.0.tar.gz",
+      "url": "https://github.com/strukturag/libheif/releases/download/v1.23.0/libheif-1.23.0.tar.gz",
+      "effective_url": "https://release-assets.githubusercontent.com/github-production-release-asset/115012280/a63ce630-c87d-4063-a4af-77e6a7e1bf7c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-30T01%3A27%3A51Z&rscd=attachment%3B+filename%3Dlibheif-1.23.0.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-30T00%3A26%3A57Z&ske=2026-10-30T01%3A27%3A51Z&sks=b&skv=2018-11-09&sig=Yug8cgROJF%2FXyvV8xo5Q0cXBwIVH%2FTc8%2FRT33sUOpD4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzMyMDk4NywibmJmIjoxNzkzMzIwNjg3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Qj3ikpsJQVsZLtBpNvWrV3FSdHTD3MveAncPd2F0EIY&response-content-disposition=attachment%3B%20filename%3Dlibheif-1.23.0.tar.gz&response-content-type=application%2Foctet-stream",
+      "time": "2026-10-30T00:10:39Z",
+      "size": 2064049,
+      "sha256": "4c9182b18897617182eed12ab5eb9f9d855b3aa3a736d6bdb31abc034ec7d393"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "toolchain": "GitHub Actions macos-15 (arm64), Apple clang (SDK 15.5 per LC_BUILD_VERSION), CMake+Ninja; cibuildwheel v4.2.1 + delocate",
+  "configuration": {
+    "GEOS_VERSION": "3.14.1",
+    "cmake_args": [
+      "-GNinja",
+      "-D CMAKE_BUILD_TYPE=Release",
+      "-D CMAKE_INSTALL_PREFIX=${GEOS_INSTALL}",
+      "-D CMAKE_INSTALL_LIBDIR=lib",
+      "-D CMAKE_INSTALL_NAME_DIR=${GEOS_INSTALL}/lib",
+      "-D BUILD_TESTING=OFF"
+    ],
+    "env": {
+      "MACOSX_DEPLOYMENT_TARGET": "10.9",
+      "CMAKE_OSX_ARCHITECTURES": "arm64",
+      "CFLAGS": "-Wno-error=incompatible-function-pointer-types"
+    },
+    "source": "shapely 2.2.0 .github/workflows/release.yml (build_wheels_mac_win, macos-15 arm64) + ci/install_geos.sh"
+  },
+  "build_commands": [
+    "tar xfj geos-3.14.1.tar.bz2 && cd geos-3.14.1",
+    "cmake -GNinja -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=${GEOS_INSTALL} -D CMAKE_INSTALL_LIBDIR=lib -D CMAKE_INSTALL_NAME_DIR=${GEOS_INSTALL}/lib -D BUILD_TESTING=OFF -S . -B build",
+    "cmake --build build -j 4",
+    "cmake --install build",
+    "delocate copies libgeos/libgeos_c into shapely/.dylibs/"
+  ],
+  "correspondence": "shapely 2.2.0's release workflow sets GEOS_VERSION=3.14.1 and builds it from this exact download.osgeo.org tarball with the listed flags; shipped libs report 3.14.1/CAPI 1.20.5 and their arm64 __text equals the shapely 2.2.0 wheel install.",
+  "source_revision": "3.14.1 commit c389f532d25fe6228861d9b19339f9cb57ca4bdb; geos-3.14.1.tar.bz2 sha256 3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716",
+  "archive_sha256": [
+    "3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716"
+  ],
+  "patch_sha256": [],
+  "archive_downloads": [
+    {
+      "path": "archives/geos-3.14.1.tar.bz2",
+      "url": "https://download.osgeo.org/geos/geos-3.14.1.tar.bz2",
+      "effective_url": "https://download.osgeo.org/geos/geos-3.14.1.tar.bz2",
+      "time": "2026-10-30T00:09:39Z",
+      "size": 7013834,
+      "sha256": "3c20919cda9a505db07b5216baa980bacdaa0702da715b43f176fb07eff7e716"
+    }
+  ]
+}
