@@ -1,6 +1,44 @@
 {
   "versions": [
     {
+      "version": "5.0.0",
+      "date": "2026-11-04",
+      "features": [
+        "Buddy installs just for you on Windows, so updates stop asking for permission. If an older copy is still installed for everyone on this computer, Buddy offers Remove it or Not now. Once it is removed, other teachers on that computer install Buddy for themselves.",
+        "The system tray offers Open Work Sample Buddy and Quit. The floating desktop bubble and pinned window are gone.",
+        "A new look: the beach course dashboard, calm sky working screens, and Light, Dark or Match my computer in Settings.",
+        "To-do brings work from every learning period into one list. New versions, possible course matches and files that couldn't be filed show as rows instead of pop-ups.",
+        "Grade and Verify share a page filmstrip: select pages to rotate, remove, reorder or combine, with Undo. The selection tools stay while a page is selected. Patch tools replace or adjust a page, or correct the work date.",
+        "The grade comment sits in the grading row and grows as you type. Chat, Task, Rubric and File are tabs beside the paper, and a comment waits on the Chat tab until you choose Post to thread or Keep with the grade.",
+        "Grade and Choose work the same way across learning periods. Compare papers side by side with the rubric in view, and work not yet graded opens in Grade.",
+        "Automatic pre-grading skips only work already graded in Schoology, and you turn it on or off from the To-do menu. When a pre-grade stops, it says why and what to do next.",
+        "Reading & AI offers None, OCR only or OCR + AI. Auto-configure says what this computer can run and suggests a model that fits.",
+        "Press ? on Grade, Verify or Report cards to see that screen's keyboard shortcuts.",
+        "Try everything in a demo workspace with made-up students and a guided tour. Nothing leaves your computer.",
+        "An empty roster now reads \"Your students go here.\"",
+        "Setup is simpler, Buddy finds your existing settings, saved records and work folders, and a recovery screen helps when a choice or reconnection is needed.",
+        "Settings are reorganised and tidier, with a Text size setting.",
+        "The Email family panel opens beside Finalize and does it all: see the email, tick which courses it lists, change the words for this student, or edit the template for every student. Drag its edge to make it wider. Finalize sends exactly what the panel shows, as an email or a Gmail draft: you choose on the Finalize bar.",
+        "Verify says plainly whether a sample is Verified, and when, with Unverify this sample right beside it. The blue button says what it will do, and verifying the last sample a student needs takes you to their Finalize screen when the packet is ready.",
+        "Thumbnails show for a moment whenever a paper opens, so you can see how long it is at a glance.",
+        "RoboSpark work arrives through the PCA extension, and configured folders and Google Drive are scanned at launch, on learning-period change and on F5.",
+        "Compress a large sample (Balanced or Smallest), and links stay clickable.",
+        "Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner. Check for updates shows the build and the time it last checked, so every click answers."
+      ],
+      "bugs": [
+        "Links survive rotation, headers, page-size fixes, merges and tall-page splits.",
+        "Recovery keeps your original databases and settings, and demo data stays separate from real work.",
+        "If the workspace goes offline mid-session, Buddy switches to read-only with a reconnect bar instead of failing to save.",
+        "Finalized packets stay protected until you unfinalize them, and missing or damaged samples and packets are rebuilt when you open them.",
+        "The bar on Verify no longer shows a square at each corner.",
+        "Filtered To-do and email actions keep the right assignment and student. Same-name students stay separate, and N/A and custom marks never post.",
+        "An older copy of Buddy can still open a database a newer copy has used. It stops only when a change made that unsafe, before changing anything, and says which version you need.",
+        "Opening Buddy while a copy is already open brings it to the front and says which copy it is, instead of seeming to do nothing.",
+        "The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.",
+        "Checking an update's signature no longer flashes a console window."
+      ]
+    },
+    {
       "version": "5.0.0-beta.6",
       "date": "2026-11-03",
       "features": [
