@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "5.0.2",
+      "date": "2026-11-05",
+      "features": [
+        "Picking F now fills in 55 percent, not 50."
+      ],
+      "bugs": [
+        "In Add Student, the name hint no longer overlaps Grade Level, and the Add button matches Cancel.",
+        "After you move, rotate or remove a page with the keyboard in Grade, the page strip keeps its place, so pressing again acts on the same page.",
+        "A grade saved with no score no longer comes back as 0 when you reopen the paper, so it can't post a 0 you didn't type. The score stays empty.",
+        "If Buddy can't save a score you typed, it now keeps your comment and other changes, and asks for the score before you can post."
+      ]
+    },
+    {
       "version": "5.0.1",
       "date": "2026-11-04",
       "features": [
