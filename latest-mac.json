@@ -3,26 +3,22 @@
   "os": "mac",
   "channels": {
     "beta": {
-      "version": "4.2.32-beta.5",
-      "tag": "v4.2.32-beta.5",
+      "version": "4.2.0",
+      "tag": "v4.2.0",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.32-beta.5.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.32-beta.5/WorkSampleBuddy_mac_v4.2.32-beta.5.dmg",
-        "size": 344799299,
-        "sha256": "a12095c8531f1e8f3747820df107fec696eb917d4bd790398f244f576e502846"
+        "name": "none",
+        "url": "https://github.com/warnerwes/wsb-releases"
       },
-      "notes": "New in this version:\n\u2022 Compare multiple samples for the same class with page previews, zoom, and available assignment details, then keep the whole file you prefer.\n\u2022 Open Mix pages when needed to combine, reorder, rotate, or remove pages from different samples.\n\u2022 Receive PCA, private Google, and RoboSpark work samples through Chrome while preserving assignment details and keeping alternatives available for review.\n\u2022 Original source revisions are preserved, with storage settings to review older backups.\n\u2022 Advanced Mode scans readable CPA and Edgenuity samples faster, and debug reports include session, freeze, and background-task details.\n\nFixes:\n\u2022 Fixed incoming samples being discarded just because their filenames matched; failed replacements and page combinations preserve the current sample and original files.\n\u2022 Fixed pressing Enter in the preview page number accidentally accepting the sample.\n\u2022 Fixed repeated or cancelled course-progress refreshes retaining completed tasks, starting overlapping database work, or showing stale results.\n\u2022 Fixed background grading remaining busy when a completed worker was cleaned up before its completion was handled.\n\u2022 Google Drive import and upload now share one sign-in.\n\u2022 Fixed quiz Attempt Score and decimal Edgenuity grades being missed, and courses outside the current learning period counting toward samples due.\n\u2022 Courses containing only excused requirements no longer show a Finalize action."
+      "notes": "Version 4.2 is no longer distributed."
     },
     "stable": {
-      "version": "4.2.31",
-      "tag": "v4.2.31",
+      "version": "4.2.0",
+      "tag": "v4.2.0",
       "asset": {
-        "name": "WorkSampleBuddy_mac_v4.2.31.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v4.2.31/WorkSampleBuddy_mac_v4.2.31.dmg",
-        "size": 343690365,
-        "sha256": "7b3f20eacc153a912af786e4006ee035f79066b83ec92adcf9be887e1e8564b9"
+        "name": "none",
+        "url": "https://github.com/warnerwes/wsb-releases"
       },
-      "notes": "New in this version:\n\u2022 macOS builds now bundle PyQt6-Qt6 6.11.2, preventing the Qt WaitCursor crash caused by QTBUG-147602.\n\nFixes:\n\u2022 Fixed a macOS crash when the app showed the wait cursor."
+      "notes": "Version 4.2 is no longer distributed."
     }
   }
 }
