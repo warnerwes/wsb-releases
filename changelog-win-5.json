@@ -1,6 +1,29 @@
 {
   "versions": [
     {
+      "version": "5.0.1",
+      "date": "2026-11-04",
+      "features": [
+        "When you create family email drafts, the To-do reminds you to send them. Open drafts takes you to Gmail and clears the reminder.",
+        "Demo work samples now look like real student work, with layouts that vary by course and grade.",
+        "Review incoming sync is now one compact screen: every student's course changes sit beside the school calendar, and the line next to Apply says what will be deleted and what stays.",
+        "Student rows open and close faster, and empty cards now grow from their small thumbnail the way work samples do. The red badge stays on the open card.",
+        "Row opening and closing and celebrations now play even if your computer is set to reduce motion. To turn them off, untick Always play animations in Settings > Appearance & celebration.",
+        "In Grade, click any learning period on the folded strip to open the sidebar at that learning period.",
+        "A paper graded in Schoology is now predicted to work as its learning period's sample, and one scored 0 is predicted not to. One click changes it.",
+        "Move earlier and Move later are gone from the thumbnail menu. Drag a thumbnail, or use Alt+Up and Alt+Down."
+      ],
+      "bugs": [
+        "Debug logs now leave out the text of student work, AI replies and prompts.",
+        "You can go back from Grade to Choose on a paper already graded in Schoology, without posting it again.",
+        "The Works as sample button works again after you press Grade on a paper opened in Choose.",
+        "The mouse wheel over the thumbnails now moves only the thumbnails, not the page.",
+        "Ticked checkboxes show a tick instead of a solid square.",
+        "If you keep your calendar during a sync, the import message now says so instead of counting the packet's learning periods.",
+        "If no browser opens from Open drafts, your drafts reminder stays on the To-do."
+      ]
+    },
+    {
       "version": "5.0.0",
       "date": "2026-11-04",
       "features": [
