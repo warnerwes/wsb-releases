@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "5.0.7",
+      "date": "2026-11-06",
+      "features": [
+        "When complete grading is unavailable, Quick feedback prepares editable general advice without inventing a grade. The banner explains the limitation and the next useful action.",
+        "The feedback dropdown offers Deeper review to attempt every page using the existing reading tools. Page coverage is reported, and teacher comments, grades and intentionally cleared comments are preserved.",
+        "The rubric dropdown gently highlights ambiguous matches, outdated choices and workbook activities needing selection. Quick feedback remains available without choosing a rubric."
+      ],
+      "bugs": [
+        "Unread pages are identified as a reading limitation instead of an AI connection problem. Incomplete evidence does not produce a grade, and changing the rubric is not suggested as a remedy for unread pages.",
+        "AI connection errors open the current Reading & AI connection settings instead of the retired advanced three-model configuration screen."
+      ]
+    },
+    {
       "version": "5.0.6",
       "date": "2026-11-06",
       "features": [
