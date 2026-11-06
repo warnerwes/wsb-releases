@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "5.0.6",
+      "date": "2026-11-06",
+      "features": [
+        "The compact Task summary above the sidebar tabs expands when clicked. Edit opens the task editor in place, with Save and Cancel; changing tabs preserves your unsaved draft.",
+        "View Full History in About & help now shows complete notes for previous releases directly in the page. Older bundled release notes remain available offline, and Show recent versions returns to the compact list."
+      ],
+      "bugs": [
+        "The Task header uses only the space it needs, shows the assignment title when no summary exists, and keeps collapsed summaries to two lines. Moving the pointer over it does not expand it.",
+        "Rubric choices and explanatory text fit narrow sidebars. Criterion names and assessment values wrap without hiding their wording.",
+        "Task controls, including Open Schoology and the options menu, respond to hover. Escape cancels task editing, and the save shortcut saves the task without posting a comment."
+      ]
+    },
+    {
       "version": "5.0.5",
       "date": "2026-11-06",
       "features": [
