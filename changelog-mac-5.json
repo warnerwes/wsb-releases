@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "5.0.3",
+      "date": "2026-11-05",
+      "features": [
+        "To-do actions are easier to scan: one main button, with other choices in an options menu. Draft emails, import choices and retry actions share the same compact layout.",
+        "History now brings demo email and upload activity together with posted grades. You can search the combined list without duplicate grade entries.",
+        "The Grade page, pre-grading and grade editor now use the same A/B/C/D/F scale and your chosen cutoffs.",
+        "Buddy asks before closing when a grade or comment needs your decision, and saves task text you are editing.",
+        "A new workspace starts with Reading & AI set to None. The welcome screen explains how to enable reading later."
+      ],
+      "bugs": [
+        "A PCA connection warning clears automatically after the connection check succeeds. The sync dropdown has more room for its arrow.",
+        "The demo tour highlights both grade and date, then guides you to Post after you choose a grade.",
+        "Unsupported saved grading scales show the standard scale and a clear explanation instead of inconsistent grades.",
+        "An update waiting for Buddy to finish closing keeps its helper running, then swaps and reopens the app once.",
+        "Page and paper keyboard hints consistently say Option on Mac."
+      ]
+    },
+    {
       "version": "5.0.2",
       "date": "2026-11-05",
       "features": [
