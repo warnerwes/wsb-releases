@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "5.0.5",
+      "date": "2026-11-06",
+      "features": [
+        "The task summary stays above Chat, Task, Rubric and File. It uses at most two lines; hover to read the full summary or choose Edit summary to change it in Task.",
+        "Assignment options have separate expandable sections with complete directions, related materials and rubric previews. Equivalent assignments keep their approval instructions and base-rubric choice together."
+      ],
+      "bugs": [
+        "Bulleted assignment options and wrapped equivalent-work instructions are recognized consistently in the sidebar and grading. Rubric suggestions use named materials, links or option numbers, never attachment order.",
+        "Older cached directions can update their assignment choices without another download. Missing option directions prompt review before automatic rubric selection, and incomplete cached materials are clearly identified.",
+        "If no task summary is available, the sidebar shows the assignment title with Add summary without saving that title as the task."
+      ]
+    },
+    {
       "version": "5.0.4",
       "date": "2026-11-06",
       "features": [
