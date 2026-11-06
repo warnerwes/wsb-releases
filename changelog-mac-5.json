@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "5.0.4",
+      "date": "2026-11-06",
+      "features": [
+        "Read the full assignment instructions and preview rubric criteria directly beneath each option. Confirm a match once to remember it for other papers from the same assignment; choose the rubric separately for each student's work.",
+        "Reading & AI now has a Test connection button, a visible model dropdown, and a count of the models found on the selected computer."
+      ],
+      "bugs": [
+        "When AI is unavailable, newly generated report-card comments use course-specific practice guidance, including age-appropriate early literacy and math wording.",
+        "PCA settings have consistent buttons, readable narrow-window layouts, and improved dark-mode fields. Advanced connection settings opens and scrolls to the right section; the temporary-file test is clearly labelled under Troubleshooting.",
+        "Changed assignment instructions, rubric criteria, or source worksheets prompt a review of saved option/rubric matches. Attachment reordering does not change a confirmed match.",
+        "The demo starts on LP1 and guides you through the real app controls. Older demos upgrade to include the Science sample needed to finalize the four-subject packet.",
+        "Tour instructions stay clear of the learning-period and To-do menus, including in smaller windows. Keep exploring preserves your practice work.",
+        "The demo asks you to match the grade and date printed on the worksheet, explains corrections, and offers a zoom reminder. Verify waits for the matching choices.",
+        "Request revision appears beside the grade choices only for samples linked to a downloaded Schoology submission. Grade tools wrap to fit narrow windows with larger text."
+      ]
+    },
+    {
       "version": "5.0.3",
       "date": "2026-11-05",
       "features": [
