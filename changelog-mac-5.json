@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "5.0.9",
+      "date": "2026-11-07",
+      "features": [
+        "Half-screen windows place each student's details and action above a full-width course grid. Courses use two columns, then one in smaller panes, and return to the wider layout when the window grows."
+      ],
+      "bugs": [
+        "Pregraded submissions appear only once in To-do, under Post for review, instead of appearing under both Grade and Post. Different assignments for the same student stay separate.",
+        "Problem reports preserve error details, timestamps and the app version where the error occurred, making crashes and freezes easier to diagnose. Student and teacher names use consistent pseudonyms; student IDs remain available for tracing the affected records."
+      ]
+    },
+    {
       "version": "5.0.8",
       "date": "2026-11-06",
       "features": [
