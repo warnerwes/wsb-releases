@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "version": "5.0.8",
+      "date": "2026-11-06",
+      "features": [
+        "Keep feedback and Deeper analysis are available directly in the grading banner. At L2, the Rubric gear also offers Quick feedback and Deeper analysis while preserving teacher edits.",
+        "Pregrade sits beside Compare in the Rubric tab at L1 and L2, and is hidden at L0. AI gear options are hidden at L0 and L1. Turning on the To-do Pregrade switch at L0 offers basic OCR pregrading, a settings comparison, or Cancel. The To-do gear offers Pre-grade ungraded work and Automation Settings.",
+        "Works as LP can turn green after saving an eligible grade and date, before verification. Your explicit override is preserved.",
+        "Balanced compression runs automatically when saving or re-verifying PDFs with image reduction enabled. Oversized saved files offer Review compression or Keep file.",
+        "Reading & AI remembers the other computer’s address when switching between local and remote Ollama, and keeps the last five successful connections."
+      ],
+      "bugs": [
+        "The wider rubric sidebar keeps its spacing after switching tabs or closing Compare. Its controls wrap when needed and the gear is no longer clipped.",
+        "The fictional demo can open and grade its cached assignments without Schoology credentials. Live Schoology access still requires its connection settings.",
+        "A second pre-grade cannot start while deeper analysis is already running."
+      ]
+    },
+    {
       "version": "5.0.7",
       "date": "2026-11-06",
       "features": [
