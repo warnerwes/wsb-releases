@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner.\n\u2022 The grading page's bottom band is one paper surface. Page tools sit on their own tab, and a thumbnail's grip shows only while the pointer is over it.\n\u2022 The grade comment sits in the grading row and grows as you type, then folds when you click away. On the Chat tab it waits as a dashed bubble until you choose Post to thread or Keep with the grade.\n\u2022 Task has its own tab between Chat and Rubric, and Chat runs the full height of the panel with the reply box at the bottom.\n\u2022 The demo tour brings each step's screen forward and hands you a worksheet to drag on the drop step. Its slides always play.\n\u2022 Automatic pre-grading now skips only work already graded in Schoology, and pre-grades everything else in any learning period. Turn it on or off from the To-do menu.\n\u2022 A pre-grade with any model output shows it with a banner instead of stopping. One that does stop says why and what to do next.\n\u2022 Reading & AI: click anywhere on a None, OCR only or OCR + AI card. Auto-configure says what this computer can run and suggests a model that fits.\n\u2022 Grade and Choose work the same way across learning periods, and a student's row unfolds out of its header as one motion. Work not yet graded opens in Grade, and a missing upload offers Check upload.\n\u2022 The Appearance, PDF output and Schoology settings pages are tidier, with matching controls and aligned rows.\n\u2022 The welcome wizard's folder step shows the records it found as one clear card, and the setup screens share one look.\n\nFixes:\n\u2022 Up and down arrows on number boxes respond when clicked.\n\u2022 The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.\n\u2022 Long student names in To-do shorten with an ellipsis instead of being cut off.\n\u2022 If a window won't close for an update, Buddy says so and keeps the update ready."
     },
     "stable": {
-      "version": "5.0.10",
-      "tag": "v5.0.10",
+      "version": "5.0.11",
+      "tag": "v5.0.11",
       "asset": {
-        "name": "WorkSampleBuddy-5.0.10-macos.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.10/WorkSampleBuddy-5.0.10-macos.dmg",
-        "size": 332833860,
-        "sha256": "54b1e3083a1a8c9a43f52be67dbebd7bcf764ea877482d523cf80ce85e52bf65"
+        "name": "WorkSampleBuddy-5.0.11-macos.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.11/WorkSampleBuddy-5.0.11-macos.dmg",
+        "size": 332838220,
+        "sha256": "8fbad4f0a8aecaa6071fadcfdd53a7181bb4c9bd92c438a5a503666956585078"
       },
-      "notes": "New in this version:\n\u2022 Enable animations now sits in Appearance, below Matrix size, and stays available when Celebrations is collapsed. Your saved animation preference is preserved.\n\nFixes:\n\u2022 Celebration previews are available only for unlocked styles. Locked styles keep their illustration and unlock explanation, and become previewable after you earn them. Confetti remains available by default."
+      "notes": "New in this version:\n\u2022 Sync reviews show only added, removed or changed items, with before-and-after values. Unchanged courses and calendar entries stay out of the review. Proposed calendar differences remain visible while you choose whether to keep your dates.\n\nFixes:\n\u2022 Repeated extension syncs no longer report unchanged student grades as changes. An unchanged sync skips confirmation, including when you request it manually.\n\u2022 Sync reviews show full teacher names, blank-to-known grade changes and every line of alias changes. Long differences wrap so their details remain readable."
     }
   }
 }
