@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Buddy now installs just for you on Windows, so updates stop asking for permission. If an older copy is still installed for everyone on this computer, Buddy offers Remove it or Not now. Once it is removed, other teachers on that computer install Buddy for themselves.\n\u2022 Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner.\n\u2022 The grading page's bottom band is one paper surface. Page tools sit on their own tab, and a thumbnail's grip shows only while the pointer is over it.\n\u2022 The grade comment sits in the grading row and grows as you type, then folds when you click away. On the Chat tab it waits as a dashed bubble until you choose Post to thread or Keep with the grade.\n\u2022 Task has its own tab between Chat and Rubric, and Chat runs the full height of the panel with the reply box at the bottom.\n\u2022 The demo tour brings each step's screen forward and hands you a worksheet to drag on the drop step. Its slides always play.\n\u2022 Automatic pre-grading now skips only work already graded in Schoology, and pre-grades everything else in any learning period. Turn it on or off from the To-do menu.\n\u2022 A pre-grade with any model output shows it with a banner instead of stopping. One that does stop says why and what to do next.\n\u2022 Reading & AI: click anywhere on a None, OCR only or OCR + AI card. Auto-configure says what this computer can run and suggests a model that fits.\n\u2022 Grade and Choose work the same way across learning periods, and a student's row unfolds out of its header as one motion. Work not yet graded opens in Grade, and a missing upload offers Check upload.\n\u2022 The Appearance, PDF output and Schoology settings pages are tidier, with matching controls and aligned rows.\n\u2022 The welcome wizard's folder step shows the records it found as one clear card, and the setup screens share one look.\n\nFixes:\n\u2022 Up and down arrows on number boxes respond when clicked.\n\u2022 The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.\n\u2022 Long student names in To-do shorten with an ellipsis instead of being cut off.\n\u2022 Checking an update's signature no longer flashes a console window."
     },
     "stable": {
-      "version": "5.0.10",
-      "tag": "v5.0.10",
+      "version": "5.0.11",
+      "tag": "v5.0.11",
       "asset": {
-        "name": "WorkSampleBuddy-5.0.10-windows.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.10/WorkSampleBuddy-5.0.10-windows.exe",
-        "size": 293325984,
-        "sha256": "1e1ea3eb93160ac89725ac216fec9b09a3e1d810db9476034f8572d099fb0010"
+        "name": "WorkSampleBuddy-5.0.11-windows.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.11/WorkSampleBuddy-5.0.11-windows.exe",
+        "size": 293341928,
+        "sha256": "2f34d979b08957b660f619bcfc5610f899f013d38bb82602224237bb47a2bca5"
       },
-      "notes": "New in this version:\n\u2022 Enable animations now sits in Appearance, below Matrix size, and stays available when Celebrations is collapsed. Your saved animation preference is preserved.\n\nFixes:\n\u2022 Celebration previews are available only for unlocked styles. Locked styles keep their illustration and unlock explanation, and become previewable after you earn them. Confetti remains available by default."
+      "notes": "New in this version:\n\u2022 Sync reviews show only added, removed or changed items, with before-and-after values. Unchanged courses and calendar entries stay out of the review. Proposed calendar differences remain visible while you choose whether to keep your dates.\n\nFixes:\n\u2022 Repeated extension syncs no longer report unchanged student grades as changes. An unchanged sync skips confirmation, including when you request it manually.\n\u2022 Sync reviews show full teacher names, blank-to-known grade changes and every line of alias changes. Long differences wrap so their details remain readable."
     }
   }
 }
