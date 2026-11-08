@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "5.0.11",
+      "date": "2026-11-07",
+      "features": [
+        "Sync reviews show only added, removed or changed items, with before-and-after values. Unchanged courses and calendar entries stay out of the review. Proposed calendar differences remain visible while you choose whether to keep your dates."
+      ],
+      "bugs": [
+        "Repeated extension syncs no longer report unchanged student grades as changes. An unchanged sync skips confirmation, including when you request it manually.",
+        "Sync reviews show full teacher names, blank-to-known grade changes and every line of alias changes. Long differences wrap so their details remain readable."
+      ]
+    },
+    {
       "version": "5.0.10",
       "date": "2026-11-07",
       "features": [
