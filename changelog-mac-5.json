@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "version": "5.0.13",
+      "date": "2026-11-10",
+      "features": [
+        "Detailed AI run logs are saved automatically beside each attempt’s pregrading reports for easier troubleshooting."
+      ],
+      "bugs": [
+        "Clicking anywhere on the grading Debug button opens the report choices.",
+        "Pregrading reports show the run’s actual materials, reading counts and warnings, including attempts that need review.",
+        "Rubric grading handles quoted omissions and small OCR differences, rejects printed directions as student evidence, and leaves unavailable visual criteria for review.",
+        "Long text submissions use fewer summarization calls with bounded input sizes.",
+        "Image-only submissions can use an available vision model, and task detection no longer passes a model refusal along as a work description.",
+        "Deeper analysis keeps a usable rubric and fills an untouched blank grading form when its result arrives. Teacher edits remain protected.",
+        "Revision instructions appear above the grade feedback so the requested changes are easier to find."
+      ]
+    },
+    {
       "version": "5.0.12",
       "date": "2026-11-09",
       "features": [],
