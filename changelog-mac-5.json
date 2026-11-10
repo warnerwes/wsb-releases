@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "version": "5.0.12",
+      "date": "2026-11-09",
+      "features": [],
+      "bugs": [
+        "The grading Debug menu again opens the detailed AI run log. Inspect, copy or save a pregrading attempt without saving grade edits or starting another attempt.",
+        "Opening an unread To-do notification opens the matching Chat, scrolls to the first unread message and highlights unread messages. Messages remain unread until viewed."
+      ]
+    },
+    {
       "version": "5.0.11",
       "date": "2026-11-07",
       "features": [
