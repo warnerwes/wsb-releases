@@ -1,6 +1,21 @@
 {
   "versions": [
     {
+      "version": "5.0.14",
+      "date": "2026-11-10",
+      "features": [],
+      "bugs": [
+        "Opening an unread Chat notification handles messages without an ID without crashing.",
+        "Fixed a Mac crash caused by refreshing the student grid again while a refresh was already running.",
+        "Successful general-feedback pregrades are reported as completed general runs instead of errors.",
+        "When a model cannot score any rubric criterion, the review tooltip includes more of its explanation.",
+        "Rubric evidence handles OCR differences more reliably and displays the matching words from the submitted work.",
+        "OCR + AI rubric grading can use a confirmed vision-capable model, with the reading level recorded in its run report.",
+        "Pregrading prioritizes scanned answer pages and can send up to eight scanned pages. Evidence read from those images can be retained when OCR misses the handwriting.",
+        "General feedback on scanned worksheets checks the work the student added and calls out missing required responses."
+      ]
+    },
+    {
       "version": "5.0.13",
       "date": "2026-11-10",
       "features": [
