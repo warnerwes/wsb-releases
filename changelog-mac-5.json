@@ -1,6 +1,21 @@
 {
   "versions": [
     {
+      "version": "5.0.17",
+      "date": "2026-11-11",
+      "features": [
+        "Report a problem includes details of the last five pre-grade runs, with no student work or names.",
+        "Report a problem includes the sender's name again, taken from the name set in the app, so the developer knows who sent it.",
+        "When the whole work was read in a deeper analysis, a rubric part the student did not attempt can be scored at the lowest level instead of declining the whole pre-grade."
+      ],
+      "bugs": [
+        "Work being pre-graded again leaves the Ready to post list in the To-do until the new pre-grade finishes.",
+        "A deeper analysis requested while the same work is already being pre-graded is no longer dropped.",
+        "The debug log keeps recording after the text reader loads.",
+        "The pre-grade summary in Report a problem no longer counts older runs under the current version."
+      ]
+    },
+    {
       "version": "5.0.16",
       "date": "2026-11-11",
       "features": [
