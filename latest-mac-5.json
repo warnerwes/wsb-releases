@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner.\n\u2022 The grading page's bottom band is one paper surface. Page tools sit on their own tab, and a thumbnail's grip shows only while the pointer is over it.\n\u2022 The grade comment sits in the grading row and grows as you type, then folds when you click away. On the Chat tab it waits as a dashed bubble until you choose Post to thread or Keep with the grade.\n\u2022 Task has its own tab between Chat and Rubric, and Chat runs the full height of the panel with the reply box at the bottom.\n\u2022 The demo tour brings each step's screen forward and hands you a worksheet to drag on the drop step. Its slides always play.\n\u2022 Automatic pre-grading now skips only work already graded in Schoology, and pre-grades everything else in any learning period. Turn it on or off from the To-do menu.\n\u2022 A pre-grade with any model output shows it with a banner instead of stopping. One that does stop says why and what to do next.\n\u2022 Reading & AI: click anywhere on a None, OCR only or OCR + AI card. Auto-configure says what this computer can run and suggests a model that fits.\n\u2022 Grade and Choose work the same way across learning periods, and a student's row unfolds out of its header as one motion. Work not yet graded opens in Grade, and a missing upload offers Check upload.\n\u2022 The Appearance, PDF output and Schoology settings pages are tidier, with matching controls and aligned rows.\n\u2022 The welcome wizard's folder step shows the records it found as one clear card, and the setup screens share one look.\n\nFixes:\n\u2022 Up and down arrows on number boxes respond when clicked.\n\u2022 The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.\n\u2022 Long student names in To-do shorten with an ellipsis instead of being cut off.\n\u2022 If a window won't close for an update, Buddy says so and keeps the update ready."
     },
     "stable": {
-      "version": "5.0.16",
-      "tag": "v5.0.16",
+      "version": "5.0.17",
+      "tag": "v5.0.17",
       "asset": {
-        "name": "WorkSampleBuddy-5.0.16-macos.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.16/WorkSampleBuddy-5.0.16-macos.dmg",
-        "size": 332947358,
-        "sha256": "da5b650ed3788bcbf2e9410c780aeec5abe7e553db95cc75f30263c818ee3919"
+        "name": "WorkSampleBuddy-5.0.17-macos.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.17/WorkSampleBuddy-5.0.17-macos.dmg",
+        "size": 332956494,
+        "sha256": "990b79b8278962b7ccf528271e2b2e411b74296fac4da12c89c25abd19b19d89"
       },
-      "notes": "New in this version:\n\u2022 Report a problem includes a count-only summary of recent pre-grade results, with no student work or names.\n\u2022 The grading Debug menu can prepare pre-grade lessons: the local model writes short notes on pre-grades that were declined or corrected, and each note is checked for names and copied text before it is kept.\n\nFixes:\n\u2022 Button labels are no longer cut off when a button takes keyboard focus.\n\u2022 Work queued for another pre-grade is held in the To-do instead of being listed as ready to review.\n\u2022 Pre-grades that were declined are tried once more after an app update."
+      "notes": "New in this version:\n\u2022 Report a problem includes details of the last five pre-grade runs, with no student work or names.\n\u2022 Report a problem includes the sender's name again, taken from the name set in the app, so the developer knows who sent it.\n\u2022 When the whole work was read in a deeper analysis, a rubric part the student did not attempt can be scored at the lowest level instead of declining the whole pre-grade.\n\nFixes:\n\u2022 Work being pre-graded again leaves the Ready to post list in the To-do until the new pre-grade finishes.\n\u2022 A deeper analysis requested while the same work is already being pre-graded is no longer dropped.\n\u2022 The debug log keeps recording after the text reader loads.\n\u2022 The pre-grade summary in Report a problem no longer counts older runs under the current version."
     }
   }
 }
