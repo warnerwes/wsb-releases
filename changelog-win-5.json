@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "5.0.16",
+      "date": "2026-11-11",
+      "features": [
+        "Report a problem includes a count-only summary of recent pre-grade results, with no student work or names.",
+        "The grading Debug menu can prepare pre-grade lessons: the local model writes short notes on pre-grades that were declined or corrected, and each note is checked for names and copied text before it is kept."
+      ],
+      "bugs": [
+        "Button labels are no longer cut off when a button takes keyboard focus.",
+        "Work queued for another pre-grade is held in the To-do instead of being listed as ready to review.",
+        "Pre-grades that were declined are tried once more after an app update."
+      ]
+    },
+    {
       "version": "5.0.14",
       "date": "2026-11-10",
       "features": [],
