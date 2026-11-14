@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "version": "5.0.19",
+      "date": "2026-11-13",
+      "features": [
+        "Report a problem can include a picture of the Buddy window. Names, file names, addresses and the paper are blurred, you see the picture first, and it is sent only if you tick the box.",
+        "A pre-grade that sends several page pictures to a slow model gets more time before it gives up.",
+        "When a pre-grade with several page pictures still runs out of time, the app reads the pages one at a time and grades from those notes instead of failing."
+      ],
+      "bugs": [
+        "A pre-grade is tried once more when the model server is busy or cannot be reached, not only when it is slow.",
+        "A pre-grade that fails now records why the request failed, so a problem report shows the cause.",
+        "A skills assignment is never guessed to be a work sample.",
+        "The student list no longer breaks when it is refreshed while another refresh is running.",
+        "On Mac, turning the page while a Patch selection is open no longer closes the app."
+      ]
+    },
+    {
       "version": "5.0.18",
       "date": "2026-11-13",
       "features": [
