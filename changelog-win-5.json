@@ -1,6 +1,27 @@
 {
   "versions": [
     {
+      "version": "5.0.20",
+      "date": "2026-11-14",
+      "features": [
+        "Grading pages scroll the paper as one continuous film strip: the mouse wheel moves across pages, the thumbnail strip's blue box follows the view, clicking a thumbnail jumps to the spot you clicked, and pages are reordered only from the grip beside the page number.",
+        "While you edit a Patch, the side panels step aside, the circled area is centred in the view, and everything returns when you finish.",
+        "After you apply a Patch, the page is saved and reloaded at the same place so you can check it.",
+        "A short tips banner guides your first Patch, with a \"Don't show these tips again\" choice.",
+        "Schoology grade now comes before Verify, and verified samples whose grade is not yet in Schoology are shown.",
+        "Sync review rows say in plain words where the work will be matched, and the dialog fits its rows.",
+        "Pre-grade tells you when the AI model is very small.",
+        "A deeper analysis replaces a pre-grade you have not changed."
+      ],
+      "bugs": [
+        "The automatic pen match in the Patch editor no longer picks up ruled lines and printed headings, so the matched stroke is no longer too wide.",
+        "Closing Buddy while work is still finishing in the background waits briefly for it and no longer loses the save.",
+        "The grading page no longer flickers while you scroll and other pages are prepared in the background.",
+        "Report a problem now fits the screen.",
+        "Sync review no longer suggests names that cannot stick or that only repeat the course."
+      ]
+    },
+    {
       "version": "5.0.19",
       "date": "2026-11-13",
       "features": [
