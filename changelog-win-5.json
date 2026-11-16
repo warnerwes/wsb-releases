@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "5.0.21",
+      "date": "2026-11-16",
+      "features": [
+        "Buddy is ready to receive your comment voice from the PCA extension; sending it arrives in an upcoming extension update. When it comes, it appears in the Sync review, where you choose \"Use this voice\" or \"Keep what Buddy has\"; nothing changes until you choose.",
+        "Once you accept a voice, every AI-written comment uses it: grading feedback, rubric feedback, pre-grade and report card comments. It changes wording and tone only, never the grade or what is included.",
+        "Each page in the film strip has one bar under it with its checkbox, page number and grip. Click anywhere on the bar to select or unselect the page; dragging across bars only adds pages.",
+        "When pages are selected, the film strip toolbar shows how many, rotate left, rotate right and Deselect. Move is gone: drag a page by its grip to reorder it.",
+        "The shore shows a different handwritten line each day.",
+        "The installer has new Buddy artwork."
+      ],
+      "bugs": [
+        "Rotating selected pages on the Grade page now saves the rotation, and the selection clears afterwards.",
+        "On the Choose screen, clicking a candidate's page thumbnail moves the preview, and the page tools say why they are not available there yet.",
+        "Grading changes no longer fail with \"no such trigger: grading_fence_update\". If only part of a change could be saved, Buddy now says so plainly.",
+        "After you grade a sample on the Grade page, Choose keeps it ready to Verify."
+      ]
+    },
+    {
       "version": "5.0.20",
       "date": "2026-11-14",
       "features": [
