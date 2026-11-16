@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Buddy now installs just for you on Windows, so updates stop asking for permission. If an older copy is still installed for everyone on this computer, Buddy offers Remove it or Not now. Once it is removed, other teachers on that computer install Buddy for themselves.\n\u2022 Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner.\n\u2022 The grading page's bottom band is one paper surface. Page tools sit on their own tab, and a thumbnail's grip shows only while the pointer is over it.\n\u2022 The grade comment sits in the grading row and grows as you type, then folds when you click away. On the Chat tab it waits as a dashed bubble until you choose Post to thread or Keep with the grade.\n\u2022 Task has its own tab between Chat and Rubric, and Chat runs the full height of the panel with the reply box at the bottom.\n\u2022 The demo tour brings each step's screen forward and hands you a worksheet to drag on the drop step. Its slides always play.\n\u2022 Automatic pre-grading now skips only work already graded in Schoology, and pre-grades everything else in any learning period. Turn it on or off from the To-do menu.\n\u2022 A pre-grade with any model output shows it with a banner instead of stopping. One that does stop says why and what to do next.\n\u2022 Reading & AI: click anywhere on a None, OCR only or OCR + AI card. Auto-configure says what this computer can run and suggests a model that fits.\n\u2022 Grade and Choose work the same way across learning periods, and a student's row unfolds out of its header as one motion. Work not yet graded opens in Grade, and a missing upload offers Check upload.\n\u2022 The Appearance, PDF output and Schoology settings pages are tidier, with matching controls and aligned rows.\n\u2022 The welcome wizard's folder step shows the records it found as one clear card, and the setup screens share one look.\n\nFixes:\n\u2022 Up and down arrows on number boxes respond when clicked.\n\u2022 The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.\n\u2022 Long student names in To-do shorten with an ellipsis instead of being cut off.\n\u2022 Checking an update's signature no longer flashes a console window."
     },
     "stable": {
-      "version": "5.0.22",
-      "tag": "v5.0.22",
+      "version": "5.0.23",
+      "tag": "v5.0.23",
       "asset": {
-        "name": "WorkSampleBuddy-5.0.22-windows.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.22/WorkSampleBuddy-5.0.22-windows.exe",
-        "size": 293534496,
-        "sha256": "ba45b6d460f8d8822f6d645843f5acce5275c01cea7597a6243d76ee2f03b404"
+        "name": "WorkSampleBuddy-5.0.23-windows.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.23/WorkSampleBuddy-5.0.23-windows.exe",
+        "size": 293542080,
+        "sha256": "389d8f6d180f9e961f22b487e5112c6ed2fa8e59539111946ab8dd1f8986a376"
       },
-      "notes": "Fixes:\n\u2022 With the updated PCA extension, automatic work-sample sync sends PDFs directly into Buddy without opening Save dialogs or changing your Chrome download settings.\n\u2022 Interrupted sample transfers can retry without importing incomplete files or downloading samples Buddy already has.\n\u2022 The Buddy artwork in the installer header now blends into the window background."
+      "notes": "Fixes:\n\u2022 Deeper analysis now checks the AI connection without getting stuck in a background-thread timeout.\n\u2022 When deeper analysis fails, the banner explains what failed and says that your grade and feedback were kept.\n\u2022 Successful deeper analysis updates the suggested grade and feedback, including automatic feedback saved by older versions. Your own edits remain protected."
     }
   }
 }
