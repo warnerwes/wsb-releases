@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "5.0.23",
+      "date": "2026-11-16",
+      "features": [],
+      "bugs": [
+        "Deeper analysis now checks the AI connection without getting stuck in a background-thread timeout.",
+        "When deeper analysis fails, the banner explains what failed and says that your grade and feedback were kept.",
+        "Successful deeper analysis updates the suggested grade and feedback, including automatic feedback saved by older versions. Your own edits remain protected."
+      ]
+    },
+    {
       "version": "5.0.22",
       "date": "2026-11-16",
       "features": [],
