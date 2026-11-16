@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "5.0.22",
+      "date": "2026-11-16",
+      "features": [],
+      "bugs": [
+        "With the updated PCA extension, automatic work-sample sync sends PDFs directly into Buddy without opening Save dialogs or changing your Chrome download settings.",
+        "Interrupted sample transfers can retry without importing incomplete files or downloading samples Buddy already has.",
+        "Fixed update/restart timing on Mac: Buddy waits for the previous launcher to close and for installation to finish before starting again."
+      ]
+    },
+    {
       "version": "5.0.21",
       "date": "2026-11-16",
       "features": [
