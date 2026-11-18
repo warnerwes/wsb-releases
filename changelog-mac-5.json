@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "5.0.24",
+      "date": "2026-11-18",
+      "features": [
+        "The grade chip is one button: click it or press G to open a panel with grade buttons, a score box with step buttons, and Excused and Missing. Flags such as Needs revision or Wrong assignment give 0 and add a note to the feedback so the work can be resubmitted.",
+        "Work samples that did not come from Schoology get a shorter grade panel with grades and score only.",
+        "You can always change whether a paper can be the LP sample, in both directions, on Grade and on Choose. Only a finalized LP locks it.",
+        "When an assignment has no rubric, pre-grade and Deeper analysis propose a grade from the task's questions and answers, including long packets. It is a proposal for you to accept or change.",
+        "The To-do tray shows pre-grading as it happens, has one switch to turn pre-grading on or off, and a Do next button to move a paper to the front. Its tabs fit on one row, with the rest under More.",
+        "Reading & AI settings say in one line whether Buddy can read page images."
+      ],
+      "bugs": [
+        "Google Drive sign-in no longer waits forever. You can start it over at once, and it gives up by itself after three minutes.",
+        "Report cards: Write and refine use the same privacy protection as Buddy's other AI writing.",
+        "When macOS blocks Chrome's folder for the PCA extension, Buddy names the Files & Folders switch to turn on."
+      ]
+    },
+    {
       "version": "5.0.23",
       "date": "2026-11-16",
       "features": [],
