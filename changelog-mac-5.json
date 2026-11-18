@@ -1,6 +1,26 @@
 {
   "versions": [
     {
+      "version": "5.0.25",
+      "date": "2026-11-18",
+      "features": [
+        "When a paper has no clear task (for example the district's work sample assignment, whose directions only say how to upload), Buddy first works out the task from the work, shows it as \"Task · Buddy's guess\" and pre-grades with it. If the guess is wrong, edit the task and run pre-grade again. If Buddy cannot tell, it says so.",
+        "The Grade side panel's Chat, Task, Rubric and File tabs are a bar that is easier to find, with a clear count on Chat.",
+        "The Rubric tab is simpler: pick a rubric and click Pregrade to run it with that rubric; Deeper analysis is behind the arrow beside it. Tick two rubrics in the list to compare them. The list opens as wide as the row, so long rubric names fit. Customize and Auto-detect equivalent work are at the bottom of the list, and Watched all and Report sit on the Criteria line.",
+        "Click the task at the top of the side panel to edit it in place. Enter saves and Esc cancels.",
+        "If Google Drive is connected but no folder is set for video links, Buddy asks where to put them and can make a \"Buddy video links\" folder for you.",
+        "The work sample button re-checks itself as you change the grade or the date, so a paper that now qualifies shows it right away. Your own choice always wins.",
+        "When a paper is set as not a sample, the bar says so on one line with Allow as sample, which flips it back so you can choose it.",
+        "In the grading window, click the course title to see the student's other courses in a popup.",
+        "Preferred names show in the red header preview, the same as on the saved sample."
+      ],
+      "bugs": [
+        "Switching from Grade to Choose no longer says \"The review view changed\" after you change the work sample button.",
+        "The matrix's right-click size menu is readable in light and dark mode.",
+        "In Choose, the second paper no longer shows pages its file doesn't have."
+      ]
+    },
+    {
       "version": "5.0.24",
       "date": "2026-11-18",
       "features": [
