@@ -1,6 +1,34 @@
 {
   "versions": [
     {
+      "version": "5.0.26",
+      "date": "2026-11-19",
+      "features": [
+        "Compare: when a course has more than one paper that could be the LP's work sample, Compare shows them as ranked cards with the best match on top, beside one large view of the card you pick. You can fix a candidate's pages there (rotate, reorder, delete, combine or patch them) before you choose it. Buddy edits its own copy, never the downloaded original, and the changes go with the paper if you choose it.",
+        "Next follows how you started. Open grading from a student's course and Buddy stays with that student: that course's papers for this LP, then its work sample, then the student's next course, then the rest of To-do. Open it from To-do and it follows To-do's order.",
+        "As Next moves through a student's courses, a course with only one possible work sample goes straight to verifying it. Compare appears only when there is a real choice.",
+        "When a course has ungraded work dated in another LP, Buddy lists it after that course and asks whether to review it. Reviewing grades it where it is; it is not moved into this LP. Skip goes straight to the next course.",
+        "Clicking a course opens Grade first when it has Schoology work this LP that is not yet graded in both Buddy and Schoology, downloading anything not yet downloaded on the way in.",
+        "A Schoology paper can be the work sample only when it is graded in both Buddy and Schoology.",
+        "When a student's RoboSpark class has no samples because its instructor never connected it, the empty course card says so and offers Request work samples.",
+        "If your learning-period dates for this school year have not come from Pathways, Buddy fills them in from the district's published school calendar. It never changes dates from Pathways or dates you set.",
+        "Changing your work folder uses the same look as setup. If the new folder doesn't have your samples, Buddy asks whether to keep your records (copy your samples over, or go back to the old folder) or start fresh. Starting fresh archives your records and deletes nothing. Bring them back from Settings > Workspace & data > Restore an archive.",
+        "While you patch, the cursor is an outline of the brush, so you can see exactly what it will cover."
+      ],
+      "bugs": [
+        "Buddy no longer fails to start when a Google Drive folder refuses a permission check.",
+        "If Google Drive comes back under a different drive letter, Buddy offers to use your work folder there.",
+        "Choosing a different folder from the \"Can't reach your work folder\" bar now says why when Buddy can't use it, instead of seeming to do nothing.",
+        "A new work folder without your samples (for example a new Google Drive shortcut folder) no longer leaves you stuck at \"Can't reach your work folder\": the bar lets you keep your records or start fresh there.",
+        "Saving a work sample no longer fails for courses whose name includes a time such as \"9:00 AM\". When a save fails for a common reason (the file is open in another program, the path is too long, the folder is offline), the message says so and what to do.",
+        "Opening Compare from a course always starts on the best match.",
+        "Compare no longer calls a paper \"Not turned in\" when it just hasn't downloaded yet, and a card updates when its PDF is downloaded again.",
+        "The blue student band shows the preferred name, as the red header does.",
+        "Choosing a paper that was marked as not a work sample now uses it as the sample (while the LP isn't finalized).",
+        "The page viewer fits the page without unneeded scrollbars."
+      ]
+    },
+    {
       "version": "5.0.25",
       "date": "2026-11-18",
       "features": [
