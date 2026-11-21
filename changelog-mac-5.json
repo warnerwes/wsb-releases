@@ -1,6 +1,30 @@
 {
   "versions": [
     {
+      "version": "5.0.27",
+      "date": "2026-11-20",
+      "features": [
+        "Drag a file into Compare or Verify to reveal the thumbnails. Drop it before, between or after pages to add it there. When you drop a file on a course tile that already has a sample, you can add its pages or replace the sample.",
+        "Each paper opens at Page Width, so the page fills the viewer from side to side. If you choose another zoom, the next papers open at your zoom.",
+        "The Found for you card has Next pin. Each press zooms to the next name, date or grade pin on the paper and says which one it is (for example \"Date, 2 of 3\"). P steps through them too, and Hide pins hides them.",
+        "After you test a connection, Reading & AI says where it connected and what it found, for example \"Connected to this computer: 3 models, including gemma4:e4b.\" If you type this computer's own address under another computer, it says so.",
+        "On a laptop, the gemma4:26b download (about 16 GB) is now beside the model in Reading & AI.",
+        "If the model you grade with goes missing, Buddy now asks only when you have chosen AI grading. It says which model it was looking for, and offers a model that is installed, Open AI settings, or Not now. Not now holds until your AI settings change."
+      ],
+      "bugs": [
+        "Keeping your records when you change your work folder now copies everything they point to, including your edited papers. Buddy checks that each file opens from the new folder before it switches. If a file is missing or different, you stay on your old folder.",
+        "While your records copy, background syncing and reading pause. The note about a pre-copy backup appears only when a backup was saved.",
+        "Buttons you can't use right now look greyed out instead of clickable.",
+        "When Deeper analysis finds no work that fits the rubric, it says why (for example, short answers instead of an essay) and offers Review rubric instead of running the same analysis again.",
+        "Notes about performance recordings no longer appear on rubrics that aren't about a performance.",
+        "Pre-grading long scanned packets now works for equivalent work and assignments with more than one option, and written work on a scanned paper is no longer reported as no work.",
+        "Buddy's logs no longer keep students' page text or the names of missing files.",
+        "Downloading the laptop grading model no longer stops as soon as it starts.",
+        "The demo no longer says it can't reach its folder, and Reset demo works while the demo is open: Buddy restarts into a fresh demo.",
+        "In the demo tour, the step about the review desk's buttons shows the whole page again, so its card has room. Your view comes back after the step."
+      ]
+    },
+    {
       "version": "5.0.26",
       "date": "2026-11-19",
       "features": [
