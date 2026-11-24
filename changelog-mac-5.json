@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "5.0.29",
+      "date": "2026-11-24",
+      "features": [
+        "Submissions with a local or Drive video copy now show a Watch video button right above the paper and on the File tab, with primary file actions up front and older copy history tucked away until needed.",
+        "The + Header and + Task buttons now sit on the desk strip above the paper so they stay easy to spot over dense or dark pages, and stay clear of the previous page in continuous scroll mode.",
+        "Opening an assignment with feedback that does not fit on one line now expands the feedback box automatically so you can read the full comment right away, then folds it when you click elsewhere.",
+        "Explosive Bursts celebrations now use a comic pop-art style; finishing a learning period plays the celebration three times, while replaying from the Samples grid plays it once."
+      ],
+      "bugs": [
+        "Multi-option assignments now select and grade matching activities reliably even when the model leaves an activity label or evidence field blank on the first pass, fitting longer assignments automatically.",
+        "Adding a header or task stamp while a video upload is in flight no longer drops the video link, and Watch video only opens videos from the current submission revision.",
+        "Grading or posting an undecided regrade upload now accepts it cleanly, and a stale open rubric report can no longer mark a newly selected upload as accepted.",
+        "Schoology rubrics and synced metadata decode HTML entities cleanly, and teacher comments containing angle brackets match what Schoology returns during post reconciliation.",
+        "Writing-craft notes such as missing citations no longer blank a model's draft grade, while real missing-work notes still hold the grade for review.",
+        "Buttons that reappear on the File tab (such as Add video link after a failed upload) now return cleanly to their grid."
+      ]
+    },
+    {
       "version": "5.0.28",
       "date": "2026-11-23",
       "features": [
