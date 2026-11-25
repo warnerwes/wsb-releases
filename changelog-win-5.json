@@ -1,6 +1,21 @@
 {
   "versions": [
     {
+      "version": "5.0.32",
+      "date": "2026-11-25",
+      "features": [
+        "The floating page toolbar has Select all, a Deselect button with the page count, and a More menu for combining, removing, and reversing pages.",
+        "Ready Schoology sample choices appear in To-do under their learning period. Open a choice to compare the submitted work.",
+        "Open a linked Schoology course directly from its Buddy course menu."
+      ],
+      "bugs": [
+        "Selected pages stay checked when you rotate them in Grade or Verify.",
+        "Schoology work appears once in To-do at its next step. After you post a grade, Verify uses the updated grade for the same work.",
+        "Reopen posted Schoology work to add or edit a task and post the update again.",
+        "Buddy restores coursework when it can match a Schoology section that was previously linked ambiguously."
+      ]
+    },
+    {
       "version": "5.0.31",
       "date": "2026-11-24",
       "features": [
