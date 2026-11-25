@@ -1,6 +1,23 @@
 {
   "versions": [
     {
+      "version": "5.0.30",
+      "date": "2026-11-24",
+      "features": [
+        "Grade stays open when you switch learning periods.",
+        "Buddy can suggest a task for image-heavy papers using the configured vision model."
+      ],
+      "bugs": [
+        "When + Header needs a work date, Buddy opens the date picker and adds the header after you choose a date.",
+        "When + Task needs a summary, Buddy opens the inline editor. Type the summary and press Enter to add the stamp.",
+        "Clicking the task summary opens its editor reliably on Windows.",
+        "Add link keeps an invalid URL in the dialog and shows how to correct it.",
+        "When a score blocks posting, Buddy opens the Grade panel and selects the score for editing.",
+        "Open Schoology settings directly from a blocked post, download, or manual sync. Buddy saves your grading draft.",
+        "If the original PDF is missing and Schoology has the attachment, the grading message offers Re-download."
+      ]
+    },
+    {
       "version": "5.0.29",
       "date": "2026-11-24",
       "features": [
