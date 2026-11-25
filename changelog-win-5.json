@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "version": "5.0.31",
+      "date": "2026-11-24",
+      "features": [
+        "The Found for you card opens on the right in Verify. Drag its heading to move it, and select a pin to see the matching red-header value in red.",
+        "Choose where to start collecting samples in Settings → Schoology → Automation → Collect samples from. Buddy asks once during Schoology setup after the first week of school."
+      ],
+      "bugs": [
+        "Ungraded Schoology uploads from completed learning periods stay in To-do and can still be pre-graded when enabled. Buddy skips uploads that already have a current Schoology grade."
+      ]
+    },
+    {
       "version": "5.0.30",
       "date": "2026-11-24",
       "features": [
