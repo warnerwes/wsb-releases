@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner.\n\u2022 The grading page's bottom band is one paper surface. Page tools sit on their own tab, and a thumbnail's grip shows only while the pointer is over it.\n\u2022 The grade comment sits in the grading row and grows as you type, then folds when you click away. On the Chat tab it waits as a dashed bubble until you choose Post to thread or Keep with the grade.\n\u2022 Task has its own tab between Chat and Rubric, and Chat runs the full height of the panel with the reply box at the bottom.\n\u2022 The demo tour brings each step's screen forward and hands you a worksheet to drag on the drop step. Its slides always play.\n\u2022 Automatic pre-grading now skips only work already graded in Schoology, and pre-grades everything else in any learning period. Turn it on or off from the To-do menu.\n\u2022 A pre-grade with any model output shows it with a banner instead of stopping. One that does stop says why and what to do next.\n\u2022 Reading & AI: click anywhere on a None, OCR only or OCR + AI card. Auto-configure says what this computer can run and suggests a model that fits.\n\u2022 Grade and Choose work the same way across learning periods, and a student's row unfolds out of its header as one motion. Work not yet graded opens in Grade, and a missing upload offers Check upload.\n\u2022 The Appearance, PDF output and Schoology settings pages are tidier, with matching controls and aligned rows.\n\u2022 The welcome wizard's folder step shows the records it found as one clear card, and the setup screens share one look.\n\nFixes:\n\u2022 Up and down arrows on number boxes respond when clicked.\n\u2022 The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.\n\u2022 Long student names in To-do shorten with an ellipsis instead of being cut off.\n\u2022 If a window won't close for an update, Buddy says so and keeps the update ready."
     },
     "stable": {
-      "version": "5.0.30",
-      "tag": "v5.0.30",
+      "version": "5.0.31",
+      "tag": "v5.0.31",
       "asset": {
-        "name": "WorkSampleBuddy-5.0.30-macos.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.30/WorkSampleBuddy-5.0.30-macos.dmg",
-        "size": 333719250,
-        "sha256": "5e01f9af388700fa385011ad10d107438236c3248ce5b0e2ebe3906be3381e4c"
+        "name": "WorkSampleBuddy-5.0.31-macos.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.31/WorkSampleBuddy-5.0.31-macos.dmg",
+        "size": 333722470,
+        "sha256": "fd50c4a2eaaaa8d7baf2a068c5e1091e90af0e9504fda30639bf75e6cefa292d"
       },
-      "notes": "New in this version:\n\u2022 Grade stays open when you switch learning periods.\n\u2022 Buddy can suggest a task for image-heavy papers using the configured vision model.\n\nFixes:\n\u2022 When + Header needs a work date, Buddy opens the date picker and adds the header after you choose a date.\n\u2022 When + Task needs a summary, Buddy opens the inline editor. Type the summary and press Enter to add the stamp.\n\u2022 Add link keeps an invalid URL in the dialog and shows how to correct it.\n\u2022 When a score blocks posting, Buddy opens the Grade panel and selects the score for editing.\n\u2022 Open Schoology settings directly from a blocked post, download, or manual sync. Buddy saves your grading draft.\n\u2022 If the original PDF is missing and Schoology has the attachment, the grading message offers Re-download."
+      "notes": "New in this version:\n\u2022 The Found for you card opens on the right in Verify. Drag its heading to move it, and select a pin to see the matching red-header value in red.\n\u2022 Choose where to start collecting samples in Settings \u2192 Schoology \u2192 Automation \u2192 Collect samples from. Buddy asks once during Schoology setup after the first week of school.\n\nFixes:\n\u2022 Ungraded Schoology uploads from completed learning periods stay in To-do and can still be pre-graded when enabled. Buddy skips uploads that already have a current Schoology grade."
     }
   }
 }
