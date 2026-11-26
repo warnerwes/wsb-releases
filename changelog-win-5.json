@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "5.0.33",
+      "date": "2026-11-26",
+      "features": [
+        "Compare puts Not a sample and Use as LP sample at the top right beside the navigation arrows.",
+        "Grade highlights work dates that fall outside the selected learning period or on a non-school day. Open the date to choose a school day.",
+        "Open the student's Work Samples archive to check an unconfirmed Pathways upload. Use Mark confirmed to continue to the family email."
+      ],
+      "bugs": [
+        "Verify & next skips completed learning periods, including samples Buddy already downloaded. Earlier uploads with a current Schoology grade are skipped. Late uploads and resubmissions that still need a grade stay in To-do.",
+        "Grade opens the assignment shown in Compare so you can edit it and return to the same work."
+      ]
+    },
+    {
       "version": "5.0.32",
       "date": "2026-11-25",
       "features": [
