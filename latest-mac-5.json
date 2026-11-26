@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner.\n\u2022 The grading page's bottom band is one paper surface. Page tools sit on their own tab, and a thumbnail's grip shows only while the pointer is over it.\n\u2022 The grade comment sits in the grading row and grows as you type, then folds when you click away. On the Chat tab it waits as a dashed bubble until you choose Post to thread or Keep with the grade.\n\u2022 Task has its own tab between Chat and Rubric, and Chat runs the full height of the panel with the reply box at the bottom.\n\u2022 The demo tour brings each step's screen forward and hands you a worksheet to drag on the drop step. Its slides always play.\n\u2022 Automatic pre-grading now skips only work already graded in Schoology, and pre-grades everything else in any learning period. Turn it on or off from the To-do menu.\n\u2022 A pre-grade with any model output shows it with a banner instead of stopping. One that does stop says why and what to do next.\n\u2022 Reading & AI: click anywhere on a None, OCR only or OCR + AI card. Auto-configure says what this computer can run and suggests a model that fits.\n\u2022 Grade and Choose work the same way across learning periods, and a student's row unfolds out of its header as one motion. Work not yet graded opens in Grade, and a missing upload offers Check upload.\n\u2022 The Appearance, PDF output and Schoology settings pages are tidier, with matching controls and aligned rows.\n\u2022 The welcome wizard's folder step shows the records it found as one clear card, and the setup screens share one look.\n\nFixes:\n\u2022 Up and down arrows on number boxes respond when clicked.\n\u2022 The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.\n\u2022 Long student names in To-do shorten with an ellipsis instead of being cut off.\n\u2022 If a window won't close for an update, Buddy says so and keeps the update ready."
     },
     "stable": {
-      "version": "5.0.32",
-      "tag": "v5.0.32",
+      "version": "5.0.33",
+      "tag": "v5.0.33",
       "asset": {
-        "name": "WorkSampleBuddy-5.0.32-macos.dmg",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.32/WorkSampleBuddy-5.0.32-macos.dmg",
-        "size": 333758743,
-        "sha256": "ebf83db71c6fbf6a5a7e5891d882aeb85a6f162b097ac74afee87008aa5dfa20"
+        "name": "WorkSampleBuddy-5.0.33-macos.dmg",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.33/WorkSampleBuddy-5.0.33-macos.dmg",
+        "size": 333760821,
+        "sha256": "fbb4eb2cd6bc591f92bd3995cd392ff7c9282123ae525e675ec5c977e9123421"
       },
-      "notes": "New in this version:\n\u2022 The floating page toolbar has Select all, a Deselect button with the page count, and a More menu for combining, removing, and reversing pages.\n\u2022 Ready Schoology sample choices appear in To-do under their learning period. Open a choice to compare the submitted work.\n\u2022 Open a linked Schoology course directly from its Buddy course menu.\n\nFixes:\n\u2022 Selected pages stay checked when you rotate them in Grade or Verify.\n\u2022 Schoology work appears once in To-do at its next step. After you post a grade, Verify uses the updated grade for the same work.\n\u2022 Reopen posted Schoology work to add or edit a task and post the update again.\n\u2022 Buddy restores coursework when it can match a Schoology section that was previously linked ambiguously."
+      "notes": "New in this version:\n\u2022 Compare puts Not a sample and Use as LP sample at the top right beside the navigation arrows.\n\u2022 Grade highlights work dates that fall outside the selected learning period or on a non-school day. Open the date to choose a school day.\n\u2022 Open the student's Work Samples archive to check an unconfirmed Pathways upload. Use Mark confirmed to continue to the family email.\n\nFixes:\n\u2022 Verify & next skips completed learning periods, including samples Buddy already downloaded. Earlier uploads with a current Schoology grade are skipped. Late uploads and resubmissions that still need a grade stay in To-do.\n\u2022 Grade opens the assignment shown in Compare so you can edit it and return to the same work."
     }
   }
 }
