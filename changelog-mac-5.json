@@ -1,6 +1,19 @@
 {
   "versions": [
     {
+      "version": "5.0.34",
+      "date": "2026-11-27",
+      "features": [
+        "Course cards show Submitted for synced Schoology work and tell you when it needs a PDF, a date check, grading, posting, or a sample choice.",
+        "Late Schoology work stays visible under the learning period its assignment belongs to.",
+        "With the matching PCA extension update, Buddy shows when Pathways is processing an upload and can confirm it during a later archive sync."
+      ],
+      "bugs": [
+        "To-do keeps a Choose sample item for each course with eligible work, even when Buddy rates every paper Less likely. Verify takes over that item when the chosen paper is ready.",
+        "Closing Grade while its course list is loading avoids a background error."
+      ]
+    },
+    {
       "version": "5.0.33",
       "date": "2026-11-26",
       "features": [
