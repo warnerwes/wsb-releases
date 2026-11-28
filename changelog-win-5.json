@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "5.0.35",
+      "date": "2026-11-28",
+      "features": [
+        "Open Drive access from Buddy’s sync notice. After you approve in Chrome, the updated PCA extension retries the waiting samples."
+      ],
+      "bugs": [
+        "No Work This LP appears as a separate course note."
+      ]
+    },
+    {
       "version": "5.0.34",
       "date": "2026-11-27",
       "features": [
