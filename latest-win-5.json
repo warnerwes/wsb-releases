@@ -14,15 +14,15 @@
       "notes": "New in this version:\n\u2022 Buddy now installs just for you on Windows, so updates stop asking for permission. If an older copy is still installed for everyone on this computer, Buddy offers Remove it or Not now. Once it is removed, other teachers on that computer install Buddy for themselves.\n\u2022 Checking, downloading and preparing an update all happen in the update window. Downloads have a real Cancel, and an update you put off comes back through the banner.\n\u2022 The grading page's bottom band is one paper surface. Page tools sit on their own tab, and a thumbnail's grip shows only while the pointer is over it.\n\u2022 The grade comment sits in the grading row and grows as you type, then folds when you click away. On the Chat tab it waits as a dashed bubble until you choose Post to thread or Keep with the grade.\n\u2022 Task has its own tab between Chat and Rubric, and Chat runs the full height of the panel with the reply box at the bottom.\n\u2022 The demo tour brings each step's screen forward and hands you a worksheet to drag on the drop step. Its slides always play.\n\u2022 Automatic pre-grading now skips only work already graded in Schoology, and pre-grades everything else in any learning period. Turn it on or off from the To-do menu.\n\u2022 A pre-grade with any model output shows it with a banner instead of stopping. One that does stop says why and what to do next.\n\u2022 Reading & AI: click anywhere on a None, OCR only or OCR + AI card. Auto-configure says what this computer can run and suggests a model that fits.\n\u2022 Grade and Choose work the same way across learning periods, and a student's row unfolds out of its header as one motion. Work not yet graded opens in Grade, and a missing upload offers Check upload.\n\u2022 The Appearance, PDF output and Schoology settings pages are tidier, with matching controls and aligned rows.\n\u2022 The welcome wizard's folder step shows the records it found as one clear card, and the setup screens share one look.\n\nFixes:\n\u2022 Up and down arrows on number boxes respond when clicked.\n\u2022 The window no longer freezes briefly at a session's first message, and report card progress stays smooth while a job runs.\n\u2022 Long student names in To-do shorten with an ellipsis instead of being cut off.\n\u2022 Checking an update's signature no longer flashes a console window."
     },
     "stable": {
-      "version": "5.0.34",
-      "tag": "v5.0.34",
+      "version": "5.0.35",
+      "tag": "v5.0.35",
       "asset": {
-        "name": "WorkSampleBuddy-5.0.34-windows.exe",
-        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.34/WorkSampleBuddy-5.0.34-windows.exe",
-        "size": 294191480,
-        "sha256": "640846bc89bcd5d4ccbcc6ed2f02129d7406303999a1409eb2c53bbbe668f827"
+        "name": "WorkSampleBuddy-5.0.35-windows.exe",
+        "url": "https://github.com/warnerwes/wsb-releases/releases/download/v5.0.35/WorkSampleBuddy-5.0.35-windows.exe",
+        "size": 294177632,
+        "sha256": "ab5e408f7e08b28cc649e4e75efbb5f3cb7141ee9bdf4d31d5d1dd1c710771c2"
       },
-      "notes": "New in this version:\n\u2022 Course cards show Submitted for synced Schoology work and tell you when it needs a PDF, a date check, grading, posting, or a sample choice.\n\u2022 Late Schoology work stays visible under the learning period its assignment belongs to.\n\u2022 With the matching PCA extension update, Buddy shows when Pathways is processing an upload and can confirm it during a later archive sync.\n\nFixes:\n\u2022 To-do keeps a Choose sample item for each course with eligible work, even when Buddy rates every paper Less likely. Verify takes over that item when the chosen paper is ready.\n\u2022 Closing Grade while its course list is loading avoids a background error."
+      "notes": "New in this version:\n\u2022 Open Drive access from Buddy\u2019s sync notice. After you approve in Chrome, the updated PCA extension retries the waiting samples.\n\nFixes:\n\u2022 No Work This LP appears as a separate course note."
     }
   }
 }
